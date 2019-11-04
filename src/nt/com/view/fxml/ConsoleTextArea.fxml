@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.TextArea?>
+<?import javafx.scene.control.ContextMenu?>
+<?import javafx.scene.control.Menu?>
+<?import javafx.scene.control.MenuItem?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.control.SeparatorMenuItem?>
+
+<fx:root fx:controller="nt.com.buiz.ConsoleTextAreaController" xmlns:fx="http://javafx.com/fxml/1" type="TextArea">
+	<contextMenu>
+		<ContextMenu fx:id="consolemenu" width="400.0">
+			<items>
+				<MenuItem fx:id="clearbtn"  mnemonicParsing="false" onAction="#clear"  text="清空">
+                     <graphic>
+                        <ImageView fitHeight="15.0" fitWidth="15.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@../../../../res/clear.gif" />
+                           </image>
+                        </ImageView>
+                     </graphic>
+                     </MenuItem>
+                     <MenuItem fx:id="textsetbtn"  mnemonicParsing="false" onAction="#textset"  text="文本设置">
+                     <graphic>
+                        <ImageView fitHeight="15.0" fitWidth="15.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@../../../../res/textset.png" />
+                           </image>
+                        </ImageView>
+                     </graphic>
+                     </MenuItem>
+			</items>
+		</ContextMenu>
+	</contextMenu>
+</fx:root>
+

@@ -1,0 +1,13 @@
+{
+	"consoleFont":{
+		"size":20,
+		"family":"Consolas"
+	},
+	"lastOpenFilePath":"workspace\\demo\\debug.js",
+	"importDirectories":[],
+	"version":"2.0.0",
+	"editFont":{
+		"size":17,
+		"family":"Consolas"
+	}
+}

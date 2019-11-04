@@ -1,0 +1,101 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.ContextMenu?>
+<?import javafx.scene.control.Menu?>
+<?import javafx.scene.control.MenuItem?>
+<?import javafx.scene.control.SeparatorMenuItem?>
+<?import javafx.scene.control.TreeView?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.BorderPane?>
+
+<fx:root editable="true" prefHeight="277.0" prefWidth="114.0" showRoot="false" type="TreeView" BorderPane.alignment="CENTER" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="nt.com.buiz.LeftTreeViewController">
+   <contextMenu>
+      <ContextMenu fx:id="lefttreemenu" width="200.0">
+        <items>
+         <Menu fx:id="lefttreeadd" mnemonicParsing="false" text="新建">
+              <items>
+              	  <MenuItem fx:id="addfoldbtn" mnemonicParsing="false" onAction="#add" text="文件夹">
+                     <graphic>
+                        <ImageView fitHeight="15.0" fitWidth="15.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@../../../../res/folder.png" />
+                           </image>
+                        </ImageView>
+                     </graphic></MenuItem>
+              	  <SeparatorMenuItem /> 
+                  <MenuItem fx:id="addxmlbtn" mnemonicParsing="false" onAction="#add" text="XML 文件">
+                     <graphic>
+                        <ImageView fitHeight="15.0" fitWidth="15.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@../../../../res/xml.png" />
+                           </image>
+                        </ImageView>
+                     </graphic></MenuItem>
+                  <MenuItem fx:id="addjsbtn" mnemonicParsing="false" onAction="#add" text="JavaScript 文件">
+                     <graphic>
+                        <ImageView fitHeight="15.0" fitWidth="15.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@../../../../res/js.png" />
+                           </image>
+                        </ImageView>
+                     </graphic></MenuItem>
+                  <MenuItem fx:id="addjsonbtn" mnemonicParsing="false" onAction="#add" text="Json 文件">
+                     <graphic>
+                        <ImageView fitHeight="15.0" fitWidth="15.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@../../../../res/json.png" />
+                           </image>
+                        </ImageView>
+                     </graphic></MenuItem>
+              </items>
+               <graphic>
+                  <ImageView fitHeight="15.0" fitWidth="15.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../../../../res/newfile.gif" />
+                     </image>
+                  </ImageView>
+               </graphic>
+            </Menu>
+            <SeparatorMenuItem /> 
+            <MenuItem fx:id="lefttreedel" mnemonicParsing="false" onAction="#del" text="删除">
+               <graphic>
+                  <ImageView fitHeight="15.0" fitWidth="15.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../../../../res/del.gif" />
+                     </image>
+                  </ImageView>
+               </graphic>
+            </MenuItem>
+            <MenuItem fx:id="lefttreermv" mnemonicParsing="false" onAction="#remove" text="移除">
+               <graphic>
+                  <ImageView fitHeight="15.0" fitWidth="15.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../../../../res/minus.png" />
+                     </image>
+                  </ImageView>
+               </graphic>
+            </MenuItem>
+            <SeparatorMenuItem /> 
+            <MenuItem fx:id="lefttreerename" mnemonicParsing="false" onAction="#rename" text="重命名">
+               <graphic>
+                  <ImageView fitHeight="15.0" fitWidth="15.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../../../../res/rename.png" />
+                     </image>
+                  </ImageView>
+               </graphic>
+            </MenuItem>
+             <MenuItem fx:id="lefttreerefresh" mnemonicParsing="false" onAction="#refresh" text="刷新">
+               <graphic>
+                  <ImageView fitHeight="15.0" fitWidth="15.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../../../../res/refresh.gif" />
+                     </image>
+                  </ImageView>
+               </graphic>
+            </MenuItem>
+        </items>
+      </ContextMenu>
+   </contextMenu>
+</fx:root>

@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.ContextMenu?>
+<?import javafx.scene.control.MenuItem?>
+<?import javafx.scene.control.SeparatorMenuItem?>
+<?import javafx.scene.control.TextArea?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import org.fxmisc.richtext.CodeArea?>
+
+<fx:root  type="CodeArea" xmlns:fx="http://javafx.com/fxml/1" xmlns="http://javafx.com/javafx/11.0.1" fx:controller="nt.com.buiz.RichEditTextAreaController">
+		<contextMenu>
+			<ContextMenu style="-fx-font-size:14" fx:id="editmenu" width="400.0">
+				<items>
+					<MenuItem fx:id="savebtn" mnemonicParsing="false" onAction="#save" text="保存">
+						<graphic>
+							<ImageView fitHeight="15.0" fitWidth="15.0" pickOnBounds="true" preserveRatio="true">
+								<image>
+									<Image url="@../../../../res/save.gif" />
+								</image>
+							</ImageView>
+						</graphic>
+					</MenuItem>
+					<MenuItem fx:id="textsetbtn" mnemonicParsing="false" onAction="#textset" text="文本设置">
+						<graphic>
+							<ImageView fitHeight="15.0" fitWidth="15.0" pickOnBounds="true" preserveRatio="true">
+								<image>
+									<Image url="@../../../../res/textset.png" />
+								</image>
+							</ImageView>
+						</graphic>
+					</MenuItem>
+					<SeparatorMenuItem />
+					<MenuItem fx:id="formatbtn" mnemonicParsing="false" onAction="#format" text="格式化文本">
+						<graphic>
+							<ImageView fitHeight="15.0" fitWidth="15.0" pickOnBounds="true" preserveRatio="true">
+								<image>
+									<Image url="@../../../../res/format.gif" />
+								</image>
+							</ImageView>
+						</graphic>
+					</MenuItem>
+					<SeparatorMenuItem />
+					<MenuItem fx:id="runbtn" mnemonicParsing="false" onAction="#run" text="开始发送">
+						<graphic>
+							<ImageView fitHeight="15.0" fitWidth="15.0" pickOnBounds="true" preserveRatio="true">
+								<image>
+									<Image url="@../../../../res/run2.gif" />
+								</image>
+							</ImageView>
+						</graphic>
+					</MenuItem>
+					<MenuItem fx:id="debugbtn" mnemonicParsing="false" onAction="#debug" text="调试脚本">
+						<graphic>
+							<ImageView fitHeight="15.0" fitWidth="15.0" pickOnBounds="true" preserveRatio="true">
+								<image>
+									<Image url="@../../../../res/debug.gif" />
+								</image>
+							</ImageView>
+						</graphic>
+					</MenuItem>
+				</items>
+			</ContextMenu>
+		</contextMenu>
+</fx:root>

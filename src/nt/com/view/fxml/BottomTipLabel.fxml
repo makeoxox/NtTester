@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.ToolBar?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.Separator?>
+<?import javafx.scene.layout.BorderPane?>
+
+<fx:root prefHeight="0.0" prefWidth="1024.0" BorderPane.alignment="CENTER" xmlns:fx="http://javafx.com/fxml/1" type="ToolBar" >
+     <items>
+        <Label fx:id="codeLabel" text="编码类型：GBK" />
+        <Separator orientation="VERTICAL" prefHeight="0.0" />
+        <Label fx:id="connectLabel" text="通讯方式：同步连接" />
+        <Separator orientation="VERTICAL" prefHeight="0.0" />
+        <Label fx:id="protocolLabel"  text="请求协议：TCP" />
+        <Separator orientation="VERTICAL" prefHeight="0.0" />
+        <Label fx:id="macLabel"  text="加密算法：无密" />
+        <Separator orientation="VERTICAL" prefHeight="0.0" />
+        <Label fx:id="multiLabel"  text="并发类型：单发无阻塞" />
+        <Separator orientation="VERTICAL" prefHeight="0.0" />
+        <Label fx:id="msgLabel"  text="报文类型：XML" />
+        <Separator orientation="VERTICAL" prefHeight="0.0" />
+        <Label fx:id="scriptLabel"  text="脚本：禁用" />
+        <Separator orientation="VERTICAL" prefHeight="0.0" />
+     </items>
+</fx:root>
+

@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import nt.com.view.init.TopToolBar?>
+<?import nt.com.view.init.TopMenuBar?>
+<?import nt.com.view.init.BottomTipLabel?>
+<?import nt.com.view.init.LeftTreeView?>
+<?import javafx.scene.control.ScrollPane?>
+<?import javafx.scene.control.SplitPane?>
+<?import javafx.scene.control.TabPane?>
+<?import javafx.scene.layout.BorderPane?>
+
+<BorderPane prefHeight="768.0" prefWidth="1024.0" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1">
+   <top>
+      <TopMenuBar fx:id="topmenubar"/>
+   </top>
+   <center>
+      <BorderPane  BorderPane.alignment="CENTER">
+         <top>
+            <TopToolBar fx:id="toptoolbar"/>
+         </top>
+         <center>
+            <SplitPane dividerPositions="0.17" prefHeight="160.0" prefWidth="200.0" BorderPane.alignment="CENTER">
+               <items>
+                  <ScrollPane fitToHeight="true" fitToWidth="true" prefHeight="200.0" prefWidth="200.0">
+                     <content>
+                        <LeftTreeView fx:id="packagetree"/>
+                     </content>
+                  </ScrollPane>
+                  <SplitPane dividerPositions="0.75" orientation="VERTICAL">
+                    <items>
+                       	<TabPane fx:id="edittabpane"/>
+                        <TabPane fx:id="consoletabpane" />
+                    </items>
+                  </SplitPane>
+               </items>
+            </SplitPane>
+         </center>
+         <bottom>
+            <BottomTipLabel fx:id="bottomtiplabel"/>
+         </bottom>
+      </BorderPane>
+   </center>
+   
+</BorderPane>

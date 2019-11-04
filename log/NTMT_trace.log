@@ -1,0 +1,42 @@
+[2019-10-28 11:30:05,254] 0    [main] INFO  net.sf.json.xml.XMLSerializer  - Using default type string 
+[2019-11-04 16:26:56,333] 0    [Thread-4] ERROR nt.com.script.AbstractMessageScriptManager  - Error executing script. 
+javax.script.ScriptException: <eval>:7:1 Expected , but found return
+	return arg;
+	^ in <eval> at line number 7 at column number 1
+	at jdk.nashorn.api.scripting.NashornScriptEngine.throwAsScriptException(NashornScriptEngine.java:470)
+	at jdk.nashorn.api.scripting.NashornScriptEngine.compileImpl(NashornScriptEngine.java:537)
+	at jdk.nashorn.api.scripting.NashornScriptEngine.compileImpl(NashornScriptEngine.java:524)
+	at jdk.nashorn.api.scripting.NashornScriptEngine.evalImpl(NashornScriptEngine.java:402)
+	at jdk.nashorn.api.scripting.NashornScriptEngine.eval(NashornScriptEngine.java:150)
+	at javax.script.AbstractScriptEngine.eval(AbstractScriptEngine.java:249)
+	at nt.com.script.AbstractMessageScriptManager.getInvocable(AbstractMessageScriptManager.java:56)
+	at nt.com.script.debug.DebugScriptManager.invoke(DebugScriptManager.java:19)
+	at nt.com.buiz.ScriptDebugDialogController$1.call(ScriptDebugDialogController.java:70)
+	at java.util.concurrent.FutureTask.run(FutureTask.java:266)
+	at java.lang.Thread.run(Thread.java:748)
+Caused by: jdk.nashorn.internal.runtime.ParserException: <eval>:7:1 Expected , but found return
+	return arg;
+	^
+	at jdk.nashorn.internal.parser.AbstractParser.error(AbstractParser.java:294)
+	at jdk.nashorn.internal.parser.AbstractParser.error(AbstractParser.java:279)
+	at jdk.nashorn.internal.parser.AbstractParser.expectDontAdvance(AbstractParser.java:350)
+	at jdk.nashorn.internal.parser.AbstractParser.expect(AbstractParser.java:337)
+	at jdk.nashorn.internal.parser.Parser.argumentList(Parser.java:2582)
+	at jdk.nashorn.internal.parser.Parser.leftHandSideExpression(Parser.java:2375)
+	at jdk.nashorn.internal.parser.Parser.unaryExpression(Parser.java:3147)
+	at jdk.nashorn.internal.parser.Parser.expression(Parser.java:3282)
+	at jdk.nashorn.internal.parser.Parser.expressionStatement(Parser.java:1150)
+	at jdk.nashorn.internal.parser.Parser.statement(Parser.java:967)
+	at jdk.nashorn.internal.parser.Parser.sourceElements(Parser.java:773)
+	at jdk.nashorn.internal.parser.Parser.functionBody(Parser.java:2901)
+	at jdk.nashorn.internal.parser.Parser.functionExpression(Parser.java:2663)
+	at jdk.nashorn.internal.parser.Parser.statement(Parser.java:875)
+	at jdk.nashorn.internal.parser.Parser.sourceElements(Parser.java:773)
+	at jdk.nashorn.internal.parser.Parser.program(Parser.java:709)
+	at jdk.nashorn.internal.parser.Parser.parse(Parser.java:283)
+	at jdk.nashorn.internal.parser.Parser.parse(Parser.java:249)
+	at jdk.nashorn.internal.runtime.Context.compile(Context.java:1284)
+	at jdk.nashorn.internal.runtime.Context.compileScript(Context.java:1251)
+	at jdk.nashorn.internal.runtime.Context.compileScript(Context.java:627)
+	at jdk.nashorn.api.scripting.NashornScriptEngine.compileImpl(NashornScriptEngine.java:535)
+	... 9 more
