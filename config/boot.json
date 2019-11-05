@@ -1,12 +1,12 @@
 {
-	"lastOpenFilePath":"C:\\Users\\Administrator\\git\\NtTester\\workspace\\project-demo\\debug.xml",
+	"lastOpenFilePath":"workspace\\project-demo\\debug.js",
 	"consoleFont":{
 		"size":14,
 		"family":"Consolas"
 	},
 	"importDirectories":[],
 	"menu":{
-		"encode":"UTF-8",
+		"encode":"GBK",
 		"msg":"xml",
 		"protocol":"tcp",
 		"connect":"sync",

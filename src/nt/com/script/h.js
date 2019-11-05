@@ -54,19 +54,20 @@ var $Ptr = {
 				var bs = BasicDataSourceFactory.createDataSource(prop);
 				this.jdbc =new JdbcTemplate(bs);
 		 }catch(e){
-			 ConsoleTextArea.AppendMessageOnCurrentConsole(e)
+			 $Ptr.println(e)
 		 }
 			
 	},
 	query : function (sql,success){
 		 if(this.jdbc==null){
-			 ConsoleTextArea.AppendMessageOnCurrentConsole("未连接数据库");
+			 $Ptr.println("未连接数据库")
 			 return null;
 		 }
 		 try{
 			 	var list =this.jdbc.queryForList(sql);
 			 }catch(e){
-				 ConsoleTextArea.AppendMessageOnCurrentConsole(e)
+				 $Ptr.println(e)
+				 return;
 			 }
 			var josnStr= JsonParser.arrayStringify(list)
 			var nativeArray = JSON.parse(josnStr)
@@ -77,13 +78,13 @@ var $Ptr = {
 	},
 	execute : function (sql){
 		if(this.jdbc==null){
-			 ConsoleTextArea.AppendMessageOnCurrentConsole("未连接数据库")
+			$Ptr.println("未连接数据库")
 			 return;
 		 }
 		 try{
 			    this.jdbc.update(sql);	
 			}catch(e){
-				ConsoleTextArea.AppendMessageOnCurrentConsole(e)
+				$Ptr.println(e)
 			}
 			 
 	} 
