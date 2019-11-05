@@ -124,7 +124,8 @@ public class RichEditTextArea extends CodeArea {
 	              });
 	              this.replaceText(0, 0, text);
 	      		this.getStylesheets().add(this.getClass().getResource("/nt/com/view/css/RichTextEdit-json.css").toExternalForm());
-			default:
+	      		break;
+	        default:
 				 this.replaceText(0, 0, text);
 				break;
         }
