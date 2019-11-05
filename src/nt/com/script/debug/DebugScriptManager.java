@@ -24,6 +24,9 @@ public class DebugScriptManager extends AbstractMessageScriptManager {
 		}
 		return null;
 	}
+	
+	
+	
 
 	
 	

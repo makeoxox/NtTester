@@ -3,6 +3,8 @@ package nt.com.script;
 import java.io.File;
 import java.io.FileNotFoundException;
 import java.io.FileReader;
+import java.io.InputStreamReader;
+
 import javax.script.Invocable;
 import javax.script.ScriptEngine;
 import javax.script.ScriptEngineManager;
@@ -37,15 +39,9 @@ public abstract class AbstractMessageScriptManager {
 		
 			if (engine == null) {
 				engine = sem.getEngineByName("javascript");
-				File headFile = new File("script/h.js");
-				if (!headFile.exists()) {
-					return ;
-				}
 				try {
-					engine.eval(new FileReader(headFile));
-				} catch (FileNotFoundException e) {
-					ConsoleTextArea.AppendMessageOnCurrentConsole(e.getLocalizedMessage());
-				} catch (ScriptException e) {
+					engine.eval(new InputStreamReader(AbstractMessageScriptManager.class.getResourceAsStream("/nt/com/script/h.js")));
+				}catch (ScriptException e) {
 					ConsoleTextArea.AppendMessageOnCurrentConsole(e.getLocalizedMessage());
 				}
 			}

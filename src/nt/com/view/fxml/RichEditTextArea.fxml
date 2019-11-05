@@ -31,7 +31,7 @@
 						</graphic>
 					</MenuItem>
 					<SeparatorMenuItem />
-					<MenuItem fx:id="formatbtn" mnemonicParsing="false" onAction="#format" text="格式化文本">
+					<MenuItem fx:id="formatbtn"  mnemonicParsing="false" onAction="#format" text="格式化文本">
 						<graphic>
 							<ImageView fitHeight="15.0" fitWidth="15.0" pickOnBounds="true" preserveRatio="true">
 								<image>

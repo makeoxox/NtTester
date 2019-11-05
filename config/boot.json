@@ -1,13 +1,22 @@
 {
+	"lastOpenFilePath":"C:\\Users\\Administrator\\git\\NtTester\\workspace\\project-demo\\debug.xml",
 	"consoleFont":{
-		"size":20,
+		"size":14,
 		"family":"Consolas"
 	},
-	"lastOpenFilePath":"workspace\\demo\\debug.js",
 	"importDirectories":[],
+	"menu":{
+		"encode":"UTF-8",
+		"msg":"xml",
+		"protocol":"tcp",
+		"connect":"sync",
+		"mac":"nomac",
+		"script":"disable",
+		"multi":"single"
+	},
 	"version":"2.0.0",
 	"editFont":{
-		"size":17,
+		"size":14,
 		"family":"Consolas"
 	}
 }

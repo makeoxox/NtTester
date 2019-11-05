@@ -1,4 +1,4 @@
 # NtTester
-Nt接口测试器
+Nt�ӿڲ�����
 
-2.0版本，抛弃了1.0的swing，拥抱javaFX:)
+2.0�汾������Swing��ӵ��JavaFX:)

@@ -24,6 +24,15 @@
                         </ImageView>
                      </graphic></MenuItem>
               	  <SeparatorMenuItem /> 
+              	  <MenuItem fx:id="addtxtbtn" mnemonicParsing="false" onAction="#add" text="文本文件">
+                     <graphic>
+                        <ImageView fitHeight="15.0" fitWidth="15.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@../../../../res/txt.png" />
+                           </image>
+                        </ImageView>
+                     </graphic>
+                     </MenuItem>
                   <MenuItem fx:id="addxmlbtn" mnemonicParsing="false" onAction="#add" text="XML 文件">
                      <graphic>
                         <ImageView fitHeight="15.0" fitWidth="15.0" pickOnBounds="true" preserveRatio="true">

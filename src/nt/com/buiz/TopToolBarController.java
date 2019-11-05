@@ -80,7 +80,7 @@ public class TopToolBarController {
 	 */
 	@FXML
 	void importPackage(ActionEvent event) {
-		ImageView dirIcon = new ImageView(new Image(getClass().getResourceAsStream("/res/dir.png")));
+		ImageView dirIcon = new ImageView(new Image(getClass().getResourceAsStream("/res/import.gif")));
 		LeftTreeView ltv = (LeftTreeView) MainView.parent.lookup("#packagetree");
 		DirectoryChooser dirChooser = new DirectoryChooser();
 		dirChooser.setInitialDirectory(new File("workspace"));
@@ -134,14 +134,10 @@ public class TopToolBarController {
 		alert.setContentText("ÊÇ·ñ±£´æ "+fileAbsPath+"£¿");
 		Optional<ButtonType> result = alert.showAndWait();
 		TopMenuBar mb =(TopMenuBar)MainView.parent.lookup("#topmenubar");
-		Menu codeMenu = mb.getMenus().get(0);
-		RadioMenuItem rmi= (RadioMenuItem) codeMenu.getItems().get(0);
-		rmi =(RadioMenuItem) rmi.getToggleGroup().getSelectedToggle();
-		String code = rmi.getText();
 		if(result.get()==ButtonType.OK) {
 			File file = new File(fileAbsPath);
 			try {
-				BufferedWriter bw = new BufferedWriter(new OutputStreamWriter(new FileOutputStream(file,false),code));
+				BufferedWriter bw = new BufferedWriter(new OutputStreamWriter(new FileOutputStream(file,false),Config.getEncode()));
 				bw.write(content);
 				bw.flush();
 				bw.close();

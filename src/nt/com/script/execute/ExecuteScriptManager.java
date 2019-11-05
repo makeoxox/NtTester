@@ -1,9 +1,7 @@
 package nt.com.script.execute;
 
-import java.io.FileNotFoundException;
 
 import javax.script.Invocable;
-import javax.script.ScriptException;
 
 import nt.com.script.AbstractMessageScriptManager;
 

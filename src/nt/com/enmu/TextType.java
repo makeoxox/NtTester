@@ -10,5 +10,6 @@ public enum TextType{
 	JSON,
 	JAVA,
 	HTML,
+	TXT,
 	UNKNOW;
 }

@@ -59,7 +59,10 @@ public class LeftTreeViewController {
 
 	@FXML
 	private MenuItem addfoldbtn;
-
+	
+	@FXML
+	private MenuItem addtxtbtn;
+	
 	@FXML
 	private MenuItem addxmlbtn;
 
@@ -98,6 +101,10 @@ public class LeftTreeViewController {
 			icon= new ImageView(new Image(LeftTreeViewController.class.getResourceAsStream("/res/dir.png")));
 			dialog.setContentText("新建文件夹名：");
 			dialog.setTitle("新增文件夹");
+		}else if(clickedBtn==addtxtbtn) {
+			icon= new ImageView(new Image(LeftTreeViewController.class.getResourceAsStream("/res/file.png")));
+			dialog.setContentText("新建文本文件名：");
+			dialog.setTitle("新增文本文件");
 		}else if(clickedBtn==addjsbtn) {
 			icon= new ImageView(new Image(LeftTreeViewController.class.getResourceAsStream("/res/file.png")));
 			dialog.setContentText("新建js文件名：");
@@ -129,6 +136,7 @@ public class LeftTreeViewController {
 			TreeItem<FileTreeModel> root =ltv.getRoot();
 			File newfile = new File("workspace/"+result.get());
 			newfile.mkdir();
+			icon= new ImageView(new Image(LeftTreeViewController.class.getResourceAsStream("/res/import.gif")));
 			FileTreeModel newfileMod = new FileTreeModel(newfile.getName(), newfile.getAbsolutePath(), newfile);
 			TreeItem<FileTreeModel> newDirNode = new TreeItem<FileTreeModel>(newfileMod, icon);
 			root.getChildren().add(newDirNode);
@@ -141,6 +149,9 @@ public class LeftTreeViewController {
 				if(clickedBtn==addfoldbtn) {
 					newfile = new File(file.getAbsolutePath()+File.separator+result.get());
 					newfile.mkdir();
+				}else if(clickedBtn==addtxtbtn) {
+					newfile = new File(file.getAbsolutePath()+File.separator+result.get()+".txt");
+					newfile.createNewFile();
 				}else if(clickedBtn==addjsbtn) {
 					newfile = new File(file.getAbsolutePath()+File.separator+result.get()+".js");
 					newfile.createNewFile();
@@ -169,6 +180,9 @@ public class LeftTreeViewController {
 				if(clickedBtn==addfoldbtn) {
 					newfile = new File(file.getParentFile().getAbsolutePath()+File.separator+result.get());
 					newfile.mkdir();
+				}else if(clickedBtn==addtxtbtn) {
+					newfile = new File(file.getParentFile().getAbsolutePath()+File.separator+result.get()+".txt");
+					newfile.createNewFile();
 				}else if(clickedBtn==addjsbtn) {
 					newfile = new File(file.getParentFile().getAbsolutePath()+File.separator+result.get()+".js");
 					newfile.createNewFile();
@@ -237,6 +251,10 @@ public class LeftTreeViewController {
 				eta.setText(content,TextType.XML);
 			}else if(clickedBtn==addjsonbtn) {
 				eta.setText(content,TextType.JSON);
+			}else if(clickedBtn==addtxtbtn) {
+				eta.setText(content,TextType.TXT);
+			}else {
+				eta.setText(content,TextType.UNKNOW);
 			}
 			 VirtualizedScrollPane<RichEditTextArea> sp = new VirtualizedScrollPane<RichEditTextArea>(eta);
 			edittab.setContent(sp);
@@ -356,12 +374,19 @@ public class LeftTreeViewController {
 		TabPane mctp = (TabPane) MainView.parent.lookup("#consoletabpane");
 		String filepath = Config.getLastOpenFilePath();
 		File lastFile = new File(filepath);
-		File dir = new File("workspace");  
-		iteratorDir(dir.listFiles(), ltv.getRoot(),lastFile,ltv);  //加载工作空间内的文件夹
+		File dir = new File("workspace");
+		File [] dirs = dir.listFiles();
+		for(File project:dirs) {   //加载工作空间内的文件夹
+			ImageView dirIcon = new ImageView(new Image(LeftTreeViewController.class.getResourceAsStream("/res/import.gif")));
+			FileTreeModel fileMode = new FileTreeModel(project.getName(), project.getAbsolutePath(), project);
+			TreeItem<FileTreeModel> newDirNode = new TreeItem<FileTreeModel>(fileMode, dirIcon);
+			ltv.getRoot().getChildren().add(newDirNode);
+			iteratorDir(project.listFiles(), newDirNode,project,ltv);
+		}
 		List<String> externalDir = Config.getImportDirectories();  //加载外部文件夹
 		for(String exDirPath:externalDir) {  
 			File exDir = new File(exDirPath);
-			ImageView dirIcon = new ImageView(new Image(LeftTreeViewController.class.getResourceAsStream("/res/dir.png")));
+			ImageView dirIcon = new ImageView(new Image(LeftTreeViewController.class.getResourceAsStream("/res/import.gif")));
 			FileTreeModel fileMode = new FileTreeModel(exDir.getName(), exDir.getAbsolutePath(), exDir);
 			TreeItem<FileTreeModel> newDirNode = new TreeItem<FileTreeModel>(fileMode, dirIcon);
 			ltv.getRoot().getChildren().add(newDirNode);
@@ -409,15 +434,11 @@ public class LeftTreeViewController {
 						RichEditTextArea eta = new RichEditTextArea();
 						ConsoleTextArea cta = new ConsoleTextArea();
 						TopMenuBar mb = (TopMenuBar) MainView.parent.lookup("#topmenubar");
-						Menu codeMenu = mb.getMenus().get(0);
-						RadioMenuItem rmi = (RadioMenuItem) codeMenu.getItems().get(0);
-						rmi = (RadioMenuItem) rmi.getToggleGroup().getSelectedToggle();
-						String code = rmi.getText();
 						String line = "";
 						String content = "";
 						try {
 							BufferedReader br = new BufferedReader(
-									new InputStreamReader(new FileInputStream(file), code));
+									new InputStreamReader(new FileInputStream(file), Config.getEncode()));
 							while ((line = br.readLine()) != null) {
 								content += line + "\n";
 							}
@@ -468,14 +489,10 @@ public class LeftTreeViewController {
 		RichEditTextArea eta = new RichEditTextArea();
 		ConsoleTextArea cta = new ConsoleTextArea();
 		TopMenuBar mb = (TopMenuBar) MainView.parent.lookup("#topmenubar");
-		Menu codeMenu = mb.getMenus().get(0);
-		RadioMenuItem rmi = (RadioMenuItem) codeMenu.getItems().get(0);
-		rmi = (RadioMenuItem) rmi.getToggleGroup().getSelectedToggle();
-		String code = rmi.getText();
 		String line = "";
 		String content = "";
 		try {
-			BufferedReader br = new BufferedReader(new InputStreamReader(new FileInputStream(lastFile), code));
+			BufferedReader br = new BufferedReader(new InputStreamReader(new FileInputStream(lastFile), Config.getEncode()));
 			while ((line = br.readLine()) != null) {
 				content += line + "\n";
 			}

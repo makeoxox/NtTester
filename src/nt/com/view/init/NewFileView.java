@@ -43,7 +43,8 @@ public class NewFileView extends VBox {
 		NewFileListModel jsType = new NewFileListModel(" JavaScript 文件", "/res/js.png",FileType.JAVASCRIPT);
 		NewFileListModel xmlrType = new NewFileListModel(" XML 文件","/res/xml.png",FileType.XML);
 		NewFileListModel jsonType = new NewFileListModel(" Json 文件","/res/json.png",FileType.JSON);
-		ObservableList<NewFileListModel> modelList = FXCollections.observableArrayList(dirType, jsType, xmlrType,jsonType);
+		NewFileListModel txtType = new NewFileListModel("文本文件","/res/json.png",FileType.TXT);
+		ObservableList<NewFileListModel> modelList = FXCollections.observableArrayList(dirType,txtType, jsType, xmlrType,jsonType);
 		fileList.setItems(modelList);
 	}
 

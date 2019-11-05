@@ -3,12 +3,9 @@ package nt.com.config;
 import java.io.BufferedReader;
 import java.io.File;
 import java.io.FileInputStream;
-import java.io.FileNotFoundException;
 import java.io.FileOutputStream;
 import java.io.IOException;
-import java.io.InputStream;
 import java.io.InputStreamReader;
-import java.io.OutputStream;
 import java.io.OutputStreamWriter;
 import java.io.Writer;
 import java.util.List;
@@ -46,36 +43,6 @@ public class Config {
 		CONFIG = JSONObject.fromObject(content);
 	}
 
-	public static String getProp(String prop) {
-		try {
-			InputStream is = new FileInputStream(new File("config/msg.properties"));
-			PROPERTIES.load(is);
-			String value = PROPERTIES.getProperty(prop);
-			is.close();
-			return value;
-		} catch (IOException e) {
-			e.printStackTrace();
-		}
-		return null;
-
-	}
-
-	public static void setProp(String prop, String val) {
-
-		try {
-			InputStream is = new FileInputStream(new File("config/msg.properties"));
-			PROPERTIES.load(is);
-			OutputStream out = new FileOutputStream(new File("config/msg.properties"));
-			PROPERTIES.setProperty(prop, val);
-			PROPERTIES.store(out, null);
-		} catch (FileNotFoundException e) {
-			e.printStackTrace();
-		} catch (IOException e) {
-			e.printStackTrace();
-		}
-
-	}
-	
 	private static void WriteConfig(String jsonStr) {
 		jsonStr =JsonParser.convertFormatJsonStr(jsonStr);
 		Writer write;
@@ -88,7 +55,8 @@ public class Config {
 			e.printStackTrace();
 		}
 	}
-
+	
+	
 	public static String getLastOpenFilePath() {
 		return CONFIG.getString("lastOpenFilePath");
 	}
@@ -165,5 +133,95 @@ public class Config {
 		WriteConfig(jsonStr);
 	}
 	
+	public static String getEncode() {
+		JSONObject menu =JSONObject.fromObject(CONFIG.get("menu"));
+		return menu.get("encode").toString();
+	}
+	
+	public static void setEncode(String encode) {
+		JSONObject menu =JSONObject.fromObject(CONFIG.get("menu"));
+		menu.element("encode", encode);
+		CONFIG.element("menu", menu);
+		String jsonStr = CONFIG.toString();
+		WriteConfig(jsonStr);
+	}
+	
+	public static String getConnect() {
+		JSONObject menu =JSONObject.fromObject(CONFIG.get("menu"));
+		return menu.get("connect").toString();
+	}
+	
+	public static void setConnect(String connect) {
+		JSONObject menu =JSONObject.fromObject(CONFIG.get("menu"));
+		menu.element("connect", connect);
+		CONFIG.element("menu", menu);
+		String jsonStr = CONFIG.toString();
+		WriteConfig(jsonStr);
+	}
+	
+	public static String getProtocol() {
+		JSONObject menu =JSONObject.fromObject(CONFIG.get("menu"));
+		return menu.get("protocol").toString();
+	}
+	
+	public static void setProtocol(String protocol) {
+		JSONObject menu =JSONObject.fromObject(CONFIG.get("menu"));
+		menu.element("protocol", protocol);
+		CONFIG.element("menu", menu);
+		String jsonStr = CONFIG.toString();
+		WriteConfig(jsonStr);
+	}
+	
+	public static String getMac() {
+		JSONObject menu =JSONObject.fromObject(CONFIG.get("menu"));
+		return menu.get("mac").toString();
+	}
+	
+	public static void setMac(String mac) {
+		JSONObject menu =JSONObject.fromObject(CONFIG.get("menu"));
+		menu.element("mac", mac);
+		CONFIG.element("menu", menu);
+		String jsonStr = CONFIG.toString();
+		WriteConfig(jsonStr);
+	}
+	
+	public static String getMulti() {
+		JSONObject menu =JSONObject.fromObject(CONFIG.get("menu"));
+		return menu.get("multi").toString();
+	}
+	
+	public static void setMulti(String multi) {
+		JSONObject menu =JSONObject.fromObject(CONFIG.get("menu"));
+		menu.element("multi", multi);
+		CONFIG.element("menu", menu);
+		String jsonStr = CONFIG.toString();
+		WriteConfig(jsonStr);
+	}
+	
+	public static String getMsg() {
+		JSONObject menu =JSONObject.fromObject(CONFIG.get("menu"));
+		return menu.get("msg").toString();
+	}
+	
+	public static void setMsg(String msg) {
+		JSONObject menu =JSONObject.fromObject(CONFIG.get("menu"));
+		menu.element("msg", msg);
+		CONFIG.element("menu", menu);
+		String jsonStr = CONFIG.toString();
+		WriteConfig(jsonStr);
+	}
+	
+	public static String getScript() {
+		JSONObject menu =JSONObject.fromObject(CONFIG.get("menu"));
+		return menu.get("script").toString();
+	}
+	
+	public static void setScript(String script) {
+		JSONObject menu =JSONObject.fromObject(CONFIG.get("menu"));
+		menu.element("script", script);
+		CONFIG.element("menu", menu);
+		String jsonStr = CONFIG.toString();
+		WriteConfig(jsonStr);
+	}
 	
 }

@@ -8,6 +8,7 @@ import java.io.Writer;
 
 import org.fxmisc.flowless.VirtualizedScrollPane;
 
+
 import javafx.collections.ObservableList;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
@@ -74,6 +75,8 @@ public class NewFileViewController {
 		//判断新建文件类型
 		if(filetype==FileType.DIR) {
 			icon= new ImageView(new Image(LeftTreeViewController.class.getResourceAsStream("/res/dir.png")));
+		}else if(filetype==FileType.TXT) {
+			icon= new ImageView(new Image(LeftTreeViewController.class.getResourceAsStream("/res/file.png")));
 		}else if(filetype==FileType.JAVASCRIPT) {
 			icon= new ImageView(new Image(LeftTreeViewController.class.getResourceAsStream("/res/file.png")));
 		}else if(filetype==FileType.XML) {
@@ -95,6 +98,7 @@ public class NewFileViewController {
 			TreeItem<FileTreeModel> root =ltv.getRoot();
 			File newfile = new File("workspace/"+newFileName);
 			newfile.mkdir();
+			icon= new ImageView(new Image(LeftTreeViewController.class.getResourceAsStream("/res/import.gif")));
 			FileTreeModel newfileMod = new FileTreeModel(newfile.getName(), newfile.getAbsolutePath(), newfile);
 			TreeItem<FileTreeModel> newDirNode = new TreeItem<FileTreeModel>(newfileMod, icon);
 			root.getChildren().add(newDirNode);
@@ -107,6 +111,9 @@ public class NewFileViewController {
 				if(filetype==FileType.DIR) {
 					newfile = new File(file.getAbsolutePath()+File.separator+newFileName);
 					newfile.mkdir();
+				}else if(filetype==FileType.TXT) {
+					newfile = new File(file.getAbsolutePath()+File.separator+newFileName+".txt");
+					newfile.createNewFile();
 				}else if(filetype==FileType.JAVASCRIPT) {
 					newfile = new File(file.getAbsolutePath()+File.separator+newFileName+".js");
 					newfile.createNewFile();
@@ -135,6 +142,9 @@ public class NewFileViewController {
 				if(filetype==FileType.DIR) {
 					newfile = new File(file.getParentFile().getAbsolutePath()+File.separator+newFileName);
 					newfile.mkdir();
+				}else if(filetype==FileType.TXT) {
+					newfile = new File(file.getParentFile().getAbsolutePath()+File.separator+newFileName+".txt");
+					newfile.createNewFile();
 				}else if(filetype==FileType.JAVASCRIPT) {
 					newfile = new File(file.getParentFile().getAbsolutePath()+File.separator+newFileName+".js");
 					newfile.createNewFile();
@@ -203,6 +213,10 @@ public class NewFileViewController {
 				 eta.setText(content,TextType.XML);
 			}else if(filetype==FileType.JSON) {
 				eta.setText(content,TextType.JSON);
+			}else if(filetype==FileType.TXT) {
+				eta.setText(content,TextType.TXT);
+			}else {
+				eta.setText(content,TextType.UNKNOW);
 			}
 			 VirtualizedScrollPane<RichEditTextArea> sp = new VirtualizedScrollPane<RichEditTextArea>(eta);
 			edittab.setContent(sp);
@@ -217,7 +231,6 @@ public class NewFileViewController {
 	void cancel(ActionEvent event) {
 		Stage stage =(Stage) newfileview.getScene().getWindow();
 		stage.close();
-		
 	}
 }
 

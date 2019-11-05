@@ -11,6 +11,7 @@ import javafx.scene.control.Label;
 import javafx.scene.control.ListView;
 import javafx.scene.image.Image;
 import javafx.scene.layout.VBox;
+import javafx.scene.text.Font;
 import javafx.stage.Stage;
 import nt.com.config.Config;
 import nt.com.model.FontFamilyModel;
@@ -45,9 +46,15 @@ public class FontChooser extends VBox{
 		GraphicsEnvironment e = GraphicsEnvironment.getLocalGraphicsEnvironment();
 	    String[] fontNames = e.getAvailableFontFamilyNames();
 	    FontFamilyModel selectFmaily=null;
+	    Font currfont = null;
+	    if(areaType.equals("Edit")) {
+	    	currfont = Config.getEditFont();
+	    }else {
+	    	currfont =Config.getConsoleFont();
+	    }
 	    for(String family:fontNames) {
 	    	FontFamilyModel addFmaily = new FontFamilyModel(family);
-	    	if(family.toUpperCase().equals(Config.getEditFont().getFamily().toUpperCase())) {
+	    	if(family.toUpperCase().equals(currfont.getFamily().toUpperCase())) {
 	    		selectFmaily=addFmaily;
 	    	}
 	    	ffmlist.add(addFmaily);
@@ -59,7 +66,7 @@ public class FontChooser extends VBox{
 		FontSizeModel selectSize =null;
 		for(int i =1;i<36;i++) {
 			FontSizeModel addSize=new FontSizeModel(i);
-			if(i==(int)Config.getEditFont().getSize()) {
+			if(i==(int)currfont.getSize()) {
 				selectSize=addSize;
 			}
 			fsmlist.add(addSize);

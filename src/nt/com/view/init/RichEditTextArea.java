@@ -26,6 +26,8 @@ import nt.com.enmu.TextType;
  */
 public class RichEditTextArea extends CodeArea {
 	
+	private TextType type;
+	
 	public RichEditTextArea() {
 		
 		FXMLLoader fxmlLoader = new FXMLLoader(getClass().getResource("/nt/com/view/fxml/RichEditTextArea.fxml"));
@@ -89,6 +91,7 @@ public class RichEditTextArea extends CodeArea {
 	public void setText(String text,TextType type) {
 		this.setParagraphGraphicFactory(LineNumberFactory.get(this));
         final Pattern whiteSpace = Pattern.compile( "^\\s+" );
+        this.type=type;
         switch(type) {
 	        case JAVASCRIPT:
 	        	  this.multiPlainChanges().successionEnds(Duration.ofMillis(500)).subscribe(ignore -> this.setStyleSpans(0, computeJSHighlighting(this.getText())));
@@ -130,6 +133,11 @@ public class RichEditTextArea extends CodeArea {
 				break;
         }
 	}
+	
+	public TextType getTextType() {
+		return this.type;
+	}
+	
 	
 	//º∆À„js∏ﬂ¡¡
 	 private static StyleSpans<Collection<String>> computeJSHighlighting(String text) {

@@ -4,6 +4,7 @@ load("nashorn:mozilla_compat.js");
 importPackage("nt.com.script")
 importPackage("nt.com.util")
 importPackage("nt.com.view.init")
+importPackage("nt.com.script");
 importPackage("org.apache.commons.dbcp");
 importPackage("org.springframework.jdbc.core");
 importPackage("java.lang");
@@ -12,36 +13,61 @@ importPackage("java.util.concurrent")
 importPackage("javax.sql");
 importPackage("java.net");
 importPackage("java.io");
+importPackage("nt.com.view.init");
+importPackage("javafx.application");
 
 
- //打印对象
-var $Ptr = {
-		println : function(content){
-			ConsoleTextArea.AppendMessageOnCurrentConsole(content);
-		},
-		print : function(content){
-			ConsoleTextArea.PrintMessageOnCurrentConsole(content);
-		}
+// 异步对象
+var $Asyn = {
+	run : function(func){
+		new Thread(new Runnable(){
+			run : function(){
+				func();
+			}
+		}).start();
+	}
 }
 
- 
- //网络对象
+// 打印对象
+var $Ptr = {
+	println : function(content){
+		ConsoleTextArea.AppendMessageOnCurrentConsole(content);
+	},
+	print : function(content){
+		ConsoleTextArea.PrintMessageOnCurrentConsole(content);
+	}
+}
+
+// 网络对象
 
 
- //数据库对象
+// 数据库对象
  var $Db = {
 	 jdbc : null,
 	 connect : function(url,driver,username,password){
-			var prop = new Properties();
-			prop.setProperty("url", url);
-			prop.setProperty("driverClassName", driver);
-			prop.setProperty("username", username);
-			prop.setProperty("password", password);
-			var bs = BasicDataSourceFactory.createDataSource(prop);
-			this.jdbc =new JdbcTemplate(bs);
+		 try{
+			 var prop = new Properties();
+				prop.setProperty("url", url);
+				prop.setProperty("driverClassName", driver);
+				prop.setProperty("username", username);
+				prop.setProperty("password", password);
+				var bs = BasicDataSourceFactory.createDataSource(prop);
+				this.jdbc =new JdbcTemplate(bs);
+		 }catch(e){
+			 ConsoleTextArea.AppendMessageOnCurrentConsole(e)
+		 }
+			
 	},
 	query : function (sql,success){
-			var list =this.jdbc.queryForList(sql);
+		 if(this.jdbc==null){
+			 ConsoleTextArea.AppendMessageOnCurrentConsole("未连接数据库");
+			 return null;
+		 }
+		 try{
+			 	var list =this.jdbc.queryForList(sql);
+			 }catch(e){
+				 ConsoleTextArea.AppendMessageOnCurrentConsole(e)
+			 }
 			var josnStr= JsonParser.arrayStringify(list)
 			var nativeArray = JSON.parse(josnStr)
 			if(success!=null){
@@ -50,14 +76,39 @@ var $Ptr = {
 			return nativeArray;
 	},
 	execute : function (sql){
-			return this.jdbc.update(sql);	 
+		if(this.jdbc==null){
+			 ConsoleTextArea.AppendMessageOnCurrentConsole("未连接数据库")
+			 return;
+		 }
+		 try{
+			    this.jdbc.update(sql);	
+			}catch(e){
+				ConsoleTextArea.AppendMessageOnCurrentConsole(e)
+			}
+			 
 	} 
  }
 	
- //UI组件对象
+ // 数据展现对象
+var $Control={
+	 Table  : function(title,data){
+		Platform.runLater(new Runnable() {
+		    run : function(){
+		    	
+		    }
+		});
+	},
+	List : function(title,data){
+		Platform.runLater(new Runnable() {
+		    run : function(){
+		    	
+		    }
+		});
+	}
+}
  
  
- //Json对象
+ // Json对象
  var $Json = {
 	 parse:function(jsonStr){
 		return JSON.parse(jsonStr) ;
@@ -73,7 +124,7 @@ var $Ptr = {
 	 }
  }
  
- //文件操作类
+ // 文件操作类
  var $File = function(path){
 	 
 	 this.file=new File(path);

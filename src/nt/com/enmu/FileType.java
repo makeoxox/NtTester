@@ -8,5 +8,8 @@ public enum FileType {
 	DIR, 
 	XML, 
 	JAVASCRIPT,
-	JSON;
+	JSON,
+	HTML,
+	TXT,
+	UNKNOW;
 }

@@ -2,16 +2,15 @@ package nt.com.buiz;
 
 import java.io.BufferedWriter;
 import java.io.File;
-import java.io.FileNotFoundException;
 import java.io.FileOutputStream;
 import java.io.IOException;
 import java.io.OutputStreamWriter;
 import java.io.UnsupportedEncodingException;
 import java.util.Optional;
 
+import org.dom4j.Document;
 import org.fxmisc.flowless.VirtualizedScrollPane;
 
-import javafx.collections.ObservableList;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.scene.control.Alert;
@@ -28,7 +27,10 @@ import javafx.scene.image.Image;
 import javafx.stage.Stage;
 import nt.com.config.Config;
 import nt.com.enmu.TextType;
+import nt.com.util.JsonParser;
 import nt.com.util.Utils;
+import nt.com.util.XmlParser;
+import nt.com.view.init.ConsoleTextArea;
 import nt.com.view.init.FontChooser;
 import nt.com.view.init.MainView;
 import nt.com.view.init.RichEditTextArea;
@@ -60,17 +62,50 @@ public class RichEditTextAreaController {
 
 	@FXML
 	private MenuItem debugbtn;
-
+	
+	/**
+	 * 格式化文本
+	 * 
+	 */
+	@SuppressWarnings("unchecked")
 	@FXML
 	void format(ActionEvent event) {
-
+		TabPane metp = (TabPane) MainView.parent.lookup("#edittabpane");
+		Tab tab =metp.getSelectionModel().getSelectedItem();
+		VirtualizedScrollPane<RichEditTextArea> vp =   (VirtualizedScrollPane<RichEditTextArea>) tab.getContent();
+		RichEditTextArea rta= (RichEditTextArea) vp.getContent();
+		TextType tt = rta.getTextType();
+		String text =rta.getText();
+		if(tt==TextType.JSON) {
+			try {
+				text = JsonParser.convertFormatJsonStr(text);
+				rta.clear();
+				rta.setText(text, TextType.JSON);
+			}catch(Exception e) {
+				ConsoleTextArea.AppendMessageOnCurrentConsole(e.getLocalizedMessage());
+			}
+		}else if(tt==TextType.XML) {
+			try {
+				Document xmldoc=XmlParser.getDocByString(text, Config.getEncode());
+				text=XmlParser.convertFormatXMLStr(xmldoc, Config.getEncode());
+				rta.clear();
+				rta.setText(text, TextType.XML);
+			}catch(Exception e) {
+				ConsoleTextArea.AppendMessageOnCurrentConsole(e.getLocalizedMessage());
+			}
+		}
+		
 	}
 
 	@FXML
 	void run(ActionEvent event) {
 
 	}
-
+	
+	/**
+	 * 保存
+	 *
+	 */
 	@SuppressWarnings("unchecked")
 	@FXML
 	void save(ActionEvent event) {
@@ -109,12 +144,20 @@ public class RichEditTextAreaController {
 			}
 		}
 	}
-
+	
+	/**
+	 * 文本设置
+	 *
+	 */
 	@FXML
 	void textset(ActionEvent event) {
 		new FontChooser("Edit");
 	}
-
+	
+	/**
+	 * 调试脚本
+	 *
+	 */
 	@FXML
 	void debug(ActionEvent event) {
 		TabPane metp = (TabPane) MainView.parent.lookup("#edittabpane");
@@ -148,5 +191,5 @@ public class RichEditTextAreaController {
 			}
 		}
 	}
-
+	
 }

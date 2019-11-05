@@ -3,6 +3,7 @@ package nt.com.buiz;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.scene.control.*;
+import nt.com.config.Config;
 import nt.com.view.init.MainView;
 
 /**
@@ -118,8 +119,10 @@ public class TopMenuBarController {
 		Label codelabel =(Label)(MainView.parent.lookup("#codeLabel"));
 		if (code.equals("GBK")) {
 			codelabel.setText("编码方式：GBK");
+			Config.setEncode("GBK");
 		} else if (code.equals("UTF-8")) {
 			codelabel.setText("编码方式：UTF-8");
+			Config.setEncode("UTF-8");
 		}
 	}
 	
@@ -133,8 +136,10 @@ public class TopMenuBarController {
 		Label connectLabel =(Label)(MainView.parent.lookup("#connectLabel"));
 		if (connect.equals("同步连接")) {
 			connectLabel.setText("通讯方式：同步连接");
+			Config.setConnect("sync");
 		} else if (connect.equals("异步连接")) {
 			connectLabel.setText("通讯方式：异步连接");
+			Config.setConnect("asyn");
 		}
 	}
 	
@@ -148,10 +153,13 @@ public class TopMenuBarController {
 		Label protocolLabel =(Label)(MainView.parent.lookup("#protocolLabel"));
 		if (protocol.equals("TCP")) {
 			protocolLabel.setText("请求协议：TCP");
+			Config.setProtocol("tcp");
 		} else if (protocol.equals("UDP")) {
 			protocolLabel.setText("请求协议：UDP");
+			Config.setProtocol("udp");
 		} else if (protocol.equals("HTTP")) {
 			protocolLabel.setText("请求协议：HTTP");
+			Config.setProtocol("http");
 		}
 	}
 	
@@ -165,10 +173,13 @@ public class TopMenuBarController {
 		Label msgLabel =(Label)(MainView.parent.lookup("#msgLabel"));
 		if (msg.equals("XML")) {
 			msgLabel.setText("报文类型：XML");
+			Config.setMsg("xml");
 		} else if (msg.equals("文本")) {
 			msgLabel.setText("报文类型：文本");
+			Config.setMsg("txt");
 		}else if (msg.equals("JSON")) {
 			msgLabel.setText("报文类型：JSON");
+			Config.setMsg("json");
 		}
 	}
 	
@@ -182,10 +193,13 @@ public class TopMenuBarController {
 		Label multiLabel =(Label)(MainView.parent.lookup("#multiLabel"));
 		if (multi.equals("单发无阻塞")) {
 			multiLabel.setText("并发类型：单发无阻塞");
+			Config.setMulti("single");
 		} else if (multi.equals("并发无阻塞")) {
 			multiLabel.setText("并发类型：并发无阻塞");
+			Config.setMulti("multiN");
 		} else if (multi.equals("并发有阻塞")) {
 			multiLabel.setText("并发类型：并发有阻塞");
+			Config.setMulti("multiB");
 		}
 	}
 	
@@ -199,10 +213,13 @@ public class TopMenuBarController {
 		Label macLabel =(Label)(MainView.parent.lookup("#macLabel"));
 		if (mac.equals("无密")) {
 			macLabel.setText("加密算法：无密");
+			Config.setMac("nomac");
 		} else if (mac.equals("3DES")) {
 			macLabel.setText("加密算法：3DES");
+			Config.setMac("3des");
 		} else if (mac.equals("SM4")) {
 			macLabel.setText("加密算法：SM4");
+			Config.setMac("sm4");
 		}
 	}
 	
@@ -216,8 +233,10 @@ public class TopMenuBarController {
 		Label scriptLabel =(Label)(MainView.parent.lookup("#scriptLabel"));
 		if (script.equals("启用")) {
 			scriptLabel.setText("脚本：启用");
+			Config.setScript("enable");
 		} else if (script.equals("禁用")) {
 			scriptLabel.setText("脚本：禁用");
+			Config.setScript("disable");
 		}
 	}
 

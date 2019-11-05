@@ -11,7 +11,7 @@
         <menus>
           <Menu  fx:id="codeMenu" mnemonicParsing="false" text="编码类型">
             <items>
-                  <RadioMenuItem fx:id="gbkMenuItem" mnemonicParsing="false" selected="true"  onAction="#codeSelected"  text="GBK">
+                  <RadioMenuItem fx:id="gbkMenuItem" mnemonicParsing="false"  onAction="#codeSelected"  text="GBK">
                      <toggleGroup>
                         <ToggleGroup fx:id="CodeGroup" />
                      </toggleGroup>
@@ -21,7 +21,7 @@
           </Menu>
           <Menu fx:id="connectMenu" mnemonicParsing="false" text="通讯方式">
             <items>
-                  <RadioMenuItem fx:id="syncMenuItem" mnemonicParsing="false" onAction="#connectSelected" selected="true" text="同步连接">
+                  <RadioMenuItem fx:id="syncMenuItem" mnemonicParsing="false" onAction="#connectSelected" text="同步连接">
                      <toggleGroup>
                         <ToggleGroup fx:id="AsynGroup" />
                      </toggleGroup>
@@ -31,7 +31,7 @@
           </Menu>
           <Menu fx:id="protocolMenu" mnemonicParsing="false"  text="请求协议">
             <items>
-                  <RadioMenuItem fx:id="tcpMenuItem" mnemonicParsing="false" selected="true" onAction="#protocolSelected" text="TCP">
+                  <RadioMenuItem fx:id="tcpMenuItem" mnemonicParsing="false" onAction="#protocolSelected" text="TCP">
                      <toggleGroup>
                         <ToggleGroup fx:id="ProtocolGroup" />
                      </toggleGroup>
@@ -42,7 +42,7 @@
           </Menu>
             <Menu fx:id="macMenu" mnemonicParsing="false"  text="加密算法">
                <items>
-                  <RadioMenuItem fx:id="nomacMenuItem" mnemonicParsing="false" onAction="#macSelected" selected="true" text="无密">
+                  <RadioMenuItem fx:id="nomacMenuItem" mnemonicParsing="false" onAction="#macSelected"  text="无密">
                      <toggleGroup>
                         <ToggleGroup fx:id="MacGroup" />
                      </toggleGroup>
@@ -53,7 +53,7 @@
             </Menu>
             <Menu fx:id="multiMenu" mnemonicParsing="false"  text="并发类型">
                <items>
-                  <RadioMenuItem fx:id="singleMenuItem" mnemonicParsing="false" onAction="#multiSelected"  selected="true" text="单发无阻塞">
+                  <RadioMenuItem fx:id="singleMenuItem" mnemonicParsing="false" onAction="#multiSelected"  text="单发无阻塞">
                      <toggleGroup>
                         <ToggleGroup fx:id="MultiGroup" />
                      </toggleGroup>
@@ -64,7 +64,7 @@
             </Menu>
             <Menu fx:id="MsgMenu" mnemonicParsing="false"   text="报文类型">
                <items>
-                  <RadioMenuItem mnemonicParsing="false" selected="true" onAction="#msgSelected" text="XML" fx:id="xmlMenuItem">
+                  <RadioMenuItem mnemonicParsing="false"  onAction="#msgSelected" text="XML" fx:id="xmlMenuItem">
                      <toggleGroup>
                         <ToggleGroup fx:id="MsgGroup" />
                      </toggleGroup>
@@ -75,7 +75,7 @@
             </Menu>
             <Menu fx:id="scriptMenu" mnemonicParsing="false" text="执行脚本">
                <items>
-                  <RadioMenuItem fx:id="disMenuItem" mnemonicParsing="false" onAction="#scriptSelected" selected="true" text="禁用">
+                  <RadioMenuItem fx:id="disMenuItem" mnemonicParsing="false" onAction="#scriptSelected"  text="禁用">
                      <toggleGroup>
                         <ToggleGroup fx:id="ScriptGroup" />
                      </toggleGroup>
