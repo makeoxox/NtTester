@@ -34,11 +34,14 @@ import nt.com.enmu.TextType;
 import nt.com.model.FileTreeModel;
 import nt.com.util.Utils;
 import nt.com.view.init.ConsoleTextArea;
+import nt.com.view.init.HttpMsgSettingView;
 import nt.com.view.init.LeftTreeView;
 import nt.com.view.init.MainView;
+import nt.com.view.init.MultiXMLView;
 import nt.com.view.init.NewFileView;
 import nt.com.view.init.RichEditTextArea;
 import nt.com.view.init.ScriptDebugDialog;
+import nt.com.view.init.TcpMsgSettingView;
 import nt.com.view.init.TopMenuBar;
 
 /**
@@ -211,4 +214,30 @@ public class TopToolBarController {
 		cta.setText(dateStr);
 	}
 	
+	/**
+	 * 报文设置
+	 */
+	@FXML
+	void msgset(ActionEvent event) {
+		String protocol= Config.getProtocol();
+		if(protocol.equals("tcp")) {
+			 new TcpMsgSettingView();
+		}else if(protocol.equals("http")) {
+			new HttpMsgSettingView();
+		}else if(protocol.equals("udp")) {
+			
+		}
+	}
+	
+	/**
+	 * 并发设置
+	 * 
+	 */
+	@FXML
+	void multiset(ActionEvent event) {
+		String msg = Config.getMsg();
+		if(msg.equals("xml")) {
+			 new MultiXMLView();
+		}
+	}
 }

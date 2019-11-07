@@ -35,7 +35,7 @@ public class FontChooser extends VBox{
 		Stage stage = new Stage();
 		Scene scene = new Scene(this);
 		stage.setScene(scene);
-		stage.setTitle("选择字体");
+		stage.setTitle("选择字体 - "+areaType);
 		stage.setResizable(false);
 		stage.getIcons().add(new Image(getClass().getResourceAsStream("/res/title.png")));
 		stage.show();

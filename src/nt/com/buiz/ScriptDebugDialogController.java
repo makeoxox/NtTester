@@ -1,12 +1,9 @@
 package nt.com.buiz;
 
-import java.util.concurrent.Callable;
 import java.util.concurrent.ExecutionException;
-import java.util.concurrent.FutureTask;
 import java.util.concurrent.TimeUnit;
 import java.util.concurrent.TimeoutException;
-
-
+import javafx.concurrent.Task;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.scene.control.Button;
@@ -53,9 +50,9 @@ public class ScriptDebugDialogController {
     	Button scriptBtn = (Button) ttb.getItems().get(5);
     	Stage stage = (Stage)scriptdebugdialog.getScene().getWindow();
     	stage.close();
-    	FutureTask<Object> task = null;
+		Task<Object> task = null;
 		try {
-			task = new FutureTask<Object>(new Callable<Object>() {
+			task = new Task<Object>() {
 				@Override
 				public Object call() {
 					scriptBtn.setDisable(true);
@@ -66,7 +63,7 @@ public class ScriptDebugDialogController {
 						return dsm.invoke(arg);
 					}
 				}
-			});
+			};
 			new Thread(task).start();
 			if (timeout.trim() == null || timeout.trim().equals("") || timeout.trim().equals("0")) {
 				task.get();

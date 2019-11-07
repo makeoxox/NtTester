@@ -1,8 +1,6 @@
 package nt.com.view.init;
 
 import java.io.IOException;
-
-
 import javafx.collections.ObservableList;
 import javafx.fxml.FXMLLoader;
 import javafx.scene.control.Menu;

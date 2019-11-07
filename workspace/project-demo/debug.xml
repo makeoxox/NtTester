@@ -4,6 +4,7 @@
         <!--定时处理银联返回文件-->  
         <job-name>UionPayResponseBatch</job-name>  
         <job-class>com.nantian.mmp.batch.UionPayResponseBatch</job-class>  
+        <!-- <cron-expression>0 30 0,9,15,16 * * ?</cron-expression> -->  
         <cron-expression>0 0/5 * * * ?</cron-expression>  
         <job-paras/> 
     </job>  
@@ -12,12 +13,14 @@
         <job-name>UionPayUploadBatch</job-name>  
         <job-class>com.nantian.mmp.batch.UionPayUploadBatch</job-class>  
         <cron-expression>0 0/5 * * * ?</cron-expression>  
+        <!-- <cron-expression>0 27 8,9,10,11,12,13,14,15,16,17,18 * * ?</cron-expression>  -->  
         <job-paras/> 
     </job>  
     <job> 
         <!--重置上传流水号-->  
         <job-name>SeqResetBatch</job-name>  
         <job-class>com.nantian.mmp.batch.SeqResetBatch</job-class>  
+        <!-- <cron-expression>0 30 0,9,15,16 * * ?</cron-expression> -->  
         <cron-expression>0 0 0 * * ?</cron-expression>  
         <job-paras/> 
     </job>  
@@ -25,6 +28,7 @@
         <!-- 高速存取款一体机设备变更发送到电子渠道-->  
         <job-name>DevElectricUpToPreBatch</job-name>  
         <job-class>com.nantian.mmp.batch.DevElectricUpToPreBatch</job-class>  
+        <!-- <cron-expression>0 30 0,9,15,16 * * ?</cron-expression> -->  
         <cron-expression>0 51 11 * * ?</cron-expression>  
         <job-paras/> 
     </job>  
@@ -32,6 +36,7 @@
         <!-- 设备变更提交到前置 -->  
         <job-name>DevLogUploadToPreBatch</job-name>  
         <job-class>com.nantian.mmp.batch.DevLogUploadToPreBatch</job-class>  
+        <!-- <cron-expression>0 30 0,9,15,16 * * ?</cron-expression>-->  
         <cron-expression>0 32 0,8,9,10,11,12,13,14,15,16 * * ?</cron-expression>  
         <job-paras/> 
     </job>  
@@ -83,6 +88,7 @@
         <job-name>moveTable_T_tranrec</job-name>  
         <job-class>com.nantian.mmp.batch.SystemClean</job-class>  
         <cron-expression>30 04 0 * * ?</cron-expression>  
+        <!--<cron-expression>0 0/5 * * * ?</cron-expression>从整点开始每隔5分钟测试  -->  
         <job-paras>deletename=moveTable_T_tranrec;para1=-1</job-paras> 
     </job>  
     <job> 

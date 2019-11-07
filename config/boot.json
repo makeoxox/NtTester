@@ -5,18 +5,32 @@
 		"family":"Consolas"
 	},
 	"importDirectories":[],
+	"httpSetting":{
+		"requesttype":"post",
+		"url":"http://127.0.0.1:8000",
+		"contenttype":"text/plain"
+	},
+	"tcpSetting":{
+		"lengthtype":"byte",
+		"fixlength":"8",
+		"offset":"8",
+		"fixtype":"right",
+		"port":"9001",
+		"ip":"127.0.0.1",
+		"fixchar":"0"
+	},
 	"menu":{
 		"encode":"GBK",
 		"msg":"xml",
 		"protocol":"tcp",
-		"connect":"sync",
+		"connect":"asyn",
 		"mac":"nomac",
 		"script":"disable",
 		"multi":"single"
 	},
 	"version":"2.0.0",
 	"editFont":{
-		"size":14,
+		"size":15,
 		"family":"Consolas"
 	}
 }
