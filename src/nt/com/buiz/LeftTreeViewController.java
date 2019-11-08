@@ -41,7 +41,6 @@ import nt.com.view.init.ConsoleTextArea;
 import nt.com.view.init.LeftTreeView;
 import nt.com.view.init.MainView;
 import nt.com.view.init.RichEditTextArea;
-import nt.com.view.init.TopMenuBar;
 
 /**
  * 左边文件树事件控制器
@@ -55,6 +54,9 @@ public class LeftTreeViewController {
 
 	@FXML
 	private Menu lefttreeadd;
+	
+	@FXML
+	private MenuItem addprojectbtn;
 
 	@FXML
 	private MenuItem addfoldbtn;
@@ -96,7 +98,11 @@ public class LeftTreeViewController {
 		dialog.setHeaderText(null);
 		ImageView icon=null;
 		MenuItem clickedBtn =(MenuItem) event.getTarget(); //判断新建文件类型
-		if(clickedBtn==addfoldbtn) {
+		if(clickedBtn==addprojectbtn) {
+			icon= new ImageView(new Image(LeftTreeViewController.class.getResourceAsStream("/res/import.gif")));
+			dialog.setContentText("新建文件夹名：");
+			dialog.setTitle("新增文件夹");
+		}else if(clickedBtn==addfoldbtn) {
 			icon= new ImageView(new Image(LeftTreeViewController.class.getResourceAsStream("/res/dir.png")));
 			dialog.setContentText("新建文件夹名：");
 			dialog.setTitle("新增文件夹");
@@ -122,13 +128,13 @@ public class LeftTreeViewController {
 		   return;
 		} 
 		if(item==null) {  //右键没选中treeitem就默认为从根节点新建
-			if(clickedBtn!=addfoldbtn) {  //根节点不支持创建文件，只建文件夹
+			if(clickedBtn!=addprojectbtn) {  //根节点不支持创建文件，只建文件夹
 				Alert alert = new Alert(AlertType.WARNING);
 				Stage alertStage =(Stage) alert.getDialogPane().getScene().getWindow();
 				alertStage.getIcons().add(new Image(getClass().getResourceAsStream("/res/title.png")));
 				alert.setTitle("提醒");
 				alert.setHeaderText(null);
-				alert.setContentText("根目录只能创建文件夹！");
+				alert.setContentText("根目录只能创建项目！");
 				alert.showAndWait();
 				return;
 			}
@@ -139,7 +145,17 @@ public class LeftTreeViewController {
 			FileTreeModel newfileMod = new FileTreeModel(newfile.getName(), newfile.getAbsolutePath(), newfile);
 			TreeItem<FileTreeModel> newDirNode = new TreeItem<FileTreeModel>(newfileMod, icon);
 			root.getChildren().add(newDirNode);
-		}else { 
+		}else {
+			if(clickedBtn==addprojectbtn) {
+				Alert alert = new Alert(AlertType.WARNING);
+				Stage alertStage =(Stage) alert.getDialogPane().getScene().getWindow();
+				alertStage.getIcons().add(new Image(getClass().getResourceAsStream("/res/title.png")));
+				alert.setTitle("提醒");
+				alert.setHeaderText(null);
+				alert.setContentText("项目只能在根文件夹创建！");
+				alert.showAndWait();
+				return;
+			}
 			File file=item.getValue().getFile();
 			File newfile=null;
 			Writer write=null;
@@ -208,7 +224,7 @@ public class LeftTreeViewController {
 				ltv.getSelectionModel().select(newDirNode);
 			}
 			//如果是新建文件则打开文件
-			if(clickedBtn==addfoldbtn) {
+			if(clickedBtn==addfoldbtn || clickedBtn==addprojectbtn) {
 				return;
 			}
 			TabPane metp = (TabPane) MainView.parent.lookup("#edittabpane");
@@ -432,7 +448,6 @@ public class LeftTreeViewController {
 						mctp.getSelectionModel().select(consoletab);
 						RichEditTextArea eta = new RichEditTextArea();
 						ConsoleTextArea cta = new ConsoleTextArea();
-						TopMenuBar mb = (TopMenuBar) MainView.parent.lookup("#topmenubar");
 						String line = "";
 						String content = "";
 						try {
@@ -487,7 +502,6 @@ public class LeftTreeViewController {
 		mctp.getSelectionModel().select(consoletab);
 		RichEditTextArea eta = new RichEditTextArea();
 		ConsoleTextArea cta = new ConsoleTextArea();
-		TopMenuBar mb = (TopMenuBar) MainView.parent.lookup("#topmenubar");
 		String line = "";
 		String content = "";
 		try {

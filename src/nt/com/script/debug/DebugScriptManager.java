@@ -4,6 +4,7 @@ package nt.com.script.debug;
 import javax.script.Invocable;
 
 import nt.com.script.AbstractMessageScriptManager;
+import nt.com.view.init.ConsoleTextArea;
 
 public class DebugScriptManager extends AbstractMessageScriptManager {
 	
@@ -20,7 +21,7 @@ public class DebugScriptManager extends AbstractMessageScriptManager {
 			DebugScript ds =iv.getInterface(DebugScript.class);
 			return ds.main(arg);
 		}catch (Exception e) {
-			e.printStackTrace();
+			ConsoleTextArea.AppendMessageOnCurrentConsole(e.getLocalizedMessage());
 		}
 		return null;
 	}

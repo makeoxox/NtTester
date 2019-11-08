@@ -56,12 +56,17 @@ public class ScriptDebugDialogController {
 				@Override
 				public Object call() {
 					scriptBtn.setDisable(true);
-					DebugScriptManager dsm = new DebugScriptManager(path.trim());
-					if (arg == null || arg.equals("")) {
-						return dsm.invoke(null);
-					} else {
-						return dsm.invoke(arg);
+					try {
+						DebugScriptManager dsm = new DebugScriptManager(path.trim());
+						if (arg == null || arg.equals("")) {
+							return dsm.invoke(null);
+						} else {
+							return dsm.invoke(arg);
+						}
+					}catch(Exception e) {
+						ConsoleTextArea.AppendMessageOnCurrentConsole(e.getLocalizedMessage());
 					}
+					return null;
 				}
 			};
 			new Thread(task).start();
@@ -70,7 +75,7 @@ public class ScriptDebugDialogController {
 			} else {
 				task.get(Integer.parseInt(timeout), TimeUnit.MILLISECONDS);
 			}
-		} catch (InterruptedException e1) {
+		}  catch (InterruptedException e1) {
 			ConsoleTextArea.AppendMessageOnCurrentConsole(e1.getLocalizedMessage());
 		} catch (ExecutionException e1) {
 			ConsoleTextArea.AppendMessageOnCurrentConsole(e1.getLocalizedMessage());

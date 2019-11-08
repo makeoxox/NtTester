@@ -19,8 +19,6 @@ import javafx.scene.control.Alert;
 import javafx.scene.control.Alert.AlertType;
 import javafx.scene.control.Button;
 import javafx.scene.control.ButtonType;
-import javafx.scene.control.Menu;
-import javafx.scene.control.RadioMenuItem;
 import javafx.scene.control.Tab;
 import javafx.scene.control.TabPane;
 import javafx.scene.control.TextField;
@@ -42,7 +40,6 @@ import nt.com.view.init.NewFileView;
 import nt.com.view.init.RichEditTextArea;
 import nt.com.view.init.ScriptDebugDialog;
 import nt.com.view.init.TcpMsgSettingView;
-import nt.com.view.init.TopMenuBar;
 
 /**
  * 上部工具栏事件控制器
@@ -136,7 +133,6 @@ public class TopToolBarController {
 		alert.setHeaderText(null);
 		alert.setContentText("是否保存 "+fileAbsPath+"？");
 		Optional<ButtonType> result = alert.showAndWait();
-		TopMenuBar mb =(TopMenuBar)MainView.parent.lookup("#topmenubar");
 		if(result.get()==ButtonType.OK) {
 			File file = new File(fileAbsPath);
 			try {

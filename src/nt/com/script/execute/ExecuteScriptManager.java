@@ -4,6 +4,7 @@ package nt.com.script.execute;
 import javax.script.Invocable;
 
 import nt.com.script.AbstractMessageScriptManager;
+import nt.com.view.init.ConsoleTextArea;
 
 public class ExecuteScriptManager extends AbstractMessageScriptManager {
 	
@@ -26,7 +27,7 @@ public class ExecuteScriptManager extends AbstractMessageScriptManager {
 				return as.afterReceive(message);
 			}
 		}catch (Exception e) {
-			e.printStackTrace();
+			ConsoleTextArea.AppendMessageOnCurrentConsole(e.getLocalizedMessage());
 		}
 		return message;
 	}

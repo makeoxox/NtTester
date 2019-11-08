@@ -15,11 +15,19 @@
         <items>
          <Menu fx:id="lefttreeadd" mnemonicParsing="false" text="新建">
               <items>
+              	  <MenuItem fx:id="addprojectbtn" mnemonicParsing="false" onAction="#add" text="项目">
+                     <graphic>
+                        <ImageView fitHeight="15.0" fitWidth="15.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@../../../../res/import.gif" />
+                           </image>
+                        </ImageView>
+                     </graphic></MenuItem>
               	  <MenuItem fx:id="addfoldbtn" mnemonicParsing="false" onAction="#add" text="文件夹">
                      <graphic>
                         <ImageView fitHeight="15.0" fitWidth="15.0" pickOnBounds="true" preserveRatio="true">
                            <image>
-                              <Image url="@../../../../res/folder.png" />
+                              <Image url="@../../../../res/dir.png" />
                            </image>
                         </ImageView>
                      </graphic></MenuItem>

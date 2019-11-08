@@ -12,12 +12,20 @@
 	},
 	"tcpSetting":{
 		"lengthtype":"byte",
-		"fixlength":"8",
-		"offset":"8",
+		"fixlength":8,
+		"offset":8,
 		"fixtype":"right",
 		"port":"9001",
 		"ip":"127.0.0.1",
 		"fixchar":"0"
+	},
+	"multixml":{
+		"increment":{},
+		"concurrency":10,
+		"assign":{
+			"disable":true,
+			"type":"attribution"
+		}
 	},
 	"menu":{
 		"encode":"GBK",

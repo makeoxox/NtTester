@@ -18,7 +18,10 @@
 }
 
 .comment {
-	-fx-fill: cadetblue;
+	-fx-fill: cadetblue;	
+}
+.attribution{
+	-fx-fill: firebrick;
 }
 
 .paragraph-box:has-caret {

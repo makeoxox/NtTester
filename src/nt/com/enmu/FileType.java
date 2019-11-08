@@ -5,6 +5,7 @@ package nt.com.enmu;
  * @author kege
  */
 public enum FileType {
+	PROJECT,
 	DIR, 
 	XML, 
 	JAVASCRIPT,

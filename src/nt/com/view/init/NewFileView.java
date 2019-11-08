@@ -39,12 +39,13 @@ public class NewFileView extends VBox {
 		stage.getIcons().add(new Image(getClass().getResourceAsStream("/res/title.png")));
 		stage.show();
 		ListView<NewFileListModel> fileList = (ListView<NewFileListModel>) this.lookup("#filelist");
+		NewFileListModel projectType = new NewFileListModel(" 项目","/res/import.gif",FileType.PROJECT);
 		NewFileListModel dirType = new NewFileListModel(" 文件夹","/res/dir.png",FileType.DIR);
 		NewFileListModel jsType = new NewFileListModel(" JavaScript 文件", "/res/js.png",FileType.JAVASCRIPT);
 		NewFileListModel xmlrType = new NewFileListModel(" XML 文件","/res/xml.png",FileType.XML);
 		NewFileListModel jsonType = new NewFileListModel(" Json 文件","/res/json.png",FileType.JSON);
-		NewFileListModel txtType = new NewFileListModel("文本文件","/res/json.png",FileType.TXT);
-		ObservableList<NewFileListModel> modelList = FXCollections.observableArrayList(dirType,txtType, jsType, xmlrType,jsonType);
+		NewFileListModel txtType = new NewFileListModel(" 文本文件","/res/json.png",FileType.TXT);
+		ObservableList<NewFileListModel> modelList = FXCollections.observableArrayList(projectType,dirType,txtType, jsType, xmlrType,jsonType);
 		fileList.setItems(modelList);
 	}
 

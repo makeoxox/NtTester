@@ -9,7 +9,6 @@ import java.io.InputStreamReader;
 import java.io.OutputStreamWriter;
 import java.io.Writer;
 import java.util.List;
-import java.util.Properties;
 
 import javafx.scene.text.Font;
 import net.sf.json.JSONArray;
@@ -25,7 +24,6 @@ import nt.com.util.JsonParser;
 public class Config {
 
 	private final static JSONObject CONFIG;
-	private final static Properties PROPERTIES = new Properties();
 
 	static {
 		BufferedReader br;
@@ -296,12 +294,12 @@ public class Config {
 	}
 	
 	//补位长度
-	public static String getFixLength() {
+	public static int getFixLength() {
 		JSONObject tcpSetting =JSONObject.fromObject(CONFIG.get("tcpSetting"));
-		return tcpSetting.get("fixlength").toString();
+		return tcpSetting.getInt("fixlength");
 	}
 	
-	public static void setFixLength(String fixlength) {
+	public static void setFixLength(int fixlength) {
 		JSONObject tcpSetting =JSONObject.fromObject(CONFIG.get("tcpSetting"));
 		tcpSetting.element("fixlength", fixlength);
 		CONFIG.element("tcpSetting", tcpSetting);
@@ -310,12 +308,12 @@ public class Config {
 	}
 	
 	//返回报文偏移度
-	public static String getOffset() {
+	public static int getOffset() {
 		JSONObject tcpSetting =JSONObject.fromObject(CONFIG.get("tcpSetting"));
-		return tcpSetting.get("offset").toString();
+		return tcpSetting.getInt("offset");
 	}
 	
-	public static void setOffset(String offset) {
+	public static void setOffset(int offset) {
 		JSONObject tcpSetting =JSONObject.fromObject(CONFIG.get("tcpSetting"));
 		tcpSetting.element("offset", offset);
 		CONFIG.element("tcpSetting", tcpSetting);

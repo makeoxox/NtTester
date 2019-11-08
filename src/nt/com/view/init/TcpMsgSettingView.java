@@ -55,9 +55,9 @@ public class TcpMsgSettingView extends VBox{
 		TextField fixcharfield = (TextField) this.lookup("#fixcharfield");
 		fixcharfield.setText(Config.getFixChar());
 		TextField fixlengthfield = (TextField) this.lookup("#fixlengthfield");
-		fixlengthfield.setText(Config.getFixLength());
+		fixlengthfield.setText(Config.getFixLength()+"");
 		TextField offsetfield = (TextField) this.lookup("#offsetfield");
-		offsetfield.setText(Config.getOffset());
+		offsetfield.setText(Config.getOffset()+"");
 		
 	}
 

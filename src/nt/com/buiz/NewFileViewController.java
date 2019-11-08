@@ -73,7 +73,9 @@ public class NewFileViewController {
 		ImageView icon=null;
 		FileType filetype=nfm.getFileType();
 		//判断新建文件类型
-		if(filetype==FileType.DIR) {
+		if(filetype==FileType.PROJECT) {
+			icon= new ImageView(new Image(LeftTreeViewController.class.getResourceAsStream("/res/import.gif")));
+		} else if(filetype==FileType.DIR) {
 			icon= new ImageView(new Image(LeftTreeViewController.class.getResourceAsStream("/res/dir.png")));
 		}else if(filetype==FileType.TXT) {
 			icon= new ImageView(new Image(LeftTreeViewController.class.getResourceAsStream("/res/file.png")));
@@ -85,13 +87,13 @@ public class NewFileViewController {
 			icon= new ImageView(new Image(LeftTreeViewController.class.getResourceAsStream("/res/file.png")));
 		}
 		if(item==null) {  //右键没选中treeitem就默认为从根节点新建
-			if(filetype!=FileType.DIR) {  //根节点不支持创建文件，只建文件夹
+			if(filetype!=FileType.PROJECT) {  //根节点不支持创建文件，只建项目
 				Alert alert = new Alert(AlertType.WARNING);
 				Stage alertStage =(Stage) alert.getDialogPane().getScene().getWindow();
 				alertStage.getIcons().add(new Image(getClass().getResourceAsStream("/res/title.png")));
 				alert.setTitle("提醒");
 				alert.setHeaderText(null);
-				alert.setContentText("根目录只能创建文件夹！");
+				alert.setContentText("根目录只能创建项目！");
 				alert.showAndWait();
 				return;
 			}
@@ -102,12 +104,24 @@ public class NewFileViewController {
 			FileTreeModel newfileMod = new FileTreeModel(newfile.getName(), newfile.getAbsolutePath(), newfile);
 			TreeItem<FileTreeModel> newDirNode = new TreeItem<FileTreeModel>(newfileMod, icon);
 			root.getChildren().add(newDirNode);
+			Stage stage =(Stage) newfileview.getScene().getWindow();
+			stage.close();
 		}else { 
+			if(filetype==FileType.PROJECT) {  //根节点不支持创建文件，只建项目
+				Alert alert = new Alert(AlertType.WARNING);
+				Stage alertStage =(Stage) alert.getDialogPane().getScene().getWindow();
+				alertStage.getIcons().add(new Image(getClass().getResourceAsStream("/res/title.png")));
+				alert.setTitle("提醒");
+				alert.setHeaderText(null);
+				alert.setContentText("项目只能在根节点创建！");
+				alert.showAndWait();
+				return;
+			}
 			File file=item.getValue().getFile();
 			File newfile=null;
 			Writer write=null;
 			String content = null;
-			if(file.isDirectory()) {  //如果是文件夹 则在该文件夹下创建
+			if(file.isDirectory()) {  //如果选中是文件夹 则在该文件夹下创建
 				if(filetype==FileType.DIR) {
 					newfile = new File(file.getAbsolutePath()+File.separator+newFileName);
 					newfile.mkdir();
@@ -138,7 +152,7 @@ public class NewFileViewController {
 				TreeItem<FileTreeModel> newDirNode = new TreeItem<FileTreeModel>(newfileMod, icon);
 				item.getChildren().add(newDirNode);
 				ltv.getSelectionModel().select(newDirNode);
-			}else {  //如果是文件，则在该文件同级创建
+			}else {  //如果选中是文件，则在该文件同级创建
 				if(filetype==FileType.DIR) {
 					newfile = new File(file.getParentFile().getAbsolutePath()+File.separator+newFileName);
 					newfile.mkdir();
@@ -171,7 +185,9 @@ public class NewFileViewController {
 				ltv.getSelectionModel().select(newDirNode);
 			}
 			//如果是新建文件则打开文件
-			if(filetype==FileType.DIR) {
+			if(filetype==FileType.DIR ||filetype==FileType.PROJECT) {
+				Stage stage =(Stage) newfileview.getScene().getWindow();
+				stage.close();
 				return;
 			}
 			TabPane metp = (TabPane) MainView.parent.lookup("#edittabpane");

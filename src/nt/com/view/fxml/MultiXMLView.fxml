@@ -59,12 +59,12 @@
             <CheckBox layoutX="106.0" layoutY="252.0" mnemonicParsing="false" />
             <RadioButton disable="true" layoutX="218.0" layoutY="252.0" mnemonicParsing="false" text="XML文本元素赋值">
                <toggleGroup>
-                  <ToggleGroup fx:id="valuesgroup" />
+                  <ToggleGroup fx:id="assigngroup" />
                </toggleGroup>
             </RadioButton>
             <RadioButton disable="true" layoutX="414.0" layoutY="252.0" mnemonicParsing="false" text="XML元素属性赋值">
                <toggleGroup>
-                  <ToggleGroup fx:id="valuesgroup" />
+                  <ToggleGroup fx:id="assigngroup" />
                </toggleGroup>
             </RadioButton>
             <Label disable="true" layoutX="38.0" layoutY="347.0" text="赋值数据文件" />
