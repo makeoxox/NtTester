@@ -2,7 +2,12 @@ package nt.com.model;
 
 import java.io.File;
 
-//文件模型
+/**
+ * 文件树文件模型
+ * 
+ * @author kege
+ *
+ */
 public class FileTreeModel {
 	private String fileName;
 	private String filePathName;

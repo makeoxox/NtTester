@@ -1,13 +1,12 @@
 
-function afterReceive(data){
-		
-		
-		return data;
-}
-
-function beforeSend(data){
+function beforeSend(msg){
 	
 	
 	
 	return data;
+}
+
+function afterReceive(msg,recv){
+	
+	
 }

@@ -6,9 +6,23 @@ import javafx.scene.image.ImageView;
 import javafx.scene.layout.HBox;
 import nt.com.enmu.FileType;
 
+/**
+ * 文件选择List文件模型
+ * 
+ * @author kege
+ *
+ */
 public class NewFileListModel extends HBox{
 	
 	private FileType type;
+	
+	public void setFileType(FileType type) {
+		this.type=type;
+	}
+	
+	public FileType getFileType() {
+		return this.type;
+	}
 
 	public NewFileListModel(String text, String imageClassPath,FileType type) {
 		Label label = new Label();
@@ -22,12 +36,6 @@ public class NewFileListModel extends HBox{
 		this.type=type;
 	}
 	
-	public void setFileType(FileType type) {
-		this.type=type;
-	}
 	
-	public FileType getFileType() {
-		return this.type;
-	}
 	
 }

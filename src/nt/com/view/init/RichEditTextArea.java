@@ -54,7 +54,7 @@ public class RichEditTextArea extends CodeArea {
             "return", "short", "static", "strictfp", "super",
             "switch", "synchronized", "this", "throw", "throws",
             "transient", "try", "void", "volatile", "while","var"
-            ,"function","prototype"
+            ,"function","prototype","typeof"
     };
     
     //∆•≈‰js/json

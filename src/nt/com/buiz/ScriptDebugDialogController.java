@@ -1,8 +1,11 @@
 package nt.com.buiz;
 
+import java.io.File;
 import java.util.concurrent.ExecutionException;
 import java.util.concurrent.TimeUnit;
 import java.util.concurrent.TimeoutException;
+
+import javafx.application.Platform;
 import javafx.concurrent.Task;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
@@ -50,6 +53,7 @@ public class ScriptDebugDialogController {
     	Button scriptBtn = (Button) ttb.getItems().get(5);
     	Stage stage = (Stage)scriptdebugdialog.getScene().getWindow();
     	stage.close();
+    	File file = new File(path);
 		Task<Object> task = null;
 		try {
 			task = new Task<Object>() {
@@ -64,7 +68,7 @@ public class ScriptDebugDialogController {
 							return dsm.invoke(arg);
 						}
 					}catch(Exception e) {
-						ConsoleTextArea.AppendMessageOnCurrentConsole(e.getLocalizedMessage());
+						ConsoleTextArea.AppendMessageOnCurrentConsole(e.toString());
 					}
 					return null;
 				}
@@ -81,8 +85,10 @@ public class ScriptDebugDialogController {
 			ConsoleTextArea.AppendMessageOnCurrentConsole(e1.getLocalizedMessage());
 		} catch (TimeoutException e1) {
 			task.cancel(true);
+			
 		} finally {
 			scriptBtn.setDisable(false);
+			ConsoleTextArea.AppendMessageOnCurrentConsole("µ÷ÊÔ½Å±¾["+path+"]½áÊø");
 		}
     }
 

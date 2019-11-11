@@ -1,6 +1,8 @@
 package nt.com.script.debug;
 
 
+import java.io.File;
+
 import javax.script.Invocable;
 
 import nt.com.script.AbstractMessageScriptManager;
@@ -14,14 +16,20 @@ public class DebugScriptManager extends AbstractMessageScriptManager {
 		this.path=path;
 	}
 	
-	public String invoke(String arg){
+	public String invoke(Object arg){
 		loadLib();
 		try {
 			Invocable iv = this.getInvocable(this.path);
 			DebugScript ds =iv.getInterface(DebugScript.class);
-			return ds.main(arg);
+			if(arg!=null) {
+				return ds.main(arg.toString());
+			}else {
+				return ds.main(null);
+			}
+			
 		}catch (Exception e) {
-			ConsoleTextArea.AppendMessageOnCurrentConsole(e.getLocalizedMessage());
+			ConsoleTextArea.AppendMessageOnCurrentConsole(e.toString());
+			e.printStackTrace();
 		}
 		return null;
 	}

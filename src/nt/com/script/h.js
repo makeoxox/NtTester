@@ -16,20 +16,32 @@ importPackage("java.io");
 importPackage("nt.com.view.init");
 importPackage("javafx.application");
 
+//导入函数
+function Nt_Import(js){
+	try{
+		AbstractMessageScriptManager.engine.eval(new InputStreamReader(new FileInputStream(new File(js))));
+	}catch(e){
+		Nt_Ptr.println(e)
+	}
+}
 
 // 异步对象
-var $Asyn = {
+var Nt_Asyn = {
 	run : function(func){
 		new Thread(new Runnable(){
 			run : function(){
-				func();
+				try{
+					func();
+				}	catch (e){
+					Nt_Ptr.println(e);
+				}
 			}
 		}).start();
 	}
 }
 
 // 打印对象
-var $Ptr = {
+var Nt_Ptr = {
 	println : function(content){
 		ConsoleTextArea.AppendMessageOnCurrentConsole(content);
 	},
@@ -42,7 +54,7 @@ var $Ptr = {
 
 
 // 数据库对象
- var $Db = {
+ var Nt_Db = {
 	 jdbc : null,
 	 connect : function(url,driver,username,password){
 		 try{
@@ -54,19 +66,19 @@ var $Ptr = {
 				var bs = BasicDataSourceFactory.createDataSource(prop);
 				this.jdbc =new JdbcTemplate(bs);
 		 }catch(e){
-			 $Ptr.println(e)
+			 Nt_Ptr.println(e)
 		 }
 			
 	},
 	query : function (sql,success){
 		 if(this.jdbc==null){
-			 $Ptr.println("未连接数据库")
+			 Nt_Ptr.println("未连接数据库")
 			 return null;
 		 }
 		 try{
 			 	var list =this.jdbc.queryForList(sql);
 			 }catch(e){
-				 $Ptr.println(e)
+				 Nt_Ptr.println(e)
 				 return;
 			 }
 			var josnStr= JsonParser.arrayStringify(list)
@@ -78,31 +90,39 @@ var $Ptr = {
 	},
 	execute : function (sql){
 		if(this.jdbc==null){
-			$Ptr.println("未连接数据库")
+			Nt_Ptr.println("未连接数据库")
 			 return;
 		 }
 		 try{
 			    this.jdbc.update(sql);	
 			}catch(e){
-				$Ptr.println(e)
+				Nt_Ptr.println(e)
 			}
 			 
 	} 
  }
 	
  // 数据展现对象
-var $Control={
+var Nt_Control={
 	 Table  : function(title,data){
 		Platform.runLater(new Runnable() {
 		    run : function(){
-		    	
+		    	try{
+		    		
+		    	}catch(e){
+		    		Nt_Ptr.println(e);
+		    	}
 		    }
 		});
 	},
 	List : function(title,data){
 		Platform.runLater(new Runnable() {
 		    run : function(){
-		    	
+		    	try{
+		    		
+		    	}catch(e){
+		    		Nt_Ptr.println(e);
+		    	}
 		    }
 		});
 	}
@@ -110,7 +130,7 @@ var $Control={
  
  
  // Json对象
- var $Json = {
+ var Nt_Json = {
 	 parse:function(jsonStr){
 		return JSON.parse(jsonStr) ;
 	 },
@@ -126,7 +146,7 @@ var $Control={
  }
  
  // 文件操作类
- var $File = function(path){
+ var Nt_File = function(path){
 	 
 	 this.file=new File(path);
 	 
@@ -137,31 +157,31 @@ var $Control={
  } 
  
  
- $File.prototype.createNewFile = function(){
+ Nt_File.prototype.createNewFile = function(){
 	 this.file.createNewFile();
  }
  
- $File.prototype.delete = function(){
+ Nt_File.prototype.delete = function(){
 	 this.file.delete();
  }
  
- $File.prototype.exists = function(){
+ Nt_File.prototype.exists = function(){
 	 return  this.file.exists();
  }
 
- $File.prototype.getParent = function(){
+ Nt_File.prototype.getParent = function(){
 	 return  this.file.getParent();
  }
 
- $File.prototype.isFile = function(){
+ Nt_File.prototype.isFile = function(){
 	 return  this.file.isFile();
  }
  
- $File.prototype.isDirectory = function(){
+ Nt_File.prototype.isDirectory = function(){
 	 return  this.file.isDirectory();
  }
  
- $File.prototype.listFiles = function(){
+ Nt_File.prototype.listFiles = function(){
 	 
 		var fileArray =this.file.listFiles();
 		var arr = [];
@@ -172,7 +192,7 @@ var $Control={
 	 return	 arr;
  }
  
- $File.prototype.listFileNames = function(){
+ Nt_File.prototype.listFileNames = function(){
 	 var fileArray =this.file.listFiles();
 		var arr = [];
 		for each(var f in fileArray){
@@ -183,7 +203,7 @@ var $Control={
  }
  
  
- $File.prototype.read = function(decode){
+ Nt_File.prototype.read = function(decode){
 		if(decode==null)decode="utf-8";
 		var  br = new BufferedReader(new InputStreamReader(new FileInputStream(this.file),decode));
 		var line = "";
@@ -195,7 +215,7 @@ var $Control={
 	 return	 content.substring(0,content.length-1);
  }
  
- $File.prototype.write = function(content,encode,overwrite){
+ Nt_File.prototype.write = function(content,encode,overwrite){
 		if(encode==null)encode="utf-8";
 		if(overwrite==null)overwrite=true;
 		var  wr = new BufferedWriter(new OutputStreamWriter(new FileOutputStream(this.file,overwrite),encode));

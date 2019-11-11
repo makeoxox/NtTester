@@ -98,7 +98,7 @@ public class NewFileViewController {
 				return;
 			}
 			TreeItem<FileTreeModel> root =ltv.getRoot();
-			File newfile = new File("workspace/"+newFileName);
+			File newfile = new File("projects/"+newFileName);
 			newfile.mkdir();
 			icon= new ImageView(new Image(LeftTreeViewController.class.getResourceAsStream("/res/import.gif")));
 			FileTreeModel newfileMod = new FileTreeModel(newfile.getName(), newfile.getAbsolutePath(), newfile);

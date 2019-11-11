@@ -139,7 +139,7 @@ public class LeftTreeViewController {
 				return;
 			}
 			TreeItem<FileTreeModel> root =ltv.getRoot();
-			File newfile = new File("workspace/"+result.get());
+			File newfile = new File("projects/"+result.get());
 			newfile.mkdir();
 			icon= new ImageView(new Image(LeftTreeViewController.class.getResourceAsStream("/res/import.gif")));
 			FileTreeModel newfileMod = new FileTreeModel(newfile.getName(), newfile.getAbsolutePath(), newfile);
@@ -382,14 +382,14 @@ public class LeftTreeViewController {
 		ltv.getSelectionModel().clearSelection();
 	}
 
-	// 所有界面初始化后，读取workspace下项目以及外部导入项目，绘制上次最后打开的文件。
+	// 所有界面初始化后，读取projects下项目以及外部导入项目，绘制上次最后打开的文件。
 	public static void LeftTreeLoad() {
 		LeftTreeView ltv = (LeftTreeView) MainView.parent.lookup("#packagetree");
 		TabPane metp = (TabPane) MainView.parent.lookup("#edittabpane");
 		TabPane mctp = (TabPane) MainView.parent.lookup("#consoletabpane");
 		String filepath = Config.getLastOpenFilePath();
 		File lastFile = new File(filepath);
-		File dir = new File("workspace");
+		File dir = new File("projects");
 		File [] dirs = dir.listFiles();
 		for(File project:dirs) {   //加载工作空间内的文件夹
 			ImageView dirIcon = new ImageView(new Image(LeftTreeViewController.class.getResourceAsStream("/res/import.gif")));

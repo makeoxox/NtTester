@@ -83,7 +83,7 @@ public class TopToolBarController {
 		ImageView dirIcon = new ImageView(new Image(getClass().getResourceAsStream("/res/import.gif")));
 		LeftTreeView ltv = (LeftTreeView) MainView.parent.lookup("#packagetree");
 		DirectoryChooser dirChooser = new DirectoryChooser();
-		dirChooser.setInitialDirectory(new File("workspace"));
+		dirChooser.setInitialDirectory(new File("projects"));
 		dirChooser.setTitle("导入文件夹");
 		File dir = dirChooser.showDialog(MainView.parent.getScene().getWindow());
 		if(dir==null)return;

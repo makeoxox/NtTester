@@ -2,7 +2,12 @@ package nt.com.model;
 
 import javafx.scene.control.Label;
 import javafx.scene.text.Font;
-
+/**
+ * 字体类型模型
+ * 
+ * @author kege
+ *
+ */
 public class FontFamilyModel extends Label{
 	
 	public FontFamilyModel(String family){
