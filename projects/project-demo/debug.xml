@@ -1,187 +1,90 @@
-<?xml version="1.0" encoding="GBK"?>
-<quartz> 
-    <job> 
-        <!--¶¨Ê±´¦ÀíÒøÁª·µ»ØÎÄ¼þ-->  
-        <job-name>UionPayResponseBatch</job-name>  
-        <job-class>com.nantian.mmp.batch.UionPayResponseBatch</job-class>  
-        <!-- <cron-expression>0 30 0,9,15,16 * * ?</cron-expression> -->  
-        <cron-expression>0 0/5 * * * ?</cron-expression>  
-        <job-paras/> 
-    </job>  
-    <job> 
-        <!--Éè±¸±ä¸üÌá½»µ½ÒøÁª-->  
-        <job-name>UionPayUploadBatch</job-name>  
-        <job-class>com.nantian.mmp.batch.UionPayUploadBatch</job-class>  
-        <cron-expression>0 0/5 * * * ?</cron-expression>  
-        <!-- <cron-expression>0 27 8,9,10,11,12,13,14,15,16,17,18 * * ?</cron-expression>  -->  
-        <job-paras/> 
-    </job>  
-    <job> 
-        <!--ÖØÖÃÉÏ´«Á÷Ë®ºÅ-->  
-        <job-name>SeqResetBatch</job-name>  
-        <job-class>com.nantian.mmp.batch.SeqResetBatch</job-class>  
-        <!-- <cron-expression>0 30 0,9,15,16 * * ?</cron-expression> -->  
-        <cron-expression>0 0 0 * * ?</cron-expression>  
-        <job-paras/> 
-    </job>  
-    <job> 
-        <!-- ¸ßËÙ´æÈ¡¿îÒ»Ìå»úÉè±¸±ä¸ü·¢ËÍµ½µç×ÓÇþµÀ-->  
-        <job-name>DevElectricUpToPreBatch</job-name>  
-        <job-class>com.nantian.mmp.batch.DevElectricUpToPreBatch</job-class>  
-        <!-- <cron-expression>0 30 0,9,15,16 * * ?</cron-expression> -->  
-        <cron-expression>0 51 11 * * ?</cron-expression>  
-        <job-paras/> 
-    </job>  
-    <job> 
-        <!-- Éè±¸±ä¸üÌá½»µ½Ç°ÖÃ -->  
-        <job-name>DevLogUploadToPreBatch</job-name>  
-        <job-class>com.nantian.mmp.batch.DevLogUploadToPreBatch</job-class>  
-        <!-- <cron-expression>0 30 0,9,15,16 * * ?</cron-expression>-->  
-        <cron-expression>0 32 0,8,9,10,11,12,13,14,15,16 * * ?</cron-expression>  
-        <job-paras/> 
-    </job>  
-    <job> 
-        <!-- Éè±¸×´Ì¬ÈÕÖÕ³ÌÐò -->  
-        <job-name>DevDayStateBatch</job-name>  
-        <job-class>com.nantian.mmp.batch.DevDayStateBatch</job-class>  
-        <cron-expression>30 45 0 * * ?</cron-expression>  
-        <job-paras>beforeday=-1</job-paras> 
-    </job>  
-    <job> 
-        <!-- Éè±¸²¿¼þ×´Ì¬ÈÕÖÕ³ÌÐò -->  
-        <job-name>DevPartsDayStateBatch</job-name>  
-        <job-class>com.nantian.mmp.batch.DevPartsDayStateBatch</job-class>  
-        <cron-expression>10 55 0 * * ?</cron-expression>  
-        <job-paras>beforeday=-1</job-paras> 
-    </job>  
-    <job> 
-        <!-- Éè±¸ÈÕ¿ª»úÂÊÍ³¼ÆÊý¾ÝÉú³É -->  
-        <job-name>DayDevRateBatch</job-name>  
-        <job-class>com.nantian.mmp.batch.DayDevRateBatch</job-class>  
-        <cron-expression>30 23 1 * * ?</cron-expression>  
-        <job-paras>beforeday=-1</job-paras> 
-    </job>  
-    <job> 
-        <!-- ¶¨Ê±·¢ËÍ¶ÌÐÅ -->  
-        <job-name>SendMail</job-name>  
-        <job-class>com.nantian.mmp.shortmail.SendMailJob</job-class>  
-        <cron-expression>00 00 08 * * ?</cron-expression>  
-        <job-paras/> 
-    </job>  
-    <!-- ¶¨Ê±ÇåÀíÀà -->  
-    <job> 
-        <!-- ÒÆ¶¯Éè±¸×´Ì¬ÈÕÖÕÊý¾Ýµ½ÀúÊ·±í -->  
-        <job-name>moveTable_Wlunit</job-name>  
-        <job-class>com.nantian.mmp.batch.SystemClean</job-class>  
-        <cron-expression>50 50 0 * * ?</cron-expression>  
-        <job-paras>deletename=moveTable_Wlunit;para1=-1</job-paras> 
-    </job>  
-    <job> 
-        <!-- ÒÆ¶¯Éè±¸²¿¼þ×´Ì¬ÈÕÖÕÊý¾Ýµ½ÀúÊ·±í -->  
-        <job-name>moveTable_Wlparts</job-name>  
-        <job-class>com.nantian.mmp.batch.SystemClean</job-class>  
-        <cron-expression>50 0 1 * * ?</cron-expression>  
-        <job-paras>deletename=moveTable_Wlparts;para1=-1</job-paras> 
-    </job>  
-    <job> 
-        <!-- ÒÆ¶¯¼à¿Ø½»Ò×Êý¾Ýµ½ÀúÊ·±í -->  
-        <job-name>moveTable_T_tranrec</job-name>  
-        <job-class>com.nantian.mmp.batch.SystemClean</job-class>  
-        <cron-expression>30 04 0 * * ?</cron-expression>  
-        <!--<cron-expression>0 0/5 * * * ?</cron-expression>´ÓÕûµã¿ªÊ¼Ã¿¸ô5·ÖÖÓ²âÊÔ  -->  
-        <job-paras>deletename=moveTable_T_tranrec;para1=-1</job-paras> 
-    </job>  
-    <job> 
-        <!--É¾³ý¼à¿Ø½»Ò×ÀúÊ·Êý¾Ý t_tranrec_his -->  
-        <job-name>deleteTable_T_tranrec_his</job-name>  
-        <job-class>com.nantian.mmp.batch.SystemClean</job-class>  
-        <cron-expression>30 23 0 * * ?</cron-expression>  
-        <job-paras>deletename=deleteTable_T_tranrec_his;para1=-365</job-paras> 
-    </job>  
-    <job> 
-        <!-- É¾³ýefesa½»Ò×ÀúÊ·Êý¾Ý tranrec_his -->  
-        <job-name>deleteTable_Tranrec</job-name>  
-        <job-class>com.nantian.mmp.batch.SystemClean</job-class>  
-        <cron-expression>30 28 3 * * ?</cron-expression>  
-        <job-paras>deletename=deleteTable_Tranrec;para1=-90</job-paras> 
-    </job>  
-    <job> 
-        <!-- É¾³ý½»Ò×ÈÕÖÕÀúÊ·Êý¾Ý T_devendday -->  
-        <job-name>deleteTable_T_devendday</job-name>  
-        <job-class>com.nantian.mmp.batch.SystemClean</job-class>  
-        <cron-expression>30 35 3 * * ?</cron-expression>  
-        <job-paras>deletename=deleteTable_T_devendday;para1=-1000</job-paras> 
-    </job>  
-    <job> 
-        <!-- ÇåÀí t_devcmdrec£¨Éè±¸ÃüÁîÁ÷Ë®±í£© -->  
-        <job-name>deleteTable_t_devcmdrec</job-name>  
-        <job-class>com.nantian.mmp.batch.SystemClean</job-class>  
-        <cron-expression>30 01 2 * * ?</cron-expression>  
-        <job-paras>deletename=deleteTable_t_devcmdrec;para1=-100</job-paras> 
-    </job>  
-    <job> 
-        <!-- ´¦ÀíÃüÁî·¢ËÍ³¬Ê±ÃüÁî£¨Éè±¸ÃüÁîÁ÷Ë®±í£© -->  
-        <job-name>t_devcmdrec_TimeOut</job-name>  
-        <job-class>com.nantian.mmp.batch.SystemClean</job-class>  
-        <cron-expression>37 31 * * * ?</cron-expression>  
-        <!-- para1 ÊÇÃüÁîÖ´ÐÐ½á¹û³¬Ê±Ê±¼ä ÏÖÔÚÊ±¼äÊÇ30·ÖÖÓ£¬¸ÃÈÎÎñÐèÒª30·ÖÖÓÖ´ÐÐÒ»´Î -->  
-        <job-paras>deletename=t_devcmdrec_TimeOut;para1=-30</job-paras> 
-    </job>  
-    <job> 
-        <!-- ÇåÀí opt_log£¨Éè±¸ÃüÁîÁ÷Ë®±í£© -->  
-        <job-name>deleteTable_opt_log</job-name>  
-        <job-class>com.nantian.mmp.batch.SystemClean</job-class>  
-        <cron-expression>30 03 3 * * ?</cron-expression>  
-        <!-- para1 ÊÇÖ¸É¾³ýÃüÁîÖ´ÐÐ½á¹û¼ÇÂ¼µÄµ±ÌìÈÕÆÚµÄÇ°¶àÉÙÌì£¬Ò»°ãÊý¾ÝÒªÊÇ¸ºµÄ -->  
-        <job-paras>deletename=deleteTable_opt_log;para1=-100</job-paras> 
-    </job>  
-    <job> 
-        <!-- É¾³ýÉè±¸×´Ì¬Á÷Ë®±íÀúÊ·Êý¾Ý -->  
-        <job-name>deleteTable_T_StaEndDay2</job-name>  
-        <job-class>com.nantian.mmp.batch.SystemClean</job-class>  
-        <cron-expression>30 10 3 * * ?</cron-expression>  
-        <job-paras>deletename=deleteTable_T_StaEndDay2;para1=-366</job-paras> 
-    </job>  
-    <job> 
-        <!-- É¾³ýÉè±¸²¿¼þ×´Ì¬Á÷Ë®±íÀúÊ·Êý¾Ý -->  
-        <job-name>deleteTable_T_PARTFAULTDAY2</job-name>  
-        <job-class>com.nantian.mmp.batch.SystemClean</job-class>  
-        <cron-expression>30 15 3 * * ?</cron-expression>  
-        <job-paras>deletename=deleteTable_T_PARTFAULTDAY2;para1=-366</job-paras> 
-    </job>  
-    <job> 
-        <!-- É¾³ý¶ÌÐÅÀúÊ·Êý¾Ý -->  
-        <job-name>deleteTable_w_msgej</job-name>  
-        <job-class>com.nantian.mmp.batch.SystemClean</job-class>  
-        <cron-expression>30 20 3 * * ?</cron-expression>  
-        <job-paras>deletename=deleteTable_w_msgej;para1=-366</job-paras> 
-    </job>  
-    <job> 
-        <!-- É¾³ý½»Ò×ÈÕÖÕÐ¡Ê±ÀúÊ·Êý¾Ý T_devendhour -->  
-        <job-name>deleteTable_T_devendhour</job-name>  
-        <job-class>com.nantian.mmp.batch.SystemClean</job-class>  
-        <cron-expression>30 45 3 * * ?</cron-expression>  
-        <job-paras>deletename=deleteTable_T_devendhour;para1=-1000</job-paras> 
-    </job>  
-    <job> 
-        <!-- ´´½¨ÎÄ¼þ×¥È¡Ê±µÄÄ¿Â¼ -->  
-        <job-name>createFileByDate</job-name>  
-        <job-class>com.nantian.mmp.batch.SystemClean</job-class>  
-        <cron-expression>30 40 3 * * ?</cron-expression>  
-        <job-paras>deletename=createFileByDate;para1=1</job-paras> 
-    </job>  
-    <job> 
-        <!-- ³õÊ¼»¯Éè±¸²¿¼þ×´Ì¬ÓëÕûÌå×´Ì¬¶ÔÓÃ¹ØÏµ -->  
-        <job-name>init_Unitpartsstatus</job-name>  
-        <job-class>com.nantian.mmp.batch.SystemClean</job-class>  
-        <cron-expression>30 05 4 * * ?</cron-expression>  
-        <job-paras>deletename=init_Unitpartsstatus;para1=-1</job-paras> 
-    </job>  
-    <job> 
-        <!-- É¾³ýÀúÊ·¹¤µ¥ÀúÊ·Êý¾Ý -->  
-        <job-name>deleteTable_wljob</job-name>  
-        <job-class>com.nantian.mmp.batch.SystemClean</job-class>  
-        <cron-expression>30 15 4 * * ?</cron-expression>  
-        <job-paras>deletename=deleteTable_wljob;para1=-183</job-paras> 
-    </job> 
-</quartz>
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.CheckBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.ListView?>
+<?import javafx.scene.control.RadioButton?>
+<?import javafx.scene.control.Separator?>
+<?import javafx.scene.control.Slider?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.control.ToggleGroup?>
+<?import javafx.scene.control.TreeView?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<fx:root fx:id="multixmlview" prefHeight="560.0" prefWidth="567.0" type="VBox" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="nt.com.buiz.MultiXMLViewController">
+   <children>
+      <AnchorPane prefHeight="39.0" prefWidth="287.0">
+         <children>
+            <Label layoutX="38.0" layoutY="12.0" text="å¹¶å‘è®¾ç½®">
+            	<font>
+						<Font name="DengXian Bold" size="13.0" />
+					</font>
+            </Label>
+            <Label layoutX="102.0" layoutY="12.0" text="XML" />
+            <ImageView fitHeight="15.0" fitWidth="15.0" layoutX="512.0" layoutY="12.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../../../../res/multiset.png" />
+               </image>
+            </ImageView>
+         </children>
+      </AnchorPane>
+      <Separator prefWidth="200.0" />
+      <AnchorPane layoutX="10.0" layoutY="83.0" prefHeight="483.0" prefWidth="567.0">
+         <children>
+            <Label layoutX="38.0" layoutY="14.0" text="å¹¶å‘é‡" />
+            <Label fx:id="concurrency" layoutX="91.0" layoutY="14.0" text="Label" />
+            <Slider fx:id="multicount" blockIncrement="5.0" layoutX="134.0" layoutY="11.0" majorTickUnit="10.0" minorTickCount="5"  prefHeight="37.0" prefWidth="399.0" showTickLabels="true" showTickMarks="true" value="10.0" />
+            <Label layoutX="38.0" layoutY="66.0" text="å¯ç”¨é€’å¢ž" />
+            <CheckBox fx:id="incrementenable" layoutX="106.0" layoutY="66.0" mnemonicParsing="false" onAction="#increment" />
+            <RadioButton fx:id="incrementtextbtn" disable="true" layoutX="218.0" layoutY="66.0" mnemonicParsing="false" onAction="#incrementtextselect" text="XMLæ–‡æœ¬å…ƒç´ é€’å¢ž">
+               <toggleGroup>
+                  <ToggleGroup fx:id="incrementgroup" />
+               </toggleGroup>
+            </RadioButton>
+            <RadioButton fx:id="incrementattrbtn" disable="true" layoutX="414.0" layoutY="66.0" mnemonicParsing="false" onAction="#incrementattrselect" text="XMLå…ƒç´ å±žæ€§é€’å¢ž" toggleGroup="$incrementgroup" />
+            <Label fx:id="incrementxmllabel" disable="true" layoutX="38.0" layoutY="112.0" text="é€’å¢žXML" />
+            <TextField fx:id="incrementxmlfield" layoutX="106.0" layoutY="108.0" prefHeight="23.0" prefWidth="150.0" />
+            <Button fx:id="incrementxmlbtn" disable="true" layoutX="277.0" layoutY="108.0" mnemonicParsing="false" text="è§£æžXMLæ ‘" />
+            <Label fx:id="incrementattrlabel" disable="true" layoutX="370.0" layoutY="112.0" text="é€’å¢žå±žæ€§å" />
+            <TextField fx:id="incrementattrfield" disable="true" layoutX="441.0" layoutY="108.0" prefHeight="23.0" prefWidth="100.0" promptText="å¤šå±žæ€§é€—å·éš”å¼€" />
+            <TreeView fx:id="incrementeletree" layoutX="38.0" layoutY="155.0" prefHeight="80.0" prefWidth="221.0" />
+            <ListView fx:id="incrementelelist" layoutX="320.0" layoutY="155.0" prefHeight="80.0" prefWidth="221.0" />
+            <Button fx:id="incrementadd" disable="true" layoutX="277.0" layoutY="162.0" mnemonicParsing="false" prefHeight="25.0" prefWidth="25.0" text="&gt;" />
+            <Button fx:id="incrementdel" disable="true" layoutX="277.0" layoutY="200.0" mnemonicParsing="false" prefHeight="25.0" prefWidth="25.0" text="&lt;" />
+            <Label layoutX="38.0" layoutY="252.0" text="å¯ç”¨èµ‹å€¼" />
+            <CheckBox fx:id="assignenable" layoutX="106.0" layoutY="252.0" mnemonicParsing="false" onAction="#assign" />
+            <RadioButton fx:id="assigntextbtn" disable="true" layoutX="218.0" layoutY="252.0" mnemonicParsing="false" onAction="#assigntextselect" text="XMLæ–‡æœ¬å…ƒç´ èµ‹å€¼">
+               <toggleGroup>
+                  <ToggleGroup fx:id="assigngroup" />
+               </toggleGroup>
+            </RadioButton>
+            <RadioButton fx:id="assignattrbtn" disable="true" layoutX="414.0" layoutY="252.0" mnemonicParsing="false" onAction="#assignattrselect" text="XMLå…ƒç´ å±žæ€§èµ‹å€¼" toggleGroup="$assigngroup" />
+            <Label fx:id="assignvalueslabel" disable="true" layoutX="38.0" layoutY="347.0" text="èµ‹å€¼æ•°æ®æ–‡ä»¶" />
+            <TextField fx:id="assignvaluesfield" disable="true" layoutX="126.0" layoutY="343.0" prefHeight="23.0" prefWidth="302.0" text="config/values.txt" />
+            <Button fx:id="assignvaluesbtn" disable="true" layoutX="428.0" layoutY="343.0" mnemonicParsing="false" prefHeight="23.0" prefWidth="110.0" text="é€‰æ‹©æ–‡ä»¶" />
+            <Label fx:id="assignxmllabel" disable="true" layoutX="38.0" layoutY="298.0" text="èµ‹å€¼XML" />
+            <TextField fx:id="assignxmlfield" layoutX="106.0" layoutY="294.0" prefHeight="23.0" prefWidth="150.0" />
+            <Button fx:id="assignxmlbtn" disable="true" layoutX="277.0" layoutY="294.0" mnemonicParsing="false" text="è§£æžXMLæ ‘" />
+            <Label fx:id="assignattrlabel" disable="true" layoutX="370.0" layoutY="297.0" text="èµ‹å€¼å±žæ€§å" />
+            <TextField fx:id="assignattrfield" disable="true" layoutX="441.0" layoutY="293.0" prefHeight="23.0" prefWidth="100.0" promptText="å¤šå±žæ€§é€—å·éš”å¼€" />
+            <TreeView fx:id="assigneletree" layoutX="38.0" layoutY="387.0" prefHeight="80.0" prefWidth="221.0" />
+            <ListView fx:id="assignelelist" layoutX="320.0" layoutY="387.0" prefHeight="80.0" prefWidth="221.0" />
+            <Button fx:id="assignadd" disable="true" layoutX="277.0" layoutY="395.0" mnemonicParsing="false" prefHeight="25.0" prefWidth="25.0" text="&gt;" />
+            <Button fx:id="assigndel" disable="true" layoutX="277.0" layoutY="427.0" mnemonicParsing="false" prefHeight="25.0" prefWidth="25.0" text="&lt;" />
+            
+         </children>
+      </AnchorPane>
+      <Separator prefHeight="0.0" prefWidth="324.0" />
+      <AnchorPane prefHeight="28.0" prefWidth="313.0">
+         <children>
+            <Button fx:id="cancelbtn" layoutX="499.0" layoutY="3.0" mnemonicParsing="false" onAction="#cancel" text="å–æ¶ˆ" />
+            <Button fx:id="okbtn" layoutX="436.0" layoutY="3.0" mnemonicParsing="false" onAction="#ok" text="ç¡®å®š" />
+         </children>
+      </AnchorPane>
+   </children>
+</fx:root>

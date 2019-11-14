@@ -6,13 +6,10 @@ import java.io.InputStreamReader;
 import java.io.OutputStream;
 import java.net.HttpURLConnection;
 import java.net.URL;
-import java.util.Map;
-import java.util.Map.Entry;
 
 import org.apache.commons.logging.Log;
 import org.apache.commons.logging.LogFactory;
 
-import java.util.Set;
 
 /**
  * http单发客户端
@@ -24,18 +21,14 @@ public class HttpSingle {
 	private  static Log log = LogFactory.getLog(HttpSingle.class);
 	private static HttpURLConnection connection;
 	
-	public String sendByBody(URL url,Map<String, String> propMap,String msg,String encode,String decode) {
+	public String sendByPost(URL url,String msg,String encode,String contentType) {
 		try {
 			String recv="";
 			connection=(HttpURLConnection) url.openConnection();
 			connection.setRequestMethod("POST");
 			connection.setDoOutput(true);
 			connection.setDoInput(true);
-			connection.setRequestProperty("Content-Type","application/x-www-form-urlencoded");
-			Set <Entry<String, String>> entrys = propMap.entrySet();
-			for (Entry<String, String> entry : entrys) {
-				connection.setRequestProperty(entry.getKey().trim(),entry.getValue().trim());
-			}
+			connection.setRequestProperty("Content-Type",contentType);
 			connection.connect();
 			OutputStream out = connection.getOutputStream();
 			out.write(msg.getBytes(encode));
@@ -43,7 +36,7 @@ public class HttpSingle {
 			out.close();
 			int code = connection.getResponseCode();
 			if (code == 200) {
-				 BufferedReader reader = new BufferedReader(new InputStreamReader(connection.getInputStream(), decode));
+				 BufferedReader reader = new BufferedReader(new InputStreamReader(connection.getInputStream(), encode));
 				 String line;
 				 while ((line = reader.readLine()) != null) {
 					 recv += line + "\n";
@@ -53,34 +46,29 @@ public class HttpSingle {
 				 recv="接受失败，错误码["+code+"]";
 			 }
 			connection.disconnect();
+			log.info("收到消息["+url+"] - "+recv);
 			return recv;
 		} catch (IOException e) {
+			log.error(e);
 			e.printStackTrace();
 		}
 		return null;
 	}
 	
-	public String sendByHead(URL url,Map<String, String> propMap,String msg,String msgname,String decode) {
+	public String sendByGet(URL url,String encode) {
 		try {
 			String recv="";
 			connection=(HttpURLConnection) url.openConnection();
-			connection.setRequestMethod("POST");
-			connection.setDoOutput(true);
+			connection.setRequestMethod("GET");
 			connection.setDoInput(true);
-			connection.setRequestProperty("Content-Type","application/x-www-form-urlencoded");
-			connection.setRequestProperty(msgname,msg);
-			Set <Entry<String, String>> entrys = propMap.entrySet();
-			for (Entry<String, String> entry : entrys) {
-				connection.setRequestProperty(entry.getKey().trim(),entry.getValue().trim());
-			}
 			connection.connect();
 			int code = connection.getResponseCode();
 			if (code == 200) {
-				 BufferedReader reader = new BufferedReader(new InputStreamReader(connection.getInputStream(),decode));
+				 BufferedReader reader = new BufferedReader(new InputStreamReader(connection.getInputStream(), encode));
 				 String line;
 				 while ((line = reader.readLine()) != null) {
 					 recv += line + "\n";
-				}
+				 }
 				 reader.close();
 			 }else {
 				 recv="接受失败，错误码["+code+"]";
@@ -89,10 +77,12 @@ public class HttpSingle {
 			log.info("收到消息["+url+"] - "+recv);
 			return recv;
 		} catch (IOException e) {
+			log.error(e);
 			e.printStackTrace();
 		}
 		return null;
 	}
+	
 	
 	public void closeConnect() {
 		connection.disconnect();

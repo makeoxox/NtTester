@@ -5,7 +5,8 @@ import java.io.IOException;
 import java.io.InputStreamReader;
 
 /**
- * 读取模板文件内容
+ * 读取模板文件
+ * 
  * @author kege
  *
  */

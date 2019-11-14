@@ -1,13 +1,15 @@
 package nt.com.script.debug;
 
-
-import java.io.File;
-
 import javax.script.Invocable;
 
 import nt.com.script.AbstractMessageScriptManager;
 import nt.com.view.init.ConsoleTextArea;
-
+/**
+ * 调试脚本管理器
+ * 
+ * @author kege
+ *
+ */
 public class DebugScriptManager extends AbstractMessageScriptManager {
 	
 	private String path;

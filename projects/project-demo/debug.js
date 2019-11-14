@@ -9,8 +9,7 @@ function main(arg){
 	Nt_Ptr.println(odata);
 	var sm4 = new SM4Util();
 	sm4.secretKey="AABBCCDDEEFFGGHH";
-	sm4.iv="IIJJKKLLMMNNOOPP";
-	var ndata =sm4.encryptData_CBC(odata);
+	var ndata =sm4.encryptData_ECB(odata);
 	Nt_Ptr.println(ndata);
 	  
 }

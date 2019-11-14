@@ -31,7 +31,7 @@ public class MainView extends Application {
 	public void start(Stage stage) {
         scene = new Scene(parent);
         stage.setScene(scene);
-        stage.setTitle("NT接口测试器 v"+Config.getVersion()+" @Author - kege");
+        stage.setTitle("NT接口调试器 v"+Config.getVersion()+" @Author - kege");
         stage.getIcons().add(new Image(getClass().getResourceAsStream("/res/title.png")));
         stage.show();
 		LeftTreeViewController.LeftTreeLoad();

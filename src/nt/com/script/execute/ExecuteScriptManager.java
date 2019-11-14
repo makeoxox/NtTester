@@ -6,7 +6,12 @@ import javax.script.Invocable;
 import nt.com.model.SessionModel;
 import nt.com.script.AbstractMessageScriptManager;
 import nt.com.view.init.ConsoleTextArea;
-
+/**
+ * 执行脚本管理器
+ * 
+ * @author kege
+ *
+ */
 public class ExecuteScriptManager extends AbstractMessageScriptManager {
 	
 	private String path;

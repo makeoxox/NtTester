@@ -1,5 +1,5 @@
 {
-	"lastOpenFilePath":"projects\\project-demo\\js\\sm4.js",
+	"lastOpenFilePath":"projects\\project-demo\\test.js",
 	"consoleFont":{
 		"size":14,
 		"family":"Consolas"
@@ -20,18 +20,42 @@
 		"fixchar":"0"
 	},
 	"multixml":{
-		"increment":{},
+		"increment":{
+			"incrementlistname":"",
+			"xmlfilepath":"projects\\project-demo\\debug.xml",
+			"disable":false,
+			"type":"attribution",
+			"attrname":"untid"
+		},
 		"concurrency":10,
 		"assign":{
+			"xmlfilepath":"",
 			"disable":true,
-			"type":"attribution"
+			"valuesfilepath":"",
+			"type":"text",
+			"attrname":"",
+			"assignlistname":""
+		}
+	},
+	"multijson":{
+		"increment":{
+			"incrementlistname":"",
+			"jsonfilepath":"",
+			"disable":true
+		},
+		"concurrency":10,
+		"assign":{
+			"jsonfilepath":"",
+			"disable":true,
+			"valuesfilepath":"",
+			"assignlistname":""
 		}
 	},
 	"menu":{
-		"encode":"GBK",
+		"encode":"UTF-8",
 		"msg":"xml",
-		"protocol":"tcp",
-		"connect":"asyn",
+		"protocol":"http",
+		"connect":"sync",
 		"mac":"nomac",
 		"script":"disable",
 		"multi":"single"

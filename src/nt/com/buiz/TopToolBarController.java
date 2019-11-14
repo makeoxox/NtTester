@@ -35,6 +35,7 @@ import nt.com.view.init.ConsoleTextArea;
 import nt.com.view.init.HttpMsgSettingView;
 import nt.com.view.init.LeftTreeView;
 import nt.com.view.init.MainView;
+import nt.com.view.init.MultiJsonView;
 import nt.com.view.init.MultiXMLView;
 import nt.com.view.init.NewFileView;
 import nt.com.view.init.RichEditTextArea;
@@ -234,6 +235,8 @@ public class TopToolBarController {
 		String msg = Config.getMsg();
 		if(msg.equals("xml")) {
 			 new MultiXMLView();
+		}else if(msg.equals("json")) {
+			new MultiJsonView();
 		}
 	}
 }

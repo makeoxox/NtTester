@@ -13,10 +13,14 @@ import java.util.List;
 import javafx.scene.text.Font;
 import net.sf.json.JSONArray;
 import net.sf.json.JSONObject;
+import nt.com.model.JsonAssignModel;
+import nt.com.model.JsonIncrementModel;
+import nt.com.model.XmlAssignModel;
+import nt.com.model.XmlIncrementModel;
 import nt.com.util.JsonParser;
 
 /**
- * 配置文件类
+ * 全局配置类
  * 
  * @author kege
  *
@@ -363,4 +367,154 @@ public class Config {
 		WriteConfig(jsonStr);
 	}
 	
+	//xml并发量
+	public static int getXMLConcurrency() {
+		JSONObject multixml =JSONObject.fromObject(CONFIG.get("multixml"));
+		return multixml.getInt("concurrency");
+	}
+	
+	public static void setXMLConcurrency(int concurrency) {
+		JSONObject multixml =JSONObject.fromObject(CONFIG.get("multixml"));
+		multixml.element("concurrency", concurrency);
+		CONFIG.element("multixml", multixml);
+		String jsonStr = CONFIG.toString();
+		WriteConfig(jsonStr);
+	}
+	
+	//XML递增属性模型
+	public static XmlIncrementModel getXmlIncrement() {
+		JSONObject multixml =JSONObject.fromObject(CONFIG.get("multixml"));
+		JSONObject increment =JSONObject.fromObject(multixml.get("increment"));
+		XmlIncrementModel xim = new XmlIncrementModel();
+		boolean disable = increment.getBoolean("disable");
+		String type  =  increment.getString("type");
+		String xmlfilepath  =  increment.getString("xmlfilepath");
+		String attrname = increment.getString("attrname");
+		String incrementlistname = increment.getString("incrementlistname");
+		xim.setAttrname(attrname);
+		xim.setDisable(disable);
+		xim.setIncrementlListName(incrementlistname);
+		xim.setType(type);
+		xim.setXmlFilePath(xmlfilepath);
+		return xim;
+	}
+	
+	public static void setXmlIncrement(XmlIncrementModel xim) {
+		JSONObject multixml =JSONObject.fromObject(CONFIG.get("multixml"));
+		JSONObject increment =JSONObject.fromObject(multixml.get("increment"));
+		increment.element("disable", xim.isDisable());
+		increment.element("type", xim.getType());
+		increment.element("xmlfilepath", xim.getXmlFilePath());
+		increment.element("attrname", xim.getAttrname());
+		increment.element("incrementlistname", xim.getIncrementlListName());
+		multixml.element("increment", increment);
+		CONFIG.element("multixml", multixml);
+		String jsonStr = CONFIG.toString();
+		WriteConfig(jsonStr);
+	}
+	
+	//xml赋值属性模型
+	public static XmlAssignModel getXmlAssign() {
+		JSONObject multixml =JSONObject.fromObject(CONFIG.get("multixml"));
+		JSONObject assign =JSONObject.fromObject(multixml.get("assign"));
+		XmlAssignModel xam = new XmlAssignModel();
+		boolean disable = assign.getBoolean("disable");
+		String type  =  assign.getString("type");
+		String xmlfilepath  =  assign.getString("xmlfilepath");
+		String attrname = assign.getString("attrname");
+		String valuesfilepath = assign.getString("valuesfilepath");
+		String assignlistname = assign.getString("assignlistname");
+		xam.setAttrname(attrname);
+		xam.setDisable(disable);
+		xam.setAssignListName(assignlistname);
+		xam.setValuesFilePath(valuesfilepath);
+		xam.setType(type);
+		xam.setXmlFilePath(xmlfilepath);
+		return xam;
+	}
+	
+	public static void setXmlAssign(XmlAssignModel xam) {
+		JSONObject multixml =JSONObject.fromObject(CONFIG.get("multixml"));
+		JSONObject assign =JSONObject.fromObject(multixml.get("assign"));
+		assign.element("disable", xam.isDisable());
+		assign.element("type", xam.getType());
+		assign.element("xmlfilepath", xam.getXmlFilePath());
+		assign.element("attrname", xam.getAttrname());
+		assign.element("valuesfilepath", xam.getValuesFilePath());
+		assign.element("assignlistname", xam.getAssignListName());
+		multixml.element("assign", assign);
+		CONFIG.element("multixml", multixml);
+		String jsonStr = CONFIG.toString();
+		WriteConfig(jsonStr);
+	}
+	
+	//json并发量
+	public static int getJSONConcurrency() {
+			JSONObject multijson =JSONObject.fromObject(CONFIG.get("multijson"));
+			return multijson.getInt("concurrency");
+	}
+		
+	public static void setJSONConcurrency(int concurrency) {
+			JSONObject multijson =JSONObject.fromObject(CONFIG.get("multijson"));
+			multijson.element("concurrency", concurrency);
+			CONFIG.element("multijson", multijson);
+			String jsonStr = CONFIG.toString();
+			WriteConfig(jsonStr);
+	}
+	
+	//json递增属性模型
+	public static JsonIncrementModel getJsonIncrement() {
+		JSONObject multijson =JSONObject.fromObject(CONFIG.get("multijson"));
+		JSONObject increment =JSONObject.fromObject(multijson.get("increment"));
+		JsonIncrementModel jim = new JsonIncrementModel();
+		boolean disable = increment.getBoolean("disable");
+		String jsonfilepath  =  increment.getString("jsonfilepath");
+		String incrementlistname = increment.getString("incrementlistname");
+		jim.setDisable(disable);
+		jim.setIncrementListName(incrementlistname);
+		jim.setJsonFilePath(jsonfilepath);
+		return jim;
+	}
+	
+	public static void setJsonIncrement(JsonIncrementModel jim) {
+		JSONObject multijson =JSONObject.fromObject(CONFIG.get("multijson"));
+		JSONObject increment =JSONObject.fromObject(multijson.get("increment"));
+		increment.element("disable", jim.isDisable());
+		increment.element("jsonfilepath", jim.getJsonFilePath());
+		increment.element("incrementlistname", jim.getIncrementListName());
+		multijson.element("increment", increment);
+		CONFIG.element("multijson", multijson);
+		String jsonStr = CONFIG.toString();
+		WriteConfig(jsonStr);
+	}
+	
+	//json赋值属性模型
+	public static JsonAssignModel getJsonAssign() {
+		JSONObject multijson =JSONObject.fromObject(CONFIG.get("multijson"));
+		JSONObject assign =JSONObject.fromObject(multijson.get("assign"));
+		JsonAssignModel jam = new JsonAssignModel();
+		boolean disable = assign.getBoolean("disable");
+		String jsonfilepath  =  assign.getString("jsonfilepath");
+		String valuesfilepath = assign.getString("valuesfilepath");
+		String assignlistname = assign.getString("assignlistname");
+		jam.setDisable(disable);
+		jam.setAssignListName(assignlistname);
+		jam.setValuesFilePath(valuesfilepath);
+		jam.setJsonFilePath(jsonfilepath);
+		return jam;
+	}
+	
+	public static void setJsonAssign(JsonAssignModel jam) {
+		JSONObject multijson =JSONObject.fromObject(CONFIG.get("multijson"));
+		JSONObject assign =JSONObject.fromObject(multijson.get("assign"));
+		assign.element("disable", jam.isDisable());
+		assign.element("jsonfilepath", jam.getJsonFilePath());
+		assign.element("valuesfilepath", jam.getValuesFilePath());
+		assign.element("assignlistname", jam.getAssignListName());
+		multijson.element("assign", assign);
+		CONFIG.element("multijson", multijson);
+		String jsonStr = CONFIG.toString();
+		WriteConfig(jsonStr);
+	}
+
 }

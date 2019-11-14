@@ -1,15 +1,12 @@
 package nt.com.script;
 
 import java.io.File;
-import java.io.FileInputStream;
-import java.io.FileNotFoundException;
 import java.io.FileReader;
 import java.io.InputStreamReader;
 
 import javax.script.Invocable;
 import javax.script.ScriptEngine;
 import javax.script.ScriptEngineManager;
-import javax.script.ScriptException;
 
 import org.apache.commons.logging.Log;
 import org.apache.commons.logging.LogFactory;
@@ -17,7 +14,7 @@ import org.apache.commons.logging.LogFactory;
 import nt.com.view.init.ConsoleTextArea;
 
 /**
- * 脚本管理器
+ * 抽象脚本管理器
  *
  * @author kege
  */

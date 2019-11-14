@@ -22,13 +22,11 @@ public class HttpMulti {
 	private   static Log log = LogFactory.getLog(HttpMulti.class);
 	private   ArrayBlockingQueue<HttpURLConnection> channelList;
 	private   String encodeC;
-	private   String decodeC;
 	private   URL url;
 	
 	// URL 编码  解码
-	public  void load(URL url, String encodeC,String decodeC) {
+	public  void load(URL url, String encodeC) {
 		this.encodeC=encodeC;
-		this.decodeC=decodeC;
 		this.url=url;
 		try {
 			System.gc();
@@ -42,7 +40,7 @@ public class HttpMulti {
 		}
 	}
 	
-	public  String sendByBody(Map<String, String> propMap,String msg) {
+	public  String sendByPost(String msg,String contentType) {
 		try {
 			log.info("发送消息到["+url.toString()+"]");
 			HttpURLConnection connection =  channelList.take(); 
@@ -52,11 +50,7 @@ public class HttpMulti {
 				connection.setRequestMethod("POST");
 				connection.setDoOutput(true);
 				connection.setDoInput(true);
-				connection.setRequestProperty("Content-Type","application/x-www-form-urlencoded");
-				Set <Entry<String, String>> entrys = propMap.entrySet();
-				for (Entry<String, String> entry : entrys) {
-					connection.setRequestProperty(entry.getKey().trim(),entry.getValue().trim());
-				}
+				connection.setRequestProperty("Content-Type",contentType);
 				connection.connect();
 				OutputStream out = connection.getOutputStream();
 				out.write(msg.getBytes(encodeC));
@@ -64,7 +58,7 @@ public class HttpMulti {
 				out.close();
 				int code = connection.getResponseCode();
 				if (code == 200) {
-					 BufferedReader reader = new BufferedReader(new InputStreamReader(connection.getInputStream(), decodeC));
+					 BufferedReader reader = new BufferedReader(new InputStreamReader(connection.getInputStream(), encodeC));
 					 String line;
 					 while ((line = reader.readLine()) != null) {
 						 recv += line + "\n";
@@ -77,9 +71,11 @@ public class HttpMulti {
 				log.info("收到消息["+url+"] - "+recv);
 				return recv;
 			} catch (IOException e) {
+				log.error(e);
 				e.printStackTrace();
 			}
 		} catch (InterruptedException e1) {
+			log.error(e1);
 			e1.printStackTrace();
 		}finally {
 			new Thread(new Runnable() {
@@ -92,26 +88,20 @@ public class HttpMulti {
 		return null;
 	}
 	
-	public  String sendByHead(Map<String, String> propMap,String msg,String msgname) {
+	public  String sendByGet(String msg,String msgname) {
 		try {
 			log.info("发送消息到["+url.toString()+"]");
 			HttpURLConnection connection =  channelList.take(); 
 			try {
 				String recv="";
 				connection=(HttpURLConnection) url.openConnection();
-				connection.setRequestMethod("POST");
-				connection.setDoOutput(true);
+				connection.setRequestMethod("GET");
 				connection.setDoInput(true);
-				connection.setRequestProperty("Content-Type","application/x-www-form-urlencoded");
 				connection.setRequestProperty(msgname,msg);
-				Set <Entry<String, String>> entrys = propMap.entrySet();
-				for (Entry<String, String> entry : entrys) {
-					connection.setRequestProperty(entry.getKey().trim(),entry.getValue().trim());
-				}
 				connection.connect();
 				int code = connection.getResponseCode();
 				if (code == 200) {
-					 BufferedReader reader = new BufferedReader(new InputStreamReader(connection.getInputStream(),decodeC));
+					 BufferedReader reader = new BufferedReader(new InputStreamReader(connection.getInputStream(),encodeC));
 					 String line;
 					 while ((line = reader.readLine()) != null) {
 						 recv += line + "\n";
@@ -124,9 +114,11 @@ public class HttpMulti {
 				log.info("收到消息["+url+"] - "+recv);
 				return recv;
 			} catch (IOException e) {
+				log.error(e);
 				e.printStackTrace();
 			}
 		} catch (InterruptedException e1) {
+			log.error(e1);
 			e1.printStackTrace();
 		}finally {
 			new Thread(new Runnable() {
