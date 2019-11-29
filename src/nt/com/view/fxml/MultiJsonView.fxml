@@ -41,8 +41,8 @@
             <CheckBox fx:id="incrementenable" layoutX="106.0" layoutY="66.0" mnemonicParsing="false" onAction="#increment" />
             <TextField fx:id="incrementjsonfield" disable="true" layoutX="227.0" layoutY="63.0" prefHeight="23.0" prefWidth="150.0" />
             <Button fx:id="incrementjsonbtn" disable="true" layoutX="414.0" layoutY="63.0" mnemonicParsing="false" text="解析JSON节点" />
-            <TreeView fx:id="incrementjsontree" layoutX="35.0" layoutY="107.0" prefHeight="80.0" prefWidth="221.0" />
-            <ListView fx:id="incrementjsonlist" layoutX="320.0" layoutY="107.0" prefHeight="80.0" prefWidth="221.0" />
+            <TreeView fx:id="incrementjsontree" disable="true" layoutX="35.0" layoutY="107.0" prefHeight="80.0" prefWidth="221.0" />
+            <ListView fx:id="incrementjsonlist" disable="true" layoutX="320.0" layoutY="107.0" prefHeight="80.0" prefWidth="221.0" />
             <Button fx:id="incrementjsonadd" disable="true" layoutX="277.0" layoutY="113.0" mnemonicParsing="false" prefHeight="25.0" prefWidth="25.0" text="&gt;" />
             <Button fx:id="incrementjsondel" disable="true" layoutX="277.0" layoutY="155.0" mnemonicParsing="false" prefHeight="25.0" prefWidth="25.0" text="&lt;" />
             <Label layoutX="38.0" layoutY="213.0" text="启用赋值" />
@@ -52,8 +52,8 @@
             <Label fx:id="assignjsonlabel" disable="true" layoutX="149.0" layoutY="214.0" text="赋值JSON" />
             <TextField fx:id="assignjsonfield" disable="true" layoutX="227.0" layoutY="210.0" prefHeight="23.0" prefWidth="150.0" />
             <Button fx:id="assignjsonbtn" disable="true" layoutX="414.0" layoutY="210.0" mnemonicParsing="false" text="解析JSON节点" />
-            <TreeView fx:id="assignjsontree" layoutX="35.0" layoutY="298.0" prefHeight="80.0" prefWidth="221.0" />
-            <ListView fx:id="assignjsonlist" layoutX="320.0" layoutY="298.0" prefHeight="80.0" prefWidth="221.0" />
+            <TreeView fx:id="assignjsontree" disable="true" layoutX="35.0" layoutY="298.0" prefHeight="80.0" prefWidth="221.0" />
+            <ListView fx:id="assignjsonlist" disable="true" layoutX="320.0" layoutY="298.0" prefHeight="80.0" prefWidth="221.0" />
             <Button fx:id="assignjsonadd" disable="true" layoutX="277.0" layoutY="307.0" mnemonicParsing="false" prefHeight="25.0" prefWidth="25.0" text="&gt;" />
             <Button fx:id="assignjsondel" disable="true" layoutX="277.0" layoutY="347.0" mnemonicParsing="false" prefHeight="25.0" prefWidth="25.0" text="&lt;" />
             <Label fx:id="incrementjsonlabel" disable="true" layoutX="149.0" layoutY="67.0" text="递增JSON" />

@@ -6,6 +6,7 @@ import javafx.fxml.FXMLLoader;
 import javafx.scene.Scene;
 import javafx.scene.image.Image;
 import javafx.scene.layout.VBox;
+import javafx.stage.Modality;
 import javafx.stage.Stage;
 
 public class ScriptDebugDialog extends VBox{
@@ -22,6 +23,7 @@ public class ScriptDebugDialog extends VBox{
 		Scene scene = new Scene(this);
 		stage.setScene(scene);
 		stage.setTitle("ต๗สิ");
+		stage.initModality(Modality.APPLICATION_MODAL);
 		stage.setResizable(false);
 		stage.getIcons().add(new Image(getClass().getResourceAsStream("/res/title.png")));
 		stage.show();

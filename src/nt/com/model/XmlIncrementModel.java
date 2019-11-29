@@ -15,7 +15,7 @@ public class XmlIncrementModel {
 	
 	private String attrname;
 	
-	private String incrementlListName;
+	private String incrementListName;
 
 	public boolean isDisable() {
 		return disable;
@@ -49,12 +49,12 @@ public class XmlIncrementModel {
 		this.xmlFilePath = xmlFilePath;
 	}
 
-	public String getIncrementlListName() {
-		return incrementlListName;
+	public String getIncrementListName() {
+		return incrementListName;
 	}
 
-	public void setIncrementlListName(String incrementlListName) {
-		this.incrementlListName = incrementlListName;
+	public void setIncrementListName(String incrementListName) {
+		this.incrementListName = incrementListName;
 	}
 
 

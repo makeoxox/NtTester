@@ -51,18 +51,9 @@ public class TopMenuBar extends MenuBar {
 		}else if(protocol.equals("http")){
 			((RadioMenuItem) (protocolItems.get(2))).setSelected(true);
 		}
-		//加密方式
-		ObservableList<MenuItem> macItems = list.get(3).getItems();
-		String mac = Config.getMac();
-		if(mac.equals("nomac")) {
-			((RadioMenuItem) (macItems.get(0))).setSelected(true);
-		}else if(mac.equals("3des")){
-			((RadioMenuItem) (macItems.get(1))).setSelected(true);
-		}else if(mac.equals("sm4")){
-			((RadioMenuItem) (macItems.get(2))).setSelected(true);
-		}
+		
 		//并发方式
-		ObservableList<MenuItem> multiItems = list.get(4).getItems();
+		ObservableList<MenuItem> multiItems = list.get(3).getItems();
 		String multi = Config.getMulti();
 		if(multi.equals("single")) {
 			((RadioMenuItem) (multiItems.get(0))).setSelected(true);
@@ -72,7 +63,7 @@ public class TopMenuBar extends MenuBar {
 			((RadioMenuItem) (multiItems.get(2))).setSelected(true);
 		}
 		//报文方式
-		ObservableList<MenuItem> msgItems = list.get(5).getItems();
+		ObservableList<MenuItem> msgItems = list.get(4).getItems();
 		String msg = Config.getMsg();
 		if(msg.equals("xml")) {
 			((RadioMenuItem) (msgItems.get(0))).setSelected(true);
@@ -82,7 +73,7 @@ public class TopMenuBar extends MenuBar {
 			((RadioMenuItem) (msgItems.get(2))).setSelected(true);
 		}
 		//脚本方式
-		ObservableList<MenuItem> scriptItems = list.get(6).getItems();
+		ObservableList<MenuItem> scriptItems = list.get(5).getItems();
 		String script = Config.getScript();
 		if(script.equals("disable")) {
 			((RadioMenuItem) (scriptItems.get(0))).setSelected(true);

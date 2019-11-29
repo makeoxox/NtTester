@@ -7,6 +7,7 @@ import java.util.Map;
 import org.dom4j.Node;
 
 import net.sf.json.JSON;
+import nt.com.model.TxtFieldModel;
 
 /**
  * 程序全局数据
@@ -23,5 +24,8 @@ public class GlobalData {
 	public static Map<String,List<JSON>> jsonIncrementNodeMap = new HashMap<>();
 	//json赋值子对象集合
 	public static Map<String,List<JSON>> jsonAssignNodeMap = new HashMap<>();
-	
+	//txt递增子对象集合
+	public static Map<String,List<TxtFieldModel>> txtIncrementNodeMap = new HashMap<>();
+	//txt赋值子对象集合
+	public static Map<String,List<TxtFieldModel>> txtAssignNodeMap = new HashMap<>();
 }

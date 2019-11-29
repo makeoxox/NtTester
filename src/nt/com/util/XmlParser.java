@@ -6,10 +6,7 @@ import java.io.IOException;
 import java.io.StringWriter;
 import java.io.UnsupportedEncodingException;
 
-import javax.swing.JOptionPane;
 
-import org.apache.commons.logging.Log;
-import org.apache.commons.logging.LogFactory;
 import org.dom4j.Document;
 import org.dom4j.DocumentException;
 import org.dom4j.io.OutputFormat;
@@ -22,8 +19,6 @@ import org.dom4j.io.XMLWriter;
  *
  */
 public class XmlParser {
-	
-	private static Log log = LogFactory.getLog(XmlParser.class);
 	
 	static SAXReader reader = new SAXReader();
 

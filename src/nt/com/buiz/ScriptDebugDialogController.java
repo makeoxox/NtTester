@@ -1,11 +1,9 @@
 package nt.com.buiz;
 
-import java.io.File;
 import java.util.concurrent.ExecutionException;
 import java.util.concurrent.TimeUnit;
 import java.util.concurrent.TimeoutException;
 
-import javafx.application.Platform;
 import javafx.concurrent.Task;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
@@ -53,10 +51,7 @@ public class ScriptDebugDialogController {
     	Button scriptBtn = (Button) ttb.getItems().get(5);
     	Stage stage = (Stage)scriptdebugdialog.getScene().getWindow();
     	stage.close();
-    	File file = new File(path);
-		Task<Object> task = null;
-		try {
-			task = new Task<Object>() {
+		Task<Object> task = new Task<Object>() {
 				@Override
 				public Object call() {
 					scriptBtn.setDisable(true);
@@ -74,22 +69,27 @@ public class ScriptDebugDialogController {
 				}
 			};
 			new Thread(task).start();
-			if (timeout.trim() == null || timeout.trim().equals("") || timeout.trim().equals("0")) {
-				task.get();
-			} else {
-				task.get(Integer.parseInt(timeout), TimeUnit.MILLISECONDS);
-			}
-		}  catch (InterruptedException e1) {
-			ConsoleTextArea.AppendMessageOnCurrentConsole(e1.getLocalizedMessage());
-		} catch (ExecutionException e1) {
-			ConsoleTextArea.AppendMessageOnCurrentConsole(e1.getLocalizedMessage());
-		} catch (TimeoutException e1) {
-			task.cancel(true);
-			
-		} finally {
-			scriptBtn.setDisable(false);
-			ConsoleTextArea.AppendMessageOnCurrentConsole("调试脚本["+path+"]结束");
-		}
+			new Thread(new Runnable() {
+				@Override
+				public void run() {
+					try {
+						if (timeout.trim() == null || timeout.trim().equals("") || timeout.trim().equals("0")) {
+							task.get();
+						} else {
+							task.get(Integer.parseInt(timeout), TimeUnit.MILLISECONDS);
+						}
+					} catch (InterruptedException e1) {
+						ConsoleTextArea.AppendMessageOnCurrentConsole(e1.getLocalizedMessage());
+					} catch (ExecutionException e1) {
+						ConsoleTextArea.AppendMessageOnCurrentConsole(e1.getLocalizedMessage());
+					} catch (TimeoutException e1) {
+						task.cancel(true);
+						
+					} finally {
+						scriptBtn.setDisable(false);
+						ConsoleTextArea.AppendMessageOnCurrentConsole("调试脚本["+path+"]结束");
+					}
+				}
+			}).start();
     }
-
 }

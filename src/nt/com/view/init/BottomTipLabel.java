@@ -49,18 +49,9 @@ public class BottomTipLabel extends ToolBar {
 		}else if(protocol.equals("http")){
 			protocolLabel.setText("请求协议：HTTP");
 		}
-		//加密方式
-		Label macLabel =(Label)(this.getItems().get(6));
-		String mac = Config.getMac();
-		if(mac.equals("nomac")) {
-			macLabel.setText("加密算法：无密");
-		}else if(mac.equals("3des")){
-			macLabel.setText("加密算法：3DES");
-		}else if(mac.equals("sm4")){
-			macLabel.setText("加密算法：SM4");
-		}
+		
 		//并发方式
-		Label multiLabel =(Label)(this.getItems().get(8));
+		Label multiLabel =(Label)(this.getItems().get(6));
 		String multi = Config.getMulti();
 		if(multi.equals("single")) {
 			multiLabel.setText("并发类型：单发无阻塞");
@@ -70,7 +61,7 @@ public class BottomTipLabel extends ToolBar {
 			multiLabel.setText("并发类型：并发有阻塞");
 		}
 		//报文方式
-		Label msgLabel =(Label)(this.getItems().get(10));
+		Label msgLabel =(Label)(this.getItems().get(8));
 		String msg = Config.getMsg();
 		if(msg.equals("xml")) {
 			msgLabel.setText("报文类型：XML");
@@ -80,7 +71,7 @@ public class BottomTipLabel extends ToolBar {
 			msgLabel.setText("报文类型：文本");
 		}
 		//脚本方式
-		Label scriptLabel =(Label)(this.getItems().get(12));
+		Label scriptLabel =(Label)(this.getItems().get(10));
 		String script = Config.getScript();
 		if(script.equals("disable")) {
 			scriptLabel.setText("脚本：禁用");

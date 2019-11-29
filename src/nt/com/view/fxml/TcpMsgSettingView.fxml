@@ -12,7 +12,7 @@
 <?import javafx.scene.layout.VBox?>
 <?import javafx.scene.text.Font?>
 
-<fx:root fx:id="tcpmsgsettingview" prefHeight="327.0" prefWidth="300.0" type="VBox" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="nt.com.buiz.TcpMsgSettingViewController">
+<fx:root fx:id="tcpmsgsettingview" prefHeight="440.0" prefWidth="300.0" type="VBox" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="nt.com.buiz.TcpMsgSettingViewController">
    <children>
       <AnchorPane prefHeight="39.0" prefWidth="287.0">
          <children>
@@ -52,32 +52,46 @@
       </AnchorPane>
       <AnchorPane prefHeight="36.0" prefWidth="324.0">
          <children>
-            <Label layoutX="42.0" layoutY="12.0" text="网络地址" />
+            <Label layoutX="41.0" layoutY="12.0" text="网络地址" />
             <TextField fx:id="ipfield" layoutX="147.0" layoutY="8.0" prefHeight="23.0" prefWidth="136.0" />
          </children>
       </AnchorPane>
       <AnchorPane prefHeight="36.0" prefWidth="324.0">
          <children>
-            <Label layoutX="42.0" layoutY="15.0" text="端口号" />
+            <Label layoutX="41.0" layoutY="15.0" text="端口号" />
             <TextField fx:id="portfield" layoutX="147.0" layoutY="11.0" prefHeight="23.0" prefWidth="136.0" />
          </children>
       </AnchorPane>
       <AnchorPane prefHeight="36.0" prefWidth="324.0">
          <children>
-            <Label layoutX="43.0" layoutY="15.0" text="补位字符" />
+            <Label layoutX="41.0" layoutY="15.0" text="补位字符" />
             <TextField fx:id="fixcharfield" layoutX="147.0" layoutY="11.0" prefHeight="23.0" prefWidth="136.0" />
          </children>
       </AnchorPane>
       <AnchorPane prefHeight="36.0" prefWidth="324.0">
          <children>
-            <Label layoutX="43.0" layoutY="15.0" text="补位长度" />
+            <Label layoutX="41.0" layoutY="15.0" text="补位长度" />
             <TextField fx:id="fixlengthfield" layoutX="147.0" layoutY="11.0" prefHeight="23.0" prefWidth="136.0" />
          </children>
       </AnchorPane>
       <AnchorPane prefHeight="47.0" prefWidth="324.0">
          <children>
-            <Label layoutX="39.0" layoutY="15.0" text="返回报文偏移度" />
+            <Label layoutX="41.0" layoutY="15.0" text="返回报文偏移度" />
             <TextField fx:id="offsetfield" layoutX="147.0" layoutY="11.0" prefHeight="23.0" prefWidth="136.0" />
+         </children>
+      </AnchorPane>
+      <Separator prefHeight="0.0" prefWidth="324.0" />
+      <AnchorPane prefHeight="114.0" prefWidth="300.0">
+         <children>
+            <Label fx:id="asynlabel" disable="true" layoutX="38.0" layoutY="14.0" text="异步设置">
+               <font>
+                  <Font name="DengXian Bold" size="13.0" />
+               </font>
+            </Label>
+            <Label fx:id="svrportlabel" disable="true" layoutX="41.0" layoutY="45.0" text="服务端口号" />
+            <Label fx:id="svrtimeoutlabel" disable="true" layoutX="40.0" layoutY="80.0" text="异步超时时间" />
+            <TextField fx:id="svrportfield" disable="true" layoutX="147.0" layoutY="41.0" prefHeight="23.0" prefWidth="136.0" />
+            <TextField fx:id="svrtimeoutfield" disable="true" layoutX="147.0" layoutY="76.0" prefHeight="23.0" prefWidth="136.0" />
          </children>
       </AnchorPane>
       <Separator prefHeight="0.0" prefWidth="324.0" />

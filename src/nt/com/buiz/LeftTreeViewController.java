@@ -100,8 +100,8 @@ public class LeftTreeViewController {
 		MenuItem clickedBtn =(MenuItem) event.getTarget(); //判断新建文件类型
 		if(clickedBtn==addprojectbtn) {
 			icon= new ImageView(new Image(LeftTreeViewController.class.getResourceAsStream("/res/import.gif")));
-			dialog.setContentText("新建文件夹名：");
-			dialog.setTitle("新增文件夹");
+			dialog.setContentText("新建项目名：");
+			dialog.setTitle("新增项目");
 		}else if(clickedBtn==addfoldbtn) {
 			icon= new ImageView(new Image(LeftTreeViewController.class.getResourceAsStream("/res/dir.png")));
 			dialog.setContentText("新建文件夹名：");
@@ -128,7 +128,7 @@ public class LeftTreeViewController {
 		   return;
 		} 
 		if(item==null) {  //右键没选中treeitem就默认为从根节点新建
-			if(clickedBtn!=addprojectbtn) {  //根节点不支持创建文件，只建文件夹
+			if(clickedBtn!=addprojectbtn) {  //根节点不支持创建文件，只建项目
 				Alert alert = new Alert(AlertType.WARNING);
 				Stage alertStage =(Stage) alert.getDialogPane().getScene().getWindow();
 				alertStage.getIcons().add(new Image(getClass().getResourceAsStream("/res/title.png")));
@@ -448,15 +448,10 @@ public class LeftTreeViewController {
 						mctp.getSelectionModel().select(consoletab);
 						RichEditTextArea eta = new RichEditTextArea();
 						ConsoleTextArea cta = new ConsoleTextArea();
-						String line = "";
 						String content = "";
 						try {
-							BufferedReader br = new BufferedReader(
-									new InputStreamReader(new FileInputStream(file), Config.getEncode()));
-							while ((line = br.readLine()) != null) {
-								content += line + "\n";
-							}
-							br.close();
+							
+							content = Utils.ReadFiletoString(file, Config.getEncode());
 						} catch (FileNotFoundException e) {
 							e.printStackTrace();
 						} catch (IOException e) {

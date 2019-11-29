@@ -1,23 +1,28 @@
 {
-	"lastOpenFilePath":"projects\\project-demo\\test.js",
+	"lastOpenFilePath":"projects\\project-demo\\demo\\demo.js",
 	"consoleFont":{
 		"size":14,
 		"family":"Consolas"
 	},
 	"importDirectories":[],
 	"httpSetting":{
-		"requesttype":"post",
-		"url":"http://127.0.0.1:8000",
-		"contenttype":"text/plain"
+		"requesttype":"get",
+		"svrport":1123,
+		"svrtimeout":60,
+		"contextroot":"/svr",
+		"url":"http://apis.juhe.cn/qrcode/api?key=468c8fa429cca535a943df230ee34a13&text=kege",
+		"contenttype":"application/x-www-form-urlencoding"
 	},
 	"tcpSetting":{
 		"lengthtype":"byte",
 		"fixlength":8,
+		"svrport":8789,
 		"offset":8,
-		"fixtype":"right",
-		"port":"9001",
+		"fixtype":"left",
+		"port":9001,
 		"ip":"127.0.0.1",
-		"fixchar":"0"
+		"fixchar":"0",
+		"svrtimeout":60
 	},
 	"multixml":{
 		"increment":{
@@ -27,11 +32,11 @@
 			"type":"attribution",
 			"attrname":"untid"
 		},
-		"concurrency":10,
+		"concurrency":77,
 		"assign":{
 			"xmlfilepath":"",
 			"disable":true,
-			"valuesfilepath":"",
+			"valuesfilepath":"config/values.txt",
 			"type":"text",
 			"attrname":"",
 			"assignlistname":""
@@ -40,14 +45,14 @@
 	"multijson":{
 		"increment":{
 			"incrementlistname":"",
-			"jsonfilepath":"",
-			"disable":true
+			"jsonfilepath":"projects\\project-demo\\debug.json",
+			"disable":false
 		},
-		"concurrency":10,
+		"concurrency":23,
 		"assign":{
 			"jsonfilepath":"",
-			"disable":true,
-			"valuesfilepath":"",
+			"disable":false,
+			"valuesfilepath":"config/values.txt",
 			"assignlistname":""
 		}
 	},
@@ -56,13 +61,24 @@
 		"msg":"xml",
 		"protocol":"http",
 		"connect":"sync",
-		"mac":"nomac",
-		"script":"disable",
+		"script":"enable",
 		"multi":"single"
 	},
 	"version":"2.0.0",
+	"multitxt":{
+		"increment":{
+			"incrementlistname":"",
+			"disable":false
+		},
+		"concurrency":77,
+		"assign":{
+			"disable":false,
+			"valuesfilepath":"config/values.txt",
+			"assignlistname":""
+		}
+	},
 	"editFont":{
-		"size":15,
+		"size":14,
 		"family":"Consolas"
 	}
 }

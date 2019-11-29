@@ -9,6 +9,7 @@ import java.nio.channels.ServerSocketChannel;
 import java.nio.channels.SocketChannel;
 import java.util.HashMap;
 import java.util.Iterator;
+import java.util.List;
 import java.util.Map;
 
 import org.apache.commons.logging.Log;
@@ -24,16 +25,13 @@ import org.apache.commons.logging.LogFactory;
 public class NioTcpServer {
 	
 	  private  static Log log = LogFactory.getLog(NioTcpServer.class);
-	  private  Map recvMsg;
+	 
 	  private  Selector selector;  
 	  private  ByteBuffer readheadBuffer;
 	  private  String decodeC;
 	  private  ServerSocketChannel servSocketChannel;  
 	  
-	  public Map getRecvMsg() {
-		  
-		  return this.recvMsg;
-	  }
+	 
 	  
 	  public  void init(int port,int recvheadLength,String codeC){  
 		  readheadBuffer = ByteBuffer.allocate(recvheadLength);  
@@ -100,10 +98,8 @@ public class NioTcpServer {
 	    			}
 	    			String recvMsg =new String(readbufbody.array(),decodeC);  
 	    			log.info("收到消息["+sc.getRemoteAddress()+"] - "+recvMsg);
-	    			Map map =new HashMap();
-	    			map.put("recvMsg",recvMsg);
-	    			map.put("ip", sc.getRemoteAddress());
-	    			this.recvMsg =map;
+	    			
+	    			
 					sc.close();    
 					this.closeConnect();
 	            }  
@@ -132,8 +128,5 @@ public class NioTcpServer {
 		}
 	 }
 	 
-	 public void clearData() {
-		 this.recvMsg =null;
-	 }
 	 
 }

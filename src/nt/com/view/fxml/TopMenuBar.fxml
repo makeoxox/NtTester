@@ -40,17 +40,6 @@
                   <RadioMenuItem fx:id="httpMenuItem" mnemonicParsing="false" onAction="#protocolSelected" text="HTTP" toggleGroup="$ProtocolGroup" />
             </items>
           </Menu>
-            <Menu fx:id="macMenu" mnemonicParsing="false"  text="加密算法">
-               <items>
-                  <RadioMenuItem fx:id="nomacMenuItem" mnemonicParsing="false" onAction="#macSelected"  text="无密">
-                     <toggleGroup>
-                        <ToggleGroup fx:id="MacGroup" />
-                     </toggleGroup>
-                  </RadioMenuItem>
-                  <RadioMenuItem fx:id="desMenuItem" disable="true" mnemonicParsing="false" onAction="#macSelected" text="3DES" toggleGroup="$MacGroup" />
-                  <RadioMenuItem fx:id="mdMenuItem" disable="true" mnemonicParsing="false" onAction="#macSelected" text="SM4" toggleGroup="$MacGroup" />
-               </items>
-            </Menu>
             <Menu fx:id="multiMenu" mnemonicParsing="false"  text="并发类型">
                <items>
                   <RadioMenuItem fx:id="singleMenuItem" mnemonicParsing="false" onAction="#multiSelected"  text="单发无阻塞">

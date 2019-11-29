@@ -4,10 +4,12 @@ import java.io.IOException;
 
 import javafx.fxml.FXMLLoader;
 import javafx.scene.Scene;
+import javafx.scene.control.Label;
 import javafx.scene.control.RadioButton;
 import javafx.scene.control.TextField;
 import javafx.scene.image.Image;
 import javafx.scene.layout.VBox;
+import javafx.stage.Modality;
 import javafx.stage.Stage;
 import nt.com.config.Config;
 /**
@@ -28,11 +30,24 @@ public class TcpMsgSettingView extends VBox{
 		Stage stage = new Stage();
 		Scene scene = new Scene(this);
 		stage.setScene(scene);
+		stage.initModality(Modality.APPLICATION_MODAL);
 		stage.setTitle("±®Œƒ…Ë÷√ - TCP");
 		stage.setResizable(false);
 		stage.getIcons().add(new Image(getClass().getResourceAsStream("/res/title.png")));
 		stage.show();
-		String lengthtype=Config.getLengthType();
+		String asyn = Config.getConnect();
+		TextField svrportfield = (TextField) this.lookup("#svrportfield");
+		 svrportfield.setText(Config.getTcpSvrPort()+"");
+		 TextField svrtimeoutfield = (TextField) this.lookup("#svrtimeoutfield");
+		 svrtimeoutfield.setText(Config.getTcpSvrTimeout()+"");
+		if(asyn.toLowerCase().equals("asyn")) {
+			 ((Label) this.lookup("#asynlabel")).setDisable(false);
+			 ((Label) this.lookup("#svrportlabel")).setDisable(false);
+			 ((Label) this.lookup("#svrtimeoutlabel")).setDisable(false);
+			 svrportfield.setDisable(false);
+			 svrtimeoutfield.setDisable(false);
+		}
+		String lengthtype=Config.getLengthType().toLowerCase();
 		if(lengthtype.equals("byte")) {
 			RadioButton byteradio =(RadioButton) this.lookup("#byteradio");
 			byteradio.setSelected(true);
@@ -40,7 +55,7 @@ public class TcpMsgSettingView extends VBox{
 			RadioButton charradio =(RadioButton) this.lookup("#charradio");
 			charradio.setSelected(true);
 		}
-		String fixtype=Config.getFixType();
+		String fixtype=Config.getFixType().toLowerCase();
 		if(fixtype.equals("left")) {
 			RadioButton leftradio =(RadioButton) this.lookup("#leftradio");
 			leftradio.setSelected(true);
@@ -51,7 +66,7 @@ public class TcpMsgSettingView extends VBox{
 		TextField ipfield = (TextField) this.lookup("#ipfield");
 		ipfield.setText(Config.getIP());
 		TextField portfield = (TextField) this.lookup("#portfield");
-		portfield.setText(Config.getPort());
+		portfield.setText(Config.getPort()+"");
 		TextField fixcharfield = (TextField) this.lookup("#fixcharfield");
 		fixcharfield.setText(Config.getFixChar());
 		TextField fixlengthfield = (TextField) this.lookup("#fixlengthfield");

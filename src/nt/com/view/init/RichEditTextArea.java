@@ -54,7 +54,7 @@ public class RichEditTextArea extends CodeArea {
             "return", "short", "static", "strictfp", "super",
             "switch", "synchronized", "this", "throw", "throws",
             "transient", "try", "void", "volatile", "while","var"
-            ,"function","prototype","typeof"
+            ,"function","prototype","typeof","null","true","false"
     };
     
     //Æ¥Åäjs/json
@@ -114,6 +114,13 @@ public class RichEditTextArea extends CodeArea {
 	               this.replaceText(0, 0, text);
 	               this.getStylesheets().add(this.getClass().getResource("/nt/com/view/css/RichTextEdit-xml.css").toExternalForm());
 	        	break;
+	        case HTML:
+	        	   this.textProperty().addListener((obs, oldText, newText) -> {
+	                   this.setStyleSpans(0, computeXMLHighlighting(newText));
+	               });
+	               this.replaceText(0, 0, text);
+	               this.getStylesheets().add(this.getClass().getResource("/nt/com/view/css/RichTextEdit-xml.css").toExternalForm());
+	        	break;	
 	        case JSON:
 	        	  this.multiPlainChanges().successionEnds(Duration.ofMillis(500)).subscribe(ignore -> this.setStyleSpans(0, computeJsonHighlighting(this.getText())));
 	              this.addEventHandler( KeyEvent.KEY_PRESSED, KE ->
@@ -128,6 +135,7 @@ public class RichEditTextArea extends CodeArea {
 	              this.replaceText(0, 0, text);
 	      		this.getStylesheets().add(this.getClass().getResource("/nt/com/view/css/RichTextEdit-json.css").toExternalForm());
 	      		break;
+	      		
 	        default:
 				 this.replaceText(0, 0, text);
 				break;

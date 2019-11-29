@@ -9,6 +9,7 @@ import javafx.scene.Scene;
 import javafx.scene.control.ListView;
 import javafx.scene.image.Image;
 import javafx.scene.layout.VBox;
+import javafx.stage.Modality;
 import javafx.stage.Stage;
 import nt.com.enmu.FileType;
 import nt.com.model.NewFileListModel;
@@ -34,6 +35,7 @@ public class NewFileView extends VBox {
 		Stage stage = new Stage();
 		Scene scene = new Scene(this);
 		stage.setScene(scene);
+		stage.initModality(Modality.APPLICATION_MODAL);
 		stage.setTitle("ÐÂ½¨");
 		stage.setResizable(false);
 		stage.getIcons().add(new Image(getClass().getResourceAsStream("/res/title.png")));

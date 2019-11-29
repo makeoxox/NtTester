@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<handler>
+
+	<before>
+		<class>nt.com.handler.LogHandler</class>
+	</before>
+	<after>
+		<class>nt.com.handler.LogHandler</class>
+	</after>
+
+</handler>

@@ -13,8 +13,6 @@
         <Separator orientation="VERTICAL" prefHeight="0.0" />
         <Label fx:id="protocolLabel"   />
         <Separator orientation="VERTICAL" prefHeight="0.0" />
-        <Label fx:id="macLabel"  />
-        <Separator orientation="VERTICAL" prefHeight="0.0" />
         <Label fx:id="multiLabel"   />
         <Separator orientation="VERTICAL" prefHeight="0.0" />
         <Label fx:id="msgLabel"  />

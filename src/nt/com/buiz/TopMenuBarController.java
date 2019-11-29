@@ -14,100 +14,86 @@ import nt.com.view.init.MainView;
 public class TopMenuBarController {
 
 	@FXML
-	private Menu codeMenu;
+	protected Menu codeMenu;
 
 	@FXML
-	private RadioMenuItem gbkMenuItem;
+	protected RadioMenuItem gbkMenuItem;
 
 	@FXML
-	private ToggleGroup CodeGroup;
+	protected ToggleGroup CodeGroup;
 
 	@FXML
-	private RadioMenuItem utfMenuItem;
+	protected RadioMenuItem utfMenuItem;
 
 	@FXML
-	private Menu connectMenu;
+	protected Menu connectMenu;
 
 	@FXML
-	private RadioMenuItem syncMenuItem;
+	protected RadioMenuItem syncMenuItem;
 
 	@FXML
-	private ToggleGroup AsynGroup;
+	protected ToggleGroup AsynGroup;
 
 	@FXML
-	private RadioMenuItem asynMenuItem;
+	protected RadioMenuItem asynMenuItem;
 
 	@FXML
-	private Menu protocolMenu;
+	protected Menu protocolMenu;
 
 	@FXML
-	private RadioMenuItem tcpMenuItem;
+	protected RadioMenuItem tcpMenuItem;
 
 	@FXML
-	private ToggleGroup ProtocolGroup;
+	protected ToggleGroup ProtocolGroup;
 
 	@FXML
-	private RadioMenuItem ucpMenuItem;
+	protected RadioMenuItem ucpMenuItem;
 
 	@FXML
-	private RadioMenuItem httpMenuItem;
+	protected RadioMenuItem httpMenuItem;
+
 
 	@FXML
-	private Menu macMenu;
+	protected Menu multiMenu;
 
 	@FXML
-	private RadioMenuItem nomacMenuItem;
+	protected RadioMenuItem singleMenuItem;
 
 	@FXML
-	private ToggleGroup MacGroup;
+	protected ToggleGroup MultiGroup;
 
 	@FXML
-	private RadioMenuItem desMenuItem;
+	protected RadioMenuItem multiNMenuItem;
 
 	@FXML
-	private RadioMenuItem mdMenuItem;
+	protected RadioMenuItem multiMenuItem;
 
 	@FXML
-	private Menu multiMenu;
+	protected Menu MsgMenu;
 
 	@FXML
-	private RadioMenuItem singleMenuItem;
-
-	@FXML
-	private ToggleGroup MultiGroup;
-
-	@FXML
-	private RadioMenuItem multiNMenuItem;
-
-	@FXML
-	private RadioMenuItem multiMenuItem;
-
-	@FXML
-	private Menu MsgMenu;
-
-	@FXML
-	private RadioMenuItem xmlMenuItem;
+	protected RadioMenuItem xmlMenuItem;
 	
 	@FXML
-	private RadioMenuItem jsonMenuItem;
+	protected RadioMenuItem jsonMenuItem;
 
 	@FXML
-	private ToggleGroup MsgGroup;
+	protected ToggleGroup MsgGroup;
 
 	@FXML
-	private RadioMenuItem txtMenuItem;
+	protected RadioMenuItem txtMenuItem;
 
 	@FXML
-	private Menu scriptMenu;
+	protected Menu scriptMenu;
 
 	@FXML
-	private RadioMenuItem disMenuItem;
+	protected RadioMenuItem disMenuItem;
 
 	@FXML
-	private ToggleGroup ScriptGroup;
+	protected ToggleGroup ScriptGroup;
 
 	@FXML
-	private RadioMenuItem enMenuItem;
+	protected RadioMenuItem enMenuItem;
 	
 	/**
 	 * 选择编码类型
@@ -203,25 +189,6 @@ public class TopMenuBarController {
 		}
 	}
 	
-	/**
-	 * 选择加密类型
-	 */
-	@FXML
-	void macSelected(ActionEvent event) {
-		RadioMenuItem rmi = (RadioMenuItem)MacGroup.getSelectedToggle();
-		String mac = rmi.getText();
-		Label macLabel =(Label)(MainView.parent.lookup("#macLabel"));
-		if (mac.equals("无密")) {
-			macLabel.setText("加密算法：无密");
-			Config.setMac("nomac");
-		} else if (mac.equals("3DES")) {
-			macLabel.setText("加密算法：3DES");
-			Config.setMac("3des");
-		} else if (mac.equals("SM4")) {
-			macLabel.setText("加密算法：SM4");
-			Config.setMac("sm4");
-		}
-	}
 	
 	/**
 	 * 选择是否启用脚本

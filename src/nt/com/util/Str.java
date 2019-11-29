@@ -415,7 +415,7 @@ public class Str {
 	    }
 	    
 	  //左补位
-	  	public static String leftFix(String num, int tag,String placeholder) {
+	  	public static String leftFix(int num, int tag,String placeholder) {
 	  				String str = "";
 	  				int len = ("" + num).length();
 	  				for (int i = len; i < tag; ++i) {
@@ -425,7 +425,7 @@ public class Str {
 	  			}
 	  		
 	  		//右补位
-	  	public static String rightFix(String num, int tag,String placeholder) {
+	  	public static String rightFix(int num, int tag,String placeholder) {
 	  			String str = "";
 	  			int len = ("" + num).length();
 	  			for (int i = len; i < tag; ++i) {

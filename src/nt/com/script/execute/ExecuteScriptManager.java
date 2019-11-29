@@ -14,26 +14,38 @@ import nt.com.view.init.ConsoleTextArea;
  */
 public class ExecuteScriptManager extends AbstractMessageScriptManager {
 	
+	public final  static   String  BEFORE="before";
+	public final  static   String  AFTER="after";
+	
 	private String path;
 	private String method;
 	
-	public ExecuteScriptManager (String path,String method) {
+	public ExecuteScriptManager (String path) {
 		this.path=path;
-		this.method=method;
 	}
 	
+	public String getMethod() {
+		return method;
+	}
+
+	public void setMethod(String method) {
+		this.method = method;
+	}
+
+
 	public String invoke(Object session){
 		loadLib();
 		try {
 			Invocable iv = this.getInvocable(path);
 			ExecuteScript as =iv.getInterface(ExecuteScript.class);
 			if(method.equals("before")) {
-				return 	as.beforeSend(((SessionModel) session).getSendMessage());
+				return as.beforeSend(((SessionModel) session).getSendMessage());
 			}else if(method.equals("after")){
 				return as.afterReceive(((SessionModel) session).getSendMessage(),((SessionModel) session).getRecvMessage());
 			}
 		}catch (Exception e) {
 			ConsoleTextArea.AppendMessageOnCurrentConsole(e.toString());
+			ConsoleTextArea.AppendMessageOnCurrentConsole("确定脚本中是否存在必须的'beforeSend'与'afterReceive'函数");
 			e.printStackTrace();
 		}
 		return null;

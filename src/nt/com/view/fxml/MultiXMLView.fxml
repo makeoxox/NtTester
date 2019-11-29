@@ -34,11 +34,11 @@
          </children>
       </AnchorPane>
       <Separator prefWidth="200.0" />
-      <AnchorPane layoutX="10.0" layoutY="83.0" prefHeight="483.0" prefWidth="567.0">
+      <AnchorPane  layoutX="10.0" layoutY="83.0" prefHeight="483.0" prefWidth="567.0">
          <children>
             <Label layoutX="38.0" layoutY="14.0" text="并发量" />
             <Label fx:id="concurrency" layoutX="91.0" layoutY="14.0" text="Label" />
-            <Slider fx:id="multicount" blockIncrement="5.0" layoutX="134.0" layoutY="11.0" majorTickUnit="10.0" minorTickCount="5"  prefHeight="37.0" prefWidth="399.0" showTickLabels="true" showTickMarks="true" value="10.0" />
+            <Slider fx:id="multicount" blockIncrement="5.0" layoutX="134.0" layoutY="11.0" majorTickUnit="10.0" minorTickCount="5" prefHeight="37.0" prefWidth="399.0" showTickLabels="true" showTickMarks="true" value="10.0" />
             <Label layoutX="38.0" layoutY="66.0" text="启用递增" />
             <CheckBox fx:id="incrementenable" layoutX="106.0" layoutY="66.0" mnemonicParsing="false" onAction="#increment" />
             <RadioButton fx:id="incrementtextbtn" disable="true" layoutX="218.0" layoutY="66.0" mnemonicParsing="false" onAction="#incrementtextselect" text="XML文本元素递增">
@@ -53,7 +53,7 @@
             <Label fx:id="incrementattrlabel" disable="true" layoutX="370.0" layoutY="112.0" text="递增属性名" />
             <TextField fx:id="incrementattrfield" disable="true" layoutX="441.0" layoutY="108.0" prefHeight="23.0" prefWidth="100.0" promptText="多属性逗号隔开" />
             <TreeView fx:id="incrementeletree" layoutX="38.0" layoutY="155.0" prefHeight="80.0" prefWidth="221.0" />
-            <ListView fx:id="incrementelelist" layoutX="320.0" layoutY="155.0" prefHeight="80.0" prefWidth="221.0" />
+            <ListView fx:id="incrementelelist" disable="true" layoutX="320.0" layoutY="155.0" prefHeight="80.0" prefWidth="221.0" />
             <Button fx:id="incrementadd" disable="true" layoutX="277.0" layoutY="162.0" mnemonicParsing="false" prefHeight="25.0" prefWidth="25.0" text="&gt;" />
             <Button fx:id="incrementdel" disable="true" layoutX="277.0" layoutY="200.0" mnemonicParsing="false" prefHeight="25.0" prefWidth="25.0" text="&lt;" />
             <Label layoutX="38.0" layoutY="252.0" text="启用赋值" />
@@ -72,8 +72,8 @@
             <Button fx:id="assignxmlbtn" disable="true" layoutX="277.0" layoutY="294.0" mnemonicParsing="false" text="解析XML树" />
             <Label fx:id="assignattrlabel" disable="true" layoutX="370.0" layoutY="297.0" text="赋值属性名" />
             <TextField fx:id="assignattrfield" disable="true" layoutX="441.0" layoutY="293.0" prefHeight="23.0" prefWidth="100.0" promptText="多属性逗号隔开" />
-            <TreeView fx:id="assigneletree" layoutX="38.0" layoutY="387.0" prefHeight="80.0" prefWidth="221.0" />
-            <ListView fx:id="assignelelist" layoutX="320.0" layoutY="387.0" prefHeight="80.0" prefWidth="221.0" />
+            <TreeView fx:id="assigneletree" disable="true" layoutX="38.0" layoutY="387.0" prefHeight="80.0" prefWidth="221.0" />
+            <ListView fx:id="assignelelist" disable="true" layoutX="320.0" layoutY="387.0" prefHeight="80.0" prefWidth="221.0" />
             <Button fx:id="assignadd" disable="true" layoutX="277.0" layoutY="395.0" mnemonicParsing="false" prefHeight="25.0" prefWidth="25.0" text="&gt;" />
             <Button fx:id="assigndel" disable="true" layoutX="277.0" layoutY="427.0" mnemonicParsing="false" prefHeight="25.0" prefWidth="25.0" text="&lt;" />
             

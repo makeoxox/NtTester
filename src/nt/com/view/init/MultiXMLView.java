@@ -21,6 +21,7 @@ import javafx.scene.control.TextField;
 import javafx.scene.control.TreeView;
 import javafx.scene.image.Image;
 import javafx.scene.layout.VBox;
+import javafx.stage.Modality;
 import javafx.stage.Stage;
 import nt.com.config.Config;
 import nt.com.config.GlobalData;
@@ -41,6 +42,7 @@ public class MultiXMLView extends VBox {
 		Stage stage = new Stage();
 		Scene scene = new Scene(this);
 		stage.setScene(scene);
+		stage.initModality(Modality.APPLICATION_MODAL);
 		stage.setTitle("≤¢∑¢…Ë÷√ - XML");
 		stage.setResizable(false);
 		stage.getIcons().add(new Image(getClass().getResourceAsStream("/res/title.png")));
@@ -93,7 +95,7 @@ public class MultiXMLView extends VBox {
 		}
 		incrementattrfield.setText(xim.getAttrname());
 		incrementxmlfield.setText(xim.getXmlFilePath());
-		List<Node> incrementList = GlobalData.xmlIncrementNodeMap.get(xim.getIncrementlListName());
+		List<Node> incrementList = GlobalData.xmlIncrementNodeMap.get(xim.getIncrementListName());
 		if (incrementList != null) {
 			ObservableList<Node> items = FXCollections.observableArrayList(incrementList);
 			incrementelelist.setItems(items);
@@ -142,7 +144,7 @@ public class MultiXMLView extends VBox {
 		assignvaluesfield.setText(xam.getValuesFilePath());
 		assignxmlfield.setText(xam.getXmlFilePath());
 		assignattrfield.setText(xam.getAttrname());
-		List<Node> assignList = GlobalData.xmlIncrementNodeMap.get(xam.getAssignListName());
+		List<Node> assignList = GlobalData.xmlAssignNodeMap.get(xam.getAssignListName());
 		if (assignList != null) {
 			ObservableList<Node> items = FXCollections.observableArrayList(assignList);
 			assignelelist.setItems(items);

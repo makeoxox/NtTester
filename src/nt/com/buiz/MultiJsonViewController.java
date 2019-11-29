@@ -10,6 +10,7 @@ import javafx.scene.control.Slider;
 import javafx.scene.control.TextField;
 import javafx.scene.control.TreeView;
 import javafx.scene.layout.VBox;
+import net.sf.json.JSON;
 
 public class MultiJsonViewController {
 	
@@ -35,7 +36,7 @@ public class MultiJsonViewController {
     private TreeView<?> incrementjsontree;
 
     @FXML
-    private ListView<?> incrementjsonlist;
+    private ListView<JSON> incrementjsonlist;
 
     @FXML
     private Button incrementjsonadd;
@@ -65,7 +66,7 @@ public class MultiJsonViewController {
     private TreeView<?> assignjsontree;
 
     @FXML
-    private ListView<?> assignjsonlist;
+    private ListView<JSON> assignjsonlist;
 
     @FXML
     private Button assignjsonadd;

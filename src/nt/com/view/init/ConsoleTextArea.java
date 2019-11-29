@@ -33,7 +33,11 @@ public class ConsoleTextArea extends TextArea{
 		this.setText(dateStr);
 	}
 	
-	
+	/**
+	 * 换行追加内容到当前控制台
+	 * 
+	 * @param message
+	 */
 	public static void AppendMessageOnCurrentConsole(String message) {
 		TabPane mctp = (TabPane) MainView.parent.lookup("#consoletabpane");
     	TabPane metp = (TabPane) MainView.parent.lookup("#edittabpane");
@@ -43,6 +47,11 @@ public class ConsoleTextArea extends TextArea{
     	cta.appendText("\n"+message);
 	}
 	
+	/**
+	 * 追加内容到当前控制台
+	 * 
+	 * @param message
+	 */
 	public static void PrintMessageOnCurrentConsole(String message) {
 		TabPane mctp = (TabPane) MainView.parent.lookup("#consoletabpane");
     	TabPane metp = (TabPane) MainView.parent.lookup("#edittabpane");

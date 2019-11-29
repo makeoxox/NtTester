@@ -27,6 +27,7 @@ import javafx.scene.image.Image;
 import javafx.stage.Stage;
 import nt.com.config.Config;
 import nt.com.enmu.TextType;
+import nt.com.util.HtmlParser;
 import nt.com.util.JsonParser;
 import nt.com.util.Utils;
 import nt.com.util.XmlParser;
@@ -90,6 +91,14 @@ public class RichEditTextAreaController {
 				text=XmlParser.convertFormatXMLStr(xmldoc, Config.getEncode());
 				rta.clear();
 				rta.setText(text, TextType.XML);
+			}catch(Exception e) {
+				ConsoleTextArea.AppendMessageOnCurrentConsole(e.getLocalizedMessage());
+			}
+		}else if(tt==TextType.HTML) {
+			try {
+				text = HtmlParser.convertFormatHTMLStr(text,Config.getEncode());
+				rta.clear();
+				rta.setText(text, TextType.HTML);
 			}catch(Exception e) {
 				ConsoleTextArea.AppendMessageOnCurrentConsole(e.getLocalizedMessage());
 			}

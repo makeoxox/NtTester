@@ -11,6 +11,7 @@ import java.text.SimpleDateFormat;
 import java.util.Date;
 import java.util.Optional;
 
+import org.dom4j.DocumentException;
 import org.fxmisc.flowless.VirtualizedScrollPane;
 
 import javafx.event.ActionEvent;
@@ -27,6 +28,7 @@ import javafx.scene.image.Image;
 import javafx.scene.image.ImageView;
 import javafx.stage.DirectoryChooser;
 import javafx.stage.Stage;
+import nt.com.buiz.comm.Comm;
 import nt.com.config.Config;
 import nt.com.enmu.TextType;
 import nt.com.model.FileTreeModel;
@@ -36,6 +38,7 @@ import nt.com.view.init.HttpMsgSettingView;
 import nt.com.view.init.LeftTreeView;
 import nt.com.view.init.MainView;
 import nt.com.view.init.MultiJsonView;
+import nt.com.view.init.MultiTxtView;
 import nt.com.view.init.MultiXMLView;
 import nt.com.view.init.NewFileView;
 import nt.com.view.init.RichEditTextArea;
@@ -62,10 +65,10 @@ public class TopToolBarController {
 	private Button debugbtn;
 
 	@FXML
-	private Button runbtn;
+	protected Button runbtn;
 
 	@FXML
-	private Button stopbtn;
+	protected Button stopbtn;
 
 	@FXML
 	private Button clearbtn;
@@ -237,6 +240,39 @@ public class TopToolBarController {
 			 new MultiXMLView();
 		}else if(msg.equals("json")) {
 			new MultiJsonView();
+		}else if(msg.equals("txt")) {
+			new MultiTxtView();
 		}
+	}
+	
+	
+	@FXML
+	void run(ActionEvent event) {
+		TabPane metp = (TabPane) MainView.parent.lookup("#edittabpane");
+		Tab currentEditTab =metp.getSelectionModel().getSelectedItem();
+		if(currentEditTab==null) {
+			Alert alert = new Alert(AlertType.WARNING);
+			Stage alertStage =(Stage) alert.getDialogPane().getScene().getWindow();
+			alertStage.getIcons().add(new Image(getClass().getResourceAsStream("/res/title.png")));
+			alert.setTitle("提醒");
+			alert.setHeaderText(null);
+			alert.setContentText("请先打开一个文件！");
+			alert.showAndWait();
+			return;
+		}else {
+			String fileAbsPath =currentEditTab.getId();
+			File file = new File(fileAbsPath);
+				try {
+					Comm sender = new Comm(file);
+					sender.send();
+				} catch (InstantiationException | IllegalAccessException | ClassNotFoundException
+						| DocumentException | IOException e) {
+					ConsoleTextArea.AppendMessageOnCurrentConsole(e.toString());
+					e.printStackTrace();
+				}
+				
+			
+		}
+	
 	}
 }

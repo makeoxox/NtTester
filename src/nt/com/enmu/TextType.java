@@ -6,10 +6,10 @@ package nt.com.enmu;
  */
 public enum TextType{
 	XML,
+	HTML,
 	JAVASCRIPT,
 	JSON,
 	JAVA,
-	HTML,
 	TXT,
 	UNKNOW;
 }

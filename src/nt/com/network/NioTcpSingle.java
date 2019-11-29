@@ -21,7 +21,6 @@ public class NioTcpSingle {
 	
 	public  String sendMsg(String msg,int recvheadLength,String encodeC,String decodeC,String ip ,int port ) {
 		try {
-			log.info("发送消息到["+ip+":"+port+"] - "+msg);
 			sc =SocketChannel.open();
 			sc.configureBlocking(true);
 			sc.connect(new InetSocketAddress(ip, port));
@@ -41,21 +40,18 @@ public class NioTcpSingle {
 				}
 			}
 			String recvMsg =new String(readbufbody.array(),decodeC);
-			log.info("收到消息["+ip+":"+port+"] - "+recvMsg);
 			sc.close();
 			return recvMsg;
 		} catch (UnsupportedEncodingException e) {
 			log.error(e.getMessage());
 		} catch (IOException e) {
 			log.error(e.getMessage());
-			return "IO异常，连接中断";
 		}
 		return null;
 	}
 	
 	public  String sendMsgNoRecv(String msg,String encodeC,String ip ,int port ) {
 		try {
-			log.info("发送消息到["+ip+":"+port+"] - "+msg);
 			sc =SocketChannel.open();
 			sc.configureBlocking(true);
 			sc.connect(new InetSocketAddress(ip, port));
@@ -79,11 +75,6 @@ public class NioTcpSingle {
 		} catch (IOException e) {
 			log.error(e.getMessage());
 		}
-	}
-	
-	public static void main(String[] args) {
-		NioTcpSingle nts = new NioTcpSingle();
-		nts.sendMsg("niha\n", 3, "GBK", "GBK", "localhost", 8888);
 	}
 
 }

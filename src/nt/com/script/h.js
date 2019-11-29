@@ -1,10 +1,10 @@
 
 load("nashorn:mozilla_compat.js");
 
-importPackage("nt.com.script")
 importPackage("nt.com.util")
 importPackage("nt.com.view.init")
 importPackage("nt.com.script");
+importPackage("nt.com.script.view")
 importPackage("org.apache.commons.dbcp");
 importPackage("org.springframework.jdbc.core");
 importPackage("java.lang");
@@ -104,22 +104,33 @@ var Nt_Ptr = {
 	
  // 数据展现对象
 var Nt_Control={
-	 Table  : function(title,data){
+	 Table  : function(NativeArray,title){
 		Platform.runLater(new Runnable() {
 		    run : function(){
 		    	try{
-		    		
+		    		var list = new ArrayList();
+		    		for(i=0;i<NativeArray.length;i++){
+		    			var map = NativeArray[i];
+		    			var dataMap = new HashMap();
+		    			for(key in map){
+		    				dataMap.put(key,map[key]);
+		    			}
+		    			list.add(dataMap);
+		    		}
+		    		if(title==null)title="table"
+		    		new Table(list,title);
 		    	}catch(e){
 		    		Nt_Ptr.println(e);
 		    	}
 		    }
 		});
 	},
-	List : function(title,data){
+	Graph : function(Base64Img,title){
 		Platform.runLater(new Runnable() {
 		    run : function(){
 		    	try{
-		    		
+		    		if(title==null)title="graph"
+		    		new Graph(Base64Img,title)
 		    	}catch(e){
 		    		Nt_Ptr.println(e);
 		    	}
@@ -144,6 +155,17 @@ var Nt_Control={
 		return JsonParser.XmlToJson(xmlStr);
 	 }
  }
+
+//Xml对象
+var Nt_Xml = {
+		document : null,
+		parse : function(xmlStr,encode){
+			this.document = XmlParser.getDocByString(xmlStr,encode)
+		},
+		format : function(xmlStr,encode){
+		 return 	XmlParser.convertFormatXMLStr(xmlStr,encode);
+		}
+}
  
  // 文件操作类
  var Nt_File = function(path){
@@ -186,7 +208,7 @@ var Nt_Control={
 		var fileArray =this.file.listFiles();
 		var arr = [];
 		for each(var f in fileArray){
-			arr.push(new $File(f.getAbsolutePath()));
+			arr.push(new Nt_File(f.getAbsolutePath()));
 		}
 		
 	 return	 arr;
@@ -205,23 +227,14 @@ var Nt_Control={
  
  Nt_File.prototype.read = function(decode){
 		if(decode==null)decode="utf-8";
-		var  br = new BufferedReader(new InputStreamReader(new FileInputStream(this.file),decode));
-		var line = "";
-		var content  = "";
-		while((line = br.readLine())!=null){
-			content += line+"\n";
-		}
-		br.close();
+		var content =Utils.ReadFiletoString(this.file,decode);
 	 return	 content.substring(0,content.length-1);
  }
  
  Nt_File.prototype.write = function(content,encode,overwrite){
 		if(encode==null)encode="utf-8";
 		if(overwrite==null)overwrite=true;
-		var  wr = new BufferedWriter(new OutputStreamWriter(new FileOutputStream(this.file,overwrite),encode));
-		wr.write(content);
-		wr.flush();
-		wr.close();
+		Utils.WriteStringtoFile(content,overwrite,this.file,encode);
  }
 
  

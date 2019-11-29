@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="GBK"?>
+<plugin>
+	<name>ntdoc</name>
+	<tooltip>插件Demo</tooltip>
+	<icon>doc.png</icon>
+	<class>nt.com.demo.DemoPlugin</class>
+</plugin>

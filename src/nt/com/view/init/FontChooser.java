@@ -12,6 +12,7 @@ import javafx.scene.control.ListView;
 import javafx.scene.image.Image;
 import javafx.scene.layout.VBox;
 import javafx.scene.text.Font;
+import javafx.stage.Modality;
 import javafx.stage.Stage;
 import nt.com.config.Config;
 import nt.com.model.FontFamilyModel;
@@ -36,6 +37,7 @@ public class FontChooser extends VBox{
 		Scene scene = new Scene(this);
 		stage.setScene(scene);
 		stage.setTitle("Ñ¡Ôñ×ÖÌå - "+areaType);
+		stage.initModality(Modality.APPLICATION_MODAL);
 		stage.setResizable(false);
 		stage.getIcons().add(new Image(getClass().getResourceAsStream("/res/title.png")));
 		stage.show();
