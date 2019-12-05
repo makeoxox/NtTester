@@ -26,7 +26,7 @@ import javafx.scene.control.Alert.AlertType;
 import javafx.scene.image.Image;
 import javafx.stage.Stage;
 import nt.com.config.Config;
-import nt.com.enmu.TextType;
+import nt.com.enums.TextType;
 import nt.com.util.HtmlParser;
 import nt.com.util.JsonParser;
 import nt.com.util.Utils;

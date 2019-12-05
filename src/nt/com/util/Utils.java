@@ -9,7 +9,7 @@ import java.io.IOException;
 import java.io.InputStreamReader;
 import java.io.OutputStreamWriter;
 
-import nt.com.enmu.TextType;
+import nt.com.enums.TextType;
 
 /**
  * 其它一些工具

@@ -11,7 +11,7 @@ import javafx.scene.image.Image;
 import javafx.scene.layout.VBox;
 import javafx.stage.Modality;
 import javafx.stage.Stage;
-import nt.com.enmu.FileType;
+import nt.com.enums.FileType;
 import nt.com.model.NewFileListModel;
 
 /**

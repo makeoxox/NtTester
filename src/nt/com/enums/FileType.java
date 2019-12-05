@@ -1,4 +1,4 @@
-package nt.com.enmu;
+package nt.com.enums;
 /*
  * 文件类型枚举
  * 

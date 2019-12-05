@@ -30,7 +30,7 @@ import javafx.stage.DirectoryChooser;
 import javafx.stage.Stage;
 import nt.com.buiz.comm.Comm;
 import nt.com.config.Config;
-import nt.com.enmu.TextType;
+import nt.com.enums.TextType;
 import nt.com.model.FileTreeModel;
 import nt.com.util.Utils;
 import nt.com.view.init.ConsoleTextArea;

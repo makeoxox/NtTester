@@ -14,8 +14,6 @@ import org.dom4j.Document;
 import org.dom4j.DocumentException;
 
 import javafx.application.Platform;
-import javafx.beans.InvalidationListener;
-import javafx.beans.Observable;
 import javafx.event.ActionEvent;
 import javafx.event.EventHandler;
 import javafx.fxml.FXMLLoader;
@@ -26,7 +24,6 @@ import javafx.scene.control.ToolBar;
 import javafx.scene.control.Tooltip;
 import javafx.scene.image.Image;
 import javafx.scene.image.ImageView;
-import nt.com.handler.Handler;
 import nt.com.plugin.Plugin;
 import nt.com.util.XmlParser;
 

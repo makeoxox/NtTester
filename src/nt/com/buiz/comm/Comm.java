@@ -17,7 +17,7 @@ import javafx.scene.control.ToolBar;
 import javafx.scene.image.Image;
 import javafx.stage.Stage;
 import nt.com.config.Config;
-import nt.com.enmu.TextType;
+import nt.com.enums.TextType;
 import nt.com.handler.HandlerManager;
 import nt.com.model.SessionModel;
 import nt.com.network.HttpSingle;

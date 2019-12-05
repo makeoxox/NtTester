@@ -34,7 +34,7 @@ import javafx.scene.input.MouseEvent;
 import javafx.stage.Stage;
 import nt.com.config.Config;
 import nt.com.config.TemplateFile;
-import nt.com.enmu.TextType;
+import nt.com.enums.TextType;
 import nt.com.model.FileTreeModel;
 import nt.com.util.Utils;
 import nt.com.view.init.ConsoleTextArea;
