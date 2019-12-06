@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="GBK"?>
 <plugin>
 	<name>ntdoc</name>
-	<tooltip>插件Demo</tooltip>
+	<tooltip>生成接口文档</tooltip>
 	<icon>doc.png</icon>
-	<class>nt.com.demo.DemoPlugin</class>
+	<class>nt.com.plugin.NtDoc</class>
 </plugin>

@@ -38,8 +38,7 @@ public class ScriptDebugDialogController {
 
     @FXML
     void cancel(ActionEvent event) {
-    	Stage stage = (Stage)scriptdebugdialog.getScene().getWindow();
-    	stage.close();
+    	((Stage) scriptdebugdialog.getScene().getWindow()).close();
     }
 
     @FXML
@@ -49,8 +48,7 @@ public class ScriptDebugDialogController {
     	String timeout= timeoutfield.getText();
     	TopToolBar ttb = (TopToolBar)MainView.parent.lookup("#toptoolbar");
     	Button scriptBtn = (Button) ttb.getItems().get(5);
-    	Stage stage = (Stage)scriptdebugdialog.getScene().getWindow();
-    	stage.close();
+    	
 		Task<Object> task = new Task<Object>() {
 				@Override
 				public Object call() {
@@ -91,5 +89,7 @@ public class ScriptDebugDialogController {
 					}
 				}
 			}).start();
+			
+			((Stage) scriptdebugdialog.getScene().getWindow()).close();
     }
 }

@@ -2,7 +2,7 @@
 
 脚本说明：
 
-1 h.js为本地库，打开jar包在nt.com.scrpit包中查看
+1 h.js为本地库，打开主程序jar包，在nt.com.scrpit包中查看
 
 2 调试脚本请先在项目中打开脚本文件再点击调试。
     调试用脚本的入口函数为 main,例如：
@@ -15,6 +15,7 @@
 3 运行脚本请命名与目标发送文件相同名字并在同一目录下，例如：发送/demo/demo.xml，启用脚本则需要有/demo/demo.js文件。
 
 4 运行脚本需要两个函数afterReceive与beforeSend，分别在目标文件内容发送前处理以及后处理。例如
+
 	function afterReceive(msg){  //msg为目标文件内容
 		// 你的脚本内容
 		return data;  //必须返回
@@ -22,5 +23,6 @@
 	
 	function beforeSend(msg,recv){   //msg为目标文件内容,recv为收到的服务器返回内容
 		// 你的脚本内容
+		return data;  //必须返回
 	}
 	

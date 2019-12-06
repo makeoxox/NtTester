@@ -238,15 +238,13 @@ public class NewFileViewController {
 			edittab.setContent(sp);
 			consoletab.setContent(cta);
 			Config.setLastOpenFilePath(newfile.getPath());
-			Stage stage =(Stage) newfileview.getScene().getWindow();
-			stage.close();
+			((Stage) newfileview.getScene().getWindow()).close();
 		}
 	}
 	
 	@FXML
 	void cancel(ActionEvent event) {
-		Stage stage =(Stage) newfileview.getScene().getWindow();
-		stage.close();
+		((Stage) newfileview.getScene().getWindow()).close();
 	}
 }
 

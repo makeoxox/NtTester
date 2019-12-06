@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="GBK"?>
+<response>
+    <error>
+        <error-code>000</error-code>
+        <error-msg>success</error-msg>
+    </error>
+    <result>
+        <root>
+            <info>
+                <id>429006199909092235</id>
+                <name>test</name>
+                <checkresult>00</checkresult>
+		<photo/>
+                <issueoffice>10150</issueoffice>
+                <bkcheckdate>20180224</bkcheckdate>
+                <bkoperid/>
+                <biztype>01</biztype>
+            </info>
+        </root>
+    </result>
+</response>

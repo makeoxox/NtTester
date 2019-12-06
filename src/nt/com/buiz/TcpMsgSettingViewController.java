@@ -75,8 +75,7 @@ public class TcpMsgSettingViewController {
     
     @FXML
     void cancel(ActionEvent event) {
-    	Stage stage = (Stage)tcpmsgsettingview.getScene().getWindow();
-    	stage.close();
+    	((Stage) tcpmsgsettingview.getScene().getWindow()).close();
     }
 
     @FXML
@@ -109,8 +108,7 @@ public class TcpMsgSettingViewController {
     		Config.setTcpSvrPort(svrport);
     	int svrtimeout = Integer.parseInt(svrtimeoutfield.getText().trim());
     		Config.setTcpSvrTimeout(svrtimeout);	
-    	Stage stage = (Stage)tcpmsgsettingview.getScene().getWindow();
-        	stage.close();
+    		((Stage) tcpmsgsettingview.getScene().getWindow()).close();
     }
 
 }

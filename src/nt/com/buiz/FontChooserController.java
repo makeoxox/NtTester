@@ -44,8 +44,7 @@ public class FontChooserController {
 
     @FXML
     void cancel(ActionEvent event) {
-    	Stage stage = (Stage)fontchooser.getScene().getWindow();
-    	stage.close();
+    	((Stage) fontchooser.getScene().getWindow()).close();
     }
 
 	@FXML
@@ -76,7 +75,6 @@ public class FontChooserController {
     			consoletab.getContent().setStyle(fontFamily + fontSize);
     		}
     	}
-    	Stage stage = (Stage)fontchooser.getScene().getWindow();
-    	stage.close();
+    	((Stage) fontchooser.getScene().getWindow()).close();
     }
 }

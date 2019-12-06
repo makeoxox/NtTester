@@ -1,0 +1,12 @@
+前后处理说明
+
+此处为前后处理jar包， 前处理逻辑将在脚本beforeSend函数前，后处理将在脚本afterRecevie函数后。
+handler.xml 里配置前后处理，<class>标签前后顺序决定多个前后处理的顺序。
+
+如何写前后处理？
+
+ 新建java工程，导入nt-handler.jar。
+ 实现Handler接口，或者继承DefaultBeforeHandler,DefaultAfterHandler类, 实现方法 before和after。
+ 打包jar，放入根目录handler文件夹下，依赖的其他jar包也放在handler文件夹下。
+ 修改handler.xml文件，在<before>或者<after>标签下加入<class>标签，其中写入你的实现类全量包名。
+ 当开始发送时，会根据handler.xml里标签顺序，从上到下依次处理。

@@ -1,0 +1,26 @@
+{
+	"code":0,
+	"data":{
+		"other":{
+			"size":0,
+			"count":0
+		},
+		"model":{
+			"size":0,
+			"count":0
+		},
+		"office":{
+			"size":45811218,
+			"count":4
+		},
+		"video":{
+			"size":9985049,
+			"count":2
+		},
+		"picture":{
+			"size":0,
+			"count":0
+		}
+	},
+	"message":"获取成功"
+}

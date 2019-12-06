@@ -1,5 +1,5 @@
 {
-	"lastOpenFilePath":"projects\\project-demo\\demo\\demo.xml",
+	"lastOpenFilePath":"projects\\project-demo\\demo\\demo.js",
 	"consoleFont":{
 		"size":14,
 		"family":"Consolas"
@@ -57,8 +57,8 @@
 		}
 	},
 	"menu":{
-		"encode":"UTF-8",
-		"msg":"txt",
+		"encode":"GBK",
+		"msg":"xml",
 		"protocol":"http",
 		"connect":"sync",
 		"script":"enable",

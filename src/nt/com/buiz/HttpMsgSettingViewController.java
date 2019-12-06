@@ -72,8 +72,7 @@ public class HttpMsgSettingViewController {
 
     @FXML
     void cancel(ActionEvent event) {
-    	Stage stage = (Stage)httpmsgsettingview.getScene().getWindow();
-    	stage.close();
+    	((Stage) httpmsgsettingview.getScene().getWindow()).close();
     }
 
     @FXML
@@ -107,8 +106,7 @@ public class HttpMsgSettingViewController {
 		Config.setHttpSvrTimeout(svrtimeout);
 		String svrroot = svrrootfield.getText().trim();
 		Config.setContextRoot(svrroot);
-    	Stage stage = (Stage)httpmsgsettingview.getScene().getWindow();
-    	stage.close();
+		((Stage) httpmsgsettingview.getScene().getWindow()).close();
     }
 
 }
