@@ -5,6 +5,7 @@ importPackage("nt.com.util")
 importPackage("nt.com.view.init")
 importPackage("nt.com.script");
 importPackage("nt.com.script.view")
+importPackage("nt.com.network")
 importPackage("org.apache.commons.dbcp");
 importPackage("org.springframework.jdbc.core");
 importPackage("java.lang");
@@ -16,10 +17,10 @@ importPackage("java.io");
 importPackage("nt.com.view.init");
 importPackage("javafx.application");
 
-//导入函数
+// 导入函数 ,项目内路径
 function Nt_Import(js){
 	try{
-		AbstractMessageScriptManager.engine.eval(new InputStreamReader(new FileInputStream(new File(js))));
+		AbstractMessageScriptManager.engine.eval(new InputStreamReader(new FileInputStream(new File("projects/"+js))));
 	}catch(e){
 		Nt_Ptr.println(e)
 	}
@@ -40,7 +41,7 @@ var Nt_Asyn = {
 	}
 }
 
-// 打印对象
+// 输出打印对象
 var Nt_Ptr = {
 	println : function(content){
 		ConsoleTextArea.AppendMessageOnCurrentConsole(content);
@@ -51,6 +52,47 @@ var Nt_Ptr = {
 }
 
 // 网络对象
+var Nt_Net ={
+		tcp : {
+			send : function(msg,ip,port){
+				try{
+					var bts = new BioTcpSingle();
+					return bts.send(msg,ip,port);
+				 }catch(e){
+					 Nt_Ptr.println(e)
+				 }
+			},
+			sendNoRecv: function(msg,ip,port){
+				try{
+					var bts = new BioTcpSingle();
+					bts.sendNoRecv(msg,ip,port);
+				 }catch(e){
+					 Nt_Ptr.println(e)
+				 }
+			}
+		},
+		http: {
+			post : function(url,msg,code,contentType){
+				if(code==null)code="utf-8";
+				if(contentType==null)contentType="text/plain"
+				try{
+					var hs = new HttpSingle();
+					return hs.sendByPost(new URL(url),msg,code,contentType);
+				 }catch(e){
+					 Nt_Ptr.println(e)
+				 }
+			},
+			get : function(url,code){
+				if(code==null)code="utf-8";
+				try{
+					var hs = new HttpSingle();
+					return hs.sendByGet(new URL(url),code);
+				 }catch(e){
+					 Nt_Ptr.println(e)
+				 }
+			}
+		}
+}
 
 
 // 数据库对象
@@ -136,6 +178,19 @@ var Nt_Control={
 		    	}
 		    }
 		});
+	},
+	Browser : function(content,contentType,title){
+		Platform.runLater(new Runnable() {
+		    run : function(){
+		    	try{
+		    		if(title==null)title="browser";
+		    		if(contentType==undefined)contentType=null;
+		    		new Browser(content,contentType,title);
+		    	}catch(e){
+		    		Nt_Ptr.println(e);
+		    	}
+		    }
+		});
 	}
 }
  
@@ -156,7 +211,7 @@ var Nt_Control={
 	 }
  }
 
-//Xml对象
+// Xml对象
 var Nt_Xml = {
 		document : null,
 		parse : function(xmlStr,encode){
@@ -170,11 +225,16 @@ var Nt_Xml = {
  // 文件操作类
  var Nt_File = function(path){
 	 
-	 this.file=new File(path);
-	 
-	 this.name= this.file.getName();
-	 
-	 this.absolutePath= this.file.getAbsolutePath();
+	try{
+		this.file=new File(path);
+		 
+		 this.name= this.file.getName();
+		 
+		 this.absolutePath= this.file.getAbsolutePath();
+		
+	}catch(e){
+		Nt_Ptr.println(e);
+	}
 	 
  } 
  
@@ -205,36 +265,58 @@ var Nt_Xml = {
  
  Nt_File.prototype.listFiles = function(){
 	 
-		var fileArray =this.file.listFiles();
-		var arr = [];
-		for each(var f in fileArray){
-			arr.push(new Nt_File(f.getAbsolutePath()));
+	 try{
+		 	var fileArray =this.file.listFiles();
+			var arr = [];
+			for ( f in fileArray ){
+				arr.push(new Nt_File(fileArray[f].getAbsolutePath()));
+			}
+		 return	 arr;
+			
+		}catch(e){
+			Nt_Ptr.println(e);
 		}
 		
-	 return	 arr;
  }
  
  Nt_File.prototype.listFileNames = function(){
-	 var fileArray =this.file.listFiles();
-		var arr = [];
-		for each(var f in fileArray){
-			arr.push(f.getName());
+	 
+	 try{
+		 	var fileArray =this.file.listFiles();
+			var arr = [];
+			for ( f in fileArray){
+				arr.push(fileArray[f].getName());
+			}
+		 return	 arr;
+			
+		}catch(e){
+			Nt_Ptr.println(e);
 		}
-		
-	 return	 arr;
  }
  
  
  Nt_File.prototype.read = function(decode){
-		if(decode==null)decode="utf-8";
-		var content =Utils.ReadFiletoString(this.file,decode);
-	 return	 content.substring(0,content.length-1);
+	 
+	 try{
+		 if(decode==null)decode="utf-8";
+		 var content =Utils.ReadFiletoString(this.file,decode);
+		 return	 content.substring(0,content.length-1);
+		}catch(e){
+			Nt_Ptr.println(e);
+		}
+		
  }
  
  Nt_File.prototype.write = function(content,encode,overwrite){
-		if(encode==null)encode="utf-8";
+	 
+	 try{
+		 if(encode==null)encode="utf-8";
 		if(overwrite==null)overwrite=true;
 		Utils.WriteStringtoFile(content,overwrite,this.file,encode);
+		}catch(e){
+			Nt_Ptr.println(e);
+		}
+		
  }
 
  

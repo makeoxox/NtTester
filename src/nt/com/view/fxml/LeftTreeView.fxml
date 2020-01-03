@@ -75,6 +75,24 @@
                </graphic>
             </Menu>
             <SeparatorMenuItem /> 
+            <MenuItem fx:id="lefttreecopy" mnemonicParsing="false" onAction="#copy" text="复制">
+               <graphic>
+                  <ImageView fitHeight="15.0" fitWidth="15.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../../../../res/file.png" />
+                     </image>
+                  </ImageView>
+               </graphic>
+            </MenuItem>
+            <MenuItem fx:id="lefttreepaste" mnemonicParsing="false" onAction="#paste" text="粘贴">
+               <graphic>
+                  <ImageView fitHeight="15.0" fitWidth="15.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../../../../res/newfile.gif" />
+                     </image>
+                  </ImageView>
+               </graphic>
+            </MenuItem>
             <MenuItem fx:id="lefttreedel" mnemonicParsing="false" onAction="#del" text="删除">
                <graphic>
                   <ImageView fitHeight="15.0" fitWidth="15.0" pickOnBounds="true" preserveRatio="true">

@@ -2,7 +2,7 @@ package nt.com.model;
 
 import javafx.scene.control.Label;
 import javafx.scene.text.Font;
-import nt.com.config.Config;
+import nt.com.global.Config;
 /**
  * 字体大小模型
  * 

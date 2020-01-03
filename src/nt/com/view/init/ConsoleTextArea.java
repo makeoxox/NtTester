@@ -7,7 +7,7 @@ import java.util.Date;
 import javafx.fxml.FXMLLoader;
 import javafx.scene.control.TabPane;
 import javafx.scene.control.TextArea;
-import nt.com.config.Config;
+import nt.com.global.Config;
 /**
  * ¿ØÖÆÌ¨
  * @author kege

@@ -1,4 +1,4 @@
-package nt.com.config;
+package nt.com.global;
 
 import java.io.File;
 import java.io.IOException;
@@ -18,7 +18,7 @@ import nt.com.util.JsonParser;
 import nt.com.util.Utils;
 
 /**
- * 全局配置类
+ * 全局配置类,对config文件夹下的boot.json读写
  * 
  * @author kege
  *

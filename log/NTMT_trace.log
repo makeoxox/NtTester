@@ -2792,3 +2792,2856 @@ Caused by: jdk.nashorn.internal.runtime.ParserException: <eval>:7:1 Expected , b
 [2019-12-05 16:06:38,883] 43083 [Thread-7] INFO  nt.com.network.HttpSingle  -  ’µΩœ˚œ¢[http://apis.juhe.cn/qrcode/api?key=468c8fa429cca535a943df230ee34a13&text=kege] - {"reason":"success","result":{"base64_image":"iVBORw0KGgoAAAANSUhEUgAAAHgAAAB4CAIAAAC2BqGFAAAPtklEQVR4nO1dXWhcxRefbRvMZtPExNaUgBZrQ60EjUUwW4JUSiBSKqUlFIsvrT5oMRZFpPXjIQ9B6YPY2AcppiAoGiWiQSJa0RC\/pWhppA9ZMRrDmhhL20205KM7\/4f55\/zPzseZj929rv\/u7yHce+fMmTPnnjlnzszsTYxzzsooPlb80wJcLSgrOiKUFR0RyoqOCGVFR4SyoiNCWdERoazoiFBWdFTgJCIQoL+\/P5vNalsfGxvDlPv378elUq2NGzcC5bp163DR22+\/HUFHaE2WikW7v1ogi8ViQK9WLLWlhVX\/tACMMRaLxcKIxTXnXOXgxTMClIpFC2AzNJmkavjYtL1YRQkPi66pqbntttvybzKdTv\/888+m0m+\/\/XZhYUFcT05O4qLp6enPP\/\/cVPHy5cvqQ62xb9iwobGx0UNiA86ePZvJZFypaReOKdva2iD+ZLNZNYKJJ1CEifHFsWPHMNv+\/n5Ms27duvxVIIIhSNLf349Ljx07RsgPFbUE+HlbW5u7Jv18NFiHdrSKUkxjuiA4FxB0u1q3LkaASRj8XO0+jXAfXQzV+ErvyMrEVh24YEBqdemvb\/f9FO0ifT4o4MsDVlqlwOCT7BeI8ZBVWQXI6T29g8a+\/vrr4eFhlyoNDQ0HDhwQ1yYR+fLU2F2SHTt2mILz6tWrsbSqTWDt9\/X1TU9Pu7S4bdu2ZDIZZg2BPpoxNjw8\/Mwzz7jUamlpefDBB62cpVFsxe7du+H9qWZr9bbQ1vHjx8+cOePSYk9Pz9atWwP8Bos+YdGqMnhIShXxYMfjXVs3zDDDtMyiVzQxAQjogFTFxFx9Hqwv6\/szoSQyQzXQ+9bFty588o+6vhxKaK1DjVqNjY2vvvoq3H788ccvvfSSlgPn\/KGHHkqn0+K2vr7+9ddft1pfwKv917gOE7QdqKqq6ujogOe\/\/\/67WhFKR0ZGfvrpJ3EtpZda1YQNoOChUCqKNrlpx44RFQmFRrnCF56whIHgQBeZpitWkVzyaS+EKaEkZh3BRS7KKngGG\/aG\/Cy62GNNm8K5VNFWtGabvilSWBUBP4sOjrnBzLUJtGNFUxE8z2fm7qvu8BS8sAgOWbTBFslBB1QvlYSlGKGJGA3BjhvGQXETFqyRhoaGlpYWl1qbNm1Sq2OEaXliYuKHH36A25tvvrm6ulpcr1mzhq6LWwTxrGhoaGChZhHuOg4cOGBdkyOq+5aq6O7u7u7uhtuxsbGmpiZHnlhZb731lvY5Lee\/cq3jakB4wuJugI4vv1D+FGZg+EKiUXf\/6CjHEbyEAURh0cFpNDz37R7eqdIS0PuE0nsCVphbEYNhOp1++eWXvbhrMTIy4ltFq+vt27ffeuutcDs4OFhRUSGuE4kEET8CBNACFgudwEkURCAa4lwHXz5WgRfeNm7cyNHxjL6+Plyxr68Pl6qHHOEARvmQ4\/\/AHXZRTaArRmMuVpSKoullUut6E7FMGuVaKIFSUTQzrNdIAcq9FD8pBaO2BEPp1FoxkEwmGRrpJ06cgOOKc3Nze\/fuBcrx8XGpLjbb3t7e2dlZcRuPx7EhJ5PJCDpiAe3CTcf9MIGVA02gNge30ol\/CSIYqq1IZy21z000WsnVY5smAgIW12HaNmW6GT5XRitXQpxoleWmCZhbgEuVWjFNomPoDKN1os1yh4s2EqgEBFx9ND3zx0rH11ItjlaBJYIY+TsJAlw5fKO+b9wLriQj+EJrE9ZbF4FdFa3yBQOBa1Xd0D3pguW+IWlw+Bq1qk3ttUkqLROgwUPT2jQBj+xWUkdvb+\/zzz8PpW+88cY999yjlebHH39sb293bAVjaWnpzz\/\/NJXW1tbG43G4\/eqrr2666SZx\/ccff9x+++1QtHPnzhMnTsDts88+K+U+YXjvvffuuusu5jbZD9+cnZubm5qagtv5+Xls4xiLi4uYslC4dOnSpUuX4HZpaQmc9ZUrV3CLFy9ehGvOeSaTKYg88BMQlyHo5DrouGei\/6egdpvwGJHBw0czBzeqxqUolW7KuQPW\/xzhztbVdaiaraurw+s4Fy9eTKVS2roTExP4tra2du3ataaGxsfHr1y5Iq4rKirWr19vopyenoYMRQBmNatWrZLWmLD8a9euxaUY2WwW\/2KsqqqK+P1WZWUlbtdE9j\/haKhze\/WCc97R0WFpaRldXV2YrcSHWL2TkoL9+\/djtmNjYy59UVnhDko\/Z+vo6DDJKSU+1qbtrkMNcTAStVNXR0izaW4+ByNNvYXcVv7urKzrVhIN9B1zs4rk5KNVdZhyJHdgybhhjZSoQhC4vAmpdXGh7YUpLcCW4fLiXX00NxztUZXuCLUW0U98bU2a6UBNUJr0pSXT5rcELIrGepTsDl+oLT3wwAOwsXT+\/PnBwUEoOnfu3MmTJ00t3nfffYuLi+L6+uuvx42mUqkvvvgCKBsaGrCbPnXqFPyAuaqqau\/eveD0xsfHP\/vsM6BsbW3dvHlzLHd5xGQxqr2DRQ8NDeGfc8Evl\/SwenHs\/oknUjDMZDJQ9P3331MS5CKdTpta1G5lAdy\/1yF+oix1RDxxCYZhP1G2+2iuuCFenDmpCpfoR5e6gHtuenkRA0poh+X\/G37TO9NrLKqN06u9RCkhlTYwEtFYDXq+UwCnYIindyD9Bx988O677wLl6Ogornjw4EEcDHHR9u3b9+3bZ2qxtraW6xbyGWNtbW3YTadSKRx\/Hn\/8cUjVFhcXcZG6Bwa9Y4x1d3dD7rpy5UrcxIULFzCf3bt379ixgy2r4vDhw46\/bf5vYy5Qo0FPT49rG7no6urS5pZqi6atIwEiM6SPtkjBEJ+Jra6uxkVDQ0O4Yk9PD72nRcA1GOYzalSouSVDrxy3gp9gsjwFIFjRvdNOnAuTGWpHcZ7gDp+b4rnbN45sCyIeM79Orpt9ubTrZNGSd86\/P9LiBn6RUl6gapmIfr52EMBKWt5xN0FLMMRHu++8884333wTmD788MOdnZ10dS0GBwcx297e3nvvvRdut27dOjMzI67Xr1\/\/ySefgA8ZGBg4cuQIUEqBqL29HcLv0tISLQPWy\/vvvz8\/Py+uV6xYgUfS3XffjY88vPbaa+pZd4BplVjAomj40S9bTrdAxPr6+vr6erWK1i1gVFRUYLazs7O4yvj4uLrPJAgymQyuKOHXX3+l+yIxZMvqvvHGGxkauHg6m0gkQLMi6BEC0Aj\/naE0drD0WkfmyDaMwBeq07AuEuUpQ2BmyHXLuNi9al0wMWEo4FzCF6rF4CKi1AsW14H3O6677jppJuC4YomljMViiUQCsxVHBghWpoak4wYzMzOwByahsrLy2muvhdtEIiFNLqGJbDaLXf8111wj3KPo7+rVq8M\/y2edaTtuZUn5heOZPK+tLPeD6BI6OzslIUt0K4vl2qY0A1Ovmc6bM90AdFk4t651WLvAlemjmhzQax0qw9gyrK0L5LV6J94VbltVJStEbNGyxe3S1bVvXa2lbUV9yJUlNpe+5HWAxtSAJByhJkcyIjn0suhgVtrI5GUrlmD4zjvvMIPV8Nwpp8my8HP8eqB6Mpm84YYbrIZpZY5RWVm5c+dOuG1tbcWUZ86cwdNh3BH1k72q8EA\/PDyMjwZa0jfahVM1CwTia7siGAJMwVCUEltZUrDq6upylK2jo0NSCI6BBd7KigC0OVtfudUgsFX6Wg\/PTQggBvryKQlFSwkOBvTNpbpUMYCVFjw3O+NkfDKhJBTN3Q7QFLCiO7Q5F3OO8ACP89EbNmw4dOiQF3ctRkZGBgYG1OeqjczMzOAWa2pq8NfUW1tbcTR+7rnn4Bx0IpFQucGTPXv2mLKb+fn5p556ihYszKI9gmFbWxvPTa5wZJAij5Q14Vvtp+eBhshxxf9hoXNUSSpTBqi95oZzHWofBX0RPz3PlJUjdblASvZcpoAqcxcanjul5ToXbBJPskraD+AQYmrIihAfbRILP+eKU2NmPfKwwbhc16U66FcVniuZHo0wH10SwfBqQOCPhTjnJ0+ePH78uAvxpk2bxHeLTK4D28ipU6fgkOPExMSuXbvUplmu\/YrhvGvXLumnBYD29vajR4\/CwD969KjYk1NRWVmJTwqOjo5u2bLF1K\/Dhw\/39vaaSiWEKFp0cnp62vGL7VJFmqC5uRlu4atfWiZSSDh37pxpn6mpqQn76MnJSZPk1dXVLS0t0MTU1BTRx8bGxjvuuMMaeAQi\/Qis1kUCYm57YMBE\/Uu0a6WRxPDtqZU+Uh9Nv3lJHY6x0SVhcZxdYHr3yOxI6f3dOx6UjIFjdVzVdGlifn4evDljLB6Pg6vJZrN\/\/\/23ylDLNh6Pr1y5UlwnEgn8S6+FhQXsvqQWpd7R8LZoafrsXsvFQWtn4iaygwcP1iAMDAzMLkNy1lhmle2XX36ZyWRExVQqhXm+8sorswhPPvmkKo\/jtDrEdYRNeJnb4hk9zF18sW8tFuqXmc9iS6TB0PTmJbbB+YsplcDt0tGYYE68xcLPOooNq1m5mF5Y\/kkoy8XYrQQhH4EN8NG0QJjtp59+CifhpGPOk5OTH374IdzW1dXhXyidPn0aXPNff\/2Fi8QJaGhl8+bNuHR0dBQOoalbWUSC\/s0338zNzcEtPkGogbzKlAtMKVbvAO4H0VtaWnBF4h9H0qt3EqRvKklbWeqqoWklj\/g4s9jKAmJ8xFIFrcmQzDAfi6YZBrA1OQR1EVEl9ppr5tnl8BQ8AFZxrZ7OJIxaUX0BPHeG4NhWQNKgRaBF598wRv6u32TRAlz30Sz35sLWRSWEW\/S2bdsc3bT4YjtzGAqc8yNHjkCEOX\/+\/IsvvmjlL1TwxBNPXLhwAZ48\/fTTQNDc3Lxv3z5Js46mCjT\/gOsQSCaT+L8oag1EGr9Ex6D6Y489BtepVIpWNDbVRx55BB5OTU3hD5p0dnbef\/\/9Jhun4btOYkJeX0RXlatKIxlOwDQ2QDYrpa\/nzT8Yhpz4144m7bRBG\/pp5N8lL89bWJ4EvP89CDNvy2qvvQyNeQ5VvCZHxDeVxl22QvloS2OYe01Njem\/FnshnU7jD0T19\/d3dnZCt3GLly9fPn36NNwODQ298MILcNvU1ARhVsLCwsJ3330Ht2vWrLnlllvg9tChQ3v27IEWt2zZAtso8Xj8o48+Asq6urrm5mYQ7Jdffvntt9+g9NFHHz179izcWl4bnc9QNQsEKTMk\/hbk84ts+SfKAOknylx3OEQ9B8L\/jYccmW56q\/4tRnPamZIUVPAcPHhOXRKK5subWFIHijeqwEebpkk4VAAZ9te+gpXKv0Jl5uxO9d3Fa1H73HGGamkrGkdcRkm4jqsBZUVHhLKiI0JZ0RGhrOiIUFZ0RCgrOiKUFR0RyoqOCP8BgQLSm2e0ZdAAAAAASUVORK5CYII="},"error_code":0}
  
 [2019-12-05 16:06:38,938] 43138 [Thread-7] INFO  nt.com.handler.LogHandler  - [LogHandler - after ][2019-12-05 16:06:38  ’µΩ±®Œƒ][object Object] 
+[2019-12-10 17:38:49,086] 1    [JavaFX Application Thread] DEBUG freemarker.cache  - Couldn't find template in cache for "DocTemplate.html"("zh_CN", GBK, parsed); will try to load it. 
+[2019-12-10 17:38:49,089] 4    [JavaFX Application Thread] DEBUG freemarker.cache  - TemplateLoader.findTemplateSource("DocTemplate_zh_CN.html"): Not found 
+[2019-12-10 17:38:49,093] 8    [JavaFX Application Thread] DEBUG freemarker.cache  - TemplateLoader.findTemplateSource("DocTemplate_zh.html"): Not found 
+[2019-12-10 17:38:49,095] 10   [JavaFX Application Thread] DEBUG freemarker.cache  - TemplateLoader.findTemplateSource("DocTemplate.html"): Found 
+[2019-12-10 17:38:49,095] 10   [JavaFX Application Thread] DEBUG freemarker.cache  - Loading template for "DocTemplate.html"("zh_CN", GBK, parsed) from "jar:file:/C:/Users/Administrator/git/NtTester/plugin/ntdoc/nt-doc-plugin.jar!/template/DocTemplate.html" 
+[2019-12-11 15:25:34,701] 1    [Thread-4] INFO  nt.com.network.HttpSingle  -  ’µΩœ˚œ¢[http://www.baidu.com] - <!DOCTYPE html>
+<!--STATUS OK--><html> <head><meta http-equiv=content-type content=text/html;charset=utf-8><meta http-equiv=X-UA-Compatible content=IE=Edge><meta content=always name=referrer><link rel=stylesheet type=text/css href=http://s1.bdstatic.com/r/www/cache/bdorz/baidu.min.css><title>∞Ÿ∂»“ªœ¬£¨ƒ„æÕ÷™µ¿</title></head> <body link=#0000cc> <div id=wrapper> <div id=head> <div class=head_wrapper> <div class=s_form> <div class=s_form_wrapper> <div id=lg> <img hidefocus=true src=//www.baidu.com/img/bd_logo1.png width=270 height=129> </div> <form id=form name=f action=//www.baidu.com/s class=fm> <input type=hidden name=bdorz_come value=1> <input type=hidden name=ie value=utf-8> <input type=hidden name=f value=8> <input type=hidden name=rsv_bp value=1> <input type=hidden name=rsv_idx value=1> <input type=hidden name=tn value=baidu><span class="bg s_ipt_wr"><input id=kw name=wd class=s_ipt value maxlength=255 autocomplete=off autofocus></span><span class="bg s_btn_wr"><input type=submit id=su value=∞Ÿ∂»“ªœ¬ class="bg s_btn"></span> </form> </div> </div> <div id=u1> <a href=http://news.baidu.com name=tj_trnews class=mnav>–¬Œ≈</a> <a href=http://www.hao123.com name=tj_trhao123 class=mnav>hao123</a> <a href=http://map.baidu.com name=tj_trmap class=mnav>µÿÕº</a> <a href=http://v.baidu.com name=tj_trvideo class=mnav> ”∆µ</a> <a href=http://tieba.baidu.com name=tj_trtieba class=mnav>Ã˘∞…</a> <noscript> <a href=http://www.baidu.com/bdorz/login.gif?login&amp;tpl=mn&amp;u=http%3A%2F%2Fwww.baidu.com%2f%3fbdorz_come%3d1 name=tj_login class=lb>µ«¬º</a> </noscript> <script>document.write('<a href="http://www.baidu.com/bdorz/login.gif?login&tpl=mn&u='+ encodeURIComponent(window.location.href+ (window.location.search === "" ? "?" : "&")+ "bdorz_come=1")+ '" name="tj_login" class="lb">µ«¬º</a>');</script> <a href=//www.baidu.com/more/ name=tj_briicon class=bri style="display: block;">∏¸∂‡≤˙∆∑</a> </div> </div> </div> <div id=ftCon> <div id=ftConw> <p id=lh> <a href=http://home.baidu.com>πÿ”⁄∞Ÿ∂»</a> <a href=http://ir.baidu.com>About Baidu</a> </p> <p id=cp>&copy;2017&nbsp;Baidu&nbsp;<a href=http://www.baidu.com/duty/> π”√∞Ÿ∂»«∞±ÿ∂¡</a>&nbsp; <a href=http://jianyi.baidu.com/ class=cp-feedback>“‚º˚∑¥¿°</a>&nbsp;æ©ICP÷§030173∫≈&nbsp; <img src=//www.baidu.com/img/gs.gif> </p> </div> </div> </div> </body> </html>
+ 
+[2019-12-11 15:26:31,133] 56433 [Thread-7] INFO  nt.com.network.HttpSingle  -  ’µΩœ˚œ¢[http://www.baidu.com] - Ω” ‹ ß∞‹£¨¥ÌŒÛ¬Î[302] 
+[2019-12-12 16:40:06,389] 0    [JavaFX Application Thread] DEBUG freemarker.cache  - Couldn't find template in cache for "DocTemplate.html"("zh_CN", GBK, parsed); will try to load it. 
+[2019-12-12 16:40:06,392] 3    [JavaFX Application Thread] DEBUG freemarker.cache  - TemplateLoader.findTemplateSource("DocTemplate_zh_CN.html"): Not found 
+[2019-12-12 16:40:06,394] 5    [JavaFX Application Thread] DEBUG freemarker.cache  - TemplateLoader.findTemplateSource("DocTemplate_zh.html"): Not found 
+[2019-12-12 16:40:06,396] 7    [JavaFX Application Thread] DEBUG freemarker.cache  - TemplateLoader.findTemplateSource("DocTemplate.html"): Found 
+[2019-12-12 16:40:06,396] 7    [JavaFX Application Thread] DEBUG freemarker.cache  - Loading template for "DocTemplate.html"("zh_CN", GBK, parsed) from "jar:file:/C:/Users/Administrator/git/NtTester/plugin/ntdoc/nt-doc-plugin.jar!/template/DocTemplate.html" 
+[2019-12-12 16:40:06,515] 126  [JavaFX Application Thread] ERROR freemarker.runtime  - Error executing FreeMarker template 
+FreeMarker template error:
+The following has evaluated to null or missing:
+==> file.interfaceName  [in template "DocTemplate.html" at line 14, column 53]
+
+----
+Tip: It's the step after the last dot that caused this error, not those before it.
+----
+Tip: If the failing expression is known to be legally refer to something that's sometimes null or missing, either specify a default value like myOptionalVar!myDefault, or use <#if myOptionalVar??>when-present<#else>when-missing</#if>. (These only cover the last step of the expression; to cover the whole expression, use parenthesis: (myOptionalVar.foo)!myDefault, (myOptionalVar.foo)??
+----
+
+----
+FTL stack trace ("~" means nesting-related):
+	- Failed at: ${file.interfaceName}  [in template "DocTemplate.html" at line 14, column 51]
+----
+
+Java stack trace (for programmers):
+----
+freemarker.core.InvalidReferenceException: [... Exception message was already printed; see it above ...]
+	at freemarker.core.InvalidReferenceException.getInstance(InvalidReferenceException.java:131)
+	at freemarker.core.EvalUtil.coerceModelToString(EvalUtil.java:355)
+	at freemarker.core.Expression.evalAndCoerceToString(Expression.java:82)
+	at freemarker.core.DollarVariable.accept(DollarVariable.java:41)
+	at freemarker.core.Environment.visit(Environment.java:324)
+	at freemarker.core.MixedContent.accept(MixedContent.java:54)
+	at freemarker.core.Environment.visitByHiddingParent(Environment.java:345)
+	at freemarker.core.IteratorBlock$IterationContext.executeNestedBlockInner(IteratorBlock.java:268)
+	at freemarker.core.IteratorBlock$IterationContext.executeNestedBlock(IteratorBlock.java:220)
+	at freemarker.core.IteratorBlock$IterationContext.accept(IteratorBlock.java:194)
+	at freemarker.core.Environment.visitIteratorBlock(Environment.java:572)
+	at freemarker.core.IteratorBlock.acceptWithResult(IteratorBlock.java:78)
+	at freemarker.core.IteratorBlock.accept(IteratorBlock.java:64)
+	at freemarker.core.Environment.visit(Environment.java:324)
+	at freemarker.core.MixedContent.accept(MixedContent.java:54)
+	at freemarker.core.Environment.visit(Environment.java:324)
+	at freemarker.core.Environment.process(Environment.java:302)
+	at freemarker.template.Template.process(Template.java:325)
+	at nt.com.render.FileToHtml.trans(FileToHtml.java:37)
+	at nt.com.sence.ProjectController.submit(ProjectController.java:53)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:498)
+	at sun.reflect.misc.Trampoline.invoke(MethodUtil.java:71)
+	at sun.reflect.GeneratedMethodAccessor1.invoke(Unknown Source)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:498)
+	at sun.reflect.misc.MethodUtil.invoke(MethodUtil.java:275)
+	at javafx.fxml.FXMLLoader$MethodHandler.invoke(FXMLLoader.java:1769)
+	at javafx.fxml.FXMLLoader$ControllerMethodEventHandler.handle(FXMLLoader.java:1657)
+	at com.sun.javafx.event.CompositeEventHandler.dispatchBubblingEvent(CompositeEventHandler.java:86)
+	at com.sun.javafx.event.EventHandlerManager.dispatchBubblingEvent(EventHandlerManager.java:238)
+	at com.sun.javafx.event.EventHandlerManager.dispatchBubblingEvent(EventHandlerManager.java:191)
+	at com.sun.javafx.event.CompositeEventDispatcher.dispatchBubblingEvent(CompositeEventDispatcher.java:59)
+	at com.sun.javafx.event.BasicEventDispatcher.dispatchEvent(BasicEventDispatcher.java:58)
+	at com.sun.javafx.event.EventDispatchChainImpl.dispatchEvent(EventDispatchChainImpl.java:114)
+	at com.sun.javafx.event.BasicEventDispatcher.dispatchEvent(BasicEventDispatcher.java:56)
+	at com.sun.javafx.event.EventDispatchChainImpl.dispatchEvent(EventDispatchChainImpl.java:114)
+	at com.sun.javafx.event.BasicEventDispatcher.dispatchEvent(BasicEventDispatcher.java:56)
+	at com.sun.javafx.event.EventDispatchChainImpl.dispatchEvent(EventDispatchChainImpl.java:114)
+	at com.sun.javafx.event.EventUtil.fireEventImpl(EventUtil.java:74)
+	at com.sun.javafx.event.EventUtil.fireEvent(EventUtil.java:49)
+	at javafx.event.Event.fireEvent(Event.java:198)
+	at javafx.scene.Node.fireEvent(Node.java:8411)
+	at javafx.scene.control.Button.fire(Button.java:185)
+	at com.sun.javafx.scene.control.behavior.ButtonBehavior.mouseReleased(ButtonBehavior.java:182)
+	at com.sun.javafx.scene.control.skin.BehaviorSkinBase$1.handle(BehaviorSkinBase.java:96)
+	at com.sun.javafx.scene.control.skin.BehaviorSkinBase$1.handle(BehaviorSkinBase.java:89)
+	at com.sun.javafx.event.CompositeEventHandler$NormalEventHandlerRecord.handleBubblingEvent(CompositeEventHandler.java:218)
+	at com.sun.javafx.event.CompositeEventHandler.dispatchBubblingEvent(CompositeEventHandler.java:80)
+	at com.sun.javafx.event.EventHandlerManager.dispatchBubblingEvent(EventHandlerManager.java:238)
+	at com.sun.javafx.event.EventHandlerManager.dispatchBubblingEvent(EventHandlerManager.java:191)
+	at com.sun.javafx.event.CompositeEventDispatcher.dispatchBubblingEvent(CompositeEventDispatcher.java:59)
+	at com.sun.javafx.event.BasicEventDispatcher.dispatchEvent(BasicEventDispatcher.java:58)
+	at com.sun.javafx.event.EventDispatchChainImpl.dispatchEvent(EventDispatchChainImpl.java:114)
+	at com.sun.javafx.event.BasicEventDispatcher.dispatchEvent(BasicEventDispatcher.java:56)
+	at com.sun.javafx.event.EventDispatchChainImpl.dispatchEvent(EventDispatchChainImpl.java:114)
+	at com.sun.javafx.event.BasicEventDispatcher.dispatchEvent(BasicEventDispatcher.java:56)
+	at com.sun.javafx.event.EventDispatchChainImpl.dispatchEvent(EventDispatchChainImpl.java:114)
+	at com.sun.javafx.event.EventUtil.fireEventImpl(EventUtil.java:74)
+	at com.sun.javafx.event.EventUtil.fireEvent(EventUtil.java:54)
+	at javafx.event.Event.fireEvent(Event.java:198)
+	at javafx.scene.Scene$MouseHandler.process(Scene.java:3757)
+	at javafx.scene.Scene$MouseHandler.access$1500(Scene.java:3485)
+	at javafx.scene.Scene.impl_processMouseEvent(Scene.java:1762)
+	at javafx.scene.Scene$ScenePeerListener.mouseEvent(Scene.java:2494)
+	at com.sun.javafx.tk.quantum.GlassViewEventHandler$MouseEventNotification.run(GlassViewEventHandler.java:394)
+	at com.sun.javafx.tk.quantum.GlassViewEventHandler$MouseEventNotification.run(GlassViewEventHandler.java:295)
+	at java.security.AccessController.doPrivileged(Native Method)
+	at com.sun.javafx.tk.quantum.GlassViewEventHandler.lambda$handleMouseEvent$353(GlassViewEventHandler.java:432)
+	at com.sun.javafx.tk.quantum.QuantumToolkit.runWithoutRenderLock(QuantumToolkit.java:389)
+	at com.sun.javafx.tk.quantum.GlassViewEventHandler.handleMouseEvent(GlassViewEventHandler.java:431)
+	at com.sun.glass.ui.View.handleMouseEvent(View.java:555)
+	at com.sun.glass.ui.View.notifyMouse(View.java:937)
+	at com.sun.glass.ui.win.WinApplication._runLoop(Native Method)
+	at com.sun.glass.ui.win.WinApplication.lambda$null$147(WinApplication.java:177)
+	at java.lang.Thread.run(Thread.java:748)
+[2019-12-12 16:45:24,244] 0    [JavaFX Application Thread] DEBUG freemarker.cache  - Couldn't find template in cache for "DocTemplate.html"("zh_CN", GBK, parsed); will try to load it. 
+[2019-12-12 16:45:24,248] 4    [JavaFX Application Thread] DEBUG freemarker.cache  - TemplateLoader.findTemplateSource("DocTemplate_zh_CN.html"): Not found 
+[2019-12-12 16:45:24,250] 6    [JavaFX Application Thread] DEBUG freemarker.cache  - TemplateLoader.findTemplateSource("DocTemplate_zh.html"): Not found 
+[2019-12-12 16:45:24,252] 8    [JavaFX Application Thread] DEBUG freemarker.cache  - TemplateLoader.findTemplateSource("DocTemplate.html"): Found 
+[2019-12-12 16:45:24,252] 8    [JavaFX Application Thread] DEBUG freemarker.cache  - Loading template for "DocTemplate.html"("zh_CN", GBK, parsed) from "jar:file:/C:/Users/Administrator/git/NtTester/plugin/ntdoc/nt-doc-plugin.jar!/template/DocTemplate.html" 
+[2019-12-12 16:45:24,369] 125  [JavaFX Application Thread] ERROR freemarker.runtime  - Error executing FreeMarker template 
+FreeMarker template error:
+The following has evaluated to null or missing:
+==> file.interfaceName  [in template "DocTemplate.html" at line 14, column 53]
+
+----
+Tip: It's the step after the last dot that caused this error, not those before it.
+----
+Tip: If the failing expression is known to be legally refer to something that's sometimes null or missing, either specify a default value like myOptionalVar!myDefault, or use <#if myOptionalVar??>when-present<#else>when-missing</#if>. (These only cover the last step of the expression; to cover the whole expression, use parenthesis: (myOptionalVar.foo)!myDefault, (myOptionalVar.foo)??
+----
+
+----
+FTL stack trace ("~" means nesting-related):
+	- Failed at: ${file.interfaceName}  [in template "DocTemplate.html" at line 14, column 51]
+----
+
+Java stack trace (for programmers):
+----
+freemarker.core.InvalidReferenceException: [... Exception message was already printed; see it above ...]
+	at freemarker.core.InvalidReferenceException.getInstance(InvalidReferenceException.java:131)
+	at freemarker.core.EvalUtil.coerceModelToString(EvalUtil.java:355)
+	at freemarker.core.Expression.evalAndCoerceToString(Expression.java:82)
+	at freemarker.core.DollarVariable.accept(DollarVariable.java:41)
+	at freemarker.core.Environment.visit(Environment.java:324)
+	at freemarker.core.MixedContent.accept(MixedContent.java:54)
+	at freemarker.core.Environment.visitByHiddingParent(Environment.java:345)
+	at freemarker.core.IteratorBlock$IterationContext.executeNestedBlockInner(IteratorBlock.java:268)
+	at freemarker.core.IteratorBlock$IterationContext.executeNestedBlock(IteratorBlock.java:220)
+	at freemarker.core.IteratorBlock$IterationContext.accept(IteratorBlock.java:194)
+	at freemarker.core.Environment.visitIteratorBlock(Environment.java:572)
+	at freemarker.core.IteratorBlock.acceptWithResult(IteratorBlock.java:78)
+	at freemarker.core.IteratorBlock.accept(IteratorBlock.java:64)
+	at freemarker.core.Environment.visit(Environment.java:324)
+	at freemarker.core.MixedContent.accept(MixedContent.java:54)
+	at freemarker.core.Environment.visit(Environment.java:324)
+	at freemarker.core.Environment.process(Environment.java:302)
+	at freemarker.template.Template.process(Template.java:325)
+	at nt.com.render.FileToHtml.trans(FileToHtml.java:37)
+	at nt.com.sence.ProjectController.submit(ProjectController.java:53)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:498)
+	at sun.reflect.misc.Trampoline.invoke(MethodUtil.java:71)
+	at sun.reflect.GeneratedMethodAccessor1.invoke(Unknown Source)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:498)
+	at sun.reflect.misc.MethodUtil.invoke(MethodUtil.java:275)
+	at javafx.fxml.FXMLLoader$MethodHandler.invoke(FXMLLoader.java:1769)
+	at javafx.fxml.FXMLLoader$ControllerMethodEventHandler.handle(FXMLLoader.java:1657)
+	at com.sun.javafx.event.CompositeEventHandler.dispatchBubblingEvent(CompositeEventHandler.java:86)
+	at com.sun.javafx.event.EventHandlerManager.dispatchBubblingEvent(EventHandlerManager.java:238)
+	at com.sun.javafx.event.EventHandlerManager.dispatchBubblingEvent(EventHandlerManager.java:191)
+	at com.sun.javafx.event.CompositeEventDispatcher.dispatchBubblingEvent(CompositeEventDispatcher.java:59)
+	at com.sun.javafx.event.BasicEventDispatcher.dispatchEvent(BasicEventDispatcher.java:58)
+	at com.sun.javafx.event.EventDispatchChainImpl.dispatchEvent(EventDispatchChainImpl.java:114)
+	at com.sun.javafx.event.BasicEventDispatcher.dispatchEvent(BasicEventDispatcher.java:56)
+	at com.sun.javafx.event.EventDispatchChainImpl.dispatchEvent(EventDispatchChainImpl.java:114)
+	at com.sun.javafx.event.BasicEventDispatcher.dispatchEvent(BasicEventDispatcher.java:56)
+	at com.sun.javafx.event.EventDispatchChainImpl.dispatchEvent(EventDispatchChainImpl.java:114)
+	at com.sun.javafx.event.EventUtil.fireEventImpl(EventUtil.java:74)
+	at com.sun.javafx.event.EventUtil.fireEvent(EventUtil.java:49)
+	at javafx.event.Event.fireEvent(Event.java:198)
+	at javafx.scene.Node.fireEvent(Node.java:8411)
+	at javafx.scene.control.Button.fire(Button.java:185)
+	at com.sun.javafx.scene.control.behavior.ButtonBehavior.mouseReleased(ButtonBehavior.java:182)
+	at com.sun.javafx.scene.control.skin.BehaviorSkinBase$1.handle(BehaviorSkinBase.java:96)
+	at com.sun.javafx.scene.control.skin.BehaviorSkinBase$1.handle(BehaviorSkinBase.java:89)
+	at com.sun.javafx.event.CompositeEventHandler$NormalEventHandlerRecord.handleBubblingEvent(CompositeEventHandler.java:218)
+	at com.sun.javafx.event.CompositeEventHandler.dispatchBubblingEvent(CompositeEventHandler.java:80)
+	at com.sun.javafx.event.EventHandlerManager.dispatchBubblingEvent(EventHandlerManager.java:238)
+	at com.sun.javafx.event.EventHandlerManager.dispatchBubblingEvent(EventHandlerManager.java:191)
+	at com.sun.javafx.event.CompositeEventDispatcher.dispatchBubblingEvent(CompositeEventDispatcher.java:59)
+	at com.sun.javafx.event.BasicEventDispatcher.dispatchEvent(BasicEventDispatcher.java:58)
+	at com.sun.javafx.event.EventDispatchChainImpl.dispatchEvent(EventDispatchChainImpl.java:114)
+	at com.sun.javafx.event.BasicEventDispatcher.dispatchEvent(BasicEventDispatcher.java:56)
+	at com.sun.javafx.event.EventDispatchChainImpl.dispatchEvent(EventDispatchChainImpl.java:114)
+	at com.sun.javafx.event.BasicEventDispatcher.dispatchEvent(BasicEventDispatcher.java:56)
+	at com.sun.javafx.event.EventDispatchChainImpl.dispatchEvent(EventDispatchChainImpl.java:114)
+	at com.sun.javafx.event.EventUtil.fireEventImpl(EventUtil.java:74)
+	at com.sun.javafx.event.EventUtil.fireEvent(EventUtil.java:54)
+	at javafx.event.Event.fireEvent(Event.java:198)
+	at javafx.scene.Scene$MouseHandler.process(Scene.java:3757)
+	at javafx.scene.Scene$MouseHandler.access$1500(Scene.java:3485)
+	at javafx.scene.Scene.impl_processMouseEvent(Scene.java:1762)
+	at javafx.scene.Scene$ScenePeerListener.mouseEvent(Scene.java:2494)
+	at com.sun.javafx.tk.quantum.GlassViewEventHandler$MouseEventNotification.run(GlassViewEventHandler.java:394)
+	at com.sun.javafx.tk.quantum.GlassViewEventHandler$MouseEventNotification.run(GlassViewEventHandler.java:295)
+	at java.security.AccessController.doPrivileged(Native Method)
+	at com.sun.javafx.tk.quantum.GlassViewEventHandler.lambda$handleMouseEvent$353(GlassViewEventHandler.java:432)
+	at com.sun.javafx.tk.quantum.QuantumToolkit.runWithoutRenderLock(QuantumToolkit.java:389)
+	at com.sun.javafx.tk.quantum.GlassViewEventHandler.handleMouseEvent(GlassViewEventHandler.java:431)
+	at com.sun.glass.ui.View.handleMouseEvent(View.java:555)
+	at com.sun.glass.ui.View.notifyMouse(View.java:937)
+	at com.sun.glass.ui.win.WinApplication._runLoop(Native Method)
+	at com.sun.glass.ui.win.WinApplication.lambda$null$147(WinApplication.java:177)
+	at java.lang.Thread.run(Thread.java:748)
+[2019-12-16 11:22:35,364] 0    [JavaFX Application Thread] DEBUG freemarker.cache  - Couldn't find template in cache for "DocTemplate.html"("zh_CN", GBK, parsed); will try to load it. 
+[2019-12-16 11:22:35,367] 3    [JavaFX Application Thread] DEBUG freemarker.cache  - TemplateLoader.findTemplateSource("DocTemplate_zh_CN.html"): Not found 
+[2019-12-16 11:22:35,370] 6    [JavaFX Application Thread] DEBUG freemarker.cache  - TemplateLoader.findTemplateSource("DocTemplate_zh.html"): Not found 
+[2019-12-16 11:22:35,371] 7    [JavaFX Application Thread] DEBUG freemarker.cache  - TemplateLoader.findTemplateSource("DocTemplate.html"): Found 
+[2019-12-16 11:22:35,371] 7    [JavaFX Application Thread] DEBUG freemarker.cache  - Loading template for "DocTemplate.html"("zh_CN", GBK, parsed) from "jar:file:/C:/Users/Administrator/git/NtTester/plugin/ntdoc/nt-doc-plugin.jar!/template/DocTemplate.html" 
+[2019-12-17 10:21:53,185] 0    [JavaFX Application Thread] DEBUG freemarker.cache  - Couldn't find template in cache for "DocTemplate.html"("zh_CN", GBK, parsed); will try to load it. 
+[2019-12-17 10:21:53,189] 4    [JavaFX Application Thread] DEBUG freemarker.cache  - TemplateLoader.findTemplateSource("DocTemplate_zh_CN.html"): Not found 
+[2019-12-17 10:21:53,191] 6    [JavaFX Application Thread] DEBUG freemarker.cache  - TemplateLoader.findTemplateSource("DocTemplate_zh.html"): Not found 
+[2019-12-17 10:21:53,192] 7    [JavaFX Application Thread] DEBUG freemarker.cache  - TemplateLoader.findTemplateSource("DocTemplate.html"): Found 
+[2019-12-17 10:21:53,192] 7    [JavaFX Application Thread] DEBUG freemarker.cache  - Loading template for "DocTemplate.html"("zh_CN", GBK, parsed) from "jar:file:/C:/Users/Administrator/git/NtTester/plugin/ntdoc/nt-doc-plugin.jar!/template/DocTemplate.html" 
+[2019-12-19 14:23:57,154] 0    [JavaFX Application Thread] INFO  nt.com.handler.LogHandler  - [LogHandler - before ][2019-12-19 14:23:57 ∑¢ÀÕ±®Œƒ]<?xml version="1.0" encoding="GBK"?>
+<root>
+	<object name="sys">
+		<field name="macadd" value=""/>
+		<field name="reqseq" value="DC101201807300000000002"/><!--µ˜”√œµÕ≥¡˜ÀÆ∫≈  ±Í÷æ(°∞D°±)+œµÕ≥±‡∫≈£®4Œª£©+»’∆⁄£®8Œª£©+À≥–Ú∫≈£®10Œª£©-->
+		<field name="gloseq" value="QC101201807300000000002"/><!--»´æ÷¡˜ÀÆ∫≈  ±Í÷æ(°∞Q°±)+œµÕ≥±‡∫≈£®4Œª£©+»’∆⁄£®8Œª£©+À≥–Ú∫≈£®10Œª£©-->
+		<field name="svccod" value="30013000004"/><!--∑˛ŒÒ¥˙¬Î 30013000004-->
+		<field name="bsicod" value="01"/><!--≥°æ∞¥˙¬Î-->
+		<field name="pkgsav" value="C101"/><!--“µŒÒƒ£øÈ±‡∫≈-->
+		<field name="pkgcli" value="R1000102"/><!--÷’∂À±‡∫≈ ∑«±ÿ ‰-->
+		<field name="chanid" value="121001"/><!--∑¢∆«˛µ¿±Í ∂ 121001-◊‘∂Ø»°øÓª˙  121002-◊‘∂Ø¥Ê»°øÓª˙  121003-◊‘∂Ø¥ÊøÓª˙  121005-∂‡√ΩÃÂ◊‘÷˙÷’∂À  121006-‘∂≥Ã ”∆µπÒ‘±ª˙  121007-¥Ê’€≤πµ«ª˙  121008-µÁ◊”ªÿµ•œ‰  121009-”≤±“∂“ªªª˙  -->
+		<field name="orgsid" value="C101  "/><!--∑¢∆∑Ω“µŒÒƒ£øÈ±‡∫≈ C101-->
+		<field name="reqsid" value="100200"/><!--µ˜”√œµÕ≥±Í ∂ 100200-->
+		<field name="prcscd" value="1686"/><!--Ωª“◊¬Î-->
+	</object>
+	<object name="comm_req">
+		<field name="farendma" value="9999"/><!--∑®»À¥˙¬Î÷µ£¨∑¢∆∂À∑¢ÀÕ∏˙∫À–ƒ∫ÛÃ®‘º∂®∫√µƒ÷µ£¨ƒø«∞πÃ∂®÷µŒ™9999-->
+		<field name="qudaohao" value="121001"/><!--«˛µ¿∫≈-->
+		<field name="jiaoyijg" value="12000"/><!--ª˙ππ∫≈∑«±ÿ ‰-->
+		<field name="jiaoyigy" value="15915945"/><!--πÒ‘±∫≈±ÿ ‰-->
+		<field name="waibriqi" value="20180730"/><!--µ⁄»˝∑Ω»’∆⁄-->
+		<field name="waibshij" value="0930"/><!--µ⁄»˝∑ΩΩª“◊ ±º‰-->
+		<field name="waiblius" value="123456789"/><!--µ⁄»˝∑Ω¡˜ÀÆ∫≈-->
+	</object>
+	<object name="input">
+		<field name="chaxlxin" value="01"/><!--≤È—Ø¿‡–Õ 00-∞¥’’øÕªß∫≈≤È—Ø  01-øÕªß’À∫≈≤È—Ø  02-÷§º˛–≈œ¢≤È—Ø-->
+		<field name="kehuzhao" value="6224980010000032"/><!--øÕªß’À∫≈-->
+	</object>
+</root>
+ 
+[2019-12-19 14:23:58,730] 1576 [Thread-4] INFO  nt.com.network.HttpSingle  -  ’µΩœ˚œ¢[http://apis.juhe.cn/qrcode/api?key=468c8fa429cca535a943df230ee34a13&text=kege] - {"reason":"success","result":{"base64_image":"iVBORw0KGgoAAAANSUhEUgAAAHgAAAB4CAIAAAC2BqGFAAAPtklEQVR4nO1dXWhcxRefbRvMZtPExNaUgBZrQ60EjUUwW4JUSiBSKqUlFIsvrT5oMRZFpPXjIQ9B6YPY2AcppiAoGiWiQSJa0RC\/pWhppA9ZMRrDmhhL20205KM7\/4f55\/zPzseZj929rv\/u7yHce+fMmTPnnjlnzszsTYxzzsooPlb80wJcLSgrOiKUFR0RyoqOCGVFR4SyoiNCWdERoazoiFBWdFTgJCIQoL+\/P5vNalsfGxvDlPv378elUq2NGzcC5bp163DR22+\/HUFHaE2WikW7v1ogi8ViQK9WLLWlhVX\/tACMMRaLxcKIxTXnXOXgxTMClIpFC2AzNJmkavjYtL1YRQkPi66pqbntttvybzKdTv\/888+m0m+\/\/XZhYUFcT05O4qLp6enPP\/\/cVPHy5cvqQ62xb9iwobGx0UNiA86ePZvJZFypaReOKdva2iD+ZLNZNYKJJ1CEifHFsWPHMNv+\/n5Ms27duvxVIIIhSNLf349Ljx07RsgPFbUE+HlbW5u7Jv18NFiHdrSKUkxjuiA4FxB0u1q3LkaASRj8XO0+jXAfXQzV+ErvyMrEVh24YEBqdemvb\/f9FO0ifT4o4MsDVlqlwOCT7BeI8ZBVWQXI6T29g8a+\/vrr4eFhlyoNDQ0HDhwQ1yYR+fLU2F2SHTt2mILz6tWrsbSqTWDt9\/X1TU9Pu7S4bdu2ZDIZZg2BPpoxNjw8\/Mwzz7jUamlpefDBB62cpVFsxe7du+H9qWZr9bbQ1vHjx8+cOePSYk9Pz9atWwP8Bos+YdGqMnhIShXxYMfjXVs3zDDDtMyiVzQxAQjogFTFxFx9Hqwv6\/szoSQyQzXQ+9bFty588o+6vhxKaK1DjVqNjY2vvvoq3H788ccvvfSSlgPn\/KGHHkqn0+K2vr7+9ddft1pfwKv917gOE7QdqKqq6ujogOe\/\/\/67WhFKR0ZGfvrpJ3EtpZda1YQNoOChUCqKNrlpx44RFQmFRrnCF56whIHgQBeZpitWkVzyaS+EKaEkZh3BRS7KKngGG\/aG\/Cy62GNNm8K5VNFWtGabvilSWBUBP4sOjrnBzLUJtGNFUxE8z2fm7qvu8BS8sAgOWbTBFslBB1QvlYSlGKGJGA3BjhvGQXETFqyRhoaGlpYWl1qbNm1Sq2OEaXliYuKHH36A25tvvrm6ulpcr1mzhq6LWwTxrGhoaGChZhHuOg4cOGBdkyOq+5aq6O7u7u7uhtuxsbGmpiZHnlhZb731lvY5Lee\/cq3jakB4wuJugI4vv1D+FGZg+EKiUXf\/6CjHEbyEAURh0cFpNDz37R7eqdIS0PuE0nsCVphbEYNhOp1++eWXvbhrMTIy4ltFq+vt27ffeuutcDs4OFhRUSGuE4kEET8CBNACFgudwEkURCAa4lwHXz5WgRfeNm7cyNHxjL6+Plyxr68Pl6qHHOEARvmQ4\/\/AHXZRTaArRmMuVpSKoullUut6E7FMGuVaKIFSUTQzrNdIAcq9FD8pBaO2BEPp1FoxkEwmGRrpJ06cgOOKc3Nze\/fuBcrx8XGpLjbb3t7e2dlZcRuPx7EhJ5PJCDpiAe3CTcf9MIGVA02gNge30ol\/CSIYqq1IZy21z000WsnVY5smAgIW12HaNmW6GT5XRitXQpxoleWmCZhbgEuVWjFNomPoDKN1os1yh4s2EqgEBFx9ND3zx0rH11ItjlaBJYIY+TsJAlw5fKO+b9wLriQj+EJrE9ZbF4FdFa3yBQOBa1Xd0D3pguW+IWlw+Bq1qk3ttUkqLROgwUPT2jQBj+xWUkdvb+\/zzz8PpW+88cY999yjlebHH39sb293bAVjaWnpzz\/\/NJXW1tbG43G4\/eqrr2666SZx\/ccff9x+++1QtHPnzhMnTsDts88+K+U+YXjvvffuuusu5jbZD9+cnZubm5qagtv5+Xls4xiLi4uYslC4dOnSpUuX4HZpaQmc9ZUrV3CLFy9ehGvOeSaTKYg88BMQlyHo5DrouGei\/6egdpvwGJHBw0czBzeqxqUolW7KuQPW\/xzhztbVdaiaraurw+s4Fy9eTKVS2roTExP4tra2du3ataaGxsfHr1y5Iq4rKirWr19vopyenoYMRQBmNatWrZLWmLD8a9euxaUY2WwW\/2KsqqqK+P1WZWUlbtdE9j\/haKhze\/WCc97R0WFpaRldXV2YrcSHWL2TkoL9+\/djtmNjYy59UVnhDko\/Z+vo6DDJKSU+1qbtrkMNcTAStVNXR0izaW4+ByNNvYXcVv7urKzrVhIN9B1zs4rk5KNVdZhyJHdgybhhjZSoQhC4vAmpdXGh7YUpLcCW4fLiXX00NxztUZXuCLUW0U98bU2a6UBNUJr0pSXT5rcELIrGepTsDl+oLT3wwAOwsXT+\/PnBwUEoOnfu3MmTJ00t3nfffYuLi+L6+uuvx42mUqkvvvgCKBsaGrCbPnXqFPyAuaqqau\/eveD0xsfHP\/vsM6BsbW3dvHlzLHd5xGQxqr2DRQ8NDeGfc8Evl\/SwenHs\/oknUjDMZDJQ9P3331MS5CKdTpta1G5lAdy\/1yF+oix1RDxxCYZhP1G2+2iuuCFenDmpCpfoR5e6gHtuenkRA0poh+X\/G37TO9NrLKqN06u9RCkhlTYwEtFYDXq+UwCnYIindyD9Bx988O677wLl6Ogornjw4EEcDHHR9u3b9+3bZ2qxtraW6xbyGWNtbW3YTadSKRx\/Hn\/8cUjVFhcXcZG6Bwa9Y4x1d3dD7rpy5UrcxIULFzCf3bt379ixgy2r4vDhw46\/bf5vYy5Qo0FPT49rG7no6urS5pZqi6atIwEiM6SPtkjBEJ+Jra6uxkVDQ0O4Yk9PD72nRcA1GOYzalSouSVDrxy3gp9gsjwFIFjRvdNOnAuTGWpHcZ7gDp+b4rnbN45sCyIeM79Orpt9ubTrZNGSd86\/P9LiBn6RUl6gapmIfr52EMBKWt5xN0FLMMRHu++8884333wTmD788MOdnZ10dS0GBwcx297e3nvvvRdut27dOjMzI67Xr1\/\/ySefgA8ZGBg4cuQIUEqBqL29HcLv0tISLQPWy\/vvvz8\/Py+uV6xYgUfS3XffjY88vPbaa+pZd4BplVjAomj40S9bTrdAxPr6+vr6erWK1i1gVFRUYLazs7O4yvj4uLrPJAgymQyuKOHXX3+l+yIxZMvqvvHGGxkauHg6m0gkQLMi6BEC0Aj\/naE0drD0WkfmyDaMwBeq07AuEuUpQ2BmyHXLuNi9al0wMWEo4FzCF6rF4CKi1AsW14H3O6677jppJuC4YomljMViiUQCsxVHBghWpoak4wYzMzOwByahsrLy2muvhdtEIiFNLqGJbDaLXf8111wj3KPo7+rVq8M\/y2edaTtuZUn5heOZPK+tLPeD6BI6OzslIUt0K4vl2qY0A1Ovmc6bM90AdFk4t651WLvAlemjmhzQax0qw9gyrK0L5LV6J94VbltVJStEbNGyxe3S1bVvXa2lbUV9yJUlNpe+5HWAxtSAJByhJkcyIjn0suhgVtrI5GUrlmD4zjvvMIPV8Nwpp8my8HP8eqB6Mpm84YYbrIZpZY5RWVm5c+dOuG1tbcWUZ86cwdNh3BH1k72q8EA\/PDyMjwZa0jfahVM1CwTia7siGAJMwVCUEltZUrDq6upylK2jo0NSCI6BBd7KigC0OVtfudUgsFX6Wg\/PTQggBvryKQlFSwkOBvTNpbpUMYCVFjw3O+NkfDKhJBTN3Q7QFLCiO7Q5F3OO8ACP89EbNmw4dOiQF3ctRkZGBgYG1OeqjczMzOAWa2pq8NfUW1tbcTR+7rnn4Bx0IpFQucGTPXv2mLKb+fn5p556ihYszKI9gmFbWxvPTa5wZJAij5Q14Vvtp+eBhshxxf9hoXNUSSpTBqi95oZzHWofBX0RPz3PlJUjdblASvZcpoAqcxcanjul5ToXbBJPskraD+AQYmrIihAfbRILP+eKU2NmPfKwwbhc16U66FcVniuZHo0wH10SwfBqQOCPhTjnJ0+ePH78uAvxpk2bxHeLTK4D28ipU6fgkOPExMSuXbvUplmu\/YrhvGvXLumnBYD29vajR4\/CwD969KjYk1NRWVmJTwqOjo5u2bLF1K\/Dhw\/39vaaSiWEKFp0cnp62vGL7VJFmqC5uRlu4atfWiZSSDh37pxpn6mpqQn76MnJSZPk1dXVLS0t0MTU1BTRx8bGxjvuuMMaeAQi\/Qis1kUCYm57YMBE\/Uu0a6WRxPDtqZU+Uh9Nv3lJHY6x0SVhcZxdYHr3yOxI6f3dOx6UjIFjdVzVdGlifn4evDljLB6Pg6vJZrN\/\/\/23ylDLNh6Pr1y5UlwnEgn8S6+FhQXsvqQWpd7R8LZoafrsXsvFQWtn4iaygwcP1iAMDAzMLkNy1lhmle2XX36ZyWRExVQqhXm+8sorswhPPvmkKo\/jtDrEdYRNeJnb4hk9zF18sW8tFuqXmc9iS6TB0PTmJbbB+YsplcDt0tGYYE68xcLPOooNq1m5mF5Y\/kkoy8XYrQQhH4EN8NG0QJjtp59+CifhpGPOk5OTH374IdzW1dXhXyidPn0aXPNff\/2Fi8QJaGhl8+bNuHR0dBQOoalbWUSC\/s0338zNzcEtPkGogbzKlAtMKVbvAO4H0VtaWnBF4h9H0qt3EqRvKklbWeqqoWklj\/g4s9jKAmJ8xFIFrcmQzDAfi6YZBrA1OQR1EVEl9ppr5tnl8BQ8AFZxrZ7OJIxaUX0BPHeG4NhWQNKgRaBF598wRv6u32TRAlz30Sz35sLWRSWEW\/S2bdsc3bT4YjtzGAqc8yNHjkCEOX\/+\/IsvvmjlL1TwxBNPXLhwAZ48\/fTTQNDc3Lxv3z5Js46mCjT\/gOsQSCaT+L8oag1EGr9Ex6D6Y489BtepVIpWNDbVRx55BB5OTU3hD5p0dnbef\/\/9Jhun4btOYkJeX0RXlatKIxlOwDQ2QDYrpa\/nzT8Yhpz4144m7bRBG\/pp5N8lL89bWJ4EvP89CDNvy2qvvQyNeQ5VvCZHxDeVxl22QvloS2OYe01Njem\/FnshnU7jD0T19\/d3dnZCt3GLly9fPn36NNwODQ298MILcNvU1ARhVsLCwsJ3330Ht2vWrLnlllvg9tChQ3v27IEWt2zZAtso8Xj8o48+Asq6urrm5mYQ7Jdffvntt9+g9NFHHz179izcWl4bnc9QNQsEKTMk\/hbk84ts+SfKAOknylx3OEQ9B8L\/jYccmW56q\/4tRnPamZIUVPAcPHhOXRKK5subWFIHijeqwEebpkk4VAAZ9te+gpXKv0Jl5uxO9d3Fa1H73HGGamkrGkdcRkm4jqsBZUVHhLKiI0JZ0RGhrOiIUFZ0RCgrOiKUFR0RyoqOCP8BgQLSm2e0ZdAAAAAASUVORK5CYII="},"error_code":0}
+ 
+[2019-12-19 14:23:58,740] 1586 [Thread-4] INFO  nt.com.handler.LogHandler  - [LogHandler - after ][2019-12-19 14:23:58  ’µΩ±®Œƒ]{"reason":"success","result":{"base64_image":"iVBORw0KGgoAAAANSUhEUgAAAHgAAAB4CAIAAAC2BqGFAAAPtklEQVR4nO1dXWhcxRefbRvMZtPExNaUgBZrQ60EjUUwW4JUSiBSKqUlFIsvrT5oMRZFpPXjIQ9B6YPY2AcppiAoGiWiQSJa0RC\/pWhppA9ZMRrDmhhL20205KM7\/4f55\/zPzseZj929rv\/u7yHce+fMmTPnnjlnzszsTYxzzsooPlb80wJcLSgrOiKUFR0RyoqOCGVFR4SyoiNCWdERoazoiFBWdFTgJCIQoL+\/P5vNalsfGxvDlPv378elUq2NGzcC5bp163DR22+\/HUFHaE2WikW7v1ogi8ViQK9WLLWlhVX\/tACMMRaLxcKIxTXnXOXgxTMClIpFC2AzNJmkavjYtL1YRQkPi66pqbntttvybzKdTv\/888+m0m+\/\/XZhYUFcT05O4qLp6enPP\/\/cVPHy5cvqQ62xb9iwobGx0UNiA86ePZvJZFypaReOKdva2iD+ZLNZNYKJJ1CEifHFsWPHMNv+\/n5Ms27duvxVIIIhSNLf349Ljx07RsgPFbUE+HlbW5u7Jv18NFiHdrSKUkxjuiA4FxB0u1q3LkaASRj8XO0+jXAfXQzV+ErvyMrEVh24YEBqdemvb\/f9FO0ifT4o4MsDVlqlwOCT7BeI8ZBVWQXI6T29g8a+\/vrr4eFhlyoNDQ0HDhwQ1yYR+fLU2F2SHTt2mILz6tWrsbSqTWDt9\/X1TU9Pu7S4bdu2ZDIZZg2BPpoxNjw8\/Mwzz7jUamlpefDBB62cpVFsxe7du+H9qWZr9bbQ1vHjx8+cOePSYk9Pz9atWwP8Bos+YdGqMnhIShXxYMfjXVs3zDDDtMyiVzQxAQjogFTFxFx9Hqwv6\/szoSQyQzXQ+9bFty588o+6vhxKaK1DjVqNjY2vvvoq3H788ccvvfSSlgPn\/KGHHkqn0+K2vr7+9ddft1pfwKv917gOE7QdqKqq6ujogOe\/\/\/67WhFKR0ZGfvrpJ3EtpZda1YQNoOChUCqKNrlpx44RFQmFRrnCF56whIHgQBeZpitWkVzyaS+EKaEkZh3BRS7KKngGG\/aG\/Cy62GNNm8K5VNFWtGabvilSWBUBP4sOjrnBzLUJtGNFUxE8z2fm7qvu8BS8sAgOWbTBFslBB1QvlYSlGKGJGA3BjhvGQXETFqyRhoaGlpYWl1qbNm1Sq2OEaXliYuKHH36A25tvvrm6ulpcr1mzhq6LWwTxrGhoaGChZhHuOg4cOGBdkyOq+5aq6O7u7u7uhtuxsbGmpiZHnlhZb731lvY5Lee\/cq3jakB4wuJugI4vv1D+FGZg+EKiUXf\/6CjHEbyEAURh0cFpNDz37R7eqdIS0PuE0nsCVphbEYNhOp1++eWXvbhrMTIy4ltFq+vt27ffeuutcDs4OFhRUSGuE4kEET8CBNACFgudwEkURCAa4lwHXz5WgRfeNm7cyNHxjL6+Plyxr68Pl6qHHOEARvmQ4\/\/AHXZRTaArRmMuVpSKoullUut6E7FMGuVaKIFSUTQzrNdIAcq9FD8pBaO2BEPp1FoxkEwmGRrpJ06cgOOKc3Nze\/fuBcrx8XGpLjbb3t7e2dlZcRuPx7EhJ5PJCDpiAe3CTcf9MIGVA02gNge30ol\/CSIYqq1IZy21z000WsnVY5smAgIW12HaNmW6GT5XRitXQpxoleWmCZhbgEuVWjFNomPoDKN1os1yh4s2EqgEBFx9ND3zx0rH11ItjlaBJYIY+TsJAlw5fKO+b9wLriQj+EJrE9ZbF4FdFa3yBQOBa1Xd0D3pguW+IWlw+Bq1qk3ttUkqLROgwUPT2jQBj+xWUkdvb+\/zzz8PpW+88cY999yjlebHH39sb293bAVjaWnpzz\/\/NJXW1tbG43G4\/eqrr2666SZx\/ccff9x+++1QtHPnzhMnTsDts88+K+U+YXjvvffuuusu5jbZD9+cnZubm5qagtv5+Xls4xiLi4uYslC4dOnSpUuX4HZpaQmc9ZUrV3CLFy9ehGvOeSaTKYg88BMQlyHo5DrouGei\/6egdpvwGJHBw0czBzeqxqUolW7KuQPW\/xzhztbVdaiaraurw+s4Fy9eTKVS2roTExP4tra2du3ataaGxsfHr1y5Iq4rKirWr19vopyenoYMRQBmNatWrZLWmLD8a9euxaUY2WwW\/2KsqqqK+P1WZWUlbtdE9j\/haKhze\/WCc97R0WFpaRldXV2YrcSHWL2TkoL9+\/djtmNjYy59UVnhDko\/Z+vo6DDJKSU+1qbtrkMNcTAStVNXR0izaW4+ByNNvYXcVv7urKzrVhIN9B1zs4rk5KNVdZhyJHdgybhhjZSoQhC4vAmpdXGh7YUpLcCW4fLiXX00NxztUZXuCLUW0U98bU2a6UBNUJr0pSXT5rcELIrGepTsDl+oLT3wwAOwsXT+\/PnBwUEoOnfu3MmTJ00t3nfffYuLi+L6+uuvx42mUqkvvvgCKBsaGrCbPnXqFPyAuaqqau\/eveD0xsfHP\/vsM6BsbW3dvHlzLHd5xGQxqr2DRQ8NDeGfc8Evl\/SwenHs\/oknUjDMZDJQ9P3331MS5CKdTpta1G5lAdy\/1yF+oix1RDxxCYZhP1G2+2iuuCFenDmpCpfoR5e6gHtuenkRA0poh+X\/G37TO9NrLKqN06u9RCkhlTYwEtFYDXq+UwCnYIindyD9Bx988O677wLl6Ogornjw4EEcDHHR9u3b9+3bZ2qxtraW6xbyGWNtbW3YTadSKRx\/Hn\/8cUjVFhcXcZG6Bwa9Y4x1d3dD7rpy5UrcxIULFzCf3bt379ixgy2r4vDhw46\/bf5vYy5Qo0FPT49rG7no6urS5pZqi6atIwEiM6SPtkjBEJ+Jra6uxkVDQ0O4Yk9PD72nRcA1GOYzalSouSVDrxy3gp9gsjwFIFjRvdNOnAuTGWpHcZ7gDp+b4rnbN45sCyIeM79Orpt9ubTrZNGSd86\/P9LiBn6RUl6gapmIfr52EMBKWt5xN0FLMMRHu++8884333wTmD788MOdnZ10dS0GBwcx297e3nvvvRdut27dOjMzI67Xr1\/\/ySefgA8ZGBg4cuQIUEqBqL29HcLv0tISLQPWy\/vvvz8\/Py+uV6xYgUfS3XffjY88vPbaa+pZd4BplVjAomj40S9bTrdAxPr6+vr6erWK1i1gVFRUYLazs7O4yvj4uLrPJAgymQyuKOHXX3+l+yIxZMvqvvHGGxkauHg6m0gkQLMi6BEC0Aj\/naE0drD0WkfmyDaMwBeq07AuEuUpQ2BmyHXLuNi9al0wMWEo4FzCF6rF4CKi1AsW14H3O6677jppJuC4YomljMViiUQCsxVHBghWpoak4wYzMzOwByahsrLy2muvhdtEIiFNLqGJbDaLXf8111wj3KPo7+rVq8M\/y2edaTtuZUn5heOZPK+tLPeD6BI6OzslIUt0K4vl2qY0A1Ovmc6bM90AdFk4t651WLvAlemjmhzQax0qw9gyrK0L5LV6J94VbltVJStEbNGyxe3S1bVvXa2lbUV9yJUlNpe+5HWAxtSAJByhJkcyIjn0suhgVtrI5GUrlmD4zjvvMIPV8Nwpp8my8HP8eqB6Mpm84YYbrIZpZY5RWVm5c+dOuG1tbcWUZ86cwdNh3BH1k72q8EA\/PDyMjwZa0jfahVM1CwTia7siGAJMwVCUEltZUrDq6upylK2jo0NSCI6BBd7KigC0OVtfudUgsFX6Wg\/PTQggBvryKQlFSwkOBvTNpbpUMYCVFjw3O+NkfDKhJBTN3Q7QFLCiO7Q5F3OO8ACP89EbNmw4dOiQF3ctRkZGBgYG1OeqjczMzOAWa2pq8NfUW1tbcTR+7rnn4Bx0IpFQucGTPXv2mLKb+fn5p556ihYszKI9gmFbWxvPTa5wZJAij5Q14Vvtp+eBhshxxf9hoXNUSSpTBqi95oZzHWofBX0RPz3PlJUjdblASvZcpoAqcxcanjul5ToXbBJPskraD+AQYmrIihAfbRILP+eKU2NmPfKwwbhc16U66FcVniuZHo0wH10SwfBqQOCPhTjnJ0+ePH78uAvxpk2bxHeLTK4D28ipU6fgkOPExMSuXbvUplmu\/YrhvGvXLumnBYD29vajR4\/CwD969KjYk1NRWVmJTwqOjo5u2bLF1K\/Dhw\/39vaaSiWEKFp0cnp62vGL7VJFmqC5uRlu4atfWiZSSDh37pxpn6mpqQn76MnJSZPk1dXVLS0t0MTU1BTRx8bGxjvuuMMaeAQi\/Qis1kUCYm57YMBE\/Uu0a6WRxPDtqZU+Uh9Nv3lJHY6x0SVhcZxdYHr3yOxI6f3dOx6UjIFjdVzVdGlifn4evDljLB6Pg6vJZrN\/\/\/23ylDLNh6Pr1y5UlwnEgn8S6+FhQXsvqQWpd7R8LZoafrsXsvFQWtn4iaygwcP1iAMDAzMLkNy1lhmle2XX36ZyWRExVQqhXm+8sorswhPPvmkKo\/jtDrEdYRNeJnb4hk9zF18sW8tFuqXmc9iS6TB0PTmJbbB+YsplcDt0tGYYE68xcLPOooNq1m5mF5Y\/kkoy8XYrQQhH4EN8NG0QJjtp59+CifhpGPOk5OTH374IdzW1dXhXyidPn0aXPNff\/2Fi8QJaGhl8+bNuHR0dBQOoalbWUSC\/s0338zNzcEtPkGogbzKlAtMKVbvAO4H0VtaWnBF4h9H0qt3EqRvKklbWeqqoWklj\/g4s9jKAmJ8xFIFrcmQzDAfi6YZBrA1OQR1EVEl9ppr5tnl8BQ8AFZxrZ7OJIxaUX0BPHeG4NhWQNKgRaBF598wRv6u32TRAlz30Sz35sLWRSWEW\/S2bdsc3bT4YjtzGAqc8yNHjkCEOX\/+\/IsvvmjlL1TwxBNPXLhwAZ48\/fTTQNDc3Lxv3z5Js46mCjT\/gOsQSCaT+L8oag1EGr9Ex6D6Y489BtepVIpWNDbVRx55BB5OTU3hD5p0dnbef\/\/9Jhun4btOYkJeX0RXlatKIxlOwDQ2QDYrpa\/nzT8Yhpz4144m7bRBG\/pp5N8lL89bWJ4EvP89CDNvy2qvvQyNeQ5VvCZHxDeVxl22QvloS2OYe01Njem\/FnshnU7jD0T19\/d3dnZCt3GLly9fPn36NNwODQ298MILcNvU1ARhVsLCwsJ3330Ht2vWrLnlllvg9tChQ3v27IEWt2zZAtso8Xj8o48+Asq6urrm5mYQ7Jdffvntt9+g9NFHHz179izcWl4bnc9QNQsEKTMk\/hbk84ts+SfKAOknylx3OEQ9B8L\/jYccmW56q\/4tRnPamZIUVPAcPHhOXRKK5subWFIHijeqwEebpkk4VAAZ9te+gpXKv0Jl5uxO9d3Fa1H73HGGamkrGkdcRkm4jqsBZUVHhLKiI0JZ0RGhrOiIUFZ0RCgrOiKUFR0RyoqOCP8BgQLSm2e0ZdAAAAAASUVORK5CYII="},"error_code":0}
+ 
+[2019-12-19 14:44:52,313] 0    [JavaFX Application Thread] INFO  nt.com.handler.LogHandler  - [LogHandler - before ][2019-12-19 14:44:52 ∑¢ÀÕ±®Œƒ]<?xml version="1.0" encoding="GBK"?>
+<root>
+	<object name="sys">
+		<field name="macadd" value=""/>
+		<field name="reqseq" value="DC101201807300000000002"/><!--µ˜”√œµÕ≥¡˜ÀÆ∫≈  ±Í÷æ(°∞D°±)+œµÕ≥±‡∫≈£®4Œª£©+»’∆⁄£®8Œª£©+À≥–Ú∫≈£®10Œª£©-->
+		<field name="gloseq" value="QC101201807300000000002"/><!--»´æ÷¡˜ÀÆ∫≈  ±Í÷æ(°∞Q°±)+œµÕ≥±‡∫≈£®4Œª£©+»’∆⁄£®8Œª£©+À≥–Ú∫≈£®10Œª£©-->
+		<field name="svccod" value="30013000004"/><!--∑˛ŒÒ¥˙¬Î 30013000004-->
+		<field name="bsicod" value="01"/><!--≥°æ∞¥˙¬Î-->
+		<field name="pkgsav" value="C101"/><!--“µŒÒƒ£øÈ±‡∫≈-->
+		<field name="pkgcli" value="R1000102"/><!--÷’∂À±‡∫≈ ∑«±ÿ ‰-->
+		<field name="chanid" value="121001"/><!--∑¢∆«˛µ¿±Í ∂ 121001-◊‘∂Ø»°øÓª˙  121002-◊‘∂Ø¥Ê»°øÓª˙  121003-◊‘∂Ø¥ÊøÓª˙  121005-∂‡√ΩÃÂ◊‘÷˙÷’∂À  121006-‘∂≥Ã ”∆µπÒ‘±ª˙  121007-¥Ê’€≤πµ«ª˙  121008-µÁ◊”ªÿµ•œ‰  121009-”≤±“∂“ªªª˙  -->
+		<field name="orgsid" value="C101  "/><!--∑¢∆∑Ω“µŒÒƒ£øÈ±‡∫≈ C101-->
+		<field name="reqsid" value="100200"/><!--µ˜”√œµÕ≥±Í ∂ 100200-->
+		<field name="prcscd" value="1686"/><!--Ωª“◊¬Î-->
+	</object>
+	<object name="comm_req">
+		<field name="farendma" value="9999"/><!--∑®»À¥˙¬Î÷µ£¨∑¢∆∂À∑¢ÀÕ∏˙∫À–ƒ∫ÛÃ®‘º∂®∫√µƒ÷µ£¨ƒø«∞πÃ∂®÷µŒ™9999-->
+		<field name="qudaohao" value="121001"/><!--«˛µ¿∫≈-->
+		<field name="jiaoyijg" value="12000"/><!--ª˙ππ∫≈∑«±ÿ ‰-->
+		<field name="jiaoyigy" value="15915945"/><!--πÒ‘±∫≈±ÿ ‰-->
+		<field name="waibriqi" value="20180730"/><!--µ⁄»˝∑Ω»’∆⁄-->
+		<field name="waibshij" value="0930"/><!--µ⁄»˝∑ΩΩª“◊ ±º‰-->
+		<field name="waiblius" value="123456789"/><!--µ⁄»˝∑Ω¡˜ÀÆ∫≈-->
+	</object>
+	<object name="input">
+		<field name="chaxlxin" value="01"/><!--≤È—Ø¿‡–Õ 00-∞¥’’øÕªß∫≈≤È—Ø  01-øÕªß’À∫≈≤È—Ø  02-÷§º˛–≈œ¢≤È—Ø-->
+		<field name="kehuzhao" value="6224980010000032"/><!--øÕªß’À∫≈-->
+	</object>
+</root>
+ 
+[2019-12-19 14:44:55,721] 3408 [Thread-4] INFO  nt.com.network.HttpSingle  -  ’µΩœ˚œ¢[http://apis.juhe.cn/qrcode/api?key=468c8fa429cca535a943df230ee34a13&text=kege] - {"reason":"success","result":{"base64_image":"iVBORw0KGgoAAAANSUhEUgAAAHgAAAB4CAIAAAC2BqGFAAAPtklEQVR4nO1dXWhcxRefbRvMZtPExNaUgBZrQ60EjUUwW4JUSiBSKqUlFIsvrT5oMRZFpPXjIQ9B6YPY2AcppiAoGiWiQSJa0RC\/pWhppA9ZMRrDmhhL20205KM7\/4f55\/zPzseZj929rv\/u7yHce+fMmTPnnjlnzszsTYxzzsooPlb80wJcLSgrOiKUFR0RyoqOCGVFR4SyoiNCWdERoazoiFBWdFTgJCIQoL+\/P5vNalsfGxvDlPv378elUq2NGzcC5bp163DR22+\/HUFHaE2WikW7v1ogi8ViQK9WLLWlhVX\/tACMMRaLxcKIxTXnXOXgxTMClIpFC2AzNJmkavjYtL1YRQkPi66pqbntttvybzKdTv\/888+m0m+\/\/XZhYUFcT05O4qLp6enPP\/\/cVPHy5cvqQ62xb9iwobGx0UNiA86ePZvJZFypaReOKdva2iD+ZLNZNYKJJ1CEifHFsWPHMNv+\/n5Ms27duvxVIIIhSNLf349Ljx07RsgPFbUE+HlbW5u7Jv18NFiHdrSKUkxjuiA4FxB0u1q3LkaASRj8XO0+jXAfXQzV+ErvyMrEVh24YEBqdemvb\/f9FO0ifT4o4MsDVlqlwOCT7BeI8ZBVWQXI6T29g8a+\/vrr4eFhlyoNDQ0HDhwQ1yYR+fLU2F2SHTt2mILz6tWrsbSqTWDt9\/X1TU9Pu7S4bdu2ZDIZZg2BPpoxNjw8\/Mwzz7jUamlpefDBB62cpVFsxe7du+H9qWZr9bbQ1vHjx8+cOePSYk9Pz9atWwP8Bos+YdGqMnhIShXxYMfjXVs3zDDDtMyiVzQxAQjogFTFxFx9Hqwv6\/szoSQyQzXQ+9bFty588o+6vhxKaK1DjVqNjY2vvvoq3H788ccvvfSSlgPn\/KGHHkqn0+K2vr7+9ddft1pfwKv917gOE7QdqKqq6ujogOe\/\/\/67WhFKR0ZGfvrpJ3EtpZda1YQNoOChUCqKNrlpx44RFQmFRrnCF56whIHgQBeZpitWkVzyaS+EKaEkZh3BRS7KKngGG\/aG\/Cy62GNNm8K5VNFWtGabvilSWBUBP4sOjrnBzLUJtGNFUxE8z2fm7qvu8BS8sAgOWbTBFslBB1QvlYSlGKGJGA3BjhvGQXETFqyRhoaGlpYWl1qbNm1Sq2OEaXliYuKHH36A25tvvrm6ulpcr1mzhq6LWwTxrGhoaGChZhHuOg4cOGBdkyOq+5aq6O7u7u7uhtuxsbGmpiZHnlhZb731lvY5Lee\/cq3jakB4wuJugI4vv1D+FGZg+EKiUXf\/6CjHEbyEAURh0cFpNDz37R7eqdIS0PuE0nsCVphbEYNhOp1++eWXvbhrMTIy4ltFq+vt27ffeuutcDs4OFhRUSGuE4kEET8CBNACFgudwEkURCAa4lwHXz5WgRfeNm7cyNHxjL6+Plyxr68Pl6qHHOEARvmQ4\/\/AHXZRTaArRmMuVpSKoullUut6E7FMGuVaKIFSUTQzrNdIAcq9FD8pBaO2BEPp1FoxkEwmGRrpJ06cgOOKc3Nze\/fuBcrx8XGpLjbb3t7e2dlZcRuPx7EhJ5PJCDpiAe3CTcf9MIGVA02gNge30ol\/CSIYqq1IZy21z000WsnVY5smAgIW12HaNmW6GT5XRitXQpxoleWmCZhbgEuVWjFNomPoDKN1os1yh4s2EqgEBFx9ND3zx0rH11ItjlaBJYIY+TsJAlw5fKO+b9wLriQj+EJrE9ZbF4FdFa3yBQOBa1Xd0D3pguW+IWlw+Bq1qk3ttUkqLROgwUPT2jQBj+xWUkdvb+\/zzz8PpW+88cY999yjlebHH39sb293bAVjaWnpzz\/\/NJXW1tbG43G4\/eqrr2666SZx\/ccff9x+++1QtHPnzhMnTsDts88+K+U+YXjvvffuuusu5jbZD9+cnZubm5qagtv5+Xls4xiLi4uYslC4dOnSpUuX4HZpaQmc9ZUrV3CLFy9ehGvOeSaTKYg88BMQlyHo5DrouGei\/6egdpvwGJHBw0czBzeqxqUolW7KuQPW\/xzhztbVdaiaraurw+s4Fy9eTKVS2roTExP4tra2du3ataaGxsfHr1y5Iq4rKirWr19vopyenoYMRQBmNatWrZLWmLD8a9euxaUY2WwW\/2KsqqqK+P1WZWUlbtdE9j\/haKhze\/WCc97R0WFpaRldXV2YrcSHWL2TkoL9+\/djtmNjYy59UVnhDko\/Z+vo6DDJKSU+1qbtrkMNcTAStVNXR0izaW4+ByNNvYXcVv7urKzrVhIN9B1zs4rk5KNVdZhyJHdgybhhjZSoQhC4vAmpdXGh7YUpLcCW4fLiXX00NxztUZXuCLUW0U98bU2a6UBNUJr0pSXT5rcELIrGepTsDl+oLT3wwAOwsXT+\/PnBwUEoOnfu3MmTJ00t3nfffYuLi+L6+uuvx42mUqkvvvgCKBsaGrCbPnXqFPyAuaqqau\/eveD0xsfHP\/vsM6BsbW3dvHlzLHd5xGQxqr2DRQ8NDeGfc8Evl\/SwenHs\/oknUjDMZDJQ9P3331MS5CKdTpta1G5lAdy\/1yF+oix1RDxxCYZhP1G2+2iuuCFenDmpCpfoR5e6gHtuenkRA0poh+X\/G37TO9NrLKqN06u9RCkhlTYwEtFYDXq+UwCnYIindyD9Bx988O677wLl6Ogornjw4EEcDHHR9u3b9+3bZ2qxtraW6xbyGWNtbW3YTadSKRx\/Hn\/8cUjVFhcXcZG6Bwa9Y4x1d3dD7rpy5UrcxIULFzCf3bt379ixgy2r4vDhw46\/bf5vYy5Qo0FPT49rG7no6urS5pZqi6atIwEiM6SPtkjBEJ+Jra6uxkVDQ0O4Yk9PD72nRcA1GOYzalSouSVDrxy3gp9gsjwFIFjRvdNOnAuTGWpHcZ7gDp+b4rnbN45sCyIeM79Orpt9ubTrZNGSd86\/P9LiBn6RUl6gapmIfr52EMBKWt5xN0FLMMRHu++8884333wTmD788MOdnZ10dS0GBwcx297e3nvvvRdut27dOjMzI67Xr1\/\/ySefgA8ZGBg4cuQIUEqBqL29HcLv0tISLQPWy\/vvvz8\/Py+uV6xYgUfS3XffjY88vPbaa+pZd4BplVjAomj40S9bTrdAxPr6+vr6erWK1i1gVFRUYLazs7O4yvj4uLrPJAgymQyuKOHXX3+l+yIxZMvqvvHGGxkauHg6m0gkQLMi6BEC0Aj\/naE0drD0WkfmyDaMwBeq07AuEuUpQ2BmyHXLuNi9al0wMWEo4FzCF6rF4CKi1AsW14H3O6677jppJuC4YomljMViiUQCsxVHBghWpoak4wYzMzOwByahsrLy2muvhdtEIiFNLqGJbDaLXf8111wj3KPo7+rVq8M\/y2edaTtuZUn5heOZPK+tLPeD6BI6OzslIUt0K4vl2qY0A1Ovmc6bM90AdFk4t651WLvAlemjmhzQax0qw9gyrK0L5LV6J94VbltVJStEbNGyxe3S1bVvXa2lbUV9yJUlNpe+5HWAxtSAJByhJkcyIjn0suhgVtrI5GUrlmD4zjvvMIPV8Nwpp8my8HP8eqB6Mpm84YYbrIZpZY5RWVm5c+dOuG1tbcWUZ86cwdNh3BH1k72q8EA\/PDyMjwZa0jfahVM1CwTia7siGAJMwVCUEltZUrDq6upylK2jo0NSCI6BBd7KigC0OVtfudUgsFX6Wg\/PTQggBvryKQlFSwkOBvTNpbpUMYCVFjw3O+NkfDKhJBTN3Q7QFLCiO7Q5F3OO8ACP89EbNmw4dOiQF3ctRkZGBgYG1OeqjczMzOAWa2pq8NfUW1tbcTR+7rnn4Bx0IpFQucGTPXv2mLKb+fn5p556ihYszKI9gmFbWxvPTa5wZJAij5Q14Vvtp+eBhshxxf9hoXNUSSpTBqi95oZzHWofBX0RPz3PlJUjdblASvZcpoAqcxcanjul5ToXbBJPskraD+AQYmrIihAfbRILP+eKU2NmPfKwwbhc16U66FcVniuZHo0wH10SwfBqQOCPhTjnJ0+ePH78uAvxpk2bxHeLTK4D28ipU6fgkOPExMSuXbvUplmu\/YrhvGvXLumnBYD29vajR4\/CwD969KjYk1NRWVmJTwqOjo5u2bLF1K\/Dhw\/39vaaSiWEKFp0cnp62vGL7VJFmqC5uRlu4atfWiZSSDh37pxpn6mpqQn76MnJSZPk1dXVLS0t0MTU1BTRx8bGxjvuuMMaeAQi\/Qis1kUCYm57YMBE\/Uu0a6WRxPDtqZU+Uh9Nv3lJHY6x0SVhcZxdYHr3yOxI6f3dOx6UjIFjdVzVdGlifn4evDljLB6Pg6vJZrN\/\/\/23ylDLNh6Pr1y5UlwnEgn8S6+FhQXsvqQWpd7R8LZoafrsXsvFQWtn4iaygwcP1iAMDAzMLkNy1lhmle2XX36ZyWRExVQqhXm+8sorswhPPvmkKo\/jtDrEdYRNeJnb4hk9zF18sW8tFuqXmc9iS6TB0PTmJbbB+YsplcDt0tGYYE68xcLPOooNq1m5mF5Y\/kkoy8XYrQQhH4EN8NG0QJjtp59+CifhpGPOk5OTH374IdzW1dXhXyidPn0aXPNff\/2Fi8QJaGhl8+bNuHR0dBQOoalbWUSC\/s0338zNzcEtPkGogbzKlAtMKVbvAO4H0VtaWnBF4h9H0qt3EqRvKklbWeqqoWklj\/g4s9jKAmJ8xFIFrcmQzDAfi6YZBrA1OQR1EVEl9ppr5tnl8BQ8AFZxrZ7OJIxaUX0BPHeG4NhWQNKgRaBF598wRv6u32TRAlz30Sz35sLWRSWEW\/S2bdsc3bT4YjtzGAqc8yNHjkCEOX\/+\/IsvvmjlL1TwxBNPXLhwAZ48\/fTTQNDc3Lxv3z5Js46mCjT\/gOsQSCaT+L8oag1EGr9Ex6D6Y489BtepVIpWNDbVRx55BB5OTU3hD5p0dnbef\/\/9Jhun4btOYkJeX0RXlatKIxlOwDQ2QDYrpa\/nzT8Yhpz4144m7bRBG\/pp5N8lL89bWJ4EvP89CDNvy2qvvQyNeQ5VvCZHxDeVxl22QvloS2OYe01Njem\/FnshnU7jD0T19\/d3dnZCt3GLly9fPn36NNwODQ298MILcNvU1ARhVsLCwsJ3330Ht2vWrLnlllvg9tChQ3v27IEWt2zZAtso8Xj8o48+Asq6urrm5mYQ7Jdffvntt9+g9NFHHz179izcWl4bnc9QNQsEKTMk\/hbk84ts+SfKAOknylx3OEQ9B8L\/jYccmW56q\/4tRnPamZIUVPAcPHhOXRKK5subWFIHijeqwEebpkk4VAAZ9te+gpXKv0Jl5uxO9d3Fa1H73HGGamkrGkdcRkm4jqsBZUVHhLKiI0JZ0RGhrOiIUFZ0RCgrOiKUFR0RyoqOCP8BgQLSm2e0ZdAAAAAASUVORK5CYII="},"error_code":0}
+ 
+[2019-12-19 14:44:55,783] 3470 [Thread-4] INFO  nt.com.handler.LogHandler  - [LogHandler - after ][2019-12-19 14:44:55  ’µΩ±®Œƒ]null 
+[2019-12-19 14:46:50,256] 0    [JavaFX Application Thread] INFO  nt.com.handler.LogHandler  - [LogHandler - before ][2019-12-19 14:46:50 ∑¢ÀÕ±®Œƒ]<?xml version="1.0" encoding="GBK"?>
+<response>
+    <error>
+        <error-code>000</error-code>
+        <error-msg>success</error-msg>
+    </error>
+    <result>
+        <root>
+            <info>
+                <id>429006199909092235</id>
+                <name>test</name>
+                <checkresult>00</checkresult>
+		<photo/>
+                <issueoffice>10150</issueoffice>
+                <bkcheckdate>20180224</bkcheckdate>
+                <bkoperid/>
+                <biztype>01</biztype>
+            </info>
+        </root>
+    </result>
+</response>
+ 
+[2019-12-19 14:46:51,492] 1236 [Thread-4] INFO  nt.com.network.HttpSingle  -  ’µΩœ˚œ¢[http://apis.juhe.cn/qrcode/api?key=468c8fa429cca535a943df230ee34a13&text=kege] - {"reason":"success","result":{"base64_image":"iVBORw0KGgoAAAANSUhEUgAAAHgAAAB4CAIAAAC2BqGFAAAPtklEQVR4nO1dXWhcxRefbRvMZtPExNaUgBZrQ60EjUUwW4JUSiBSKqUlFIsvrT5oMRZFpPXjIQ9B6YPY2AcppiAoGiWiQSJa0RC\/pWhppA9ZMRrDmhhL20205KM7\/4f55\/zPzseZj929rv\/u7yHce+fMmTPnnjlnzszsTYxzzsooPlb80wJcLSgrOiKUFR0RyoqOCGVFR4SyoiNCWdERoazoiFBWdFTgJCIQoL+\/P5vNalsfGxvDlPv378elUq2NGzcC5bp163DR22+\/HUFHaE2WikW7v1ogi8ViQK9WLLWlhVX\/tACMMRaLxcKIxTXnXOXgxTMClIpFC2AzNJmkavjYtL1YRQkPi66pqbntttvybzKdTv\/888+m0m+\/\/XZhYUFcT05O4qLp6enPP\/\/cVPHy5cvqQ62xb9iwobGx0UNiA86ePZvJZFypaReOKdva2iD+ZLNZNYKJJ1CEifHFsWPHMNv+\/n5Ms27duvxVIIIhSNLf349Ljx07RsgPFbUE+HlbW5u7Jv18NFiHdrSKUkxjuiA4FxB0u1q3LkaASRj8XO0+jXAfXQzV+ErvyMrEVh24YEBqdemvb\/f9FO0ifT4o4MsDVlqlwOCT7BeI8ZBVWQXI6T29g8a+\/vrr4eFhlyoNDQ0HDhwQ1yYR+fLU2F2SHTt2mILz6tWrsbSqTWDt9\/X1TU9Pu7S4bdu2ZDIZZg2BPpoxNjw8\/Mwzz7jUamlpefDBB62cpVFsxe7du+H9qWZr9bbQ1vHjx8+cOePSYk9Pz9atWwP8Bos+YdGqMnhIShXxYMfjXVs3zDDDtMyiVzQxAQjogFTFxFx9Hqwv6\/szoSQyQzXQ+9bFty588o+6vhxKaK1DjVqNjY2vvvoq3H788ccvvfSSlgPn\/KGHHkqn0+K2vr7+9ddft1pfwKv917gOE7QdqKqq6ujogOe\/\/\/67WhFKR0ZGfvrpJ3EtpZda1YQNoOChUCqKNrlpx44RFQmFRrnCF56whIHgQBeZpitWkVzyaS+EKaEkZh3BRS7KKngGG\/aG\/Cy62GNNm8K5VNFWtGabvilSWBUBP4sOjrnBzLUJtGNFUxE8z2fm7qvu8BS8sAgOWbTBFslBB1QvlYSlGKGJGA3BjhvGQXETFqyRhoaGlpYWl1qbNm1Sq2OEaXliYuKHH36A25tvvrm6ulpcr1mzhq6LWwTxrGhoaGChZhHuOg4cOGBdkyOq+5aq6O7u7u7uhtuxsbGmpiZHnlhZb731lvY5Lee\/cq3jakB4wuJugI4vv1D+FGZg+EKiUXf\/6CjHEbyEAURh0cFpNDz37R7eqdIS0PuE0nsCVphbEYNhOp1++eWXvbhrMTIy4ltFq+vt27ffeuutcDs4OFhRUSGuE4kEET8CBNACFgudwEkURCAa4lwHXz5WgRfeNm7cyNHxjL6+Plyxr68Pl6qHHOEARvmQ4\/\/AHXZRTaArRmMuVpSKoullUut6E7FMGuVaKIFSUTQzrNdIAcq9FD8pBaO2BEPp1FoxkEwmGRrpJ06cgOOKc3Nze\/fuBcrx8XGpLjbb3t7e2dlZcRuPx7EhJ5PJCDpiAe3CTcf9MIGVA02gNge30ol\/CSIYqq1IZy21z000WsnVY5smAgIW12HaNmW6GT5XRitXQpxoleWmCZhbgEuVWjFNomPoDKN1os1yh4s2EqgEBFx9ND3zx0rH11ItjlaBJYIY+TsJAlw5fKO+b9wLriQj+EJrE9ZbF4FdFa3yBQOBa1Xd0D3pguW+IWlw+Bq1qk3ttUkqLROgwUPT2jQBj+xWUkdvb+\/zzz8PpW+88cY999yjlebHH39sb293bAVjaWnpzz\/\/NJXW1tbG43G4\/eqrr2666SZx\/ccff9x+++1QtHPnzhMnTsDts88+K+U+YXjvvffuuusu5jbZD9+cnZubm5qagtv5+Xls4xiLi4uYslC4dOnSpUuX4HZpaQmc9ZUrV3CLFy9ehGvOeSaTKYg88BMQlyHo5DrouGei\/6egdpvwGJHBw0czBzeqxqUolW7KuQPW\/xzhztbVdaiaraurw+s4Fy9eTKVS2roTExP4tra2du3ataaGxsfHr1y5Iq4rKirWr19vopyenoYMRQBmNatWrZLWmLD8a9euxaUY2WwW\/2KsqqqK+P1WZWUlbtdE9j\/haKhze\/WCc97R0WFpaRldXV2YrcSHWL2TkoL9+\/djtmNjYy59UVnhDko\/Z+vo6DDJKSU+1qbtrkMNcTAStVNXR0izaW4+ByNNvYXcVv7urKzrVhIN9B1zs4rk5KNVdZhyJHdgybhhjZSoQhC4vAmpdXGh7YUpLcCW4fLiXX00NxztUZXuCLUW0U98bU2a6UBNUJr0pSXT5rcELIrGepTsDl+oLT3wwAOwsXT+\/PnBwUEoOnfu3MmTJ00t3nfffYuLi+L6+uuvx42mUqkvvvgCKBsaGrCbPnXqFPyAuaqqau\/eveD0xsfHP\/vsM6BsbW3dvHlzLHd5xGQxqr2DRQ8NDeGfc8Evl\/SwenHs\/oknUjDMZDJQ9P3331MS5CKdTpta1G5lAdy\/1yF+oix1RDxxCYZhP1G2+2iuuCFenDmpCpfoR5e6gHtuenkRA0poh+X\/G37TO9NrLKqN06u9RCkhlTYwEtFYDXq+UwCnYIindyD9Bx988O677wLl6Ogornjw4EEcDHHR9u3b9+3bZ2qxtraW6xbyGWNtbW3YTadSKRx\/Hn\/8cUjVFhcXcZG6Bwa9Y4x1d3dD7rpy5UrcxIULFzCf3bt379ixgy2r4vDhw46\/bf5vYy5Qo0FPT49rG7no6urS5pZqi6atIwEiM6SPtkjBEJ+Jra6uxkVDQ0O4Yk9PD72nRcA1GOYzalSouSVDrxy3gp9gsjwFIFjRvdNOnAuTGWpHcZ7gDp+b4rnbN45sCyIeM79Orpt9ubTrZNGSd86\/P9LiBn6RUl6gapmIfr52EMBKWt5xN0FLMMRHu++8884333wTmD788MOdnZ10dS0GBwcx297e3nvvvRdut27dOjMzI67Xr1\/\/ySefgA8ZGBg4cuQIUEqBqL29HcLv0tISLQPWy\/vvvz8\/Py+uV6xYgUfS3XffjY88vPbaa+pZd4BplVjAomj40S9bTrdAxPr6+vr6erWK1i1gVFRUYLazs7O4yvj4uLrPJAgymQyuKOHXX3+l+yIxZMvqvvHGGxkauHg6m0gkQLMi6BEC0Aj\/naE0drD0WkfmyDaMwBeq07AuEuUpQ2BmyHXLuNi9al0wMWEo4FzCF6rF4CKi1AsW14H3O6677jppJuC4YomljMViiUQCsxVHBghWpoak4wYzMzOwByahsrLy2muvhdtEIiFNLqGJbDaLXf8111wj3KPo7+rVq8M\/y2edaTtuZUn5heOZPK+tLPeD6BI6OzslIUt0K4vl2qY0A1Ovmc6bM90AdFk4t651WLvAlemjmhzQax0qw9gyrK0L5LV6J94VbltVJStEbNGyxe3S1bVvXa2lbUV9yJUlNpe+5HWAxtSAJByhJkcyIjn0suhgVtrI5GUrlmD4zjvvMIPV8Nwpp8my8HP8eqB6Mpm84YYbrIZpZY5RWVm5c+dOuG1tbcWUZ86cwdNh3BH1k72q8EA\/PDyMjwZa0jfahVM1CwTia7siGAJMwVCUEltZUrDq6upylK2jo0NSCI6BBd7KigC0OVtfudUgsFX6Wg\/PTQggBvryKQlFSwkOBvTNpbpUMYCVFjw3O+NkfDKhJBTN3Q7QFLCiO7Q5F3OO8ACP89EbNmw4dOiQF3ctRkZGBgYG1OeqjczMzOAWa2pq8NfUW1tbcTR+7rnn4Bx0IpFQucGTPXv2mLKb+fn5p556ihYszKI9gmFbWxvPTa5wZJAij5Q14Vvtp+eBhshxxf9hoXNUSSpTBqi95oZzHWofBX0RPz3PlJUjdblASvZcpoAqcxcanjul5ToXbBJPskraD+AQYmrIihAfbRILP+eKU2NmPfKwwbhc16U66FcVniuZHo0wH10SwfBqQOCPhTjnJ0+ePH78uAvxpk2bxHeLTK4D28ipU6fgkOPExMSuXbvUplmu\/YrhvGvXLumnBYD29vajR4\/CwD969KjYk1NRWVmJTwqOjo5u2bLF1K\/Dhw\/39vaaSiWEKFp0cnp62vGL7VJFmqC5uRlu4atfWiZSSDh37pxpn6mpqQn76MnJSZPk1dXVLS0t0MTU1BTRx8bGxjvuuMMaeAQi\/Qis1kUCYm57YMBE\/Uu0a6WRxPDtqZU+Uh9Nv3lJHY6x0SVhcZxdYHr3yOxI6f3dOx6UjIFjdVzVdGlifn4evDljLB6Pg6vJZrN\/\/\/23ylDLNh6Pr1y5UlwnEgn8S6+FhQXsvqQWpd7R8LZoafrsXsvFQWtn4iaygwcP1iAMDAzMLkNy1lhmle2XX36ZyWRExVQqhXm+8sorswhPPvmkKo\/jtDrEdYRNeJnb4hk9zF18sW8tFuqXmc9iS6TB0PTmJbbB+YsplcDt0tGYYE68xcLPOooNq1m5mF5Y\/kkoy8XYrQQhH4EN8NG0QJjtp59+CifhpGPOk5OTH374IdzW1dXhXyidPn0aXPNff\/2Fi8QJaGhl8+bNuHR0dBQOoalbWUSC\/s0338zNzcEtPkGogbzKlAtMKVbvAO4H0VtaWnBF4h9H0qt3EqRvKklbWeqqoWklj\/g4s9jKAmJ8xFIFrcmQzDAfi6YZBrA1OQR1EVEl9ppr5tnl8BQ8AFZxrZ7OJIxaUX0BPHeG4NhWQNKgRaBF598wRv6u32TRAlz30Sz35sLWRSWEW\/S2bdsc3bT4YjtzGAqc8yNHjkCEOX\/+\/IsvvmjlL1TwxBNPXLhwAZ48\/fTTQNDc3Lxv3z5Js46mCjT\/gOsQSCaT+L8oag1EGr9Ex6D6Y489BtepVIpWNDbVRx55BB5OTU3hD5p0dnbef\/\/9Jhun4btOYkJeX0RXlatKIxlOwDQ2QDYrpa\/nzT8Yhpz4144m7bRBG\/pp5N8lL89bWJ4EvP89CDNvy2qvvQyNeQ5VvCZHxDeVxl22QvloS2OYe01Njem\/FnshnU7jD0T19\/d3dnZCt3GLly9fPn36NNwODQ298MILcNvU1ARhVsLCwsJ3330Ht2vWrLnlllvg9tChQ3v27IEWt2zZAtso8Xj8o48+Asq6urrm5mYQ7Jdffvntt9+g9NFHHz179izcWl4bnc9QNQsEKTMk\/hbk84ts+SfKAOknylx3OEQ9B8L\/jYccmW56q\/4tRnPamZIUVPAcPHhOXRKK5subWFIHijeqwEebpkk4VAAZ9te+gpXKv0Jl5uxO9d3Fa1H73HGGamkrGkdcRkm4jqsBZUVHhLKiI0JZ0RGhrOiIUFZ0RCgrOiKUFR0RyoqOCP8BgQLSm2e0ZdAAAAAASUVORK5CYII="},"error_code":0}
+ 
+[2019-12-19 14:46:51,661] 1405 [Thread-4] INFO  nt.com.handler.LogHandler  - [LogHandler - after ][2019-12-19 14:46:51  ’µΩ±®Œƒ]{"reason":"success","result":{"base64_image":"iVBORw0KGgoAAAANSUhEUgAAAHgAAAB4CAIAAAC2BqGFAAAPtklEQVR4nO1dXWhcxRefbRvMZtPExNaUgBZrQ60EjUUwW4JUSiBSKqUlFIsvrT5oMRZFpPXjIQ9B6YPY2AcppiAoGiWiQSJa0RC\/pWhppA9ZMRrDmhhL20205KM7\/4f55\/zPzseZj929rv\/u7yHce+fMmTPnnjlnzszsTYxzzsooPlb80wJcLSgrOiKUFR0RyoqOCGVFR4SyoiNCWdERoazoiFBWdFTgJCIQoL+\/P5vNalsfGxvDlPv378elUq2NGzcC5bp163DR22+\/HUFHaE2WikW7v1ogi8ViQK9WLLWlhVX\/tACMMRaLxcKIxTXnXOXgxTMClIpFC2AzNJmkavjYtL1YRQkPi66pqbntttvybzKdTv\/888+m0m+\/\/XZhYUFcT05O4qLp6enPP\/\/cVPHy5cvqQ62xb9iwobGx0UNiA86ePZvJZFypaReOKdva2iD+ZLNZNYKJJ1CEifHFsWPHMNv+\/n5Ms27duvxVIIIhSNLf349Ljx07RsgPFbUE+HlbW5u7Jv18NFiHdrSKUkxjuiA4FxB0u1q3LkaASRj8XO0+jXAfXQzV+ErvyMrEVh24YEBqdemvb\/f9FO0ifT4o4MsDVlqlwOCT7BeI8ZBVWQXI6T29g8a+\/vrr4eFhlyoNDQ0HDhwQ1yYR+fLU2F2SHTt2mILz6tWrsbSqTWDt9\/X1TU9Pu7S4bdu2ZDIZZg2BPpoxNjw8\/Mwzz7jUamlpefDBB62cpVFsxe7du+H9qWZr9bbQ1vHjx8+cOePSYk9Pz9atWwP8Bos+YdGqMnhIShXxYMfjXVs3zDDDtMyiVzQxAQjogFTFxFx9Hqwv6\/szoSQyQzXQ+9bFty588o+6vhxKaK1DjVqNjY2vvvoq3H788ccvvfSSlgPn\/KGHHkqn0+K2vr7+9ddft1pfwKv917gOE7QdqKqq6ujogOe\/\/\/67WhFKR0ZGfvrpJ3EtpZda1YQNoOChUCqKNrlpx44RFQmFRrnCF56whIHgQBeZpitWkVzyaS+EKaEkZh3BRS7KKngGG\/aG\/Cy62GNNm8K5VNFWtGabvilSWBUBP4sOjrnBzLUJtGNFUxE8z2fm7qvu8BS8sAgOWbTBFslBB1QvlYSlGKGJGA3BjhvGQXETFqyRhoaGlpYWl1qbNm1Sq2OEaXliYuKHH36A25tvvrm6ulpcr1mzhq6LWwTxrGhoaGChZhHuOg4cOGBdkyOq+5aq6O7u7u7uhtuxsbGmpiZHnlhZb731lvY5Lee\/cq3jakB4wuJugI4vv1D+FGZg+EKiUXf\/6CjHEbyEAURh0cFpNDz37R7eqdIS0PuE0nsCVphbEYNhOp1++eWXvbhrMTIy4ltFq+vt27ffeuutcDs4OFhRUSGuE4kEET8CBNACFgudwEkURCAa4lwHXz5WgRfeNm7cyNHxjL6+Plyxr68Pl6qHHOEARvmQ4\/\/AHXZRTaArRmMuVpSKoullUut6E7FMGuVaKIFSUTQzrNdIAcq9FD8pBaO2BEPp1FoxkEwmGRrpJ06cgOOKc3Nze\/fuBcrx8XGpLjbb3t7e2dlZcRuPx7EhJ5PJCDpiAe3CTcf9MIGVA02gNge30ol\/CSIYqq1IZy21z000WsnVY5smAgIW12HaNmW6GT5XRitXQpxoleWmCZhbgEuVWjFNomPoDKN1os1yh4s2EqgEBFx9ND3zx0rH11ItjlaBJYIY+TsJAlw5fKO+b9wLriQj+EJrE9ZbF4FdFa3yBQOBa1Xd0D3pguW+IWlw+Bq1qk3ttUkqLROgwUPT2jQBj+xWUkdvb+\/zzz8PpW+88cY999yjlebHH39sb293bAVjaWnpzz\/\/NJXW1tbG43G4\/eqrr2666SZx\/ccff9x+++1QtHPnzhMnTsDts88+K+U+YXjvvffuuusu5jbZD9+cnZubm5qagtv5+Xls4xiLi4uYslC4dOnSpUuX4HZpaQmc9ZUrV3CLFy9ehGvOeSaTKYg88BMQlyHo5DrouGei\/6egdpvwGJHBw0czBzeqxqUolW7KuQPW\/xzhztbVdaiaraurw+s4Fy9eTKVS2roTExP4tra2du3ataaGxsfHr1y5Iq4rKirWr19vopyenoYMRQBmNatWrZLWmLD8a9euxaUY2WwW\/2KsqqqK+P1WZWUlbtdE9j\/haKhze\/WCc97R0WFpaRldXV2YrcSHWL2TkoL9+\/djtmNjYy59UVnhDko\/Z+vo6DDJKSU+1qbtrkMNcTAStVNXR0izaW4+ByNNvYXcVv7urKzrVhIN9B1zs4rk5KNVdZhyJHdgybhhjZSoQhC4vAmpdXGh7YUpLcCW4fLiXX00NxztUZXuCLUW0U98bU2a6UBNUJr0pSXT5rcELIrGepTsDl+oLT3wwAOwsXT+\/PnBwUEoOnfu3MmTJ00t3nfffYuLi+L6+uuvx42mUqkvvvgCKBsaGrCbPnXqFPyAuaqqau\/eveD0xsfHP\/vsM6BsbW3dvHlzLHd5xGQxqr2DRQ8NDeGfc8Evl\/SwenHs\/oknUjDMZDJQ9P3331MS5CKdTpta1G5lAdy\/1yF+oix1RDxxCYZhP1G2+2iuuCFenDmpCpfoR5e6gHtuenkRA0poh+X\/G37TO9NrLKqN06u9RCkhlTYwEtFYDXq+UwCnYIindyD9Bx988O677wLl6Ogornjw4EEcDHHR9u3b9+3bZ2qxtraW6xbyGWNtbW3YTadSKRx\/Hn\/8cUjVFhcXcZG6Bwa9Y4x1d3dD7rpy5UrcxIULFzCf3bt379ixgy2r4vDhw46\/bf5vYy5Qo0FPT49rG7no6urS5pZqi6atIwEiM6SPtkjBEJ+Jra6uxkVDQ0O4Yk9PD72nRcA1GOYzalSouSVDrxy3gp9gsjwFIFjRvdNOnAuTGWpHcZ7gDp+b4rnbN45sCyIeM79Orpt9ubTrZNGSd86\/P9LiBn6RUl6gapmIfr52EMBKWt5xN0FLMMRHu++8884333wTmD788MOdnZ10dS0GBwcx297e3nvvvRdut27dOjMzI67Xr1\/\/ySefgA8ZGBg4cuQIUEqBqL29HcLv0tISLQPWy\/vvvz8\/Py+uV6xYgUfS3XffjY88vPbaa+pZd4BplVjAomj40S9bTrdAxPr6+vr6erWK1i1gVFRUYLazs7O4yvj4uLrPJAgymQyuKOHXX3+l+yIxZMvqvvHGGxkauHg6m0gkQLMi6BEC0Aj\/naE0drD0WkfmyDaMwBeq07AuEuUpQ2BmyHXLuNi9al0wMWEo4FzCF6rF4CKi1AsW14H3O6677jppJuC4YomljMViiUQCsxVHBghWpoak4wYzMzOwByahsrLy2muvhdtEIiFNLqGJbDaLXf8111wj3KPo7+rVq8M\/y2edaTtuZUn5heOZPK+tLPeD6BI6OzslIUt0K4vl2qY0A1Ovmc6bM90AdFk4t651WLvAlemjmhzQax0qw9gyrK0L5LV6J94VbltVJStEbNGyxe3S1bVvXa2lbUV9yJUlNpe+5HWAxtSAJByhJkcyIjn0suhgVtrI5GUrlmD4zjvvMIPV8Nwpp8my8HP8eqB6Mpm84YYbrIZpZY5RWVm5c+dOuG1tbcWUZ86cwdNh3BH1k72q8EA\/PDyMjwZa0jfahVM1CwTia7siGAJMwVCUEltZUrDq6upylK2jo0NSCI6BBd7KigC0OVtfudUgsFX6Wg\/PTQggBvryKQlFSwkOBvTNpbpUMYCVFjw3O+NkfDKhJBTN3Q7QFLCiO7Q5F3OO8ACP89EbNmw4dOiQF3ctRkZGBgYG1OeqjczMzOAWa2pq8NfUW1tbcTR+7rnn4Bx0IpFQucGTPXv2mLKb+fn5p556ihYszKI9gmFbWxvPTa5wZJAij5Q14Vvtp+eBhshxxf9hoXNUSSpTBqi95oZzHWofBX0RPz3PlJUjdblASvZcpoAqcxcanjul5ToXbBJPskraD+AQYmrIihAfbRILP+eKU2NmPfKwwbhc16U66FcVniuZHo0wH10SwfBqQOCPhTjnJ0+ePH78uAvxpk2bxHeLTK4D28ipU6fgkOPExMSuXbvUplmu\/YrhvGvXLumnBYD29vajR4\/CwD969KjYk1NRWVmJTwqOjo5u2bLF1K\/Dhw\/39vaaSiWEKFp0cnp62vGL7VJFmqC5uRlu4atfWiZSSDh37pxpn6mpqQn76MnJSZPk1dXVLS0t0MTU1BTRx8bGxjvuuMMaeAQi\/Qis1kUCYm57YMBE\/Uu0a6WRxPDtqZU+Uh9Nv3lJHY6x0SVhcZxdYHr3yOxI6f3dOx6UjIFjdVzVdGlifn4evDljLB6Pg6vJZrN\/\/\/23ylDLNh6Pr1y5UlwnEgn8S6+FhQXsvqQWpd7R8LZoafrsXsvFQWtn4iaygwcP1iAMDAzMLkNy1lhmle2XX36ZyWRExVQqhXm+8sorswhPPvmkKo\/jtDrEdYRNeJnb4hk9zF18sW8tFuqXmc9iS6TB0PTmJbbB+YsplcDt0tGYYE68xcLPOooNq1m5mF5Y\/kkoy8XYrQQhH4EN8NG0QJjtp59+CifhpGPOk5OTH374IdzW1dXhXyidPn0aXPNff\/2Fi8QJaGhl8+bNuHR0dBQOoalbWUSC\/s0338zNzcEtPkGogbzKlAtMKVbvAO4H0VtaWnBF4h9H0qt3EqRvKklbWeqqoWklj\/g4s9jKAmJ8xFIFrcmQzDAfi6YZBrA1OQR1EVEl9ppr5tnl8BQ8AFZxrZ7OJIxaUX0BPHeG4NhWQNKgRaBF598wRv6u32TRAlz30Sz35sLWRSWEW\/S2bdsc3bT4YjtzGAqc8yNHjkCEOX\/+\/IsvvmjlL1TwxBNPXLhwAZ48\/fTTQNDc3Lxv3z5Js46mCjT\/gOsQSCaT+L8oag1EGr9Ex6D6Y489BtepVIpWNDbVRx55BB5OTU3hD5p0dnbef\/\/9Jhun4btOYkJeX0RXlatKIxlOwDQ2QDYrpa\/nzT8Yhpz4144m7bRBG\/pp5N8lL89bWJ4EvP89CDNvy2qvvQyNeQ5VvCZHxDeVxl22QvloS2OYe01Njem\/FnshnU7jD0T19\/d3dnZCt3GLly9fPn36NNwODQ298MILcNvU1ARhVsLCwsJ3330Ht2vWrLnlllvg9tChQ3v27IEWt2zZAtso8Xj8o48+Asq6urrm5mYQ7Jdffvntt9+g9NFHHz179izcWl4bnc9QNQsEKTMk\/hbk84ts+SfKAOknylx3OEQ9B8L\/jYccmW56q\/4tRnPamZIUVPAcPHhOXRKK5subWFIHijeqwEebpkk4VAAZ9te+gpXKv0Jl5uxO9d3Fa1H73HGGamkrGkdcRkm4jqsBZUVHhLKiI0JZ0RGhrOiIUFZ0RCgrOiKUFR0RyoqOCP8BgQLSm2e0ZdAAAAAASUVORK5CYII="},"error_code":0}
+ 
+[2019-12-19 14:47:55,685] 0    [JavaFX Application Thread] INFO  nt.com.handler.LogHandler  - [LogHandler - before ][2019-12-19 14:47:55 ∑¢ÀÕ±®Œƒ]<?xml version="1.0" encoding="GBK"?>
+<response>
+    <error>
+        <error-code>000</error-code>
+        <error-msg>success</error-msg>
+    </error>
+    <result>
+        <root>
+            <info>
+                <id>429006199909092235</id>
+                <name>test</name>
+                <checkresult>00</checkresult>
+		<photo/>
+                <issueoffice>10150</issueoffice>
+                <bkcheckdate>20180224</bkcheckdate>
+                <bkoperid/>
+                <biztype>01</biztype>
+            </info>
+        </root>
+    </result>
+</response>
+ 
+[2019-12-19 14:47:57,306] 1621 [Thread-4] INFO  nt.com.network.HttpSingle  -  ’µΩœ˚œ¢[http://apis.juhe.cn/qrcode/api?key=468c8fa429cca535a943df230ee34a13&text=kege] - {"reason":"success","result":{"base64_image":"iVBORw0KGgoAAAANSUhEUgAAAHgAAAB4CAIAAAC2BqGFAAAPtklEQVR4nO1dXWhcxRefbRvMZtPExNaUgBZrQ60EjUUwW4JUSiBSKqUlFIsvrT5oMRZFpPXjIQ9B6YPY2AcppiAoGiWiQSJa0RC\/pWhppA9ZMRrDmhhL20205KM7\/4f55\/zPzseZj929rv\/u7yHce+fMmTPnnjlnzszsTYxzzsooPlb80wJcLSgrOiKUFR0RyoqOCGVFR4SyoiNCWdERoazoiFBWdFTgJCIQoL+\/P5vNalsfGxvDlPv378elUq2NGzcC5bp163DR22+\/HUFHaE2WikW7v1ogi8ViQK9WLLWlhVX\/tACMMRaLxcKIxTXnXOXgxTMClIpFC2AzNJmkavjYtL1YRQkPi66pqbntttvybzKdTv\/888+m0m+\/\/XZhYUFcT05O4qLp6enPP\/\/cVPHy5cvqQ62xb9iwobGx0UNiA86ePZvJZFypaReOKdva2iD+ZLNZNYKJJ1CEifHFsWPHMNv+\/n5Ms27duvxVIIIhSNLf349Ljx07RsgPFbUE+HlbW5u7Jv18NFiHdrSKUkxjuiA4FxB0u1q3LkaASRj8XO0+jXAfXQzV+ErvyMrEVh24YEBqdemvb\/f9FO0ifT4o4MsDVlqlwOCT7BeI8ZBVWQXI6T29g8a+\/vrr4eFhlyoNDQ0HDhwQ1yYR+fLU2F2SHTt2mILz6tWrsbSqTWDt9\/X1TU9Pu7S4bdu2ZDIZZg2BPpoxNjw8\/Mwzz7jUamlpefDBB62cpVFsxe7du+H9qWZr9bbQ1vHjx8+cOePSYk9Pz9atWwP8Bos+YdGqMnhIShXxYMfjXVs3zDDDtMyiVzQxAQjogFTFxFx9Hqwv6\/szoSQyQzXQ+9bFty588o+6vhxKaK1DjVqNjY2vvvoq3H788ccvvfSSlgPn\/KGHHkqn0+K2vr7+9ddft1pfwKv917gOE7QdqKqq6ujogOe\/\/\/67WhFKR0ZGfvrpJ3EtpZda1YQNoOChUCqKNrlpx44RFQmFRrnCF56whIHgQBeZpitWkVzyaS+EKaEkZh3BRS7KKngGG\/aG\/Cy62GNNm8K5VNFWtGabvilSWBUBP4sOjrnBzLUJtGNFUxE8z2fm7qvu8BS8sAgOWbTBFslBB1QvlYSlGKGJGA3BjhvGQXETFqyRhoaGlpYWl1qbNm1Sq2OEaXliYuKHH36A25tvvrm6ulpcr1mzhq6LWwTxrGhoaGChZhHuOg4cOGBdkyOq+5aq6O7u7u7uhtuxsbGmpiZHnlhZb731lvY5Lee\/cq3jakB4wuJugI4vv1D+FGZg+EKiUXf\/6CjHEbyEAURh0cFpNDz37R7eqdIS0PuE0nsCVphbEYNhOp1++eWXvbhrMTIy4ltFq+vt27ffeuutcDs4OFhRUSGuE4kEET8CBNACFgudwEkURCAa4lwHXz5WgRfeNm7cyNHxjL6+Plyxr68Pl6qHHOEARvmQ4\/\/AHXZRTaArRmMuVpSKoullUut6E7FMGuVaKIFSUTQzrNdIAcq9FD8pBaO2BEPp1FoxkEwmGRrpJ06cgOOKc3Nze\/fuBcrx8XGpLjbb3t7e2dlZcRuPx7EhJ5PJCDpiAe3CTcf9MIGVA02gNge30ol\/CSIYqq1IZy21z000WsnVY5smAgIW12HaNmW6GT5XRitXQpxoleWmCZhbgEuVWjFNomPoDKN1os1yh4s2EqgEBFx9ND3zx0rH11ItjlaBJYIY+TsJAlw5fKO+b9wLriQj+EJrE9ZbF4FdFa3yBQOBa1Xd0D3pguW+IWlw+Bq1qk3ttUkqLROgwUPT2jQBj+xWUkdvb+\/zzz8PpW+88cY999yjlebHH39sb293bAVjaWnpzz\/\/NJXW1tbG43G4\/eqrr2666SZx\/ccff9x+++1QtHPnzhMnTsDts88+K+U+YXjvvffuuusu5jbZD9+cnZubm5qagtv5+Xls4xiLi4uYslC4dOnSpUuX4HZpaQmc9ZUrV3CLFy9ehGvOeSaTKYg88BMQlyHo5DrouGei\/6egdpvwGJHBw0czBzeqxqUolW7KuQPW\/xzhztbVdaiaraurw+s4Fy9eTKVS2roTExP4tra2du3ataaGxsfHr1y5Iq4rKirWr19vopyenoYMRQBmNatWrZLWmLD8a9euxaUY2WwW\/2KsqqqK+P1WZWUlbtdE9j\/haKhze\/WCc97R0WFpaRldXV2YrcSHWL2TkoL9+\/djtmNjYy59UVnhDko\/Z+vo6DDJKSU+1qbtrkMNcTAStVNXR0izaW4+ByNNvYXcVv7urKzrVhIN9B1zs4rk5KNVdZhyJHdgybhhjZSoQhC4vAmpdXGh7YUpLcCW4fLiXX00NxztUZXuCLUW0U98bU2a6UBNUJr0pSXT5rcELIrGepTsDl+oLT3wwAOwsXT+\/PnBwUEoOnfu3MmTJ00t3nfffYuLi+L6+uuvx42mUqkvvvgCKBsaGrCbPnXqFPyAuaqqau\/eveD0xsfHP\/vsM6BsbW3dvHlzLHd5xGQxqr2DRQ8NDeGfc8Evl\/SwenHs\/oknUjDMZDJQ9P3331MS5CKdTpta1G5lAdy\/1yF+oix1RDxxCYZhP1G2+2iuuCFenDmpCpfoR5e6gHtuenkRA0poh+X\/G37TO9NrLKqN06u9RCkhlTYwEtFYDXq+UwCnYIindyD9Bx988O677wLl6Ogornjw4EEcDHHR9u3b9+3bZ2qxtraW6xbyGWNtbW3YTadSKRx\/Hn\/8cUjVFhcXcZG6Bwa9Y4x1d3dD7rpy5UrcxIULFzCf3bt379ixgy2r4vDhw46\/bf5vYy5Qo0FPT49rG7no6urS5pZqi6atIwEiM6SPtkjBEJ+Jra6uxkVDQ0O4Yk9PD72nRcA1GOYzalSouSVDrxy3gp9gsjwFIFjRvdNOnAuTGWpHcZ7gDp+b4rnbN45sCyIeM79Orpt9ubTrZNGSd86\/P9LiBn6RUl6gapmIfr52EMBKWt5xN0FLMMRHu++8884333wTmD788MOdnZ10dS0GBwcx297e3nvvvRdut27dOjMzI67Xr1\/\/ySefgA8ZGBg4cuQIUEqBqL29HcLv0tISLQPWy\/vvvz8\/Py+uV6xYgUfS3XffjY88vPbaa+pZd4BplVjAomj40S9bTrdAxPr6+vr6erWK1i1gVFRUYLazs7O4yvj4uLrPJAgymQyuKOHXX3+l+yIxZMvqvvHGGxkauHg6m0gkQLMi6BEC0Aj\/naE0drD0WkfmyDaMwBeq07AuEuUpQ2BmyHXLuNi9al0wMWEo4FzCF6rF4CKi1AsW14H3O6677jppJuC4YomljMViiUQCsxVHBghWpoak4wYzMzOwByahsrLy2muvhdtEIiFNLqGJbDaLXf8111wj3KPo7+rVq8M\/y2edaTtuZUn5heOZPK+tLPeD6BI6OzslIUt0K4vl2qY0A1Ovmc6bM90AdFk4t651WLvAlemjmhzQax0qw9gyrK0L5LV6J94VbltVJStEbNGyxe3S1bVvXa2lbUV9yJUlNpe+5HWAxtSAJByhJkcyIjn0suhgVtrI5GUrlmD4zjvvMIPV8Nwpp8my8HP8eqB6Mpm84YYbrIZpZY5RWVm5c+dOuG1tbcWUZ86cwdNh3BH1k72q8EA\/PDyMjwZa0jfahVM1CwTia7siGAJMwVCUEltZUrDq6upylK2jo0NSCI6BBd7KigC0OVtfudUgsFX6Wg\/PTQggBvryKQlFSwkOBvTNpbpUMYCVFjw3O+NkfDKhJBTN3Q7QFLCiO7Q5F3OO8ACP89EbNmw4dOiQF3ctRkZGBgYG1OeqjczMzOAWa2pq8NfUW1tbcTR+7rnn4Bx0IpFQucGTPXv2mLKb+fn5p556ihYszKI9gmFbWxvPTa5wZJAij5Q14Vvtp+eBhshxxf9hoXNUSSpTBqi95oZzHWofBX0RPz3PlJUjdblASvZcpoAqcxcanjul5ToXbBJPskraD+AQYmrIihAfbRILP+eKU2NmPfKwwbhc16U66FcVniuZHo0wH10SwfBqQOCPhTjnJ0+ePH78uAvxpk2bxHeLTK4D28ipU6fgkOPExMSuXbvUplmu\/YrhvGvXLumnBYD29vajR4\/CwD969KjYk1NRWVmJTwqOjo5u2bLF1K\/Dhw\/39vaaSiWEKFp0cnp62vGL7VJFmqC5uRlu4atfWiZSSDh37pxpn6mpqQn76MnJSZPk1dXVLS0t0MTU1BTRx8bGxjvuuMMaeAQi\/Qis1kUCYm57YMBE\/Uu0a6WRxPDtqZU+Uh9Nv3lJHY6x0SVhcZxdYHr3yOxI6f3dOx6UjIFjdVzVdGlifn4evDljLB6Pg6vJZrN\/\/\/23ylDLNh6Pr1y5UlwnEgn8S6+FhQXsvqQWpd7R8LZoafrsXsvFQWtn4iaygwcP1iAMDAzMLkNy1lhmle2XX36ZyWRExVQqhXm+8sorswhPPvmkKo\/jtDrEdYRNeJnb4hk9zF18sW8tFuqXmc9iS6TB0PTmJbbB+YsplcDt0tGYYE68xcLPOooNq1m5mF5Y\/kkoy8XYrQQhH4EN8NG0QJjtp59+CifhpGPOk5OTH374IdzW1dXhXyidPn0aXPNff\/2Fi8QJaGhl8+bNuHR0dBQOoalbWUSC\/s0338zNzcEtPkGogbzKlAtMKVbvAO4H0VtaWnBF4h9H0qt3EqRvKklbWeqqoWklj\/g4s9jKAmJ8xFIFrcmQzDAfi6YZBrA1OQR1EVEl9ppr5tnl8BQ8AFZxrZ7OJIxaUX0BPHeG4NhWQNKgRaBF598wRv6u32TRAlz30Sz35sLWRSWEW\/S2bdsc3bT4YjtzGAqc8yNHjkCEOX\/+\/IsvvmjlL1TwxBNPXLhwAZ48\/fTTQNDc3Lxv3z5Js46mCjT\/gOsQSCaT+L8oag1EGr9Ex6D6Y489BtepVIpWNDbVRx55BB5OTU3hD5p0dnbef\/\/9Jhun4btOYkJeX0RXlatKIxlOwDQ2QDYrpa\/nzT8Yhpz4144m7bRBG\/pp5N8lL89bWJ4EvP89CDNvy2qvvQyNeQ5VvCZHxDeVxl22QvloS2OYe01Njem\/FnshnU7jD0T19\/d3dnZCt3GLly9fPn36NNwODQ298MILcNvU1ARhVsLCwsJ3330Ht2vWrLnlllvg9tChQ3v27IEWt2zZAtso8Xj8o48+Asq6urrm5mYQ7Jdffvntt9+g9NFHHz179izcWl4bnc9QNQsEKTMk\/hbk84ts+SfKAOknylx3OEQ9B8L\/jYccmW56q\/4tRnPamZIUVPAcPHhOXRKK5subWFIHijeqwEebpkk4VAAZ9te+gpXKv0Jl5uxO9d3Fa1H73HGGamkrGkdcRkm4jqsBZUVHhLKiI0JZ0RGhrOiIUFZ0RCgrOiKUFR0RyoqOCP8BgQLSm2e0ZdAAAAAASUVORK5CYII="},"error_code":0}
+ 
+[2019-12-19 14:47:57,480] 1795 [Thread-4] INFO  nt.com.handler.LogHandler  - [LogHandler - after ][2019-12-19 14:47:57  ’µΩ±®Œƒ]{"reason":"success","result":{"base64_image":"iVBORw0KGgoAAAANSUhEUgAAAHgAAAB4CAIAAAC2BqGFAAAPtklEQVR4nO1dXWhcxRefbRvMZtPExNaUgBZrQ60EjUUwW4JUSiBSKqUlFIsvrT5oMRZFpPXjIQ9B6YPY2AcppiAoGiWiQSJa0RC\/pWhppA9ZMRrDmhhL20205KM7\/4f55\/zPzseZj929rv\/u7yHce+fMmTPnnjlnzszsTYxzzsooPlb80wJcLSgrOiKUFR0RyoqOCGVFR4SyoiNCWdERoazoiFBWdFTgJCIQoL+\/P5vNalsfGxvDlPv378elUq2NGzcC5bp163DR22+\/HUFHaE2WikW7v1ogi8ViQK9WLLWlhVX\/tACMMRaLxcKIxTXnXOXgxTMClIpFC2AzNJmkavjYtL1YRQkPi66pqbntttvybzKdTv\/888+m0m+\/\/XZhYUFcT05O4qLp6enPP\/\/cVPHy5cvqQ62xb9iwobGx0UNiA86ePZvJZFypaReOKdva2iD+ZLNZNYKJJ1CEifHFsWPHMNv+\/n5Ms27duvxVIIIhSNLf349Ljx07RsgPFbUE+HlbW5u7Jv18NFiHdrSKUkxjuiA4FxB0u1q3LkaASRj8XO0+jXAfXQzV+ErvyMrEVh24YEBqdemvb\/f9FO0ifT4o4MsDVlqlwOCT7BeI8ZBVWQXI6T29g8a+\/vrr4eFhlyoNDQ0HDhwQ1yYR+fLU2F2SHTt2mILz6tWrsbSqTWDt9\/X1TU9Pu7S4bdu2ZDIZZg2BPpoxNjw8\/Mwzz7jUamlpefDBB62cpVFsxe7du+H9qWZr9bbQ1vHjx8+cOePSYk9Pz9atWwP8Bos+YdGqMnhIShXxYMfjXVs3zDDDtMyiVzQxAQjogFTFxFx9Hqwv6\/szoSQyQzXQ+9bFty588o+6vhxKaK1DjVqNjY2vvvoq3H788ccvvfSSlgPn\/KGHHkqn0+K2vr7+9ddft1pfwKv917gOE7QdqKqq6ujogOe\/\/\/67WhFKR0ZGfvrpJ3EtpZda1YQNoOChUCqKNrlpx44RFQmFRrnCF56whIHgQBeZpitWkVzyaS+EKaEkZh3BRS7KKngGG\/aG\/Cy62GNNm8K5VNFWtGabvilSWBUBP4sOjrnBzLUJtGNFUxE8z2fm7qvu8BS8sAgOWbTBFslBB1QvlYSlGKGJGA3BjhvGQXETFqyRhoaGlpYWl1qbNm1Sq2OEaXliYuKHH36A25tvvrm6ulpcr1mzhq6LWwTxrGhoaGChZhHuOg4cOGBdkyOq+5aq6O7u7u7uhtuxsbGmpiZHnlhZb731lvY5Lee\/cq3jakB4wuJugI4vv1D+FGZg+EKiUXf\/6CjHEbyEAURh0cFpNDz37R7eqdIS0PuE0nsCVphbEYNhOp1++eWXvbhrMTIy4ltFq+vt27ffeuutcDs4OFhRUSGuE4kEET8CBNACFgudwEkURCAa4lwHXz5WgRfeNm7cyNHxjL6+Plyxr68Pl6qHHOEARvmQ4\/\/AHXZRTaArRmMuVpSKoullUut6E7FMGuVaKIFSUTQzrNdIAcq9FD8pBaO2BEPp1FoxkEwmGRrpJ06cgOOKc3Nze\/fuBcrx8XGpLjbb3t7e2dlZcRuPx7EhJ5PJCDpiAe3CTcf9MIGVA02gNge30ol\/CSIYqq1IZy21z000WsnVY5smAgIW12HaNmW6GT5XRitXQpxoleWmCZhbgEuVWjFNomPoDKN1os1yh4s2EqgEBFx9ND3zx0rH11ItjlaBJYIY+TsJAlw5fKO+b9wLriQj+EJrE9ZbF4FdFa3yBQOBa1Xd0D3pguW+IWlw+Bq1qk3ttUkqLROgwUPT2jQBj+xWUkdvb+\/zzz8PpW+88cY999yjlebHH39sb293bAVjaWnpzz\/\/NJXW1tbG43G4\/eqrr2666SZx\/ccff9x+++1QtHPnzhMnTsDts88+K+U+YXjvvffuuusu5jbZD9+cnZubm5qagtv5+Xls4xiLi4uYslC4dOnSpUuX4HZpaQmc9ZUrV3CLFy9ehGvOeSaTKYg88BMQlyHo5DrouGei\/6egdpvwGJHBw0czBzeqxqUolW7KuQPW\/xzhztbVdaiaraurw+s4Fy9eTKVS2roTExP4tra2du3ataaGxsfHr1y5Iq4rKirWr19vopyenoYMRQBmNatWrZLWmLD8a9euxaUY2WwW\/2KsqqqK+P1WZWUlbtdE9j\/haKhze\/WCc97R0WFpaRldXV2YrcSHWL2TkoL9+\/djtmNjYy59UVnhDko\/Z+vo6DDJKSU+1qbtrkMNcTAStVNXR0izaW4+ByNNvYXcVv7urKzrVhIN9B1zs4rk5KNVdZhyJHdgybhhjZSoQhC4vAmpdXGh7YUpLcCW4fLiXX00NxztUZXuCLUW0U98bU2a6UBNUJr0pSXT5rcELIrGepTsDl+oLT3wwAOwsXT+\/PnBwUEoOnfu3MmTJ00t3nfffYuLi+L6+uuvx42mUqkvvvgCKBsaGrCbPnXqFPyAuaqqau\/eveD0xsfHP\/vsM6BsbW3dvHlzLHd5xGQxqr2DRQ8NDeGfc8Evl\/SwenHs\/oknUjDMZDJQ9P3331MS5CKdTpta1G5lAdy\/1yF+oix1RDxxCYZhP1G2+2iuuCFenDmpCpfoR5e6gHtuenkRA0poh+X\/G37TO9NrLKqN06u9RCkhlTYwEtFYDXq+UwCnYIindyD9Bx988O677wLl6Ogornjw4EEcDHHR9u3b9+3bZ2qxtraW6xbyGWNtbW3YTadSKRx\/Hn\/8cUjVFhcXcZG6Bwa9Y4x1d3dD7rpy5UrcxIULFzCf3bt379ixgy2r4vDhw46\/bf5vYy5Qo0FPT49rG7no6urS5pZqi6atIwEiM6SPtkjBEJ+Jra6uxkVDQ0O4Yk9PD72nRcA1GOYzalSouSVDrxy3gp9gsjwFIFjRvdNOnAuTGWpHcZ7gDp+b4rnbN45sCyIeM79Orpt9ubTrZNGSd86\/P9LiBn6RUl6gapmIfr52EMBKWt5xN0FLMMRHu++8884333wTmD788MOdnZ10dS0GBwcx297e3nvvvRdut27dOjMzI67Xr1\/\/ySefgA8ZGBg4cuQIUEqBqL29HcLv0tISLQPWy\/vvvz8\/Py+uV6xYgUfS3XffjY88vPbaa+pZd4BplVjAomj40S9bTrdAxPr6+vr6erWK1i1gVFRUYLazs7O4yvj4uLrPJAgymQyuKOHXX3+l+yIxZMvqvvHGGxkauHg6m0gkQLMi6BEC0Aj\/naE0drD0WkfmyDaMwBeq07AuEuUpQ2BmyHXLuNi9al0wMWEo4FzCF6rF4CKi1AsW14H3O6677jppJuC4YomljMViiUQCsxVHBghWpoak4wYzMzOwByahsrLy2muvhdtEIiFNLqGJbDaLXf8111wj3KPo7+rVq8M\/y2edaTtuZUn5heOZPK+tLPeD6BI6OzslIUt0K4vl2qY0A1Ovmc6bM90AdFk4t651WLvAlemjmhzQax0qw9gyrK0L5LV6J94VbltVJStEbNGyxe3S1bVvXa2lbUV9yJUlNpe+5HWAxtSAJByhJkcyIjn0suhgVtrI5GUrlmD4zjvvMIPV8Nwpp8my8HP8eqB6Mpm84YYbrIZpZY5RWVm5c+dOuG1tbcWUZ86cwdNh3BH1k72q8EA\/PDyMjwZa0jfahVM1CwTia7siGAJMwVCUEltZUrDq6upylK2jo0NSCI6BBd7KigC0OVtfudUgsFX6Wg\/PTQggBvryKQlFSwkOBvTNpbpUMYCVFjw3O+NkfDKhJBTN3Q7QFLCiO7Q5F3OO8ACP89EbNmw4dOiQF3ctRkZGBgYG1OeqjczMzOAWa2pq8NfUW1tbcTR+7rnn4Bx0IpFQucGTPXv2mLKb+fn5p556ihYszKI9gmFbWxvPTa5wZJAij5Q14Vvtp+eBhshxxf9hoXNUSSpTBqi95oZzHWofBX0RPz3PlJUjdblASvZcpoAqcxcanjul5ToXbBJPskraD+AQYmrIihAfbRILP+eKU2NmPfKwwbhc16U66FcVniuZHo0wH10SwfBqQOCPhTjnJ0+ePH78uAvxpk2bxHeLTK4D28ipU6fgkOPExMSuXbvUplmu\/YrhvGvXLumnBYD29vajR4\/CwD969KjYk1NRWVmJTwqOjo5u2bLF1K\/Dhw\/39vaaSiWEKFp0cnp62vGL7VJFmqC5uRlu4atfWiZSSDh37pxpn6mpqQn76MnJSZPk1dXVLS0t0MTU1BTRx8bGxjvuuMMaeAQi\/Qis1kUCYm57YMBE\/Uu0a6WRxPDtqZU+Uh9Nv3lJHY6x0SVhcZxdYHr3yOxI6f3dOx6UjIFjdVzVdGlifn4evDljLB6Pg6vJZrN\/\/\/23ylDLNh6Pr1y5UlwnEgn8S6+FhQXsvqQWpd7R8LZoafrsXsvFQWtn4iaygwcP1iAMDAzMLkNy1lhmle2XX36ZyWRExVQqhXm+8sorswhPPvmkKo\/jtDrEdYRNeJnb4hk9zF18sW8tFuqXmc9iS6TB0PTmJbbB+YsplcDt0tGYYE68xcLPOooNq1m5mF5Y\/kkoy8XYrQQhH4EN8NG0QJjtp59+CifhpGPOk5OTH374IdzW1dXhXyidPn0aXPNff\/2Fi8QJaGhl8+bNuHR0dBQOoalbWUSC\/s0338zNzcEtPkGogbzKlAtMKVbvAO4H0VtaWnBF4h9H0qt3EqRvKklbWeqqoWklj\/g4s9jKAmJ8xFIFrcmQzDAfi6YZBrA1OQR1EVEl9ppr5tnl8BQ8AFZxrZ7OJIxaUX0BPHeG4NhWQNKgRaBF598wRv6u32TRAlz30Sz35sLWRSWEW\/S2bdsc3bT4YjtzGAqc8yNHjkCEOX\/+\/IsvvmjlL1TwxBNPXLhwAZ48\/fTTQNDc3Lxv3z5Js46mCjT\/gOsQSCaT+L8oag1EGr9Ex6D6Y489BtepVIpWNDbVRx55BB5OTU3hD5p0dnbef\/\/9Jhun4btOYkJeX0RXlatKIxlOwDQ2QDYrpa\/nzT8Yhpz4144m7bRBG\/pp5N8lL89bWJ4EvP89CDNvy2qvvQyNeQ5VvCZHxDeVxl22QvloS2OYe01Njem\/FnshnU7jD0T19\/d3dnZCt3GLly9fPn36NNwODQ298MILcNvU1ARhVsLCwsJ3330Ht2vWrLnlllvg9tChQ3v27IEWt2zZAtso8Xj8o48+Asq6urrm5mYQ7Jdffvntt9+g9NFHHz179izcWl4bnc9QNQsEKTMk\/hbk84ts+SfKAOknylx3OEQ9B8L\/jYccmW56q\/4tRnPamZIUVPAcPHhOXRKK5subWFIHijeqwEebpkk4VAAZ9te+gpXKv0Jl5uxO9d3Fa1H73HGGamkrGkdcRkm4jqsBZUVHhLKiI0JZ0RGhrOiIUFZ0RCgrOiKUFR0RyoqOCP8BgQLSm2e0ZdAAAAAASUVORK5CYII="},"error_code":0}
+ 
+[2019-12-19 14:48:42,629] 46944 [JavaFX Application Thread] INFO  nt.com.handler.LogHandler  - [LogHandler - before ][2019-12-19 14:48:42 ∑¢ÀÕ±®Œƒ]<?xml version="1.0" encoding="GBK"?>
+<response>
+    <error>
+        <error-code>000</error-code>
+        <error-msg>success</error-msg>
+    </error>
+    <result>
+        <root>
+            <info>
+                <id>429006199909092235</id>
+                <name>test</name>
+                <checkresult>00</checkresult>
+		<photo/>
+                <issueoffice>10150</issueoffice>
+                <bkcheckdate>20180224</bkcheckdate>
+                <bkoperid/>
+                <biztype>01</biztype>
+            </info>
+        </root>
+    </result>
+</response>
+ 
+[2019-12-19 14:48:42,894] 47209 [Thread-12] INFO  nt.com.network.HttpSingle  -  ’µΩœ˚œ¢[http://baidu.com] - <html>
+<meta http-equiv="refresh" content="0;url=http://www.baidu.com/">
+</html>
+ 
+[2019-12-19 14:48:42,953] 47268 [Thread-12] INFO  nt.com.handler.LogHandler  - [LogHandler - after ][2019-12-19 14:48:42  ’µΩ±®Œƒ]<html>
+<meta http-equiv="refresh" content="0;url=http://www.baidu.com/">
+</html>
+ 
+[2019-12-19 14:50:02,690] 0    [JavaFX Application Thread] INFO  nt.com.handler.LogHandler  - [LogHandler - before ][2019-12-19 14:50:02 ∑¢ÀÕ±®Œƒ]<?xml version="1.0" encoding="GBK"?>
+<response>
+    <error>
+        <error-code>000</error-code>
+        <error-msg>success</error-msg>
+    </error>
+    <result>
+        <root>
+            <info>
+                <id>429006199909092235</id>
+                <name>test</name>
+                <checkresult>00</checkresult>
+		<photo/>
+                <issueoffice>10150</issueoffice>
+                <bkcheckdate>20180224</bkcheckdate>
+                <bkoperid/>
+                <biztype>01</biztype>
+            </info>
+        </root>
+    </result>
+</response>
+ 
+[2019-12-19 14:50:04,067] 1377 [Thread-4] INFO  nt.com.network.HttpSingle  -  ’µΩœ˚œ¢[http://baidu.com] - <html>
+<meta http-equiv="refresh" content="0;url=http://www.baidu.com/">
+</html>
+ 
+[2019-12-19 14:50:04,207] 1517 [Thread-4] INFO  nt.com.handler.LogHandler  - [LogHandler - after ][2019-12-19 14:50:04  ’µΩ±®Œƒ]<html>
+<meta http-equiv="refresh" content="0;url=http://www.baidu.com/">
+</html>
+ 
+[2019-12-19 14:51:49,327] 0    [JavaFX Application Thread] INFO  nt.com.handler.LogHandler  - [LogHandler - before ][2019-12-19 14:51:49 ∑¢ÀÕ±®Œƒ]<?xml version="1.0" encoding="GBK"?>
+<response>
+    <error>
+        <error-code>000</error-code>
+        <error-msg>success</error-msg>
+    </error>
+    <result>
+        <root>
+            <info>
+                <id>429006199909092235</id>
+                <name>test</name>
+                <checkresult>00</checkresult>
+		<photo/>
+                <issueoffice>10150</issueoffice>
+                <bkcheckdate>20180224</bkcheckdate>
+                <bkoperid/>
+                <biztype>01</biztype>
+            </info>
+        </root>
+    </result>
+</response>
+ 
+[2019-12-19 14:51:50,508] 1181 [Thread-4] INFO  nt.com.network.HttpSingle  -  ’µΩœ˚œ¢[http://baidu.com] - <html>
+<meta http-equiv="refresh" content="0;url=http://www.baidu.com/">
+</html>
+ 
+[2019-12-19 14:51:50,624] 1297 [Thread-4] INFO  nt.com.handler.LogHandler  - [LogHandler - after ][2019-12-19 14:51:50  ’µΩ±®Œƒ]<html>
+<meta http-equiv="refresh" content="0;url=http://www.baidu.com/">
+</html>
+ 
+[2019-12-19 14:53:00,567] 0    [JavaFX Application Thread] INFO  nt.com.handler.LogHandler  - [LogHandler - before ][2019-12-19 14:53:00 ∑¢ÀÕ±®Œƒ]<?xml version="1.0" encoding="GBK"?>
+<response>
+    <error>
+        <error-code>000</error-code>
+        <error-msg>success</error-msg>
+    </error>
+    <result>
+        <root>
+            <info>
+                <id>429006199909092235</id>
+                <name>test</name>
+                <checkresult>00</checkresult>
+		<photo/>
+                <issueoffice>10150</issueoffice>
+                <bkcheckdate>20180224</bkcheckdate>
+                <bkoperid/>
+                <biztype>01</biztype>
+            </info>
+        </root>
+    </result>
+</response>
+ 
+[2019-12-19 14:53:02,216] 1649 [Thread-4] INFO  nt.com.network.HttpSingle  -  ’µΩœ˚œ¢[http://baidu.com] - <html>
+<meta http-equiv="refresh" content="0;url=http://www.baidu.com/">
+</html>
+ 
+[2019-12-19 14:53:02,333] 1766 [Thread-4] INFO  nt.com.handler.LogHandler  - [LogHandler - after ][2019-12-19 14:53:02  ’µΩ±®Œƒ]<html>
+<meta http-equiv="refresh" content="0;url=http://www.baidu.com/">
+</html>
+ 
+[2019-12-19 14:54:20,465] 0    [JavaFX Application Thread] INFO  nt.com.handler.LogHandler  - [LogHandler - before ][2019-12-19 14:54:20 ∑¢ÀÕ±®Œƒ]<?xml version="1.0" encoding="GBK"?>
+<response>
+    <error>
+        <error-code>000</error-code>
+        <error-msg>success</error-msg>
+    </error>
+    <result>
+        <root>
+            <info>
+                <id>429006199909092235</id>
+                <name>test</name>
+                <checkresult>00</checkresult>
+		<photo/>
+                <issueoffice>10150</issueoffice>
+                <bkcheckdate>20180224</bkcheckdate>
+                <bkoperid/>
+                <biztype>01</biztype>
+            </info>
+        </root>
+    </result>
+</response>
+ 
+[2019-12-19 14:54:21,860] 1395 [Thread-4] INFO  nt.com.network.HttpSingle  -  ’µΩœ˚œ¢[http://baidu.com] - <html>
+<meta http-equiv="refresh" content="0;url=http://www.baidu.com/">
+</html>
+ 
+[2019-12-19 14:54:21,980] 1515 [Thread-4] INFO  nt.com.handler.LogHandler  - [LogHandler - after ][2019-12-19 14:54:21  ’µΩ±®Œƒ]<html>
+<meta http-equiv="refresh" content="0;url=http://www.baidu.com/">
+</html>
+ 
+[2019-12-19 15:46:37,845] 0    [JavaFX Application Thread] INFO  nt.com.handler.LogHandler  - [LogHandler - before ][2019-12-19 15:46:37 ∑¢ÀÕ±®Œƒ]<?xml version="1.0" encoding="GBK"?>
+<response>
+    <error>
+        <error-code>000</error-code>
+        <error-msg>success</error-msg>
+    </error>
+    <result>
+        <root>
+            <info>
+                <id>429006199909092235</id>
+                <name>test</name>
+                <checkresult>00</checkresult>
+		<photo/>
+                <issueoffice>10150</issueoffice>
+                <bkcheckdate>20180224</bkcheckdate>
+                <bkoperid/>
+                <biztype>01</biztype>
+            </info>
+        </root>
+    </result>
+</response>
+ 
+[2019-12-19 15:46:39,157] 1312 [Thread-4] INFO  nt.com.network.HttpSingle  -  ’µΩœ˚œ¢[http://baidu.com] - <html>
+<meta http-equiv="refresh" content="0;url=http://www.baidu.com/">
+</html>
+ 
+[2019-12-19 15:46:39,278] 1433 [Thread-4] INFO  nt.com.handler.LogHandler  - [LogHandler - after ][2019-12-19 15:46:39  ’µΩ±®Œƒ]<html>
+<meta http-equiv="refresh" content="0;url=http://www.baidu.com/">
+</html>
+ 
+[2019-12-19 15:47:33,739] 0    [JavaFX Application Thread] INFO  nt.com.handler.LogHandler  - [LogHandler - before ][2019-12-19 15:47:33 ∑¢ÀÕ±®Œƒ]<?xml version="1.0" encoding="GBK"?>
+<response>
+    <error>
+        <error-code>000</error-code>
+        <error-msg>success</error-msg>
+    </error>
+    <result>
+        <root>
+            <info>
+                <id>429006199909092235</id>
+                <name>test</name>
+                <checkresult>00</checkresult>
+		<photo/>
+                <issueoffice>10150</issueoffice>
+                <bkcheckdate>20180224</bkcheckdate>
+                <bkoperid/>
+                <biztype>01</biztype>
+            </info>
+        </root>
+    </result>
+</response>
+ 
+[2019-12-19 15:47:34,754] 1015 [Thread-4] INFO  nt.com.network.HttpSingle  -  ’µΩœ˚œ¢[http://baidu.com] - <html>
+<meta http-equiv="refresh" content="0;url=http://www.baidu.com/">
+</html>
+ 
+[2019-12-19 15:47:34,876] 1137 [Thread-4] INFO  nt.com.handler.LogHandler  - [LogHandler - after ][2019-12-19 15:47:34  ’µΩ±®Œƒ]<html>
+<meta http-equiv="refresh" content="0;url=http://www.baidu.com/">
+</html>
+ 
+[2019-12-19 15:47:58,284] 0    [JavaFX Application Thread] INFO  nt.com.handler.LogHandler  - [LogHandler - before ][2019-12-19 15:47:58 ∑¢ÀÕ±®Œƒ]<?xml version="1.0" encoding="GBK"?>
+<response>
+    <error>
+        <error-code>000</error-code>
+        <error-msg>success</error-msg>
+    </error>
+    <result>
+        <root>
+            <info>
+                <id>429006199909092235</id>
+                <name>test</name>
+                <checkresult>00</checkresult>
+		<photo/>
+                <issueoffice>10150</issueoffice>
+                <bkcheckdate>20180224</bkcheckdate>
+                <bkoperid/>
+                <biztype>01</biztype>
+            </info>
+        </root>
+    </result>
+</response>
+ 
+[2019-12-19 15:47:59,479] 1195 [Thread-4] INFO  nt.com.network.HttpSingle  -  ’µΩœ˚œ¢[http://baidu.com] - <html>
+<meta http-equiv="refresh" content="0;url=http://www.baidu.com/">
+</html>
+ 
+[2019-12-19 15:47:59,603] 1319 [Thread-4] INFO  nt.com.handler.LogHandler  - [LogHandler - after ][2019-12-19 15:47:59  ’µΩ±®Œƒ]<html>
+<meta http-equiv="refresh" content="0;url=http://www.baidu.com/">
+</html>
+ 
+[2019-12-19 15:49:40,658] 0    [JavaFX Application Thread] INFO  nt.com.handler.LogHandler  - [LogHandler - before ][2019-12-19 15:49:40 ∑¢ÀÕ±®Œƒ]<?xml version="1.0" encoding="GBK"?>
+<response>
+    <error>
+        <error-code>000</error-code>
+        <error-msg>success</error-msg>
+    </error>
+    <result>
+        <root>
+            <info>
+                <id>429006199909092235</id>
+                <name>test</name>
+                <checkresult>00</checkresult>
+		<photo/>
+                <issueoffice>10150</issueoffice>
+                <bkcheckdate>20180224</bkcheckdate>
+                <bkoperid/>
+                <biztype>01</biztype>
+            </info>
+        </root>
+    </result>
+</response>
+ 
+[2019-12-19 15:49:41,715] 1057 [Thread-4] INFO  nt.com.network.HttpSingle  -  ’µΩœ˚œ¢[http://baidu.com] - <html>
+<meta http-equiv="refresh" content="0;url=http://www.baidu.com/">
+</html>
+ 
+[2019-12-19 15:49:41,843] 1185 [Thread-4] INFO  nt.com.handler.LogHandler  - [LogHandler - after ][2019-12-19 15:49:41  ’µΩ±®Œƒ]<html>
+<meta http-equiv="refresh" content="0;url=http://www.baidu.com/">
+</html>
+ 
+[2019-12-19 15:54:07,973] 1    [JavaFX Application Thread] INFO  nt.com.handler.LogHandler  - [LogHandler - before ][2019-12-19 15:54:07 ∑¢ÀÕ±®Œƒ]<?xml version="1.0" encoding="GBK"?>
+<response>
+    <error>
+        <error-code>000</error-code>
+        <error-msg>success</error-msg>
+    </error>
+    <result>
+        <root>
+            <info>
+                <id>429006199909092235</id>
+                <name>test</name>
+                <checkresult>00</checkresult>
+		<photo/>
+                <issueoffice>10150</issueoffice>
+                <bkcheckdate>20180224</bkcheckdate>
+                <bkoperid/>
+                <biztype>01</biztype>
+            </info>
+        </root>
+    </result>
+</response>
+ 
+[2019-12-19 15:54:10,876] 2904 [Thread-4] INFO  nt.com.network.HttpSingle  -  ’µΩœ˚œ¢[https://bbs.nga.cn/read.php?tid=19703050] - Ω” ‹ ß∞‹£¨¥ÌŒÛ¬Î[403] 
+[2019-12-19 15:54:11,024] 3052 [Thread-4] INFO  nt.com.handler.LogHandler  - [LogHandler - after ][2019-12-19 15:54:11  ’µΩ±®Œƒ]Ω” ‹ ß∞‹£¨¥ÌŒÛ¬Î[403] 
+[2019-12-19 15:54:32,694] 24722 [JavaFX Application Thread] INFO  nt.com.handler.LogHandler  - [LogHandler - before ][2019-12-19 15:54:32 ∑¢ÀÕ±®Œƒ]<?xml version="1.0" encoding="GBK"?>
+<response>
+    <error>
+        <error-code>000</error-code>
+        <error-msg>success</error-msg>
+    </error>
+    <result>
+        <root>
+            <info>
+                <id>429006199909092235</id>
+                <name>test</name>
+                <checkresult>00</checkresult>
+		<photo/>
+                <issueoffice>10150</issueoffice>
+                <bkcheckdate>20180224</bkcheckdate>
+                <bkoperid/>
+                <biztype>01</biztype>
+            </info>
+        </root>
+    </result>
+</response>
+ 
+[2019-12-19 15:54:32,967] 24995 [Thread-10] INFO  nt.com.network.HttpSingle  -  ’µΩœ˚œ¢[https://bbs.nga.cn/read.php?tid=19703050] - Ω” ‹ ß∞‹£¨¥ÌŒÛ¬Î[403] 
+[2019-12-19 15:54:33,035] 25063 [Thread-10] INFO  nt.com.handler.LogHandler  - [LogHandler - after ][2019-12-19 15:54:33  ’µΩ±®Œƒ]Ω” ‹ ß∞‹£¨¥ÌŒÛ¬Î[403] 
+[2019-12-19 15:56:09,012] 121040 [JavaFX Application Thread] INFO  nt.com.handler.LogHandler  - [LogHandler - before ][2019-12-19 15:56:09 ∑¢ÀÕ±®Œƒ]<?xml version="1.0" encoding="GBK"?>
+<response>
+    <error>
+        <error-code>000</error-code>
+        <error-msg>success</error-msg>
+    </error>
+    <result>
+        <root>
+            <info>
+                <id>429006199909092235</id>
+                <name>test</name>
+                <checkresult>00</checkresult>
+		<photo/>
+                <issueoffice>10150</issueoffice>
+                <bkcheckdate>20180224</bkcheckdate>
+                <bkoperid/>
+                <biztype>01</biztype>
+            </info>
+        </root>
+    </result>
+</response>
+ 
+[2019-12-19 15:56:09,259] 121287 [Thread-21] INFO  nt.com.network.HttpSingle  -  ’µΩœ˚œ¢[https://www.baidu.com/s?ie=utf-8&f=8&rsv_bp=1&tn=baidu&wd=tenxun&oq=nga&rsv_pq=894c08b100013737&rsv_t=95b4BN9pmDHePkIB1TuLBA7uBI5yfX%2BiqIQZDfaNAIiyiw%2BhxCasJKLfer8&rqlang=cn&rsv_enter=1&rsv_dl=tb&inputT=8792&rsv_sug3=378&rsv_sug1=159&rsv_sug7=101&rsv_sug2=0&rsv_sug4=10957] - <html>
+<head>
+	<script>
+		location.replace(location.href.replace("https://","http://"));
+	</script>
+</head>
+<body>
+	<noscript><meta http-equiv="refresh" content="0;url=http://www.baidu.com/"></noscript>
+</body>
+</html>
+ 
+[2019-12-19 15:56:09,305] 121333 [Thread-21] INFO  nt.com.handler.LogHandler  - [LogHandler - after ][2019-12-19 15:56:09  ’µΩ±®Œƒ]<html>
+<head>
+	<script>
+		location.replace(location.href.replace("https://","http://"));
+	</script>
+</head>
+<body>
+	<noscript><meta http-equiv="refresh" content="0;url=http://www.baidu.com/"></noscript>
+</body>
+</html>
+ 
+[2019-12-19 15:57:32,137] 204165 [JavaFX Application Thread] INFO  nt.com.handler.LogHandler  - [LogHandler - before ][2019-12-19 15:57:32 ∑¢ÀÕ±®Œƒ]<?xml version="1.0" encoding="GBK"?>
+<response>
+    <error>
+        <error-code>000</error-code>
+        <error-msg>success</error-msg>
+    </error>
+    <result>
+        <root>
+            <info>
+                <id>429006199909092235</id>
+                <name>test</name>
+                <checkresult>00</checkresult>
+		<photo/>
+                <issueoffice>10150</issueoffice>
+                <bkcheckdate>20180224</bkcheckdate>
+                <bkoperid/>
+                <biztype>01</biztype>
+            </info>
+        </root>
+    </result>
+</response>
+ 
+[2019-12-19 15:57:32,324] 204352 [Thread-31] INFO  nt.com.network.HttpSingle  -  ’µΩœ˚œ¢[https://www.baidu.com/img/bd_logo1.png] - âPNG
+
+   
+IHDR       ??8   	pHYs     öú  
+MiCCPPhotoshop ICC profile  x⁄ùSwXì˜>ﬂ˜eVBÿ±ól? "#??Y?? a?@≈Ö?
+VúHUƒÇ?
+Hùà‚†(∏gAäàZãU\8?‹ßµ}zÔÌÌ˚◊˚ºÁúÁ¸Œy??&ëÊ¢j 9R?<:?èOHƒ…ΩÄH? ÊÀ¬g?  ?yx~t???Øo  p?.$«·?É∫P&W  ? ?"?êR ?.T? ? ∞S≥d
+ ?  ly|B" ?
+ ÏÙI> ÿ©ì‹ ÿ¢? ? ?(G$@? `UÅR,¿¬ †¨@".¿Æ?Y?2G?? véX?@` ?ôB,?  8 C? L?0“ø‡©_pÖ∏H ¿ÀïÕóK?3∏ï?wÚ‡‚!‚¬l±Ba)f	?"úó?#H?L?  ˘—¡˛8?êÁÊ‰·ÊfÁlÔÙ≈¢˛ko">!Òﬂ˛º? NœÔ⁄_ÂÂ?p?∞uøk©[ ⁄V hﬂ˘]3?	†Z
+–z˘ãy8¸@û°P?<
+?%b°Ω0„ã>?3·o‡ã~ˆ¸@˛€z? qö@ô≠¿£É˝qanvÆRéÁ?B1n˜Á#˛«?˝é)—‚4±\,äÒXâ∏P"M«yπRëD!…ï??2?ñ˝	ìw
+ ¨ÜO¿N?µÀl¿~??X“v @~?-?? g42y?  ìø˘è@+ Õó§„  ºË\®îL?  D†Å*∞A?¨¿ú¡º¿aD@$?<B‰Ä
+?ñAT?:?µ∞?ö·¥¡18
+Á‡\ÅÎp`û¬ºÜ	A?a!:?béÿ"?ôé"aH4íÄ? ÈàQ"≈»r?©Bjë]H#?-r9ç\@˙ê€» 2ä¸äºG1îÅ≤Q?u@π®ä∆†s—t4]?ñ¢k??=?∂¢ß—KËut }äéc??1fåŸa\åáE`âX&?cÂX5V?5cX7v¿ûa?$ãÄ?^?¬lÇêêGXLXC?%?#??W	ÉÑ1?'"ì®O?%z˘ƒxb:±êXF?&?!!?%^'_ìH$…í‰N
+!%?2IIkH€H-§S?>?iúL&Îêm…ﬁ?≤Ä? óë∑êêOí˚…√‰∑:≈à‚L	?$R§îJ5e??•ü2Bô†™QÕ©û‘™à:üZIm†vP/Sá©4u?%ÕõCÀ§-£’–öigi˜h/Èt?	›ÉEó–ó“k?ÈÁÈÉÙw
+?
+É«Hb(k{??/ôL?”óô»T0?2ôg?òoUX*?*|ë ?:ïVï~ïÁ™TUsU?’y?T´U´^V}¶FU≥P„©	?´’?Uª©6ÆŒRwRèPœQ_£æ_˝Ç˙c
+≤ÜÖF†ÜH£Tc∑∆?!?2eÒXB÷rV?,kòMb[≤˘ÏLv?v/{LSCs™f¨fëfùÊq?∆±‡9ŸúJ?!?
+Œ{--?-±÷j≠f≠~?7⁄z⁄æ⁄bÌr?ÌÎ⁄Ôupù@?,ùı:m:˜u	?6∫Q∫Ö∫€uœÍ>”cÎy?	ı ?È›—GımÙ£?ÍÔ÷Ô?7046?l18cÃêcËkòi∏—Ñ·®Àh∫ëƒh£—I?'?&Óág?5x>f¨ob?4ﬁe‹k<abi2€§ƒ§≈‰?)Õîköf∫—¥”tÃÃ?,‹¨ÿ¨…Ï?9’úkûaæŸº€¸çÖ•Eú≈J?6ã«ñ⁄ñ|?ñMñ˜¨òV>VyVıV◊¨I÷\?,Îm÷WlPW??:õÀ∂®≠õ≠ƒvõm???)?)ıSn?1Ï¸?
+Ïö??9ˆa?%ˆmˆœ??;t;|rtuÃvlpºÎ§·4√©ƒ©√ÈWgg°sùÛ5¶KêÀóv?SmßäßnüzÀï?Ó∫“µ”ı£õªõ‹≠Ÿm‘›?=≈}´˚M.?…]?=ÔAÙ˜X‚qÃ„ùßõß¬ÛêÁ/^v^Y^˚ΩO≥ú&û÷0m»€ƒ[‡ΩÀ{`:>=e˙Œ?>?>üzüáæ¶?"?=?#~÷~ô~¸û?;˙À˝è¯ø·y?ÒN`??ΩÅÅ≥k??5??/>B	
+Yrìo??˘c3‹g,ö—??Z?0?&L?éÜ??~o¶˘LÈÃ?à‡Glà∏i?˘})*2?.ÍQ¥Stqt?,÷¨‰Y˚gΩéÒè©å?;€j∂rvg¨jlRlcÏõ∏Ä∏™∏Åxá¯EÒót$	Ìâ‰ƒÿƒ=â„sÁl?3ú‰öTñtcÆÂ‹¢?ÊÈŒÀûw<Y5Yê|8Öòó≤?ÂÉ BP/OÂßnMÚÑõÖOEæ¢ç¢Q±∑∏J<íÊùVïˆ8?;}C˙hÜOFu?3	OR+y?íπ#ÛMVD÷ﬁ¨œŸq?-9îúîú£R
+iñ¥+?0?(∑Of++?
+‰yÊm?ìá ˜?#˘sÛ€lÖL—£¥RÆPL/?+x[[x∏HΩHZ?3ﬂf˛Í?#?|Ωê∞P∏∞≥ÿ∏xYÒ‡"øE?#ãSw.1]R∫dxi“}ÀhÀ≤ñ˝P‚XRUÚjy‹ÚéRÉ“••C+ÇW4ï©î…ÀnÆÙZπcaïdUÔjó’[V*ï_¨p¨®Æ¯∞F∏Ê‚WN_’|ıym⁄⁄ﬁJ∑ ÌÎHÎ§În¨˜YøØJΩjA’–Ü
+?Òç?_mJﬁt°zjıéÕ¥Õ ?5a5Ì[Ã∂¨€Ú°6£ˆz?]ÀV˝≠´∑æŸ&⁄÷ø›w{??;ﬁÔîÏºµ+xWkΩE}ın“ÓÇ›?b∫øÊ~›∏GwO≈ûè{•{ˆEÔÎjtol‹Øøø?	mR6?H:pÂõ?o⁄õÌöwµpZ*¬AÂ¡'ﬂ¶|{„PË°Œ√‹√Õﬂ?∑ıÎHy+?:øu?-£m?=°ΩÔËå£?^Gæ∑?~?1„cu?5èWû†?(=Ò˘‰Çì„ßdßûùN?=‘ô‹y˜L¸ôk]Q]ΩgCœû?tÓL∑_˜…ÛﬁÁè]ºp?"˜b?%∑K?=?=G~p˝·HØ[oÎe˜ÀÌW<ÆtÙM?;—Ô?˙j¿’s◊¯?.]üyΩÔ∆Ï∑n&??%∫ı¯vˆÌw
+ÓL‹]zèxØ¸æ⁄˝Í??¥˛±e¿m‡¯`¿`œ√Y?	áû˛î?”á·“GÃG?#F#çè?
+ΩÚdŒì·ß≤ßœ ~V?yÎs´Áﬂ˝‚˚KœX¸ÿ?˘ãœøÆy©ÛrÔ´©Ø:?#?ºŒy=Ò¶¸≠Œ€}Ô∏Ô∫ﬂ«??(¸@˛PÛ—˙c«ß–O?>Á|˛¸/˜ÑÛ˚%“ü3    cHRM  z%  ??  ?  ??  u0  Í`  :?  oí_≈F   PLTE   ????#‹¸˚˛ıÙ˝ˆı˝ÚÒ˝ÛÚ˝ÙÛ?2(ﬁF=·LC‚_WÂrkËwpÈxqÈÑ~ÎãÖÏöïÔõñÔúóÔùòÔ§üØ´Ú±≠Û∂≤Û«ƒˆ…∆ˆœÃ˜–Õ˜÷‘¯ÿ÷˘⁄ÿ˘‹⁄˘‚‡˙ÎÍ¸ÏÎ¸ÌÏ¸ÓÌ¸ÔÓ¸$?&?'?(?+!?,"?,#?-$?.%?/&?0'?3*?4+?5,?6-?7.?8/?90?90?:1?;2?<3?=4?>5??7·@8·B9·C:·D;·E<·F>‚H@‚JB‚ME„OG„RJ„RK‰SL‰VN‰YQÂ[TÂ\UÂ_XÊaZÊc\Êd]Êe^Áf_Ág`ÁhaÁibÁjcÁkeËngËohËsmÈtnÈysÍ{uÍ}wÍ~x?zÎÅ{ÎÇ|ÎÑÏÜÅÏàÉÏãÜÌçàÌèäÌëåÓêãÌíçÓëåÌìéÓîèÓñëÓòîÔüõ†ú§†Òß£Ò®§Ò´®Ú≤ØÛ¥±Û∑¥Ùπ∂Ùª∏ÙºπÙøºı¡æı√¡ˆ≈√ˆÀ…˜ÕÀ˜–Œ¯”—¯‘“¯ﬁ›˙‡ﬂ˙„‚˚‰„˚Â‰˚ÊÂ˚ÁÊ˚ÈË¸ËÁ˚ÍÈ¸ÈË˚˝ˆˆ˛˘˘˛˙˙˛¸¸?˛˛?¸ËÁ˝ÎÍ???????ÖÇÒáÑÒâÜÒéãÚëéÚîëÚñìÙ°üÙ¶§ı©ßı¨™ıÆ¨ˆ¥≤˜π∑˜∫∏˜Ωª˜øΩ˜¡ø˙”“˙‘”˙÷’˙ÿ◊˚⁄Ÿ˚‹€˚›‹˚‡ﬂ¸„‚˚‚·¸Â‰¸ÁÊ???	?
+???
+?
+????? ?#?%!?)%?*&?-)?/+?3/?62?95?<8?>:Ë@<ÈDAÈFCÈHEÈJGÈLIÍOLÎVSÎYVÎ^[Ïb_ÌfcÌjgÌmjÓpnÔvtÔ}{?}Ä~Ç?ÛôóÛûú¯¡¿¯ƒ√¯∆≈˘…»˘ÃÀ˘œŒ˝ÓÓ˝˛ıı˛ˆˆ˛˘?˚˚?˝˝????…jU   tRNS??????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????? S?%  ⁄IDATx⁄Ï›i|Ep?+$@ãA?Ñ@LBh1àÑ]¡Ä·é??r)
+Y.%ÑH"?.IfÑ≈ ?"?.?.àr?9Qw9E?~˚¡df˙®ÍÓôÓôÈûÁ˘òyßáÈ˙”›”U]uAFn?.@?8‡@?8‡@?8‡@?8‡@?88‡@?8‡@?8‡@‡@?8‡@?8‡@?8‡@?8‡@?88‡@?8‡@?8‡@‡@?8‡@?8‡@?8‡@?8‡@?88‡@?8‡@?8‡@‡@?8|œ“ÏáÓIN?4®~! ?(ÖO¥°i7?¿·NÏ˝?#??‡®L£T*J?§…?
+ìS°ë∆≠?$iãX?
+{˛Q—v|U?ÅƒßQY2îè	É›%Ìfá˝?U»h• ¸{D5cù¿aÛÃT≤AìÊ?+g∑ñ
+.['¨ã"%´ÃI?=? ;?e$Fı≤ïR:
+8Ïú?,5≈u?;(V=ˆM,?M©ÊYÁË©\?.8lõß?8h}œ∫[XU√Å√∂yêç?è≤?VURp?4Uíÿ8:z?
+`óç ?&èr?*ã·T?ˆL6GCWŸ@^Y‡∞g¢y?>Õı36âW?'‡∞gÜÚZ}Be?3?*?ˆLØ’?+´∫rq$?-”ó◊ÍïøCS~
+?√ñÈœkÙõ+äf´‡?∂Ã@-ßïlMÅ√?∆kÙ[+äûT¡±8lnªO?(Õ∑q?8lôzºVo\Q4úè#
+?eÌô¶ºü®U*äFq?{&?5ª—kTEÛq?é–ª—?»øAzg1p?4??Á‚©—>°Ö#ûŸß÷ﬁı#dG‡∞~"?
+Ôôﬁ≠˜®Òi`0´—«πJZl?'¿aıTÌz≤‡?'#<^`
+˜I^ËÆâ‰‡òVOﬁ›?
+⁄°Å˙%©Á??Œœ?,O}È√jèπ?-±…Jç~Wº«?≥ü_( ãgñ¸™≥ü{vßßUüK ∞pL"¿aÌºê™–¨}]?Go˘´√ƒ[ò…∞—œ Z<NÂá?u,Ì∆ñSë~?#pX¸ÇCm?0âó<0;@6£`s?	^Ë}/‡∞v¬Ócuµª«aOt?ΩÂÖìE?=Úæ?	pX<Ï^˘AU1Q<ZäU‹Ã¬L?	?8¨ûLvü|cœ∫Ÿè><pƒ¥¨Ì8¶zûZ2r=^*ŒππW⁄Ì4πSTt#pX'?8w7÷∑)«¨aÈâîR⁄yXCèÈ?
+üjÁ±ÕNuãÄ?*y?7úg°ÓÕÖœœ/X*˙KÈºQÈç??"ÈŒ?5´„˚ˆs‰ì3$?K$!ëá£Øœ€œW?)åé+dw,∆›æn?0]y√S????s?f?Mrc???^Ï€?#⁄∞6‹µ8?>›¯8b}€zˆñ? G–ßGæo[?ΩÂˆE?‰©¢ÚòkûO[_¿€t=?ÚDòäco”Ω?#?N?<?<∆€t“m?‰i√«—åÒ∂E”FDEvÓ“=k?,Œjëô4‘f?˛t^Tq-Æ™S<Ôπ?aˆït‡n{4pys€Ø∫¬;
+'?!-?£∏?0Ó≠y:8?<∑p?/C˛ÜJáÉ?J#{ÚèJô¿‰ô«møa?3
+kb“»X˘∂õqt? ?3MœΩàÇ?0KSse€Œ.Çg?CKFÒ~m6?
+Ó‚'œínzpX<?8WçΩ≈•Û€r;YzÏ»·„?
+? 3??:{y?L?;Æ˝√ô¡zÜËÌÒ?*wÃZÕ√i≈|9rqsπ˘8?1ë¢??>T-i-Ù‡?>?·ïef? µX?'æà»¶ÍÈ#ZÉzÆJ±wªD)ƒ∏M˘Ê∆Ø8a˘´øõå£jgÂ∆*æi—FZ[Ù€Ü_[8|?!«~1cpqß… -6häggLÑ¶˘IÅ√¬æ
+Ê‚Pz|?v/€ÄjKÜÁøT™·&
+p¯ÑCÿΩﬁ\$ØùÏò_EÙ÷≈’5?Mı†ñ≈??7?õÃ≈Aöã◊ò-~?#äjŒL˜€∏ì¢ﬂ? Cp+_2!15+?-⁄–)yÁD?6hjú∂sQM∆‡ŒöçÉê¬Á≥«è´› ?){cN??’x√ó?£p?ôéÉô¶©TW?Fqóº78√q&`8•Qùq?!ÿå}»ôJL?†û? ·¯Z?pDt”k?&∫Ó≠éd?<†i?D?‡„:? —Ë≈`O?!l?Ö¬^TZU>
+[»x?)µô??-?WB´Ï˙∂ıgˆJj/∆F?&mTvÂf(‚iH?8Ñm¿Qô_?◊û
+
+ÓóTkTN^SaJçè√ú÷wV	!d?!QÌ¡ ÿ®*;ßh≈A3\?6?
+h5?*ÒÊ¿qE?Z??’ÓÒø?ÚsÇf4”›qWLü _<’˚M?<≠±¯¿!lèº!.˛M„UÌÓWN\∏˙?6??k«A{ãû£Ø÷lnn?&?
+æJÔ≈P¬Òñw8˛Ëç˘rãØ?eÁ∂?>·†Y≈^?‡–ÚÔêúsÀuÓÃ/v˙Ñ#Wq’P=8ËÄb?0«FqﬂõÓùy`?ﬁ@q
+}8h?"?0	«w¢⁄ì^ÏÃÔº˛l∆ço}8hT!pòÉ„Ñ®ˆ?7;Û[?>º¯qVkÎƒA{V3pl◊Æıjg^ıÊ√ó∞ápÈ≈A{$á≠oÇmE\˚éW;Û£üıx£v?84rpçc„À‚“R/w?'øÎ˝?-©ë8h«X?0«˚ÎOI˜¿owÊe?˛ÑÙiÉ¡3)’iÔÖ´˛<p´myIIIII?
+ÖWÆy?3˜Ì“É?)ô‰-u"ÎöÅ}ë˝5•ÅÊù‚Õ?Zî≤ÛÔoWJﬂzIßd¿¯Ê¬Lzp–ƒIAäc?pªÆ?#Æ]êºw?K⁄q?Oû∆?=8(≠U?8???€Ù|?*…ªWk∆ë≠cH?>4≥E†qòy#?8º•ÔS?'(éíQ?y-πì±¯ÑÉv?p˛YÁß¸†i‰æÏm∑›-:pL&Ü‚†m?5éR+‚ÿsA?◊Ω?1D?^∫q–NÒ¡å„U+‚ÿ{~áA∑STpàWÙJ?3ÌÂ^•◊≠yZŸ∑™Ã8ä≈S~çrøRÂ÷ÆåÜ◊âÉ±⁄d0‡¯?bMÇ?2Ûq??2πƒı¬?ÃÜ◊ã£Õí†ƒ±ÔƒÍﬂàeqG∂ôç√!û¸©üÎÖ‹ñ?0è—?	áü?;§ØH/<?6?9Ë˝£§Ú˝˜ú?ßªÓôv?‚H^‚Áæïê¿!îäûïΩÒ?˝{èãc cÂø|j$≈ÂÜÅ√Á˝pŒc3ÀæÚfÔÒpJ&t≠Ç0¡X?~??Å`?œ±Ì[?9„M◊´o,çC2uäÎÖæ∆‚PZ?$?!e´§_ÓDÂK;Ü„ò¿ZÖß≥¡8&?
+?
+˚‚ d?Iı÷än◊R¡x?$≥ππ^®n0é˛¿aÚ∫§∫b¸˘9?5$7$\/?7«Ω~√Ò≤≠q?/≈’oB»V?)„Ç4”`Ia˛¬qƒﬁ8§áéÌ?Úô)8ng-b?¥¡8Ëí†∆Q∫…*8§]ÔØB~L¡—öµ‘ ¸DÉq?«Q˝[⁄Ô?*~ƒÒã§|!‰º§œˆõw
+π}.]Ûq$?#ﬂw±˛∫}æC2ÊI¯ØtÜè7%3?ú}/ònÇ©To?9([°eåò~ëí&LwΩ≤8M?4?8^Ù_ﬂ Ê„?I<Vø∫Ò∆ßís[ÇÎ©Jı´íÚU?9;6’Òñ≈æYõÆG¥f~Ïx+_#˘…‚ZΩ¶|?Œø??*?qúî„X+Ó 7¨W6Z⁄Ü√›ØÖO HQ√Q<∫≠6…Nøˆ?.ª∏G“ø˝˝
+B ÆJ.Hv?7fEΩÄM?$k	˘Z?Ép‘ó-´≥DÂ´PJ?"
+5í‹ÔÔ.˚_%¬…ÕØI?N˛Dàµp?:$≈±âê≥Z?*^‡xQ÷äèhh¯∫˙q?xé◊U~‘Æ\wÉX«èÚØÙÆÙ©ÉUÜ· È™ÀQ+4|zënµ˝èÉ¸æj?g ˜E◊X?é˜7(t?$Ñú˝ÂXπa8F?/"¨–ct„à	 B?;∑õa„‘ØÑ'}9O?(˛”•r£p(¨Û?2]µ·'ÎƒëÍB~<©¥K?^O?=pºEY'zº’ ŒH•’=T~D?.5I?p?ﬂKg?v_∫FlÇ„8!ÑÏ‹mŒÌsB?(.ƒˆ???>}∫SéŸ∆‡¯Q?éeg?;Ê‰?2õ‡ÿH!‰s≥pÑ∑Uúy%˘oŸÛUæÀ∏X?8:8¡±Û∏^?.ØT∏˝ı¶ól?„K∆Õ£p?:‘¸?1¸\?«éµ_Ìµ^óΩûg*f3øq?,Eë¶€H^??>o?:8∏û??#ìpêº$≥q<J?√x?=z_ØöÖC◊Ú±ﬁ‰Œ3p–ç„Ùi;?8!âçY8úÉÕ≈1ÉòÅ„3?8N?@ ØÏ∑éΩﬂH?'≠ﬁcRúe¶çõâ)8÷Ë¬q˙èC;ŒÌ?é}‰Ûsl9jR<?<?¶‡8z];?Œ∫'Iz˜Ú!ã„¯Ëãu?7ÒÆ?>h
+B≤[õC#qå”î€∆á?&Zq∫ºK|œÙÁÀü~`E˚‚¬k[Ÿ”Õîm∫Tj˜p¢⁄∫†Q√kOœÕ/àãõüü˜l›QYm©j£›≥∫w ˛?˘|ÕoDé£_o1b®ó?8,ë¸GR?+–˜?KaPq„…⁄ÓoåL !ëõB?;Üœ|º˜ΩwxÙ•vŒ»ykÉπ?5?ãr£{(?(IªÑ‡∞W¬ñ.çãããKXÍ‘˙éjsj?!:Ï§ˆ{&?2{,ÑpxÁ‚&9”˛^gR›©œŒ?±Ôp ¿Å p ¿Å p ¿Å ¿Å p ¿Å p ¿Å ? p ¿Å?5? µÌB ?=B?    IENDÆB`?
+ 
+[2019-12-19 15:57:32,416] 204444 [Thread-31] INFO  nt.com.handler.LogHandler  - [LogHandler - after ][2019-12-19 15:57:32  ’µΩ±®Œƒ]âPNG
+
+   
+IHDR       ??8   	pHYs     öú  
+MiCCPPhotoshop ICC profile  x⁄ùSwXì˜>ﬂ˜eVBÿ±ól? "#??Y?? a?@≈Ö?
+VúHUƒÇ?
+Hùà‚†(∏gAäàZãU\8?‹ßµ}zÔÌÌ˚◊˚ºÁúÁ¸Œy??&ëÊ¢j 9R?<:?èOHƒ…ΩÄH? ÊÀ¬g?  ?yx~t???Øo  p?.$«·?É∫P&W  ? ?"?êR ?.T? ? ∞S≥d
+ ?  ly|B" ?
+ ÏÙI> ÿ©ì‹ ÿ¢? ? ?(G$@? `UÅR,¿¬ †¨@".¿Æ?Y?2G?? véX?@` ?ôB,?  8 C? L?0“ø‡©_pÖ∏H ¿ÀïÕóK?3∏ï?wÚ‡‚!‚¬l±Ba)f	?"úó?#H?L?  ˘—¡˛8?êÁÊ‰·ÊfÁlÔÙ≈¢˛ko">!Òﬂ˛º? NœÔ⁄_ÂÂ?p?∞uøk©[ ⁄V hﬂ˘]3?	†Z
+–z˘ãy8¸@û°P?<
+?%b°Ω0„ã>?3·o‡ã~ˆ¸@˛€z? qö@ô≠¿£É˝qanvÆRéÁ?B1n˜Á#˛«?˝é)—‚4±\,äÒXâ∏P"M«yπRëD!…ï??2?ñ˝	ìw
+ ¨ÜO¿N?µÀl¿~??X“v @~?-?? g42y?  ìø˘è@+ Õó§„  ºË\®îL?  D†Å*∞A?¨¿ú¡º¿aD@$?<B‰Ä
+?ñAT?:?µ∞?ö·¥¡18
+Á‡\ÅÎp`û¬ºÜ	A?a!:?béÿ"?ôé"aH4íÄ? ÈàQ"≈»r?©Bjë]H#?-r9ç\@˙ê€» 2ä¸äºG1îÅ≤Q?u@π®ä∆†s—t4]?ñ¢k??=?∂¢ß—KËut }äéc??1fåŸa\åáE`âX&?cÂX5V?5cX7v¿ûa?$ãÄ?^?¬lÇêêGXLXC?%?#??W	ÉÑ1?'"ì®O?%z˘ƒxb:±êXF?&?!!?%^'_ìH$…í‰N
+!%?2IIkH€H-§S?>?iúL&Îêm…ﬁ?≤Ä? óë∑êêOí˚…√‰∑:≈à‚L	?$R§îJ5e??•ü2Bô†™QÕ©û‘™à:üZIm†vP/Sá©4u?%ÕõCÀ§-£’–öigi˜h/Èt?	›ÉEó–ó“k?ÈÁÈÉÙw
+?
+É«Hb(k{??/ôL?”óô»T0?2ôg?òoUX*?*|ë ?:ïVï~ïÁ™TUsU?’y?T´U´^V}¶FU≥P„©	?´’?Uª©6ÆŒRwRèPœQ_£æ_˝Ç˙c
+≤ÜÖF†ÜH£Tc∑∆?!?2eÒXB÷rV?,kòMb[≤˘ÏLv?v/{LSCs™f¨fëfùÊq?∆±‡9ŸúJ?!?
+Œ{--?-±÷j≠f≠~?7⁄z⁄æ⁄bÌr?ÌÎ⁄Ôupù@?,ùı:m:˜u	?6∫Q∫Ö∫€uœÍ>”cÎy?	ı ?È›—GımÙ£?ÍÔ÷Ô?7046?l18cÃêcËkòi∏—Ñ·®Àh∫ëƒh£—I?'?&Óág?5x>f¨ob?4ﬁe‹k<abi2€§ƒ§≈‰?)Õîköf∫—¥”tÃÃ?,‹¨ÿ¨…Ï?9’úkûaæŸº€¸çÖ•Eú≈J?6ã«ñ⁄ñ|?ñMñ˜¨òV>VyVıV◊¨I÷\?,Îm÷WlPW??:õÀ∂®≠õ≠ƒvõm???)?)ıSn?1Ï¸?
+Ïö??9ˆa?%ˆmˆœ??;t;|rtuÃvlpºÎ§·4√©ƒ©√ÈWgg°sùÛ5¶KêÀóv?SmßäßnüzÀï?Ó∫“µ”ı£õªõ‹≠Ÿm‘›?=≈}´˚M.?…]?=ÔAÙ˜X‚qÃ„ùßõß¬ÛêÁ/^v^Y^˚ΩO≥ú&û÷0m»€ƒ[‡ΩÀ{`:>=e˙Œ?>?>üzüáæ¶?"?=?#~÷~ô~¸û?;˙À˝è¯ø·y?ÒN`??ΩÅÅ≥k??5??/>B	
+Yrìo??˘c3‹g,ö—??Z?0?&L?éÜ??~o¶˘LÈÃ?à‡Glà∏i?˘})*2?.ÍQ¥Stqt?,÷¨‰Y˚gΩéÒè©å?;€j∂rvg¨jlRlcÏõ∏Ä∏™∏Åxá¯EÒót$	Ìâ‰ƒÿƒ=â„sÁl?3ú‰öTñtcÆÂ‹¢?ÊÈŒÀûw<Y5Yê|8Öòó≤?ÂÉ BP/OÂßnMÚÑõÖOEæ¢ç¢Q±∑∏J<íÊùVïˆ8?;}C˙hÜOFu?3	OR+y?íπ#ÛMVD÷ﬁ¨œŸq?-9îúîú£R
+iñ¥+?0?(∑Of++?
+‰yÊm?ìá ˜?#˘sÛ€lÖL—£¥RÆPL/?+x[[x∏HΩHZ?3ﬂf˛Í?#?|Ωê∞P∏∞≥ÿ∏xYÒ‡"øE?#ãSw.1]R∫dxi“}ÀhÀ≤ñ˝P‚XRUÚjy‹ÚéRÉ“••C+ÇW4ï©î…ÀnÆÙZπcaïdUÔjó’[V*ï_¨p¨®Æ¯∞F∏Ê‚WN_’|ıym⁄⁄ﬁJ∑ ÌÎHÎ§În¨˜YøØJΩjA’–Ü
+?Òç?_mJﬁt°zjıéÕ¥Õ ?5a5Ì[Ã∂¨€Ú°6£ˆz?]ÀV˝≠´∑æŸ&⁄÷ø›w{??;ﬁÔîÏºµ+xWkΩE}ın“ÓÇ›?b∫øÊ~›∏GwO≈ûè{•{ˆEÔÎjtol‹Øøø?	mR6?H:pÂõ?o⁄õÌöwµpZ*¬AÂ¡'ﬂ¶|{„PË°Œ√‹√Õﬂ?∑ıÎHy+?:øu?-£m?=°ΩÔËå£?^Gæ∑?~?1„cu?5èWû†?(=Ò˘‰Çì„ßdßûùN?=‘ô‹y˜L¸ôk]Q]ΩgCœû?tÓL∑_˜…ÛﬁÁè]ºp?"˜b?%∑K?=?=G~p˝·HØ[oÎe˜ÀÌW<ÆtÙM?;—Ô?˙j¿’s◊¯?.]üyΩÔ∆Ï∑n&??%∫ı¯vˆÌw
+ÓL‹]zèxØ¸æ⁄˝Í??¥˛±e¿m‡¯`¿`œ√Y?	áû˛î?”á·“GÃG?#F#çè?
+ΩÚdŒì·ß≤ßœ ~V?yÎs´Áﬂ˝‚˚KœX¸ÿ?˘ãœøÆy©ÛrÔ´©Ø:?#?ºŒy=Ò¶¸≠Œ€}Ô∏Ô∫ﬂ«??(¸@˛PÛ—˙c«ß–O?>Á|˛¸/˜ÑÛ˚%“ü3    cHRM  z%  ??  ?  ??  u0  Í`  :?  oí_≈F   PLTE   ????#‹¸˚˛ıÙ˝ˆı˝ÚÒ˝ÛÚ˝ÙÛ?2(ﬁF=·LC‚_WÂrkËwpÈxqÈÑ~ÎãÖÏöïÔõñÔúóÔùòÔ§üØ´Ú±≠Û∂≤Û«ƒˆ…∆ˆœÃ˜–Õ˜÷‘¯ÿ÷˘⁄ÿ˘‹⁄˘‚‡˙ÎÍ¸ÏÎ¸ÌÏ¸ÓÌ¸ÔÓ¸$?&?'?(?+!?,"?,#?-$?.%?/&?0'?3*?4+?5,?6-?7.?8/?90?90?:1?;2?<3?=4?>5??7·@8·B9·C:·D;·E<·F>‚H@‚JB‚ME„OG„RJ„RK‰SL‰VN‰YQÂ[TÂ\UÂ_XÊaZÊc\Êd]Êe^Áf_Ág`ÁhaÁibÁjcÁkeËngËohËsmÈtnÈysÍ{uÍ}wÍ~x?zÎÅ{ÎÇ|ÎÑÏÜÅÏàÉÏãÜÌçàÌèäÌëåÓêãÌíçÓëåÌìéÓîèÓñëÓòîÔüõ†ú§†Òß£Ò®§Ò´®Ú≤ØÛ¥±Û∑¥Ùπ∂Ùª∏ÙºπÙøºı¡æı√¡ˆ≈√ˆÀ…˜ÕÀ˜–Œ¯”—¯‘“¯ﬁ›˙‡ﬂ˙„‚˚‰„˚Â‰˚ÊÂ˚ÁÊ˚ÈË¸ËÁ˚ÍÈ¸ÈË˚˝ˆˆ˛˘˘˛˙˙˛¸¸?˛˛?¸ËÁ˝ÎÍ???????ÖÇÒáÑÒâÜÒéãÚëéÚîëÚñìÙ°üÙ¶§ı©ßı¨™ıÆ¨ˆ¥≤˜π∑˜∫∏˜Ωª˜øΩ˜¡ø˙”“˙‘”˙÷’˙ÿ◊˚⁄Ÿ˚‹€˚›‹˚‡ﬂ¸„‚˚‚·¸Â‰¸ÁÊ???	?
+???
+?
+????? ?#?%!?)%?*&?-)?/+?3/?62?95?<8?>:Ë@<ÈDAÈFCÈHEÈJGÈLIÍOLÎVSÎYVÎ^[Ïb_ÌfcÌjgÌmjÓpnÔvtÔ}{?}Ä~Ç?ÛôóÛûú¯¡¿¯ƒ√¯∆≈˘…»˘ÃÀ˘œŒ˝ÓÓ˝˛ıı˛ˆˆ˛˘?˚˚?˝˝????…jU   tRNS??????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????? S?%  ⁄IDATx⁄Ï›i|Ep?+$@ãA?Ñ@LBh1àÑ]¡Ä·é??r)
+Y.%ÑH"?.IfÑ≈ ?"?.?.àr?9Qw9E?~˚¡df˙®ÍÓôÓôÈûÁ˘òyßáÈ˙”›”U]uAFn?.@?8‡@?8‡@?8‡@?8‡@?88‡@?8‡@?8‡@‡@?8‡@?8‡@?8‡@?8‡@?88‡@?8‡@?8‡@‡@?8‡@?8‡@?8‡@?8‡@?88‡@?8‡@?8‡@‡@?8|œ“ÏáÓIN?4®~! ?(ÖO¥°i7?¿·NÏ˝?#??‡®L£T*J?§…?
+ìS°ë∆≠?$iãX?
+{˛Q—v|U?ÅƒßQY2îè	É›%Ìfá˝?U»h• ¸{D5cù¿aÛÃT≤AìÊ?+g∑ñ
+.['¨ã"%´ÃI?=? ;?e$Fı≤ïR:
+8Ïú?,5≈u?;(V=ˆM,?M©ÊYÁË©\?.8lõß?8h}œ∫[XU√Å√∂yêç?è≤?VURp?4Uíÿ8:z?
+`óç ?&èr?*ã·T?ˆL6GCWŸ@^Y‡∞g¢y?>Õı36âW?'‡∞gÜÚZ}Be?3?*?ˆLØ’?+´∫rq$?-”ó◊ÍïøCS~
+?√ñÈœkÙõ+äf´‡?∂Ã@-ßïlMÅ√?∆kÙ[+äûT¡±8lnªO?(Õ∑q?8lôzºVo\Q4úè#
+?eÌô¶ºü®U*äFq?{&?5ª—kTEÛq?é–ª—?»øAzg1p?4??Á‚©—>°Ö#ûŸß÷ﬁı#dG‡∞~"?
+Ôôﬁ≠˜®Òi`0´—«πJZl?'¿aıTÌz≤‡?'#<^`
+˜I^ËÆâ‰‡òVOﬁ›?
+⁄°Å˙%©Á??Œœ?,O}È√jèπ?-±…Jç~Wº«?≥ü_( ãgñ¸™≥ü{vßßUüK ∞pL"¿aÌºê™–¨}]?Go˘´√ƒ[ò…∞—œ Z<NÂá?u,Ì∆ñSë~?#pX¸ÇCm?0âó<0;@6£`s?	^Ë}/‡∞v¬Ócuµª«aOt?ΩÂÖìE?=Úæ?	pX<Ï^˘AU1Q<ZäU‹Ã¬L?	?8¨ûLvü|cœ∫Ÿè><pƒ¥¨Ì8¶zûZ2r=^*ŒππW⁄Ì4πSTt#pX'?8w7÷∑)«¨aÈâîR⁄yXCèÈ?
+üjÁ±ÕNuãÄ?*y?7úg°ÓÕÖœœ/X*˙KÈºQÈç??"ÈŒ?5´„˚ˆs‰ì3$?K$!ëá£Øœ€œW?)åé+dw,∆›æn?0]y√S????s?f?Mrc???^Ï€?#⁄∞6‹µ8?>›¯8b}€zˆñ? G–ßGæo[?ΩÂˆE?‰©¢ÚòkûO[_¿€t=?ÚDòäco”Ω?#?N?<?<∆€t“m?‰i√«—åÒ∂E”FDEvÓ“=k?,Œjëô4‘f?˛t^Tq-Æ™S<Ôπ?aˆït‡n{4pys€Ø∫¬;
+'?!-?£∏?0Ó≠y:8?<∑p?/C˛ÜJáÉ?J#{ÚèJô¿‰ô«møa?3
+kb“»X˘∂õqt? ?3MœΩàÇ?0KSse€Œ.Çg?CKFÒ~m6?
+Ó‚'œínzpX<?8WçΩ≈•Û€r;YzÏ»·„?
+? 3??:{y?L?;Æ˝√ô¡zÜËÌÒ?*wÃZÕ√i≈|9rqsπ˘8?1ë¢??>T-i-Ù‡?>?·ïef? µX?'æà»¶ÍÈ#ZÉzÆJ±wªD)ƒ∏M˘Ê∆Ø8a˘´øõå£jgÂ∆*æi—FZ[Ù€Ü_[8|?!«~1cpqß… -6häggLÑ¶˘IÅ√¬æ
+Ê‚Pz|?v/€ÄjKÜÁøT™·&
+p¯ÑCÿΩﬁ\$ØùÏò_EÙ÷≈’5?Mı†ñ≈??7?õÃ≈Aöã◊ò-~?#äjŒL˜€∏ì¢ﬂ? Cp+_2!15+?-⁄–)yÁD?6hjú∂sQM∆‡ŒöçÉê¬Á≥«è´› ?){cN??’x√ó?£p?ôéÉô¶©TW?Fqóº78√q&`8•Qùq?!ÿå}»ôJL?†û? ·¯Z?pDt”k?&∫Ó≠éd?<†i?D?‡„:? —Ë≈`O?!l?Ö¬^TZU>
+[»x?)µô??-?WB´Ï˙∂ıgˆJj/∆F?&mTvÂf(‚iH?8Ñm¿Qô_?◊û
+
+ÓóTkTN^SaJçè√ú÷wV	!d?!QÌ¡ ÿ®*;ßh≈A3\?6?
+h5?*ÒÊ¿qE?Z??’ÓÒø?ÚsÇf4”›qWLü _<’˚M?<≠±¯¿!lèº!.˛M„UÌÓWN\∏˙?6??k«A{ãû£Ø÷lnn?&?
+æJÔ≈P¬Òñw8˛Ëç˘rãØ?eÁ∂?>·†Y≈^?‡–ÚÔêúsÀuÓÃ/v˙Ñ#Wq’P=8ËÄb?0«FqﬂõÓùy`?ﬁ@q
+}8h?"?0	«w¢⁄ì^ÏÃÔº˛l∆ço}8hT!pòÉ„Ñ®ˆ?7;Û[?>º¯qVkÎƒA{V3pl◊Æıjg^ıÊ√ó∞ápÈ≈A{$á≠oÇmE\˚éW;Û£üıx£v?84rpçc„À‚“R/w?'øÎ˝?-©ë8h«X?0«˚ÎOI˜¿owÊe?˛ÑÙiÉ¡3)’iÔÖ´˛<p´myIIIII?
+ÖWÆy?3˜Ì“É?)ô‰-u"ÎöÅ}ë˝5•ÅÊù‚Õ?Zî≤ÛÔoWJﬂzIßd¿¯Ê¬Lzp–ƒIAäc?pªÆ?#Æ]êºw?K⁄q?Oû∆?=8(≠U?8???€Ù|?*…ªWk∆ë≠cH?>4≥E†qòy#?8º•ÔS?'(éíQ?y-πì±¯ÑÉv?p˛YÁß¸†i‰æÏm∑›-:pL&Ü‚†m?5éR+‚ÿsA?◊Ω?1D?^∫q–NÒ¡å„U+‚ÿ{~áA∑STpàWÙJ?3ÌÂ^•◊≠yZŸ∑™Ã8ä≈S~çrøRÂ÷ÆåÜ◊âÉ±⁄d0‡¯?bMÇ?2Ûq??2πƒı¬?ÃÜ◊ã£Õí†ƒ±ÔƒÍﬂàeqG∂ôç√!û¸©üÎÖ‹ñ?0è—?	áü?;§ØH/<?6?9Ë˝£§Ú˝˜ú?ßªÓôv?‚H^‚Áæïê¿!îäûïΩÒ?˝{èãc cÂø|j$≈ÂÜÅ√Á˝pŒc3ÀæÚfÔÒpJ&t≠Ç0¡X?~??Å`?œ±Ì[?9„M◊´o,çC2uäÎÖæ∆‚PZ?$?!e´§_ÓDÂK;Ü„ò¿ZÖß≥¡8&?
+?
+˚‚ d?Iı÷än◊R¡x?$≥ππ^®n0é˛¿aÚ∫§∫b¸˘9?5$7$\/?7«Ω~√Ò≤≠q?/≈’oB»V?)„Ç4”`Ia˛¬qƒﬁ8§áéÌ?Úô)8ng-b?¥¡8Ëí†∆Q∫…*8§]ÔØB~L¡—öµ‘ ¸DÉq?«Q˝[⁄Ô?*~ƒÒã§|!‰º§œˆõw
+π}.]Ûq$?#ﬂw±˛∫}æC2ÊI¯ØtÜè7%3?ú}/ònÇ©To?9([°eåò~ëí&LwΩ≤8M?4?8^Ù_ﬂ Ê„?I<Vø∫Ò∆ßís[ÇÎ©Jı´íÚU?9;6’Òñ≈æYõÆG¥f~Ïx+_#˘…‚ZΩ¶|?Œø??*?qúî„X+Ó 7¨W6Z⁄Ü√›ØÖO HQ√Q<∫≠6…Nøˆ?.ª∏G“ø˝˝
+B ÆJ.Hv?7fEΩÄM?$k	˘Z?Ép‘ó-´≥DÂ´PJ?"
+5í‹ÔÔ.˚_%¬…ÕØI?N˛Dàµp?:$≈±âê≥Z?*^‡xQ÷äèhh¯∫˙q?xé◊U~‘Æ\wÉX«èÚØÙÆÙ©ÉUÜ· È™ÀQ+4|zënµ˝èÉ¸æj?g ˜E◊X?é˜7(t?$Ñú˝ÂXπa8F?/"¨–ct„à	 B?;∑õa„‘ØÑ'}9O?(˛”•r£p(¨Û?2]µ·'ÎƒëÍB~<©¥K?^O?=pºEY'zº’ ŒH•’=T~D?.5I?p?ﬂKg?v_∫FlÇ„8!ÑÏ‹mŒÌsB?(.ƒˆ???>}∫SéŸ∆‡¯Q?éeg?;Ê‰?2õ‡ÿH!‰s≥pÑ∑Uúy%˘oŸÛUæÀ∏X?8:8¡±Û∏^?.ØT∏˝ı¶ól?„K∆Õ£p?:‘¸?1¸\?«éµ_Ìµ^óΩûg*f3øq?,Eë¶€H^??>o?:8∏û??#ìpêº$≥q<J?√x?=z_ØöÖC◊Ú±ﬁ‰Œ3p–ç„Ùi;?8!âçY8úÉÕ≈1ÉòÅ„3?8N?@ ØÏ∑éΩﬂH?'≠ﬁcRúe¶çõâ)8÷Ë¬q˙èC;ŒÌ?é}‰Ûsl9jR<?<?¶‡8z];?Œ∫'Iz˜Ú!ã„¯Ëãu?7ÒÆ?>h
+B≤[õC#qå”î€∆á?&Zq∫ºK|œÙÁÀü~`E˚‚¬k[Ÿ”Õîm∫Tj˜p¢⁄∫†Q√kOœÕ/àãõüü˜l›QYm©j£›≥∫w ˛?˘|ÕoDé£_o1b®ó?8,ë¸GR?+–˜?KaPq„…⁄ÓoåL !ëõB?;Üœ|º˜ΩwxÙ•vŒ»ykÉπ?5?ãr£{(?(IªÑ‡∞W¬ñ.çãããKXÍ‘˙éjsj?!:Ï§ˆ{&?2{,ÑpxÁ‚&9”˛^gR›©œŒ?±Ôp ¿Å p ¿Å p ¿Å ¿Å p ¿Å p ¿Å ? p ¿Å?5? µÌB ?=B?    IENDÆB`?
+ 
+[2019-12-19 15:58:50,001] 282029 [JavaFX Application Thread] INFO  nt.com.handler.LogHandler  - [LogHandler - before ][2019-12-19 15:58:50 ∑¢ÀÕ±®Œƒ]<?xml version="1.0" encoding="GBK"?>
+<response>
+    <error>
+        <error-code>000</error-code>
+        <error-msg>success</error-msg>
+    </error>
+    <result>
+        <root>
+            <info>
+                <id>429006199909092235</id>
+                <name>test</name>
+                <checkresult>00</checkresult>
+		<photo/>
+                <issueoffice>10150</issueoffice>
+                <bkcheckdate>20180224</bkcheckdate>
+                <bkoperid/>
+                <biztype>01</biztype>
+            </info>
+        </root>
+    </result>
+</response>
+ 
+[2019-12-19 15:58:50,266] 282294 [Thread-41] INFO  nt.com.network.HttpSingle  -  ’µΩœ˚œ¢[https://www.w3school.com.cn/] - <!DOCTYPE html>
+<html lang="zh-cn">
+<head>
+
+<!-- Global site tag (gtag.js) - Google Analytics -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=UA-878633-1"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'UA-878633-1');
+</script>
+
+<title>w3school ??????</title>
+
+<link rel="stylesheet" type="text/css" href="/c5.css" />
+<meta charset="gbk" />
+<meta http-equiv="Content-Language" content="zh-cn" />
+<meta name="description" content="??????????? Web ????????" />
+<meta name="robots" content="all" />
+<meta name="author" content="w3school.com.cn" />
+<meta name="Copyright" content="Copyright W3school.com.cn All Rights Reserved." />
+<meta name="MSSmartTagsPreventParsing" content="true" />
+<meta http-equiv="imagetoolbar" content="false" />
+
+<link rel="icon" type="image/png" sizes="16x16" href="/ui2019/logo-16-red.png">
+<link rel="icon" type="image/png" sizes="32x32" href="/ui2019/logo-32-red.png">
+<link rel="icon" type="image/png" sizes="48x48" href="/ui2019/logo-48-red.png">
+<link rel="icon" type="image/png" sizes="96x96" href="/ui2019/logo-96-red.png">
+<link rel="apple-touch-icon-precomposed" sizes="180x180" href="/ui2019/logo-180.png">
+</head>
+
+<body id="homefirst">
+<div id="wrapper">
+
+<div id="header_index">
+<h1><a href="/index.html" title="w3school ??????" style="float:left;">w3school ??????</a></h1>
+
+<div id="searchui">
+<form method="get" id="searchform" action="https://www.google.com.hk/search">
+<input type="hidden" name="sitesearch" value="w3school.com.cn" />
+<input type="text" name="as_q" class="box"  id="searched_content" title="????????????????" />
+<input type="submit" value="Go" class="button" title="??????" />
+</form>
+</div>
+</div>
+
+<div id="navfirst">
+<ul id="menu">
+<li id="h"><a href="/h.asp" title="HTML ??ßﬂ??">HTML ??ßﬂ??</a></li>
+<li id="b"><a href="/b.asp" title="???????????">????????</a></li>
+<li id="s"><a href="/s.asp" title="????????????">?????????</a></li>
+<li id="p"><a href="/p.asp" title="?????">?????</a></li>
+<li id="x"><a href="/x.asp" title="XML ??ßﬂ??">XML ??ßﬂ??</a></li>
+<li id="w"><a href="/w.asp" title="??????">??????</a></li>
+<li id="r"><a href="/r.asp" title="?¶œ????">?¶œ????</a></li>
+</ul>
+</div>
+
+<div id="navsecond">
+<h2>HTML ???</h2>
+<ul>
+<li><a href="/html/index.asp" title="HTML ???">HTML</a></li>
+<li><a href="/html5/index.asp" title="HTML5 ???">HTML5</a></li>
+<li><a href="/xhtml/index.asp" title="XHTML ???">XHTML</a></li>
+<li><a href="/css/index.asp" title="CSS ???">CSS</a></li>
+<li><a href="/css3/index.asp" title="CSS3 ???">CSS3</a></li>
+<li><a href="/tcpip/index.asp" title="TCP/IP ???">TCP/IP</a></li>
+</ul>
+
+<h2>????????</h2>
+<ul>
+<li><a href="/js/index.asp" title="JavaScript ???">JavaScript</a></li>
+<li><a href="/htmldom/index.asp" title="HTML DOM ???">HTML DOM</a></li>
+<li><a href="/jquery/index.asp" title="jQuery ???">jQuery</a></li>
+<li><a href="/jquerymobile/index.asp" title="jQuery Mobile ???">jQuery Mobile</a></li>
+<li><a href="/ajax/index.asp" title="AJAX ???">AJAX</a></li>
+<li><a href="/json/index.asp" title="JSON ???">JSON</a></li>
+<li><a href="/dhtml/index.asp" title="DHTML ???">DHTML</a></li>
+<li><a href="/e4x/index.asp" title="E4X ???">E4X</a></li>
+<li><a href="/wmlscript/index.asp" title="WMLScript ???">WMLScript</a></li>
+</ul>
+
+<h2>?????????</h2>
+<ul>
+<li><a href="/php/index.asp" title="PHP ???">PHP</a></li>
+<li><a href="/sql/index.asp" title="SQL ???">SQL</a></li>
+<li><a href="/asp/index.asp" title="ASP ???">ASP</a></li>
+<li><a href="/ado/index.asp" title="ADO ???">ADO</a></li>
+<li><a href="/aspnet/index.asp" title="ASP.NET ???">ASP.NET</a></li>
+<li><a href="/vbscript/index.asp" title="VBScript ???">VBScript</a></li>
+</ul>
+
+
+<h2>???</h2>
+<ul>
+<li><a href="/python/index.asp" title="Python ???">Python</a></li>
+<li><a href="#" title="Java ???">Java</a></li>
+<li><a href="#" title="C++ ???">C++</a></li>
+<li><a href="#" title="C# ???">C#</a></li>
+</ul>
+
+<h2>XML ???</h2>
+<ul>
+<li><a href="/xml/index.asp" title="XML ???">XML</a></li>
+<li><a href="/dtd/index.asp" title="DTD???">DTD</a></li>
+<li><a href="/xmldom/index.asp" title="XML DOM ???">XML DOM</a></li>
+<li><a href="/xsl/xsl_languages.asp" title="XSL ????">XSL</a></li>
+<li><a href="/xsl/index.asp" title="XSLT ???">XSLT</a></li>
+<li><a href="/xslfo/index.asp" title="XSL-FO ???">XSL-FO</a></li>
+<li><a href="/xpath/index.asp" title="XPath ???">XPath</a></li>
+<li><a href="/xquery/index.asp" title="XQuery ???">XQuery</a></li>
+<li><a href="/xlink/index.asp" title="XLink ???">XLink</a></li>
+<li><a href="/xlink/index.asp" title="XPointer ???">XPointer</a></li>
+<li><a href="/schema/index.asp" title="Schema ???">Schema</a></li>
+<li><a href="/xforms/index.asp" title="XForms ???">XForms</a></li>
+<li><a href="/wap/index.asp" title="WAP ???">WAP</a></li>
+<li><a href="/svg/index.asp" title="SVG ???">SVG</a></li>
+</ul>
+
+<h2>Web Services</h2>
+<ul>
+<li><a href="/webservices/index.asp" title="Web Services ???">Web Services</a></li>
+<li><a href="/wsdl/index.asp" title="WSDL ???">WSDL</a></li>
+<li><a href="/soap/index.asp" title="SOAP ???">SOAP</a></li>
+<li><a href="/rss/index.asp" title="RSS ???">RSS</a></li>
+<li><a href="/rdf/index.asp" title="RDF ???">RDF</a></li>
+</ul>
+
+<h2>??????</h2>
+<ul>
+<li><a href="/site/index.asp" title="???????">???????</a></li>
+<li><a href="/w3c/index.asp" title="????????? (W3C)">????????? (W3C)</a></li>
+<li><a href="/browsers/index.asp" title="????????">????????</a></li>
+<li><a href="/quality/index.asp" title="??????">??????</a></li>
+<li><a href="/semweb/index.asp" title="??????">??????</a></li>
+<li><a href="/careers/index.asp" title="???ú˝">???ú˝</a></li>
+<li><a href="/hosting/index.asp" title="??????????">???????</a></li>
+<li><a href="/media/index.asp" title="?????????">???????</a></li>
+</ul>
+
+<h2 id="link_about"><a href="/about/index.asp" title="???? W3School">???? W3School</a></h2>
+<h2 id="link_help"><a href="/about/about_helping.asp" title="???? W3School">???? W3School</a></h2>
+</div>
+
+<div id="maincontent">
+
+<div class="idea" id="d1">
+<h2>????? Web ??????? - ??????</h2>
+<p>?? W3School??????????????????????ß÷???????????</p>
+<p>??????? HTML ?? CSS??????????? XML??SQL??JS??PHP ?? ASP.NET??</p>
+<p><strong>?????????????????????</strong></p>
+</div>
+
+<div class="idea" id="d2">
+<h3>??????????????¶œ????</h3>
+<p>?????¶œ???????????????????????µµ</p>
+<p>???ß—???W3C?????????HTML??CSS??XML ??????????????????? JavaScript??PHP??SQL ???</p>
+</div>
+
+<div class="idea" id="d3">
+<h3>??????????????</h3>
+<p>?? W3School??????????????????</p>
+<p>????????????????????????????ßª?????????????????Óï</p>
+</div>
+
+<div class="idea" id="d4">
+<h3>?????????????</h3>
+<p>??????????????????????????????????????</p>
+<p>?????????????????????????????????????????¶ ?????</p>
+</div>
+
+
+<div class="idea" id="d5">
+<h3>????????</h3>
+<p>??????? Web ??????????????????</p>
+<p>W3School ???????????????????????? Web ???????°§????????????</p>
+<p>?????????????????????<a href="/web/index.asp" title="??????????????">??????????????</a>????</p>
+<p>??????????????????????<a href="/site/index.asp" title="???????">?????????????</a>????</p>
+</div>
+
+
+<div class="idea" id="d6">
+<h3>W3School ????</h3>
+
+<p style="margin-top: 20px;">
+<a style="font-size: 20px;" href="/python/index.asp" title="Python ???">W3School ?????????Python ????????</a>
+</p>
+</div>
+
+
+<div class="idea" id="d7">
+<h3>W3School ???????</h3>
+
+<p style="margin-top: 20px;">
+<a style="font-size: 20px;" href="/python/python_ref_functions.asp" title="Python ???">?¶œ????Python ???????</a>
+</p>
+
+</div>
+
+
+<div id="d8">
+<h3>W3School ????????</h3>
+<p class="partner">
+<a target="_blank" href="https://mozilla.com.cn/">Firefox ????????</a> &nbsp;&nbsp;&nbsp; 
+<a target="_blank" href="https://www.w3ctech.com/">w3ctech</a> &nbsp;&nbsp;&nbsp; 
+<a target="_blank" href="https://wetest.qq.com/?from=links_w3school">WeTest?????????????</a> &nbsp;&nbsp;&nbsp; 
+</p>
+</div>
+
+
+<div id="d9">
+<h3>???????</h3>
+<p><a target="_blank" href="https://weibo.com/w3schoolcomcn">W3School ??????</a></p>
+</div>
+
+
+<div id="d10">
+<h3>???????</h3>
+<p>W3School ????????</p>
+</div>
+
+</div>
+
+
+<div id="sidebar">
+
+<h2>?¶œ????</h2>
+<ul>
+<li><a href="/tags/index.asp" title="HTML ?¶œ????">HTML/HTML5 ???</a></li>
+<li><a href="/tags/html_ref_colornames.asp" title="HTML ?????">HTML ???</a></li>
+<li><a href="/cssref/index.asp" title="CSS ?¶œ????">CSS 1,2,3</a></li>
+<li><a href="/jsref/index.asp" title="JavaScript ?¶œ????">JavaScript</a></li>
+<li><a href="/jsref/index.asp" title="HTML DOM ?¶œ????">HTML DOM</a></li>
+<li><a href="/jquery/jquery_reference.asp" title="jQuery ?¶œ????">jQuery</a></li>
+<li><a href="/jquerymobile/jquerymobile_ref_data.asp" title="jQuery Mobile ?¶œ????">jQuery Mobile</a></li>
+<li><a href="/vbscript/vbscript_ref_functions.asp" title="VBScript ????">VBScript</a></li>
+<li><a href="/asp/asp_ref.asp" title="ASP ?¶œ????">ASP</a></li>
+<li><a href="/ado/ado_reference.asp" title="ADO ?¶œ????">ADO</a></li>
+<li><a href="/aspnet/aspnet_reference.asp" title="ASP.NET ?¶œ????">ASP.NET</a></li>
+<li><a href="/php/php_ref.asp" title="PHP ?¶œ????">PHP 5.1</a></li>
+<li><a href="/xmldom/xmldom_reference.asp" title="XML DOM ?¶œ????">XML DOM</a></li>
+<li><a href="/xsl/xsl_w3celementref.asp" title="XSLT ???¶œ????">XSLT 1.0</a></li>
+<li><a href="/xpath/xpath_functions.asp" title="XPath??XQuery ??? XSLT ????">XPath 2.0</a></li>
+<li><a href="/xslfo/xslfo_reference.asp" title="XSL-FO ?¶œ????">XSL-FO</a></li>
+<li><a href="/wap/wml_reference.asp" title="WML ?¶œ????">WML 1.1</a></li>
+<li><a href="/glossary/index.asp" title="W3C ????????">W3C ?????</a></li>
+</ul>
+
+<h2>?????</h2>
+<ul>
+<li><a href="/tags/html_ref_charactersets.asp" title="HTML ?????">HTML ?????</a></li>
+<li><a href="/tags/html_ref_ascii.asp" title="HTML ASCII ?¶œ????">HTML ASCII</a></li>
+<li><a href="/tags/html_ref_entities.html" title="HTML ISO-8859-1 ?¶œ????">HTML ISO-8859-1</a></li>
+<li><a href="/tags/html_ref_symbols.html" title="HTML 4.01 ???????">HTML ????</a></li>
+</ul>
+
+<h2>???/????</h2>
+<ul>
+<li><a href="/example/html_examples.asp">HTML ???</a></li>
+<li><a href="/example/csse_examples.asp">CSS ???</a></li>
+<li><a href="/example/xmle_examples.asp">XML ???</a></li>
+<li><a href="/python/python_examples.asp">Python ???</a></li>
+<li><a href="/js/js_examples.asp">JavaScript ???</a></li>
+<li><a href="/js/js_html_objects_examples.asp">JavaScript ???????</a></li>
+<li><a href="/js/js_dom_examples.asp">HTML DOM ???</a></li>
+<li><a href="/jquery/jquery_examples.asp">jQuery ???</a></li>
+<li><a href="/jquerymobile/jquerymobile_examples.asp">jQuery Mobile ???</a></li>
+<li><a href="/example/xdom_examples.asp">XML DOM ???</a></li>
+<li><a href="/example/dhtm_examples.asp">DHTML ???</a></li>
+<li><a href="/example/ajax_examples.asp">AJAX ???</a></li>
+<li><a href="/example/vbst_examples.asp">VBScript ???</a></li>
+<li><a href="/example/aspe_examples.asp">ASP ???</a></li>
+<li><a href="/example/adoe_examples.asp">ADO ???</a></li>
+<li><a href="/svg/svg_examples.asp">SVG ???</a></li>
+<li><a href="/wap/wap_demo.asp" title="WAP ???">WAP ???</a></li>
+</ul>
+
+<h2>????/????</h2>
+<ul>
+<li><a href="/html/html_quiz.asp">HTML ????</a></li>
+<li><a href="/html5/html5_quiz.asp">HTML5 ????</a></li>
+<li><a href="/xhtml/xhtml_quiz.asp">XHTML ????</a></li>
+<li><a href="/css/css_quiz.asp">CSS ????</a></li>
+<li><a href="/xml/xml_quiz.asp">XML ????</a></li>
+<li><a href="/js/js_quiz.asp">JavaScript ????</a></li>
+<li><a href="/jquery/jquery_quiz.asp">jQuery ????</a></li>
+<li><a href="/sql/sql_quiz.asp">SQL ????</a></li>
+<li><a href="/asp/asp_quiz.asp">ASP ????</a></li>
+<li><a href="/php/php_quiz.asp">PHP ????</a></li>
+</ul>
+
+<h2>???????</h2>
+<ul>
+<li><a href="/site/site_validate.asp" title="??????">???HTML</a></li>
+<li><a href="/site/site_validate.asp" title="??????">???CSS</a></li>
+<li><a href="/site/site_validate.asp" title="??????">???XHTML</a></li>
+<li><a href="/site/site_validate.asp" title="??????">???XML</a></li>
+<li><a href="/site/site_validate.asp" title="??????">???WML</a></li>
+</ul>
+
+</div>
+
+
+
+<div id="footer">
+<p id="p1">
+W3School ??????????????????????????????????????????????????????????????????????????????
+</p>
+
+<p id="p2">
+<a href="/about/about_use.asp" title="???????">???????</a>??<a href="/about/about_privacy.asp" title="???????">???????</a>????????ßµ?????????????
+???????<a target="_blank" href="https://www.ykinvestment.com/" title="???????????????">???????????????</a>??
+<a target="_blank" href="https://www.miitbeian.gov.cn/">??ICP??06004630??</a>
+<a style="color: #000; margin-left: 20px;" href="/ad.html" target="_blank" title="W3School ??Â™??">??Â™??</a>
+</p>
+</div>
+
+</div>
+</body>
+</html>
+ 
+[2019-12-19 15:58:50,367] 282395 [Thread-41] INFO  nt.com.handler.LogHandler  - [LogHandler - after ][2019-12-19 15:58:50  ’µΩ±®Œƒ]<!DOCTYPE html>
+<html lang="zh-cn">
+<head>
+
+<!-- Global site tag (gtag.js) - Google Analytics -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=UA-878633-1"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'UA-878633-1');
+</script>
+
+<title>w3school ??????</title>
+
+<link rel="stylesheet" type="text/css" href="/c5.css" />
+<meta charset="gbk" />
+<meta http-equiv="Content-Language" content="zh-cn" />
+<meta name="description" content="??????????? Web ????????" />
+<meta name="robots" content="all" />
+<meta name="author" content="w3school.com.cn" />
+<meta name="Copyright" content="Copyright W3school.com.cn All Rights Reserved." />
+<meta name="MSSmartTagsPreventParsing" content="true" />
+<meta http-equiv="imagetoolbar" content="false" />
+
+<link rel="icon" type="image/png" sizes="16x16" href="/ui2019/logo-16-red.png">
+<link rel="icon" type="image/png" sizes="32x32" href="/ui2019/logo-32-red.png">
+<link rel="icon" type="image/png" sizes="48x48" href="/ui2019/logo-48-red.png">
+<link rel="icon" type="image/png" sizes="96x96" href="/ui2019/logo-96-red.png">
+<link rel="apple-touch-icon-precomposed" sizes="180x180" href="/ui2019/logo-180.png">
+</head>
+
+<body id="homefirst">
+<div id="wrapper">
+
+<div id="header_index">
+<h1><a href="/index.html" title="w3school ??????" style="float:left;">w3school ??????</a></h1>
+
+<div id="searchui">
+<form method="get" id="searchform" action="https://www.google.com.hk/search">
+<input type="hidden" name="sitesearch" value="w3school.com.cn" />
+<input type="text" name="as_q" class="box"  id="searched_content" title="????????????????" />
+<input type="submit" value="Go" class="button" title="??????" />
+</form>
+</div>
+</div>
+
+<div id="navfirst">
+<ul id="menu">
+<li id="h"><a href="/h.asp" title="HTML ??ßﬂ??">HTML ??ßﬂ??</a></li>
+<li id="b"><a href="/b.asp" title="???????????">????????</a></li>
+<li id="s"><a href="/s.asp" title="????????????">?????????</a></li>
+<li id="p"><a href="/p.asp" title="?????">?????</a></li>
+<li id="x"><a href="/x.asp" title="XML ??ßﬂ??">XML ??ßﬂ??</a></li>
+<li id="w"><a href="/w.asp" title="??????">??????</a></li>
+<li id="r"><a href="/r.asp" title="?¶œ????">?¶œ????</a></li>
+</ul>
+</div>
+
+<div id="navsecond">
+<h2>HTML ???</h2>
+<ul>
+<li><a href="/html/index.asp" title="HTML ???">HTML</a></li>
+<li><a href="/html5/index.asp" title="HTML5 ???">HTML5</a></li>
+<li><a href="/xhtml/index.asp" title="XHTML ???">XHTML</a></li>
+<li><a href="/css/index.asp" title="CSS ???">CSS</a></li>
+<li><a href="/css3/index.asp" title="CSS3 ???">CSS3</a></li>
+<li><a href="/tcpip/index.asp" title="TCP/IP ???">TCP/IP</a></li>
+</ul>
+
+<h2>????????</h2>
+<ul>
+<li><a href="/js/index.asp" title="JavaScript ???">JavaScript</a></li>
+<li><a href="/htmldom/index.asp" title="HTML DOM ???">HTML DOM</a></li>
+<li><a href="/jquery/index.asp" title="jQuery ???">jQuery</a></li>
+<li><a href="/jquerymobile/index.asp" title="jQuery Mobile ???">jQuery Mobile</a></li>
+<li><a href="/ajax/index.asp" title="AJAX ???">AJAX</a></li>
+<li><a href="/json/index.asp" title="JSON ???">JSON</a></li>
+<li><a href="/dhtml/index.asp" title="DHTML ???">DHTML</a></li>
+<li><a href="/e4x/index.asp" title="E4X ???">E4X</a></li>
+<li><a href="/wmlscript/index.asp" title="WMLScript ???">WMLScript</a></li>
+</ul>
+
+<h2>?????????</h2>
+<ul>
+<li><a href="/php/index.asp" title="PHP ???">PHP</a></li>
+<li><a href="/sql/index.asp" title="SQL ???">SQL</a></li>
+<li><a href="/asp/index.asp" title="ASP ???">ASP</a></li>
+<li><a href="/ado/index.asp" title="ADO ???">ADO</a></li>
+<li><a href="/aspnet/index.asp" title="ASP.NET ???">ASP.NET</a></li>
+<li><a href="/vbscript/index.asp" title="VBScript ???">VBScript</a></li>
+</ul>
+
+
+<h2>???</h2>
+<ul>
+<li><a href="/python/index.asp" title="Python ???">Python</a></li>
+<li><a href="#" title="Java ???">Java</a></li>
+<li><a href="#" title="C++ ???">C++</a></li>
+<li><a href="#" title="C# ???">C#</a></li>
+</ul>
+
+<h2>XML ???</h2>
+<ul>
+<li><a href="/xml/index.asp" title="XML ???">XML</a></li>
+<li><a href="/dtd/index.asp" title="DTD???">DTD</a></li>
+<li><a href="/xmldom/index.asp" title="XML DOM ???">XML DOM</a></li>
+<li><a href="/xsl/xsl_languages.asp" title="XSL ????">XSL</a></li>
+<li><a href="/xsl/index.asp" title="XSLT ???">XSLT</a></li>
+<li><a href="/xslfo/index.asp" title="XSL-FO ???">XSL-FO</a></li>
+<li><a href="/xpath/index.asp" title="XPath ???">XPath</a></li>
+<li><a href="/xquery/index.asp" title="XQuery ???">XQuery</a></li>
+<li><a href="/xlink/index.asp" title="XLink ???">XLink</a></li>
+<li><a href="/xlink/index.asp" title="XPointer ???">XPointer</a></li>
+<li><a href="/schema/index.asp" title="Schema ???">Schema</a></li>
+<li><a href="/xforms/index.asp" title="XForms ???">XForms</a></li>
+<li><a href="/wap/index.asp" title="WAP ???">WAP</a></li>
+<li><a href="/svg/index.asp" title="SVG ???">SVG</a></li>
+</ul>
+
+<h2>Web Services</h2>
+<ul>
+<li><a href="/webservices/index.asp" title="Web Services ???">Web Services</a></li>
+<li><a href="/wsdl/index.asp" title="WSDL ???">WSDL</a></li>
+<li><a href="/soap/index.asp" title="SOAP ???">SOAP</a></li>
+<li><a href="/rss/index.asp" title="RSS ???">RSS</a></li>
+<li><a href="/rdf/index.asp" title="RDF ???">RDF</a></li>
+</ul>
+
+<h2>??????</h2>
+<ul>
+<li><a href="/site/index.asp" title="???????">???????</a></li>
+<li><a href="/w3c/index.asp" title="????????? (W3C)">????????? (W3C)</a></li>
+<li><a href="/browsers/index.asp" title="????????">????????</a></li>
+<li><a href="/quality/index.asp" title="??????">??????</a></li>
+<li><a href="/semweb/index.asp" title="??????">??????</a></li>
+<li><a href="/careers/index.asp" title="???ú˝">???ú˝</a></li>
+<li><a href="/hosting/index.asp" title="??????????">???????</a></li>
+<li><a href="/media/index.asp" title="?????????">???????</a></li>
+</ul>
+
+<h2 id="link_about"><a href="/about/index.asp" title="???? W3School">???? W3School</a></h2>
+<h2 id="link_help"><a href="/about/about_helping.asp" title="???? W3School">???? W3School</a></h2>
+</div>
+
+<div id="maincontent">
+
+<div class="idea" id="d1">
+<h2>????? Web ??????? - ??????</h2>
+<p>?? W3School??????????????????????ß÷???????????</p>
+<p>??????? HTML ?? CSS??????????? XML??SQL??JS??PHP ?? ASP.NET??</p>
+<p><strong>?????????????????????</strong></p>
+</div>
+
+<div class="idea" id="d2">
+<h3>??????????????¶œ????</h3>
+<p>?????¶œ???????????????????????µµ</p>
+<p>???ß—???W3C?????????HTML??CSS??XML ??????????????????? JavaScript??PHP??SQL ???</p>
+</div>
+
+<div class="idea" id="d3">
+<h3>??????????????</h3>
+<p>?? W3School??????????????????</p>
+<p>????????????????????????????ßª?????????????????Óï</p>
+</div>
+
+<div class="idea" id="d4">
+<h3>?????????????</h3>
+<p>??????????????????????????????????????</p>
+<p>?????????????????????????????????????????¶ ?????</p>
+</div>
+
+
+<div class="idea" id="d5">
+<h3>????????</h3>
+<p>??????? Web ??????????????????</p>
+<p>W3School ???????????????????????? Web ???????°§????????????</p>
+<p>?????????????????????<a href="/web/index.asp" title="??????????????">??????????????</a>????</p>
+<p>??????????????????????<a href="/site/index.asp" title="???????">?????????????</a>????</p>
+</div>
+
+
+<div class="idea" id="d6">
+<h3>W3School ????</h3>
+
+<p style="margin-top: 20px;">
+<a style="font-size: 20px;" href="/python/index.asp" title="Python ???">W3School ?????????Python ????????</a>
+</p>
+</div>
+
+
+<div class="idea" id="d7">
+<h3>W3School ???????</h3>
+
+<p style="margin-top: 20px;">
+<a style="font-size: 20px;" href="/python/python_ref_functions.asp" title="Python ???">?¶œ????Python ???????</a>
+</p>
+
+</div>
+
+
+<div id="d8">
+<h3>W3School ????????</h3>
+<p class="partner">
+<a target="_blank" href="https://mozilla.com.cn/">Firefox ????????</a> &nbsp;&nbsp;&nbsp; 
+<a target="_blank" href="https://www.w3ctech.com/">w3ctech</a> &nbsp;&nbsp;&nbsp; 
+<a target="_blank" href="https://wetest.qq.com/?from=links_w3school">WeTest?????????????</a> &nbsp;&nbsp;&nbsp; 
+</p>
+</div>
+
+
+<div id="d9">
+<h3>???????</h3>
+<p><a target="_blank" href="https://weibo.com/w3schoolcomcn">W3School ??????</a></p>
+</div>
+
+
+<div id="d10">
+<h3>???????</h3>
+<p>W3School ????????</p>
+</div>
+
+</div>
+
+
+<div id="sidebar">
+
+<h2>?¶œ????</h2>
+<ul>
+<li><a href="/tags/index.asp" title="HTML ?¶œ????">HTML/HTML5 ???</a></li>
+<li><a href="/tags/html_ref_colornames.asp" title="HTML ?????">HTML ???</a></li>
+<li><a href="/cssref/index.asp" title="CSS ?¶œ????">CSS 1,2,3</a></li>
+<li><a href="/jsref/index.asp" title="JavaScript ?¶œ????">JavaScript</a></li>
+<li><a href="/jsref/index.asp" title="HTML DOM ?¶œ????">HTML DOM</a></li>
+<li><a href="/jquery/jquery_reference.asp" title="jQuery ?¶œ????">jQuery</a></li>
+<li><a href="/jquerymobile/jquerymobile_ref_data.asp" title="jQuery Mobile ?¶œ????">jQuery Mobile</a></li>
+<li><a href="/vbscript/vbscript_ref_functions.asp" title="VBScript ????">VBScript</a></li>
+<li><a href="/asp/asp_ref.asp" title="ASP ?¶œ????">ASP</a></li>
+<li><a href="/ado/ado_reference.asp" title="ADO ?¶œ????">ADO</a></li>
+<li><a href="/aspnet/aspnet_reference.asp" title="ASP.NET ?¶œ????">ASP.NET</a></li>
+<li><a href="/php/php_ref.asp" title="PHP ?¶œ????">PHP 5.1</a></li>
+<li><a href="/xmldom/xmldom_reference.asp" title="XML DOM ?¶œ????">XML DOM</a></li>
+<li><a href="/xsl/xsl_w3celementref.asp" title="XSLT ???¶œ????">XSLT 1.0</a></li>
+<li><a href="/xpath/xpath_functions.asp" title="XPath??XQuery ??? XSLT ????">XPath 2.0</a></li>
+<li><a href="/xslfo/xslfo_reference.asp" title="XSL-FO ?¶œ????">XSL-FO</a></li>
+<li><a href="/wap/wml_reference.asp" title="WML ?¶œ????">WML 1.1</a></li>
+<li><a href="/glossary/index.asp" title="W3C ????????">W3C ?????</a></li>
+</ul>
+
+<h2>?????</h2>
+<ul>
+<li><a href="/tags/html_ref_charactersets.asp" title="HTML ?????">HTML ?????</a></li>
+<li><a href="/tags/html_ref_ascii.asp" title="HTML ASCII ?¶œ????">HTML ASCII</a></li>
+<li><a href="/tags/html_ref_entities.html" title="HTML ISO-8859-1 ?¶œ????">HTML ISO-8859-1</a></li>
+<li><a href="/tags/html_ref_symbols.html" title="HTML 4.01 ???????">HTML ????</a></li>
+</ul>
+
+<h2>???/????</h2>
+<ul>
+<li><a href="/example/html_examples.asp">HTML ???</a></li>
+<li><a href="/example/csse_examples.asp">CSS ???</a></li>
+<li><a href="/example/xmle_examples.asp">XML ???</a></li>
+<li><a href="/python/python_examples.asp">Python ???</a></li>
+<li><a href="/js/js_examples.asp">JavaScript ???</a></li>
+<li><a href="/js/js_html_objects_examples.asp">JavaScript ???????</a></li>
+<li><a href="/js/js_dom_examples.asp">HTML DOM ???</a></li>
+<li><a href="/jquery/jquery_examples.asp">jQuery ???</a></li>
+<li><a href="/jquerymobile/jquerymobile_examples.asp">jQuery Mobile ???</a></li>
+<li><a href="/example/xdom_examples.asp">XML DOM ???</a></li>
+<li><a href="/example/dhtm_examples.asp">DHTML ???</a></li>
+<li><a href="/example/ajax_examples.asp">AJAX ???</a></li>
+<li><a href="/example/vbst_examples.asp">VBScript ???</a></li>
+<li><a href="/example/aspe_examples.asp">ASP ???</a></li>
+<li><a href="/example/adoe_examples.asp">ADO ???</a></li>
+<li><a href="/svg/svg_examples.asp">SVG ???</a></li>
+<li><a href="/wap/wap_demo.asp" title="WAP ???">WAP ???</a></li>
+</ul>
+
+<h2>????/????</h2>
+<ul>
+<li><a href="/html/html_quiz.asp">HTML ????</a></li>
+<li><a href="/html5/html5_quiz.asp">HTML5 ????</a></li>
+<li><a href="/xhtml/xhtml_quiz.asp">XHTML ????</a></li>
+<li><a href="/css/css_quiz.asp">CSS ????</a></li>
+<li><a href="/xml/xml_quiz.asp">XML ????</a></li>
+<li><a href="/js/js_quiz.asp">JavaScript ????</a></li>
+<li><a href="/jquery/jquery_quiz.asp">jQuery ????</a></li>
+<li><a href="/sql/sql_quiz.asp">SQL ????</a></li>
+<li><a href="/asp/asp_quiz.asp">ASP ????</a></li>
+<li><a href="/php/php_quiz.asp">PHP ????</a></li>
+</ul>
+
+<h2>???????</h2>
+<ul>
+<li><a href="/site/site_validate.asp" title="??????">???HTML</a></li>
+<li><a href="/site/site_validate.asp" title="??????">???CSS</a></li>
+<li><a href="/site/site_validate.asp" title="??????">???XHTML</a></li>
+<li><a href="/site/site_validate.asp" title="??????">???XML</a></li>
+<li><a href="/site/site_validate.asp" title="??????">???WML</a></li>
+</ul>
+
+</div>
+
+
+
+<div id="footer">
+<p id="p1">
+W3School ??????????????????????????????????????????????????????????????????????????????
+</p>
+
+<p id="p2">
+<a href="/about/about_use.asp" title="???????">???????</a>??<a href="/about/about_privacy.asp" title="???????">???????</a>????????ßµ?????????????
+???????<a target="_blank" href="https://www.ykinvestment.com/" title="???????????????">???????????????</a>??
+<a target="_blank" href="https://www.miitbeian.gov.cn/">??ICP??06004630??</a>
+<a style="color: #000; margin-left: 20px;" href="/ad.html" target="_blank" title="W3School ??Â™??">??Â™??</a>
+</p>
+</div>
+
+</div>
+</body>
+</html>
+ 
+[2019-12-19 15:59:52,994] 345022 [JavaFX Application Thread] INFO  nt.com.handler.LogHandler  - [LogHandler - before ][2019-12-19 15:59:52 ∑¢ÀÕ±®Œƒ]<?xml version="1.0" encoding="GBK"?>
+<response>
+    <error>
+        <error-code>000</error-code>
+        <error-msg>success</error-msg>
+    </error>
+    <result>
+        <root>
+            <info>
+                <id>429006199909092235</id>
+                <name>test</name>
+                <checkresult>00</checkresult>
+		<photo/>
+                <issueoffice>10150</issueoffice>
+                <bkcheckdate>20180224</bkcheckdate>
+                <bkoperid/>
+                <biztype>01</biztype>
+            </info>
+        </root>
+    </result>
+</response>
+ 
+[2019-12-19 15:59:53,187] 345215 [Thread-49] INFO  nt.com.network.HttpSingle  -  ’µΩœ˚œ¢[https://www.w3school.com.cn/] - <!DOCTYPE html>
+<html lang="zh-cn">
+<head>
+
+<!-- Global site tag (gtag.js) - Google Analytics -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=UA-878633-1"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'UA-878633-1');
+</script>
+
+<title>w3school ‘⁄œﬂΩÃ≥Ã</title>
+
+<link rel="stylesheet" type="text/css" href="/c5.css" />
+<meta charset="gbk" />
+<meta http-equiv="Content-Language" content="zh-cn" />
+<meta name="description" content="»´«Ú◊Ó¥Ûµƒ÷–Œƒ Web ºº ıΩÃ≥Ã°£" />
+<meta name="robots" content="all" />
+<meta name="author" content="w3school.com.cn" />
+<meta name="Copyright" content="Copyright W3school.com.cn All Rights Reserved." />
+<meta name="MSSmartTagsPreventParsing" content="true" />
+<meta http-equiv="imagetoolbar" content="false" />
+
+<link rel="icon" type="image/png" sizes="16x16" href="/ui2019/logo-16-red.png">
+<link rel="icon" type="image/png" sizes="32x32" href="/ui2019/logo-32-red.png">
+<link rel="icon" type="image/png" sizes="48x48" href="/ui2019/logo-48-red.png">
+<link rel="icon" type="image/png" sizes="96x96" href="/ui2019/logo-96-red.png">
+<link rel="apple-touch-icon-precomposed" sizes="180x180" href="/ui2019/logo-180.png">
+</head>
+
+<body id="homefirst">
+<div id="wrapper">
+
+<div id="header_index">
+<h1><a href="/index.html" title="w3school ‘⁄œﬂΩÃ≥Ã" style="float:left;">w3school ‘⁄œﬂΩÃ≥Ã</a></h1>
+
+<div id="searchui">
+<form method="get" id="searchform" action="https://www.google.com.hk/search">
+<input type="hidden" name="sitesearch" value="w3school.com.cn" />
+<input type="text" name="as_q" class="box"  id="searched_content" title="‘⁄¥À ‰»ÎÀ—À˜ƒ⁄»›°£" />
+<input type="submit" value="Go" class="button" title="À—À˜£°" />
+</form>
+</div>
+</div>
+
+<div id="navfirst">
+<ul id="menu">
+<li id="h"><a href="/h.asp" title="HTML œµ¡–ΩÃ≥Ã">HTML œµ¡–ΩÃ≥Ã</a></li>
+<li id="b"><a href="/b.asp" title="‰Ø¿¿∆˜Ω≈±æΩÃ≥Ã">‰Ø¿¿∆˜Ω≈±æ</a></li>
+<li id="s"><a href="/s.asp" title="∑˛ŒÒ∆˜Ω≈±æΩÃ≥Ã">∑˛ŒÒ∆˜Ω≈±æ</a></li>
+<li id="p"><a href="/p.asp" title="±‡≥ÃΩÃ≥Ã">±‡≥ÃΩÃ≥Ã</a></li>
+<li id="x"><a href="/x.asp" title="XML œµ¡–ΩÃ≥Ã">XML œµ¡–ΩÃ≥Ã</a></li>
+<li id="w"><a href="/w.asp" title="Ω®’æ ÷≤·">Ω®’æ ÷≤·</a></li>
+<li id="r"><a href="/r.asp" title="≤Œøº ÷≤·">≤Œøº ÷≤·</a></li>
+</ul>
+</div>
+
+<div id="navsecond">
+<h2>HTML ΩÃ≥Ã</h2>
+<ul>
+<li><a href="/html/index.asp" title="HTML ΩÃ≥Ã">HTML</a></li>
+<li><a href="/html5/index.asp" title="HTML5 ΩÃ≥Ã">HTML5</a></li>
+<li><a href="/xhtml/index.asp" title="XHTML ΩÃ≥Ã">XHTML</a></li>
+<li><a href="/css/index.asp" title="CSS ΩÃ≥Ã">CSS</a></li>
+<li><a href="/css3/index.asp" title="CSS3 ΩÃ≥Ã">CSS3</a></li>
+<li><a href="/tcpip/index.asp" title="TCP/IP ΩÃ≥Ã">TCP/IP</a></li>
+</ul>
+
+<h2>‰Ø¿¿∆˜Ω≈±æ</h2>
+<ul>
+<li><a href="/js/index.asp" title="JavaScript ΩÃ≥Ã">JavaScript</a></li>
+<li><a href="/htmldom/index.asp" title="HTML DOM ΩÃ≥Ã">HTML DOM</a></li>
+<li><a href="/jquery/index.asp" title="jQuery ΩÃ≥Ã">jQuery</a></li>
+<li><a href="/jquerymobile/index.asp" title="jQuery Mobile ΩÃ≥Ã">jQuery Mobile</a></li>
+<li><a href="/ajax/index.asp" title="AJAX ΩÃ≥Ã">AJAX</a></li>
+<li><a href="/json/index.asp" title="JSON ΩÃ≥Ã">JSON</a></li>
+<li><a href="/dhtml/index.asp" title="DHTML ΩÃ≥Ã">DHTML</a></li>
+<li><a href="/e4x/index.asp" title="E4X ΩÃ≥Ã">E4X</a></li>
+<li><a href="/wmlscript/index.asp" title="WMLScript ΩÃ≥Ã">WMLScript</a></li>
+</ul>
+
+<h2>∑˛ŒÒ∆˜Ω≈±æ</h2>
+<ul>
+<li><a href="/php/index.asp" title="PHP ΩÃ≥Ã">PHP</a></li>
+<li><a href="/sql/index.asp" title="SQL ΩÃ≥Ã">SQL</a></li>
+<li><a href="/asp/index.asp" title="ASP ΩÃ≥Ã">ASP</a></li>
+<li><a href="/ado/index.asp" title="ADO ΩÃ≥Ã">ADO</a></li>
+<li><a href="/aspnet/index.asp" title="ASP.NET ΩÃ≥Ã">ASP.NET</a></li>
+<li><a href="/vbscript/index.asp" title="VBScript ΩÃ≥Ã">VBScript</a></li>
+</ul>
+
+
+<h2>±‡≥Ã</h2>
+<ul>
+<li><a href="/python/index.asp" title="Python ΩÃ≥Ã">Python</a></li>
+<li><a href="#" title="Java ΩÃ≥Ã">Java</a></li>
+<li><a href="#" title="C++ ΩÃ≥Ã">C++</a></li>
+<li><a href="#" title="C# ΩÃ≥Ã">C#</a></li>
+</ul>
+
+<h2>XML ΩÃ≥Ã</h2>
+<ul>
+<li><a href="/xml/index.asp" title="XML ΩÃ≥Ã">XML</a></li>
+<li><a href="/dtd/index.asp" title="DTDΩÃ≥Ã">DTD</a></li>
+<li><a href="/xmldom/index.asp" title="XML DOM ΩÃ≥Ã">XML DOM</a></li>
+<li><a href="/xsl/xsl_languages.asp" title="XSL ”Ô—‘">XSL</a></li>
+<li><a href="/xsl/index.asp" title="XSLT ΩÃ≥Ã">XSLT</a></li>
+<li><a href="/xslfo/index.asp" title="XSL-FO ΩÃ≥Ã">XSL-FO</a></li>
+<li><a href="/xpath/index.asp" title="XPath ΩÃ≥Ã">XPath</a></li>
+<li><a href="/xquery/index.asp" title="XQuery ΩÃ≥Ã">XQuery</a></li>
+<li><a href="/xlink/index.asp" title="XLink ΩÃ≥Ã">XLink</a></li>
+<li><a href="/xlink/index.asp" title="XPointer ΩÃ≥Ã">XPointer</a></li>
+<li><a href="/schema/index.asp" title="Schema ΩÃ≥Ã">Schema</a></li>
+<li><a href="/xforms/index.asp" title="XForms ΩÃ≥Ã">XForms</a></li>
+<li><a href="/wap/index.asp" title="WAP ΩÃ≥Ã">WAP</a></li>
+<li><a href="/svg/index.asp" title="SVG ΩÃ≥Ã">SVG</a></li>
+</ul>
+
+<h2>Web Services</h2>
+<ul>
+<li><a href="/webservices/index.asp" title="Web Services ΩÃ≥Ã">Web Services</a></li>
+<li><a href="/wsdl/index.asp" title="WSDL ΩÃ≥Ã">WSDL</a></li>
+<li><a href="/soap/index.asp" title="SOAP ΩÃ≥Ã">SOAP</a></li>
+<li><a href="/rss/index.asp" title="RSS ΩÃ≥Ã">RSS</a></li>
+<li><a href="/rdf/index.asp" title="RDF ΩÃ≥Ã">RDF</a></li>
+</ul>
+
+<h2>Ω®’æ ÷≤·</h2>
+<ul>
+<li><a href="/site/index.asp" title="Õ¯’æππΩ®">Õ¯’æππΩ®</a></li>
+<li><a href="/w3c/index.asp" title="ÕÚŒ¨Õ¯¡™√À (W3C)">ÕÚŒ¨Õ¯¡™√À (W3C)</a></li>
+<li><a href="/browsers/index.asp" title="‰Ø¿¿∆˜–≈œ¢">‰Ø¿¿∆˜–≈œ¢</a></li>
+<li><a href="/quality/index.asp" title="Õ¯’æ∆∑÷ ">Õ¯’æ∆∑÷ </a></li>
+<li><a href="/semweb/index.asp" title="”Ô“ÂÕ¯">”Ô“ÂÕ¯</a></li>
+<li><a href="/careers/index.asp" title="÷∞“µπÊªÆ">÷∞“µπÊªÆ</a></li>
+<li><a href="/hosting/index.asp" title="Õ¯’æ÷˜ª˙ΩÃ≥Ã">Õ¯’æ÷˜ª˙</a></li>
+<li><a href="/media/index.asp" title="Õ¯¬Á√ΩÃÂΩÃ≥Ã">Õ¯¬Á√ΩÃÂ</a></li>
+</ul>
+
+<h2 id="link_about"><a href="/about/index.asp" title="πÿ”⁄ W3School">πÿ”⁄ W3School</a></h2>
+<h2 id="link_help"><a href="/about/about_helping.asp" title="∞Ô÷˙ W3School">∞Ô÷˙ W3School</a></h2>
+</div>
+
+<div id="maincontent">
+
+<div class="idea" id="d1">
+<h2>¡Ïœ»µƒ Web ºº ıΩÃ≥Ã - »´≤ø√‚∑—</h2>
+<p>‘⁄ W3School£¨ƒ„ø…“‘’“µΩƒ„À˘–Ë“™µƒÀ˘”–µƒÕ¯’æΩ®…ËΩÃ≥Ã°£</p>
+<p>¥”ª˘¥°µƒ HTML µΩ CSS£¨ƒÀ÷¡Ω¯Ω◊µƒ XML°¢SQL°¢JS°¢PHP ∫Õ ASP.NET°£</p>
+<p><strong>¥”◊Û≤‡µƒ≤Àµ•—°‘Òƒ„–Ë“™µƒΩÃ≥Ã£°</strong></p>
+</div>
+
+<div class="idea" id="d2">
+<h3>ÕÍ’˚µƒÕ¯’æºº ı≤Œøº ÷≤·</h3>
+<p>Œ“√«µƒ≤Œøº ÷≤·∫≠∏«¡ÀÕ¯’æºº ıµƒ∑Ω∑Ω√Ê√Ê°£</p>
+<p>∆‰÷–∞¸¿®W3C±Í◊ººº ı£∫HTML°¢CSS°¢XML °£“‘º∞∆‰À˚ºº ı£¨÷Ó»Á JavaScript°¢PHP°¢SQL µ»°£</p>
+</div>
+
+<div class="idea" id="d3">
+<h3>‘⁄œﬂ µ¿˝≤‚ ‘π§æﬂ</h3>
+<p>‘⁄ W3School£¨Œ“√«Ã·π©…œ«ß∏ˆ µ¿˝°£</p>
+<p>Õ®π˝ π”√Œ“√«µƒ‘⁄œﬂ±‡º≠∆˜£¨ƒ„ø…“‘±‡º≠’‚–©¿˝◊”£¨≤¢∂‘¥˙¬ÎΩ¯–– µ—È°£</p>
+</div>
+
+<div class="idea" id="d4">
+<h3>øÏΩ›“◊∂Æµƒ—ßœ∞∑Ω Ω</h3>
+<p>“ª¥Áπ‚“ı“ª¥ÁΩ£¨“Ú¥À£¨Œ“√«Œ™ƒ˙Ã·π©øÏΩ›“◊∂Æµƒ—ßœ∞ƒ⁄»›°£</p>
+<p>‘⁄’‚¿Ô£¨ƒ˙ø…“‘Õ®π˝“ª÷÷“◊∂Æµƒ±„¿˚µƒƒ£ ΩªÒµ√ƒ˙–Ë“™µƒ»Œ∫Œ÷™ ∂°£</p>
+</div>
+
+
+<div class="idea" id="d5">
+<h3>¥”∫Œ»Î ÷£ø</h3>
+<p> ≤√¥ «“ª∏ˆ Web Ω®…Ë’ﬂ–Ë“™—ßœ∞µƒ÷™ ∂ƒÿ£ø</p>
+<p>W3School Ω´Œ™ƒ˙ªÿ¥’‚∏ˆŒ Ã‚£¨‘⁄ƒ˙≥…Œ™◊®“µ Web ø™∑¢’ﬂµƒ¬∑…œ÷˙“ª±€÷Æ¡¶°£</p>
+<p>»Áπ˚ƒ˙ «≥ı—ß’ﬂ£¨«Îƒ˙‘ƒ∂¡°∂<a href="/web/index.asp" title="Õ¯’æππΩ®≥ıº∂ΩÃ≥Ã">Õ¯’æππΩ®≥ıº∂ΩÃ≥Ã</a>°∑°£</p>
+<p>»Áπ˚ƒ˙ «ø™∑¢’ﬂ£¨«Îƒ˙‘ƒ∂¡°∂<a href="/site/index.asp" title="Õ¯’æππΩ®">Õ¯’æππΩ®∏ﬂº∂ΩÃ≥Ã</a>°∑°£</p>
+</div>
+
+
+<div class="idea" id="d6">
+<h3>W3School –¬Œ≈</h3>
+
+<p style="margin-top: 20px;">
+<a style="font-size: 20px;" href="/python/index.asp" title="Python ΩÃ≥Ã">W3School  ◊∏ˆ±‡≥ÃΩÃ≥Ã£∫Python ΩÃ≥Ã…œœﬂ£°</a>
+</p>
+</div>
+
+
+<div class="idea" id="d7">
+<h3>W3School ∏¸–¬–≈œ¢</h3>
+
+<p style="margin-top: 20px;">
+<a style="font-size: 20px;" href="/python/python_ref_functions.asp" title="Python ΩÃ≥Ã">≤Œøº ÷≤·£∫Python ƒ⁄Ω®∫Ø ˝</a>
+</p>
+
+</div>
+
+
+<div id="d8">
+<h3>W3School ”—«È¡¥Ω”</h3>
+<p class="partner">
+<a target="_blank" href="https://mozilla.com.cn/">Firefox ÷–Œƒ…Á«¯</a> &nbsp;&nbsp;&nbsp; 
+<a target="_blank" href="https://www.w3ctech.com/">w3ctech</a> &nbsp;&nbsp;&nbsp; 
+<a target="_blank" href="https://wetest.qq.com/?from=links_w3school">WeTestÃ⁄—∂÷ ¡øø™∑≈∆ΩÃ®</a> &nbsp;&nbsp;&nbsp; 
+</p>
+</div>
+
+
+<div id="d9">
+<h3>–¬¿ÀŒ¢≤©</h3>
+<p><a target="_blank" href="https://weibo.com/w3schoolcomcn">W3School πŸ∑ΩŒ¢≤©</a></p>
+</div>
+
+
+<div id="d10">
+<h3>Œ¢–≈π´÷⁄∫≈</h3>
+<p>W3School πŸ∑Ω∑˛ŒÒ∫≈</p>
+</div>
+
+</div>
+
+
+<div id="sidebar">
+
+<h2>≤Œøº ÷≤·</h2>
+<ul>
+<li><a href="/tags/index.asp" title="HTML ≤Œøº ÷≤·">HTML/HTML5 ±Í«©</a></li>
+<li><a href="/tags/html_ref_colornames.asp" title="HTML —’…´√˚">HTML —’…´</a></li>
+<li><a href="/cssref/index.asp" title="CSS ≤Œøº ÷≤·">CSS 1,2,3</a></li>
+<li><a href="/jsref/index.asp" title="JavaScript ≤Œøº ÷≤·">JavaScript</a></li>
+<li><a href="/jsref/index.asp" title="HTML DOM ≤Œøº ÷≤·">HTML DOM</a></li>
+<li><a href="/jquery/jquery_reference.asp" title="jQuery ≤Œøº ÷≤·">jQuery</a></li>
+<li><a href="/jquerymobile/jquerymobile_ref_data.asp" title="jQuery Mobile ≤Œøº ÷≤·">jQuery Mobile</a></li>
+<li><a href="/vbscript/vbscript_ref_functions.asp" title="VBScript ∫Ø ˝">VBScript</a></li>
+<li><a href="/asp/asp_ref.asp" title="ASP ≤Œøº ÷≤·">ASP</a></li>
+<li><a href="/ado/ado_reference.asp" title="ADO ≤Œøº ÷≤·">ADO</a></li>
+<li><a href="/aspnet/aspnet_reference.asp" title="ASP.NET ≤Œøº ÷≤·">ASP.NET</a></li>
+<li><a href="/php/php_ref.asp" title="PHP ≤Œøº ÷≤·">PHP 5.1</a></li>
+<li><a href="/xmldom/xmldom_reference.asp" title="XML DOM ≤Œøº ÷≤·">XML DOM</a></li>
+<li><a href="/xsl/xsl_w3celementref.asp" title="XSLT ‘™Àÿ≤Œøº ÷≤·">XSLT 1.0</a></li>
+<li><a href="/xpath/xpath_functions.asp" title="XPath°¢XQuery “‘º∞ XSLT ∫Ø ˝">XPath 2.0</a></li>
+<li><a href="/xslfo/xslfo_reference.asp" title="XSL-FO ≤Œøº ÷≤·">XSL-FO</a></li>
+<li><a href="/wap/wml_reference.asp" title="WML ≤Œøº ÷≤·">WML 1.1</a></li>
+<li><a href="/glossary/index.asp" title="W3C  ı”Ô±Ì∫Õ¥ µ‰">W3C  ı”Ô±Ì</a></li>
+</ul>
+
+<h2>◊÷∑˚ºØ</h2>
+<ul>
+<li><a href="/tags/html_ref_charactersets.asp" title="HTML ◊÷∑˚ºØ">HTML ◊÷∑˚ºØ</a></li>
+<li><a href="/tags/html_ref_ascii.asp" title="HTML ASCII ≤Œøº ÷≤·">HTML ASCII</a></li>
+<li><a href="/tags/html_ref_entities.html" title="HTML ISO-8859-1 ≤Œøº ÷≤·">HTML ISO-8859-1</a></li>
+<li><a href="/tags/html_ref_symbols.html" title="HTML 4.01 ∑˚∫≈ µÃÂ">HTML ∑˚∫≈</a></li>
+</ul>
+
+<h2> µ¿˝/∞∏¿˝</h2>
+<ul>
+<li><a href="/example/html_examples.asp">HTML  µ¿˝</a></li>
+<li><a href="/example/csse_examples.asp">CSS  µ¿˝</a></li>
+<li><a href="/example/xmle_examples.asp">XML  µ¿˝</a></li>
+<li><a href="/python/python_examples.asp">Python  µ¿˝</a></li>
+<li><a href="/js/js_examples.asp">JavaScript  µ¿˝</a></li>
+<li><a href="/js/js_html_objects_examples.asp">JavaScript ∂‘œÛ µ¿˝</a></li>
+<li><a href="/js/js_dom_examples.asp">HTML DOM  µ¿˝</a></li>
+<li><a href="/jquery/jquery_examples.asp">jQuery  µ¿˝</a></li>
+<li><a href="/jquerymobile/jquerymobile_examples.asp">jQuery Mobile  µ¿˝</a></li>
+<li><a href="/example/xdom_examples.asp">XML DOM  µ¿˝</a></li>
+<li><a href="/example/dhtm_examples.asp">DHTML  µ¿˝</a></li>
+<li><a href="/example/ajax_examples.asp">AJAX  µ¿˝</a></li>
+<li><a href="/example/vbst_examples.asp">VBScript  µ¿˝</a></li>
+<li><a href="/example/aspe_examples.asp">ASP  µ¿˝</a></li>
+<li><a href="/example/adoe_examples.asp">ADO  µ¿˝</a></li>
+<li><a href="/svg/svg_examples.asp">SVG  µ¿˝</a></li>
+<li><a href="/wap/wap_demo.asp" title="WAP —› æ">WAP  µ¿˝</a></li>
+</ul>
+
+<h2>≤‚—È/øº ‘</h2>
+<ul>
+<li><a href="/html/html_quiz.asp">HTML ≤‚—È</a></li>
+<li><a href="/html5/html5_quiz.asp">HTML5 ≤‚—È</a></li>
+<li><a href="/xhtml/xhtml_quiz.asp">XHTML ≤‚—È</a></li>
+<li><a href="/css/css_quiz.asp">CSS ≤‚—È</a></li>
+<li><a href="/xml/xml_quiz.asp">XML ≤‚—È</a></li>
+<li><a href="/js/js_quiz.asp">JavaScript ≤‚—È</a></li>
+<li><a href="/jquery/jquery_quiz.asp">jQuery ≤‚—È</a></li>
+<li><a href="/sql/sql_quiz.asp">SQL ≤‚—È</a></li>
+<li><a href="/asp/asp_quiz.asp">ASP ≤‚—È</a></li>
+<li><a href="/php/php_quiz.asp">PHP ≤‚—È</a></li>
+</ul>
+
+<h2>¥˙¬Î—È÷§</h2>
+<ul>
+<li><a href="/site/site_validate.asp" title="Õ¯“≥—È÷§">—È÷§HTML</a></li>
+<li><a href="/site/site_validate.asp" title="Õ¯“≥—È÷§">—È÷§CSS</a></li>
+<li><a href="/site/site_validate.asp" title="Õ¯“≥—È÷§">—È÷§XHTML</a></li>
+<li><a href="/site/site_validate.asp" title="Õ¯“≥—È÷§">—È÷§XML</a></li>
+<li><a href="/site/site_validate.asp" title="Õ¯“≥—È÷§">—È÷§WML</a></li>
+</ul>
+
+</div>
+
+
+
+<div id="footer">
+<p id="p1">
+W3School ºÚÃÂ÷–Œƒ∞ÊÃ·π©µƒƒ⁄»›Ωˆ”√”⁄≈‡—µ∫Õ≤‚ ‘£¨≤ª±£÷§ƒ⁄»›µƒ’˝»∑–‘°£Õ®π˝ π”√±æ’æƒ⁄»›ÀÊ÷Æ∂¯¿¥µƒ∑Áœ’”Î±æ’æŒﬁπÿ°£
+</p>
+
+<p id="p2">
+<a href="/about/about_use.asp" title="πÿ”⁄ π”√"> π”√ÃıøÓ</a>∫Õ<a href="/about/about_privacy.asp" title="πÿ”⁄“˛ÀΩ">“˛ÀΩÃıøÓ</a>°£∞Ê»®À˘”–£¨±£¡Ù“ª«–»®¿˚°£
+‘ﬁ÷˙…Ã£∫<a target="_blank" href="https://www.ykinvestment.com/" title="…œ∫£”Æø∆Õ∂◊ ”–œﬁπ´Àæ">…œ∫£”Æø∆Õ∂◊ ”–œﬁπ´Àæ</a>°£
+<a target="_blank" href="https://www.miitbeian.gov.cn/">√…ICP±∏06004630∫≈</a>
+<a style="color: #000; margin-left: 20px;" href="/ad.html" target="_blank" title="W3School π„∏ÊøØ¿˝">π„∏ÊøØ¿˝</a>
+</p>
+</div>
+
+</div>
+</body>
+</html>
+ 
+[2019-12-19 15:59:53,285] 345313 [Thread-49] INFO  nt.com.handler.LogHandler  - [LogHandler - after ][2019-12-19 15:59:53  ’µΩ±®Œƒ]<!DOCTYPE html>
+<html lang="zh-cn">
+<head>
+
+<!-- Global site tag (gtag.js) - Google Analytics -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=UA-878633-1"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'UA-878633-1');
+</script>
+
+<title>w3school ‘⁄œﬂΩÃ≥Ã</title>
+
+<link rel="stylesheet" type="text/css" href="/c5.css" />
+<meta charset="gbk" />
+<meta http-equiv="Content-Language" content="zh-cn" />
+<meta name="description" content="»´«Ú◊Ó¥Ûµƒ÷–Œƒ Web ºº ıΩÃ≥Ã°£" />
+<meta name="robots" content="all" />
+<meta name="author" content="w3school.com.cn" />
+<meta name="Copyright" content="Copyright W3school.com.cn All Rights Reserved." />
+<meta name="MSSmartTagsPreventParsing" content="true" />
+<meta http-equiv="imagetoolbar" content="false" />
+
+<link rel="icon" type="image/png" sizes="16x16" href="/ui2019/logo-16-red.png">
+<link rel="icon" type="image/png" sizes="32x32" href="/ui2019/logo-32-red.png">
+<link rel="icon" type="image/png" sizes="48x48" href="/ui2019/logo-48-red.png">
+<link rel="icon" type="image/png" sizes="96x96" href="/ui2019/logo-96-red.png">
+<link rel="apple-touch-icon-precomposed" sizes="180x180" href="/ui2019/logo-180.png">
+</head>
+
+<body id="homefirst">
+<div id="wrapper">
+
+<div id="header_index">
+<h1><a href="/index.html" title="w3school ‘⁄œﬂΩÃ≥Ã" style="float:left;">w3school ‘⁄œﬂΩÃ≥Ã</a></h1>
+
+<div id="searchui">
+<form method="get" id="searchform" action="https://www.google.com.hk/search">
+<input type="hidden" name="sitesearch" value="w3school.com.cn" />
+<input type="text" name="as_q" class="box"  id="searched_content" title="‘⁄¥À ‰»ÎÀ—À˜ƒ⁄»›°£" />
+<input type="submit" value="Go" class="button" title="À—À˜£°" />
+</form>
+</div>
+</div>
+
+<div id="navfirst">
+<ul id="menu">
+<li id="h"><a href="/h.asp" title="HTML œµ¡–ΩÃ≥Ã">HTML œµ¡–ΩÃ≥Ã</a></li>
+<li id="b"><a href="/b.asp" title="‰Ø¿¿∆˜Ω≈±æΩÃ≥Ã">‰Ø¿¿∆˜Ω≈±æ</a></li>
+<li id="s"><a href="/s.asp" title="∑˛ŒÒ∆˜Ω≈±æΩÃ≥Ã">∑˛ŒÒ∆˜Ω≈±æ</a></li>
+<li id="p"><a href="/p.asp" title="±‡≥ÃΩÃ≥Ã">±‡≥ÃΩÃ≥Ã</a></li>
+<li id="x"><a href="/x.asp" title="XML œµ¡–ΩÃ≥Ã">XML œµ¡–ΩÃ≥Ã</a></li>
+<li id="w"><a href="/w.asp" title="Ω®’æ ÷≤·">Ω®’æ ÷≤·</a></li>
+<li id="r"><a href="/r.asp" title="≤Œøº ÷≤·">≤Œøº ÷≤·</a></li>
+</ul>
+</div>
+
+<div id="navsecond">
+<h2>HTML ΩÃ≥Ã</h2>
+<ul>
+<li><a href="/html/index.asp" title="HTML ΩÃ≥Ã">HTML</a></li>
+<li><a href="/html5/index.asp" title="HTML5 ΩÃ≥Ã">HTML5</a></li>
+<li><a href="/xhtml/index.asp" title="XHTML ΩÃ≥Ã">XHTML</a></li>
+<li><a href="/css/index.asp" title="CSS ΩÃ≥Ã">CSS</a></li>
+<li><a href="/css3/index.asp" title="CSS3 ΩÃ≥Ã">CSS3</a></li>
+<li><a href="/tcpip/index.asp" title="TCP/IP ΩÃ≥Ã">TCP/IP</a></li>
+</ul>
+
+<h2>‰Ø¿¿∆˜Ω≈±æ</h2>
+<ul>
+<li><a href="/js/index.asp" title="JavaScript ΩÃ≥Ã">JavaScript</a></li>
+<li><a href="/htmldom/index.asp" title="HTML DOM ΩÃ≥Ã">HTML DOM</a></li>
+<li><a href="/jquery/index.asp" title="jQuery ΩÃ≥Ã">jQuery</a></li>
+<li><a href="/jquerymobile/index.asp" title="jQuery Mobile ΩÃ≥Ã">jQuery Mobile</a></li>
+<li><a href="/ajax/index.asp" title="AJAX ΩÃ≥Ã">AJAX</a></li>
+<li><a href="/json/index.asp" title="JSON ΩÃ≥Ã">JSON</a></li>
+<li><a href="/dhtml/index.asp" title="DHTML ΩÃ≥Ã">DHTML</a></li>
+<li><a href="/e4x/index.asp" title="E4X ΩÃ≥Ã">E4X</a></li>
+<li><a href="/wmlscript/index.asp" title="WMLScript ΩÃ≥Ã">WMLScript</a></li>
+</ul>
+
+<h2>∑˛ŒÒ∆˜Ω≈±æ</h2>
+<ul>
+<li><a href="/php/index.asp" title="PHP ΩÃ≥Ã">PHP</a></li>
+<li><a href="/sql/index.asp" title="SQL ΩÃ≥Ã">SQL</a></li>
+<li><a href="/asp/index.asp" title="ASP ΩÃ≥Ã">ASP</a></li>
+<li><a href="/ado/index.asp" title="ADO ΩÃ≥Ã">ADO</a></li>
+<li><a href="/aspnet/index.asp" title="ASP.NET ΩÃ≥Ã">ASP.NET</a></li>
+<li><a href="/vbscript/index.asp" title="VBScript ΩÃ≥Ã">VBScript</a></li>
+</ul>
+
+
+<h2>±‡≥Ã</h2>
+<ul>
+<li><a href="/python/index.asp" title="Python ΩÃ≥Ã">Python</a></li>
+<li><a href="#" title="Java ΩÃ≥Ã">Java</a></li>
+<li><a href="#" title="C++ ΩÃ≥Ã">C++</a></li>
+<li><a href="#" title="C# ΩÃ≥Ã">C#</a></li>
+</ul>
+
+<h2>XML ΩÃ≥Ã</h2>
+<ul>
+<li><a href="/xml/index.asp" title="XML ΩÃ≥Ã">XML</a></li>
+<li><a href="/dtd/index.asp" title="DTDΩÃ≥Ã">DTD</a></li>
+<li><a href="/xmldom/index.asp" title="XML DOM ΩÃ≥Ã">XML DOM</a></li>
+<li><a href="/xsl/xsl_languages.asp" title="XSL ”Ô—‘">XSL</a></li>
+<li><a href="/xsl/index.asp" title="XSLT ΩÃ≥Ã">XSLT</a></li>
+<li><a href="/xslfo/index.asp" title="XSL-FO ΩÃ≥Ã">XSL-FO</a></li>
+<li><a href="/xpath/index.asp" title="XPath ΩÃ≥Ã">XPath</a></li>
+<li><a href="/xquery/index.asp" title="XQuery ΩÃ≥Ã">XQuery</a></li>
+<li><a href="/xlink/index.asp" title="XLink ΩÃ≥Ã">XLink</a></li>
+<li><a href="/xlink/index.asp" title="XPointer ΩÃ≥Ã">XPointer</a></li>
+<li><a href="/schema/index.asp" title="Schema ΩÃ≥Ã">Schema</a></li>
+<li><a href="/xforms/index.asp" title="XForms ΩÃ≥Ã">XForms</a></li>
+<li><a href="/wap/index.asp" title="WAP ΩÃ≥Ã">WAP</a></li>
+<li><a href="/svg/index.asp" title="SVG ΩÃ≥Ã">SVG</a></li>
+</ul>
+
+<h2>Web Services</h2>
+<ul>
+<li><a href="/webservices/index.asp" title="Web Services ΩÃ≥Ã">Web Services</a></li>
+<li><a href="/wsdl/index.asp" title="WSDL ΩÃ≥Ã">WSDL</a></li>
+<li><a href="/soap/index.asp" title="SOAP ΩÃ≥Ã">SOAP</a></li>
+<li><a href="/rss/index.asp" title="RSS ΩÃ≥Ã">RSS</a></li>
+<li><a href="/rdf/index.asp" title="RDF ΩÃ≥Ã">RDF</a></li>
+</ul>
+
+<h2>Ω®’æ ÷≤·</h2>
+<ul>
+<li><a href="/site/index.asp" title="Õ¯’æππΩ®">Õ¯’æππΩ®</a></li>
+<li><a href="/w3c/index.asp" title="ÕÚŒ¨Õ¯¡™√À (W3C)">ÕÚŒ¨Õ¯¡™√À (W3C)</a></li>
+<li><a href="/browsers/index.asp" title="‰Ø¿¿∆˜–≈œ¢">‰Ø¿¿∆˜–≈œ¢</a></li>
+<li><a href="/quality/index.asp" title="Õ¯’æ∆∑÷ ">Õ¯’æ∆∑÷ </a></li>
+<li><a href="/semweb/index.asp" title="”Ô“ÂÕ¯">”Ô“ÂÕ¯</a></li>
+<li><a href="/careers/index.asp" title="÷∞“µπÊªÆ">÷∞“µπÊªÆ</a></li>
+<li><a href="/hosting/index.asp" title="Õ¯’æ÷˜ª˙ΩÃ≥Ã">Õ¯’æ÷˜ª˙</a></li>
+<li><a href="/media/index.asp" title="Õ¯¬Á√ΩÃÂΩÃ≥Ã">Õ¯¬Á√ΩÃÂ</a></li>
+</ul>
+
+<h2 id="link_about"><a href="/about/index.asp" title="πÿ”⁄ W3School">πÿ”⁄ W3School</a></h2>
+<h2 id="link_help"><a href="/about/about_helping.asp" title="∞Ô÷˙ W3School">∞Ô÷˙ W3School</a></h2>
+</div>
+
+<div id="maincontent">
+
+<div class="idea" id="d1">
+<h2>¡Ïœ»µƒ Web ºº ıΩÃ≥Ã - »´≤ø√‚∑—</h2>
+<p>‘⁄ W3School£¨ƒ„ø…“‘’“µΩƒ„À˘–Ë“™µƒÀ˘”–µƒÕ¯’æΩ®…ËΩÃ≥Ã°£</p>
+<p>¥”ª˘¥°µƒ HTML µΩ CSS£¨ƒÀ÷¡Ω¯Ω◊µƒ XML°¢SQL°¢JS°¢PHP ∫Õ ASP.NET°£</p>
+<p><strong>¥”◊Û≤‡µƒ≤Àµ•—°‘Òƒ„–Ë“™µƒΩÃ≥Ã£°</strong></p>
+</div>
+
+<div class="idea" id="d2">
+<h3>ÕÍ’˚µƒÕ¯’æºº ı≤Œøº ÷≤·</h3>
+<p>Œ“√«µƒ≤Œøº ÷≤·∫≠∏«¡ÀÕ¯’æºº ıµƒ∑Ω∑Ω√Ê√Ê°£</p>
+<p>∆‰÷–∞¸¿®W3C±Í◊ººº ı£∫HTML°¢CSS°¢XML °£“‘º∞∆‰À˚ºº ı£¨÷Ó»Á JavaScript°¢PHP°¢SQL µ»°£</p>
+</div>
+
+<div class="idea" id="d3">
+<h3>‘⁄œﬂ µ¿˝≤‚ ‘π§æﬂ</h3>
+<p>‘⁄ W3School£¨Œ“√«Ã·π©…œ«ß∏ˆ µ¿˝°£</p>
+<p>Õ®π˝ π”√Œ“√«µƒ‘⁄œﬂ±‡º≠∆˜£¨ƒ„ø…“‘±‡º≠’‚–©¿˝◊”£¨≤¢∂‘¥˙¬ÎΩ¯–– µ—È°£</p>
+</div>
+
+<div class="idea" id="d4">
+<h3>øÏΩ›“◊∂Æµƒ—ßœ∞∑Ω Ω</h3>
+<p>“ª¥Áπ‚“ı“ª¥ÁΩ£¨“Ú¥À£¨Œ“√«Œ™ƒ˙Ã·π©øÏΩ›“◊∂Æµƒ—ßœ∞ƒ⁄»›°£</p>
+<p>‘⁄’‚¿Ô£¨ƒ˙ø…“‘Õ®π˝“ª÷÷“◊∂Æµƒ±„¿˚µƒƒ£ ΩªÒµ√ƒ˙–Ë“™µƒ»Œ∫Œ÷™ ∂°£</p>
+</div>
+
+
+<div class="idea" id="d5">
+<h3>¥”∫Œ»Î ÷£ø</h3>
+<p> ≤√¥ «“ª∏ˆ Web Ω®…Ë’ﬂ–Ë“™—ßœ∞µƒ÷™ ∂ƒÿ£ø</p>
+<p>W3School Ω´Œ™ƒ˙ªÿ¥’‚∏ˆŒ Ã‚£¨‘⁄ƒ˙≥…Œ™◊®“µ Web ø™∑¢’ﬂµƒ¬∑…œ÷˙“ª±€÷Æ¡¶°£</p>
+<p>»Áπ˚ƒ˙ «≥ı—ß’ﬂ£¨«Îƒ˙‘ƒ∂¡°∂<a href="/web/index.asp" title="Õ¯’æππΩ®≥ıº∂ΩÃ≥Ã">Õ¯’æππΩ®≥ıº∂ΩÃ≥Ã</a>°∑°£</p>
+<p>»Áπ˚ƒ˙ «ø™∑¢’ﬂ£¨«Îƒ˙‘ƒ∂¡°∂<a href="/site/index.asp" title="Õ¯’æππΩ®">Õ¯’æππΩ®∏ﬂº∂ΩÃ≥Ã</a>°∑°£</p>
+</div>
+
+
+<div class="idea" id="d6">
+<h3>W3School –¬Œ≈</h3>
+
+<p style="margin-top: 20px;">
+<a style="font-size: 20px;" href="/python/index.asp" title="Python ΩÃ≥Ã">W3School  ◊∏ˆ±‡≥ÃΩÃ≥Ã£∫Python ΩÃ≥Ã…œœﬂ£°</a>
+</p>
+</div>
+
+
+<div class="idea" id="d7">
+<h3>W3School ∏¸–¬–≈œ¢</h3>
+
+<p style="margin-top: 20px;">
+<a style="font-size: 20px;" href="/python/python_ref_functions.asp" title="Python ΩÃ≥Ã">≤Œøº ÷≤·£∫Python ƒ⁄Ω®∫Ø ˝</a>
+</p>
+
+</div>
+
+
+<div id="d8">
+<h3>W3School ”—«È¡¥Ω”</h3>
+<p class="partner">
+<a target="_blank" href="https://mozilla.com.cn/">Firefox ÷–Œƒ…Á«¯</a> &nbsp;&nbsp;&nbsp; 
+<a target="_blank" href="https://www.w3ctech.com/">w3ctech</a> &nbsp;&nbsp;&nbsp; 
+<a target="_blank" href="https://wetest.qq.com/?from=links_w3school">WeTestÃ⁄—∂÷ ¡øø™∑≈∆ΩÃ®</a> &nbsp;&nbsp;&nbsp; 
+</p>
+</div>
+
+
+<div id="d9">
+<h3>–¬¿ÀŒ¢≤©</h3>
+<p><a target="_blank" href="https://weibo.com/w3schoolcomcn">W3School πŸ∑ΩŒ¢≤©</a></p>
+</div>
+
+
+<div id="d10">
+<h3>Œ¢–≈π´÷⁄∫≈</h3>
+<p>W3School πŸ∑Ω∑˛ŒÒ∫≈</p>
+</div>
+
+</div>
+
+
+<div id="sidebar">
+
+<h2>≤Œøº ÷≤·</h2>
+<ul>
+<li><a href="/tags/index.asp" title="HTML ≤Œøº ÷≤·">HTML/HTML5 ±Í«©</a></li>
+<li><a href="/tags/html_ref_colornames.asp" title="HTML —’…´√˚">HTML —’…´</a></li>
+<li><a href="/cssref/index.asp" title="CSS ≤Œøº ÷≤·">CSS 1,2,3</a></li>
+<li><a href="/jsref/index.asp" title="JavaScript ≤Œøº ÷≤·">JavaScript</a></li>
+<li><a href="/jsref/index.asp" title="HTML DOM ≤Œøº ÷≤·">HTML DOM</a></li>
+<li><a href="/jquery/jquery_reference.asp" title="jQuery ≤Œøº ÷≤·">jQuery</a></li>
+<li><a href="/jquerymobile/jquerymobile_ref_data.asp" title="jQuery Mobile ≤Œøº ÷≤·">jQuery Mobile</a></li>
+<li><a href="/vbscript/vbscript_ref_functions.asp" title="VBScript ∫Ø ˝">VBScript</a></li>
+<li><a href="/asp/asp_ref.asp" title="ASP ≤Œøº ÷≤·">ASP</a></li>
+<li><a href="/ado/ado_reference.asp" title="ADO ≤Œøº ÷≤·">ADO</a></li>
+<li><a href="/aspnet/aspnet_reference.asp" title="ASP.NET ≤Œøº ÷≤·">ASP.NET</a></li>
+<li><a href="/php/php_ref.asp" title="PHP ≤Œøº ÷≤·">PHP 5.1</a></li>
+<li><a href="/xmldom/xmldom_reference.asp" title="XML DOM ≤Œøº ÷≤·">XML DOM</a></li>
+<li><a href="/xsl/xsl_w3celementref.asp" title="XSLT ‘™Àÿ≤Œøº ÷≤·">XSLT 1.0</a></li>
+<li><a href="/xpath/xpath_functions.asp" title="XPath°¢XQuery “‘º∞ XSLT ∫Ø ˝">XPath 2.0</a></li>
+<li><a href="/xslfo/xslfo_reference.asp" title="XSL-FO ≤Œøº ÷≤·">XSL-FO</a></li>
+<li><a href="/wap/wml_reference.asp" title="WML ≤Œøº ÷≤·">WML 1.1</a></li>
+<li><a href="/glossary/index.asp" title="W3C  ı”Ô±Ì∫Õ¥ µ‰">W3C  ı”Ô±Ì</a></li>
+</ul>
+
+<h2>◊÷∑˚ºØ</h2>
+<ul>
+<li><a href="/tags/html_ref_charactersets.asp" title="HTML ◊÷∑˚ºØ">HTML ◊÷∑˚ºØ</a></li>
+<li><a href="/tags/html_ref_ascii.asp" title="HTML ASCII ≤Œøº ÷≤·">HTML ASCII</a></li>
+<li><a href="/tags/html_ref_entities.html" title="HTML ISO-8859-1 ≤Œøº ÷≤·">HTML ISO-8859-1</a></li>
+<li><a href="/tags/html_ref_symbols.html" title="HTML 4.01 ∑˚∫≈ µÃÂ">HTML ∑˚∫≈</a></li>
+</ul>
+
+<h2> µ¿˝/∞∏¿˝</h2>
+<ul>
+<li><a href="/example/html_examples.asp">HTML  µ¿˝</a></li>
+<li><a href="/example/csse_examples.asp">CSS  µ¿˝</a></li>
+<li><a href="/example/xmle_examples.asp">XML  µ¿˝</a></li>
+<li><a href="/python/python_examples.asp">Python  µ¿˝</a></li>
+<li><a href="/js/js_examples.asp">JavaScript  µ¿˝</a></li>
+<li><a href="/js/js_html_objects_examples.asp">JavaScript ∂‘œÛ µ¿˝</a></li>
+<li><a href="/js/js_dom_examples.asp">HTML DOM  µ¿˝</a></li>
+<li><a href="/jquery/jquery_examples.asp">jQuery  µ¿˝</a></li>
+<li><a href="/jquerymobile/jquerymobile_examples.asp">jQuery Mobile  µ¿˝</a></li>
+<li><a href="/example/xdom_examples.asp">XML DOM  µ¿˝</a></li>
+<li><a href="/example/dhtm_examples.asp">DHTML  µ¿˝</a></li>
+<li><a href="/example/ajax_examples.asp">AJAX  µ¿˝</a></li>
+<li><a href="/example/vbst_examples.asp">VBScript  µ¿˝</a></li>
+<li><a href="/example/aspe_examples.asp">ASP  µ¿˝</a></li>
+<li><a href="/example/adoe_examples.asp">ADO  µ¿˝</a></li>
+<li><a href="/svg/svg_examples.asp">SVG  µ¿˝</a></li>
+<li><a href="/wap/wap_demo.asp" title="WAP —› æ">WAP  µ¿˝</a></li>
+</ul>
+
+<h2>≤‚—È/øº ‘</h2>
+<ul>
+<li><a href="/html/html_quiz.asp">HTML ≤‚—È</a></li>
+<li><a href="/html5/html5_quiz.asp">HTML5 ≤‚—È</a></li>
+<li><a href="/xhtml/xhtml_quiz.asp">XHTML ≤‚—È</a></li>
+<li><a href="/css/css_quiz.asp">CSS ≤‚—È</a></li>
+<li><a href="/xml/xml_quiz.asp">XML ≤‚—È</a></li>
+<li><a href="/js/js_quiz.asp">JavaScript ≤‚—È</a></li>
+<li><a href="/jquery/jquery_quiz.asp">jQuery ≤‚—È</a></li>
+<li><a href="/sql/sql_quiz.asp">SQL ≤‚—È</a></li>
+<li><a href="/asp/asp_quiz.asp">ASP ≤‚—È</a></li>
+<li><a href="/php/php_quiz.asp">PHP ≤‚—È</a></li>
+</ul>
+
+<h2>¥˙¬Î—È÷§</h2>
+<ul>
+<li><a href="/site/site_validate.asp" title="Õ¯“≥—È÷§">—È÷§HTML</a></li>
+<li><a href="/site/site_validate.asp" title="Õ¯“≥—È÷§">—È÷§CSS</a></li>
+<li><a href="/site/site_validate.asp" title="Õ¯“≥—È÷§">—È÷§XHTML</a></li>
+<li><a href="/site/site_validate.asp" title="Õ¯“≥—È÷§">—È÷§XML</a></li>
+<li><a href="/site/site_validate.asp" title="Õ¯“≥—È÷§">—È÷§WML</a></li>
+</ul>
+
+</div>
+
+
+
+<div id="footer">
+<p id="p1">
+W3School ºÚÃÂ÷–Œƒ∞ÊÃ·π©µƒƒ⁄»›Ωˆ”√”⁄≈‡—µ∫Õ≤‚ ‘£¨≤ª±£÷§ƒ⁄»›µƒ’˝»∑–‘°£Õ®π˝ π”√±æ’æƒ⁄»›ÀÊ÷Æ∂¯¿¥µƒ∑Áœ’”Î±æ’æŒﬁπÿ°£
+</p>
+
+<p id="p2">
+<a href="/about/about_use.asp" title="πÿ”⁄ π”√"> π”√ÃıøÓ</a>∫Õ<a href="/about/about_privacy.asp" title="πÿ”⁄“˛ÀΩ">“˛ÀΩÃıøÓ</a>°£∞Ê»®À˘”–£¨±£¡Ù“ª«–»®¿˚°£
+‘ﬁ÷˙…Ã£∫<a target="_blank" href="https://www.ykinvestment.com/" title="…œ∫£”Æø∆Õ∂◊ ”–œﬁπ´Àæ">…œ∫£”Æø∆Õ∂◊ ”–œﬁπ´Àæ</a>°£
+<a target="_blank" href="https://www.miitbeian.gov.cn/">√…ICP±∏06004630∫≈</a>
+<a style="color: #000; margin-left: 20px;" href="/ad.html" target="_blank" title="W3School π„∏ÊøØ¿˝">π„∏ÊøØ¿˝</a>
+</p>
+</div>
+
+</div>
+</body>
+</html>
+ 
+[2019-12-19 16:04:30,258] 0    [JavaFX Application Thread] INFO  nt.com.handler.LogHandler  - [LogHandler - before ][2019-12-19 16:04:30 ∑¢ÀÕ±®Œƒ]<?xml version="1.0" encoding="GBK"?>
+<response>
+    <error>
+        <error-code>000</error-code>
+        <error-msg>success</error-msg>
+    </error>
+    <result>
+        <root>
+            <info>
+                <id>429006199909092235</id>
+                <name>test</name>
+                <checkresult>00</checkresult>
+		<photo/>
+                <issueoffice>10150</issueoffice>
+                <bkcheckdate>20180224</bkcheckdate>
+                <bkoperid/>
+                <biztype>01</biztype>
+            </info>
+        </root>
+    </result>
+</response>
+ 
+[2019-12-19 16:04:32,932] 2674 [Thread-4] INFO  nt.com.network.HttpSingle  -  ’µΩœ˚œ¢[https://www.w3school.com.cn/] - <!DOCTYPE html>
+<html lang="zh-cn">
+<head>
+
+<!-- Global site tag (gtag.js) - Google Analytics -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=UA-878633-1"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'UA-878633-1');
+</script>
+
+<title>w3school ‘⁄œﬂΩÃ≥Ã</title>
+
+<link rel="stylesheet" type="text/css" href="/c5.css" />
+<meta charset="gbk" />
+<meta http-equiv="Content-Language" content="zh-cn" />
+<meta name="description" content="»´«Ú◊Ó¥Ûµƒ÷–Œƒ Web ºº ıΩÃ≥Ã°£" />
+<meta name="robots" content="all" />
+<meta name="author" content="w3school.com.cn" />
+<meta name="Copyright" content="Copyright W3school.com.cn All Rights Reserved." />
+<meta name="MSSmartTagsPreventParsing" content="true" />
+<meta http-equiv="imagetoolbar" content="false" />
+
+<link rel="icon" type="image/png" sizes="16x16" href="/ui2019/logo-16-red.png">
+<link rel="icon" type="image/png" sizes="32x32" href="/ui2019/logo-32-red.png">
+<link rel="icon" type="image/png" sizes="48x48" href="/ui2019/logo-48-red.png">
+<link rel="icon" type="image/png" sizes="96x96" href="/ui2019/logo-96-red.png">
+<link rel="apple-touch-icon-precomposed" sizes="180x180" href="/ui2019/logo-180.png">
+</head>
+
+<body id="homefirst">
+<div id="wrapper">
+
+<div id="header_index">
+<h1><a href="/index.html" title="w3school ‘⁄œﬂΩÃ≥Ã" style="float:left;">w3school ‘⁄œﬂΩÃ≥Ã</a></h1>
+
+<div id="searchui">
+<form method="get" id="searchform" action="https://www.google.com.hk/search">
+<input type="hidden" name="sitesearch" value="w3school.com.cn" />
+<input type="text" name="as_q" class="box"  id="searched_content" title="‘⁄¥À ‰»ÎÀ—À˜ƒ⁄»›°£" />
+<input type="submit" value="Go" class="button" title="À—À˜£°" />
+</form>
+</div>
+</div>
+
+<div id="navfirst">
+<ul id="menu">
+<li id="h"><a href="/h.asp" title="HTML œµ¡–ΩÃ≥Ã">HTML œµ¡–ΩÃ≥Ã</a></li>
+<li id="b"><a href="/b.asp" title="‰Ø¿¿∆˜Ω≈±æΩÃ≥Ã">‰Ø¿¿∆˜Ω≈±æ</a></li>
+<li id="s"><a href="/s.asp" title="∑˛ŒÒ∆˜Ω≈±æΩÃ≥Ã">∑˛ŒÒ∆˜Ω≈±æ</a></li>
+<li id="p"><a href="/p.asp" title="±‡≥ÃΩÃ≥Ã">±‡≥ÃΩÃ≥Ã</a></li>
+<li id="x"><a href="/x.asp" title="XML œµ¡–ΩÃ≥Ã">XML œµ¡–ΩÃ≥Ã</a></li>
+<li id="w"><a href="/w.asp" title="Ω®’æ ÷≤·">Ω®’æ ÷≤·</a></li>
+<li id="r"><a href="/r.asp" title="≤Œøº ÷≤·">≤Œøº ÷≤·</a></li>
+</ul>
+</div>
+
+<div id="navsecond">
+<h2>HTML ΩÃ≥Ã</h2>
+<ul>
+<li><a href="/html/index.asp" title="HTML ΩÃ≥Ã">HTML</a></li>
+<li><a href="/html5/index.asp" title="HTML5 ΩÃ≥Ã">HTML5</a></li>
+<li><a href="/xhtml/index.asp" title="XHTML ΩÃ≥Ã">XHTML</a></li>
+<li><a href="/css/index.asp" title="CSS ΩÃ≥Ã">CSS</a></li>
+<li><a href="/css3/index.asp" title="CSS3 ΩÃ≥Ã">CSS3</a></li>
+<li><a href="/tcpip/index.asp" title="TCP/IP ΩÃ≥Ã">TCP/IP</a></li>
+</ul>
+
+<h2>‰Ø¿¿∆˜Ω≈±æ</h2>
+<ul>
+<li><a href="/js/index.asp" title="JavaScript ΩÃ≥Ã">JavaScript</a></li>
+<li><a href="/htmldom/index.asp" title="HTML DOM ΩÃ≥Ã">HTML DOM</a></li>
+<li><a href="/jquery/index.asp" title="jQuery ΩÃ≥Ã">jQuery</a></li>
+<li><a href="/jquerymobile/index.asp" title="jQuery Mobile ΩÃ≥Ã">jQuery Mobile</a></li>
+<li><a href="/ajax/index.asp" title="AJAX ΩÃ≥Ã">AJAX</a></li>
+<li><a href="/json/index.asp" title="JSON ΩÃ≥Ã">JSON</a></li>
+<li><a href="/dhtml/index.asp" title="DHTML ΩÃ≥Ã">DHTML</a></li>
+<li><a href="/e4x/index.asp" title="E4X ΩÃ≥Ã">E4X</a></li>
+<li><a href="/wmlscript/index.asp" title="WMLScript ΩÃ≥Ã">WMLScript</a></li>
+</ul>
+
+<h2>∑˛ŒÒ∆˜Ω≈±æ</h2>
+<ul>
+<li><a href="/php/index.asp" title="PHP ΩÃ≥Ã">PHP</a></li>
+<li><a href="/sql/index.asp" title="SQL ΩÃ≥Ã">SQL</a></li>
+<li><a href="/asp/index.asp" title="ASP ΩÃ≥Ã">ASP</a></li>
+<li><a href="/ado/index.asp" title="ADO ΩÃ≥Ã">ADO</a></li>
+<li><a href="/aspnet/index.asp" title="ASP.NET ΩÃ≥Ã">ASP.NET</a></li>
+<li><a href="/vbscript/index.asp" title="VBScript ΩÃ≥Ã">VBScript</a></li>
+</ul>
+
+
+<h2>±‡≥Ã</h2>
+<ul>
+<li><a href="/python/index.asp" title="Python ΩÃ≥Ã">Python</a></li>
+<li><a href="#" title="Java ΩÃ≥Ã">Java</a></li>
+<li><a href="#" title="C++ ΩÃ≥Ã">C++</a></li>
+<li><a href="#" title="C# ΩÃ≥Ã">C#</a></li>
+</ul>
+
+<h2>XML ΩÃ≥Ã</h2>
+<ul>
+<li><a href="/xml/index.asp" title="XML ΩÃ≥Ã">XML</a></li>
+<li><a href="/dtd/index.asp" title="DTDΩÃ≥Ã">DTD</a></li>
+<li><a href="/xmldom/index.asp" title="XML DOM ΩÃ≥Ã">XML DOM</a></li>
+<li><a href="/xsl/xsl_languages.asp" title="XSL ”Ô—‘">XSL</a></li>
+<li><a href="/xsl/index.asp" title="XSLT ΩÃ≥Ã">XSLT</a></li>
+<li><a href="/xslfo/index.asp" title="XSL-FO ΩÃ≥Ã">XSL-FO</a></li>
+<li><a href="/xpath/index.asp" title="XPath ΩÃ≥Ã">XPath</a></li>
+<li><a href="/xquery/index.asp" title="XQuery ΩÃ≥Ã">XQuery</a></li>
+<li><a href="/xlink/index.asp" title="XLink ΩÃ≥Ã">XLink</a></li>
+<li><a href="/xlink/index.asp" title="XPointer ΩÃ≥Ã">XPointer</a></li>
+<li><a href="/schema/index.asp" title="Schema ΩÃ≥Ã">Schema</a></li>
+<li><a href="/xforms/index.asp" title="XForms ΩÃ≥Ã">XForms</a></li>
+<li><a href="/wap/index.asp" title="WAP ΩÃ≥Ã">WAP</a></li>
+<li><a href="/svg/index.asp" title="SVG ΩÃ≥Ã">SVG</a></li>
+</ul>
+
+<h2>Web Services</h2>
+<ul>
+<li><a href="/webservices/index.asp" title="Web Services ΩÃ≥Ã">Web Services</a></li>
+<li><a href="/wsdl/index.asp" title="WSDL ΩÃ≥Ã">WSDL</a></li>
+<li><a href="/soap/index.asp" title="SOAP ΩÃ≥Ã">SOAP</a></li>
+<li><a href="/rss/index.asp" title="RSS ΩÃ≥Ã">RSS</a></li>
+<li><a href="/rdf/index.asp" title="RDF ΩÃ≥Ã">RDF</a></li>
+</ul>
+
+<h2>Ω®’æ ÷≤·</h2>
+<ul>
+<li><a href="/site/index.asp" title="Õ¯’æππΩ®">Õ¯’æππΩ®</a></li>
+<li><a href="/w3c/index.asp" title="ÕÚŒ¨Õ¯¡™√À (W3C)">ÕÚŒ¨Õ¯¡™√À (W3C)</a></li>
+<li><a href="/browsers/index.asp" title="‰Ø¿¿∆˜–≈œ¢">‰Ø¿¿∆˜–≈œ¢</a></li>
+<li><a href="/quality/index.asp" title="Õ¯’æ∆∑÷ ">Õ¯’æ∆∑÷ </a></li>
+<li><a href="/semweb/index.asp" title="”Ô“ÂÕ¯">”Ô“ÂÕ¯</a></li>
+<li><a href="/careers/index.asp" title="÷∞“µπÊªÆ">÷∞“µπÊªÆ</a></li>
+<li><a href="/hosting/index.asp" title="Õ¯’æ÷˜ª˙ΩÃ≥Ã">Õ¯’æ÷˜ª˙</a></li>
+<li><a href="/media/index.asp" title="Õ¯¬Á√ΩÃÂΩÃ≥Ã">Õ¯¬Á√ΩÃÂ</a></li>
+</ul>
+
+<h2 id="link_about"><a href="/about/index.asp" title="πÿ”⁄ W3School">πÿ”⁄ W3School</a></h2>
+<h2 id="link_help"><a href="/about/about_helping.asp" title="∞Ô÷˙ W3School">∞Ô÷˙ W3School</a></h2>
+</div>
+
+<div id="maincontent">
+
+<div class="idea" id="d1">
+<h2>¡Ïœ»µƒ Web ºº ıΩÃ≥Ã - »´≤ø√‚∑—</h2>
+<p>‘⁄ W3School£¨ƒ„ø…“‘’“µΩƒ„À˘–Ë“™µƒÀ˘”–µƒÕ¯’æΩ®…ËΩÃ≥Ã°£</p>
+<p>¥”ª˘¥°µƒ HTML µΩ CSS£¨ƒÀ÷¡Ω¯Ω◊µƒ XML°¢SQL°¢JS°¢PHP ∫Õ ASP.NET°£</p>
+<p><strong>¥”◊Û≤‡µƒ≤Àµ•—°‘Òƒ„–Ë“™µƒΩÃ≥Ã£°</strong></p>
+</div>
+
+<div class="idea" id="d2">
+<h3>ÕÍ’˚µƒÕ¯’æºº ı≤Œøº ÷≤·</h3>
+<p>Œ“√«µƒ≤Œøº ÷≤·∫≠∏«¡ÀÕ¯’æºº ıµƒ∑Ω∑Ω√Ê√Ê°£</p>
+<p>∆‰÷–∞¸¿®W3C±Í◊ººº ı£∫HTML°¢CSS°¢XML °£“‘º∞∆‰À˚ºº ı£¨÷Ó»Á JavaScript°¢PHP°¢SQL µ»°£</p>
+</div>
+
+<div class="idea" id="d3">
+<h3>‘⁄œﬂ µ¿˝≤‚ ‘π§æﬂ</h3>
+<p>‘⁄ W3School£¨Œ“√«Ã·π©…œ«ß∏ˆ µ¿˝°£</p>
+<p>Õ®π˝ π”√Œ“√«µƒ‘⁄œﬂ±‡º≠∆˜£¨ƒ„ø…“‘±‡º≠’‚–©¿˝◊”£¨≤¢∂‘¥˙¬ÎΩ¯–– µ—È°£</p>
+</div>
+
+<div class="idea" id="d4">
+<h3>øÏΩ›“◊∂Æµƒ—ßœ∞∑Ω Ω</h3>
+<p>“ª¥Áπ‚“ı“ª¥ÁΩ£¨“Ú¥À£¨Œ“√«Œ™ƒ˙Ã·π©øÏΩ›“◊∂Æµƒ—ßœ∞ƒ⁄»›°£</p>
+<p>‘⁄’‚¿Ô£¨ƒ˙ø…“‘Õ®π˝“ª÷÷“◊∂Æµƒ±„¿˚µƒƒ£ ΩªÒµ√ƒ˙–Ë“™µƒ»Œ∫Œ÷™ ∂°£</p>
+</div>
+
+
+<div class="idea" id="d5">
+<h3>¥”∫Œ»Î ÷£ø</h3>
+<p> ≤√¥ «“ª∏ˆ Web Ω®…Ë’ﬂ–Ë“™—ßœ∞µƒ÷™ ∂ƒÿ£ø</p>
+<p>W3School Ω´Œ™ƒ˙ªÿ¥’‚∏ˆŒ Ã‚£¨‘⁄ƒ˙≥…Œ™◊®“µ Web ø™∑¢’ﬂµƒ¬∑…œ÷˙“ª±€÷Æ¡¶°£</p>
+<p>»Áπ˚ƒ˙ «≥ı—ß’ﬂ£¨«Îƒ˙‘ƒ∂¡°∂<a href="/web/index.asp" title="Õ¯’æππΩ®≥ıº∂ΩÃ≥Ã">Õ¯’æππΩ®≥ıº∂ΩÃ≥Ã</a>°∑°£</p>
+<p>»Áπ˚ƒ˙ «ø™∑¢’ﬂ£¨«Îƒ˙‘ƒ∂¡°∂<a href="/site/index.asp" title="Õ¯’æππΩ®">Õ¯’æππΩ®∏ﬂº∂ΩÃ≥Ã</a>°∑°£</p>
+</div>
+
+
+<div class="idea" id="d6">
+<h3>W3School –¬Œ≈</h3>
+
+<p style="margin-top: 20px;">
+<a style="font-size: 20px;" href="/python/index.asp" title="Python ΩÃ≥Ã">W3School  ◊∏ˆ±‡≥ÃΩÃ≥Ã£∫Python ΩÃ≥Ã…œœﬂ£°</a>
+</p>
+</div>
+
+
+<div class="idea" id="d7">
+<h3>W3School ∏¸–¬–≈œ¢</h3>
+
+<p style="margin-top: 20px;">
+<a style="font-size: 20px;" href="/python/python_ref_functions.asp" title="Python ΩÃ≥Ã">≤Œøº ÷≤·£∫Python ƒ⁄Ω®∫Ø ˝</a>
+</p>
+
+</div>
+
+
+<div id="d8">
+<h3>W3School ”—«È¡¥Ω”</h3>
+<p class="partner">
+<a target="_blank" href="https://mozilla.com.cn/">Firefox ÷–Œƒ…Á«¯</a> &nbsp;&nbsp;&nbsp; 
+<a target="_blank" href="https://www.w3ctech.com/">w3ctech</a> &nbsp;&nbsp;&nbsp; 
+<a target="_blank" href="https://wetest.qq.com/?from=links_w3school">WeTestÃ⁄—∂÷ ¡øø™∑≈∆ΩÃ®</a> &nbsp;&nbsp;&nbsp; 
+</p>
+</div>
+
+
+<div id="d9">
+<h3>–¬¿ÀŒ¢≤©</h3>
+<p><a target="_blank" href="https://weibo.com/w3schoolcomcn">W3School πŸ∑ΩŒ¢≤©</a></p>
+</div>
+
+
+<div id="d10">
+<h3>Œ¢–≈π´÷⁄∫≈</h3>
+<p>W3School πŸ∑Ω∑˛ŒÒ∫≈</p>
+</div>
+
+</div>
+
+
+<div id="sidebar">
+
+<h2>≤Œøº ÷≤·</h2>
+<ul>
+<li><a href="/tags/index.asp" title="HTML ≤Œøº ÷≤·">HTML/HTML5 ±Í«©</a></li>
+<li><a href="/tags/html_ref_colornames.asp" title="HTML —’…´√˚">HTML —’…´</a></li>
+<li><a href="/cssref/index.asp" title="CSS ≤Œøº ÷≤·">CSS 1,2,3</a></li>
+<li><a href="/jsref/index.asp" title="JavaScript ≤Œøº ÷≤·">JavaScript</a></li>
+<li><a href="/jsref/index.asp" title="HTML DOM ≤Œøº ÷≤·">HTML DOM</a></li>
+<li><a href="/jquery/jquery_reference.asp" title="jQuery ≤Œøº ÷≤·">jQuery</a></li>
+<li><a href="/jquerymobile/jquerymobile_ref_data.asp" title="jQuery Mobile ≤Œøº ÷≤·">jQuery Mobile</a></li>
+<li><a href="/vbscript/vbscript_ref_functions.asp" title="VBScript ∫Ø ˝">VBScript</a></li>
+<li><a href="/asp/asp_ref.asp" title="ASP ≤Œøº ÷≤·">ASP</a></li>
+<li><a href="/ado/ado_reference.asp" title="ADO ≤Œøº ÷≤·">ADO</a></li>
+<li><a href="/aspnet/aspnet_reference.asp" title="ASP.NET ≤Œøº ÷≤·">ASP.NET</a></li>
+<li><a href="/php/php_ref.asp" title="PHP ≤Œøº ÷≤·">PHP 5.1</a></li>
+<li><a href="/xmldom/xmldom_reference.asp" title="XML DOM ≤Œøº ÷≤·">XML DOM</a></li>
+<li><a href="/xsl/xsl_w3celementref.asp" title="XSLT ‘™Àÿ≤Œøº ÷≤·">XSLT 1.0</a></li>
+<li><a href="/xpath/xpath_functions.asp" title="XPath°¢XQuery “‘º∞ XSLT ∫Ø ˝">XPath 2.0</a></li>
+<li><a href="/xslfo/xslfo_reference.asp" title="XSL-FO ≤Œøº ÷≤·">XSL-FO</a></li>
+<li><a href="/wap/wml_reference.asp" title="WML ≤Œøº ÷≤·">WML 1.1</a></li>
+<li><a href="/glossary/index.asp" title="W3C  ı”Ô±Ì∫Õ¥ µ‰">W3C  ı”Ô±Ì</a></li>
+</ul>
+
+<h2>◊÷∑˚ºØ</h2>
+<ul>
+<li><a href="/tags/html_ref_charactersets.asp" title="HTML ◊÷∑˚ºØ">HTML ◊÷∑˚ºØ</a></li>
+<li><a href="/tags/html_ref_ascii.asp" title="HTML ASCII ≤Œøº ÷≤·">HTML ASCII</a></li>
+<li><a href="/tags/html_ref_entities.html" title="HTML ISO-8859-1 ≤Œøº ÷≤·">HTML ISO-8859-1</a></li>
+<li><a href="/tags/html_ref_symbols.html" title="HTML 4.01 ∑˚∫≈ µÃÂ">HTML ∑˚∫≈</a></li>
+</ul>
+
+<h2> µ¿˝/∞∏¿˝</h2>
+<ul>
+<li><a href="/example/html_examples.asp">HTML  µ¿˝</a></li>
+<li><a href="/example/csse_examples.asp">CSS  µ¿˝</a></li>
+<li><a href="/example/xmle_examples.asp">XML  µ¿˝</a></li>
+<li><a href="/python/python_examples.asp">Python  µ¿˝</a></li>
+<li><a href="/js/js_examples.asp">JavaScript  µ¿˝</a></li>
+<li><a href="/js/js_html_objects_examples.asp">JavaScript ∂‘œÛ µ¿˝</a></li>
+<li><a href="/js/js_dom_examples.asp">HTML DOM  µ¿˝</a></li>
+<li><a href="/jquery/jquery_examples.asp">jQuery  µ¿˝</a></li>
+<li><a href="/jquerymobile/jquerymobile_examples.asp">jQuery Mobile  µ¿˝</a></li>
+<li><a href="/example/xdom_examples.asp">XML DOM  µ¿˝</a></li>
+<li><a href="/example/dhtm_examples.asp">DHTML  µ¿˝</a></li>
+<li><a href="/example/ajax_examples.asp">AJAX  µ¿˝</a></li>
+<li><a href="/example/vbst_examples.asp">VBScript  µ¿˝</a></li>
+<li><a href="/example/aspe_examples.asp">ASP  µ¿˝</a></li>
+<li><a href="/example/adoe_examples.asp">ADO  µ¿˝</a></li>
+<li><a href="/svg/svg_examples.asp">SVG  µ¿˝</a></li>
+<li><a href="/wap/wap_demo.asp" title="WAP —› æ">WAP  µ¿˝</a></li>
+</ul>
+
+<h2>≤‚—È/øº ‘</h2>
+<ul>
+<li><a href="/html/html_quiz.asp">HTML ≤‚—È</a></li>
+<li><a href="/html5/html5_quiz.asp">HTML5 ≤‚—È</a></li>
+<li><a href="/xhtml/xhtml_quiz.asp">XHTML ≤‚—È</a></li>
+<li><a href="/css/css_quiz.asp">CSS ≤‚—È</a></li>
+<li><a href="/xml/xml_quiz.asp">XML ≤‚—È</a></li>
+<li><a href="/js/js_quiz.asp">JavaScript ≤‚—È</a></li>
+<li><a href="/jquery/jquery_quiz.asp">jQuery ≤‚—È</a></li>
+<li><a href="/sql/sql_quiz.asp">SQL ≤‚—È</a></li>
+<li><a href="/asp/asp_quiz.asp">ASP ≤‚—È</a></li>
+<li><a href="/php/php_quiz.asp">PHP ≤‚—È</a></li>
+</ul>
+
+<h2>¥˙¬Î—È÷§</h2>
+<ul>
+<li><a href="/site/site_validate.asp" title="Õ¯“≥—È÷§">—È÷§HTML</a></li>
+<li><a href="/site/site_validate.asp" title="Õ¯“≥—È÷§">—È÷§CSS</a></li>
+<li><a href="/site/site_validate.asp" title="Õ¯“≥—È÷§">—È÷§XHTML</a></li>
+<li><a href="/site/site_validate.asp" title="Õ¯“≥—È÷§">—È÷§XML</a></li>
+<li><a href="/site/site_validate.asp" title="Õ¯“≥—È÷§">—È÷§WML</a></li>
+</ul>
+
+</div>
+
+
+
+<div id="footer">
+<p id="p1">
+W3School ºÚÃÂ÷–Œƒ∞ÊÃ·π©µƒƒ⁄»›Ωˆ”√”⁄≈‡—µ∫Õ≤‚ ‘£¨≤ª±£÷§ƒ⁄»›µƒ’˝»∑–‘°£Õ®π˝ π”√±æ’æƒ⁄»›ÀÊ÷Æ∂¯¿¥µƒ∑Áœ’”Î±æ’æŒﬁπÿ°£
+</p>
+
+<p id="p2">
+<a href="/about/about_use.asp" title="πÿ”⁄ π”√"> π”√ÃıøÓ</a>∫Õ<a href="/about/about_privacy.asp" title="πÿ”⁄“˛ÀΩ">“˛ÀΩÃıøÓ</a>°£∞Ê»®À˘”–£¨±£¡Ù“ª«–»®¿˚°£
+‘ﬁ÷˙…Ã£∫<a target="_blank" href="https://www.ykinvestment.com/" title="…œ∫£”Æø∆Õ∂◊ ”–œﬁπ´Àæ">…œ∫£”Æø∆Õ∂◊ ”–œﬁπ´Àæ</a>°£
+<a target="_blank" href="https://www.miitbeian.gov.cn/">√…ICP±∏06004630∫≈</a>
+<a style="color: #000; margin-left: 20px;" href="/ad.html" target="_blank" title="W3School π„∏ÊøØ¿˝">π„∏ÊøØ¿˝</a>
+</p>
+</div>
+
+</div>
+</body>
+</html>
+ 
+[2019-12-19 16:04:33,177] 2919 [Thread-4] INFO  nt.com.handler.LogHandler  - [LogHandler - after ][2019-12-19 16:04:33  ’µΩ±®Œƒ]<!DOCTYPE html>
+<html lang="zh-cn">
+<head>
+
+<!-- Global site tag (gtag.js) - Google Analytics -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=UA-878633-1"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'UA-878633-1');
+</script>
+
+<title>w3school ‘⁄œﬂΩÃ≥Ã</title>
+
+<link rel="stylesheet" type="text/css" href="/c5.css" />
+<meta charset="gbk" />
+<meta http-equiv="Content-Language" content="zh-cn" />
+<meta name="description" content="»´«Ú◊Ó¥Ûµƒ÷–Œƒ Web ºº ıΩÃ≥Ã°£" />
+<meta name="robots" content="all" />
+<meta name="author" content="w3school.com.cn" />
+<meta name="Copyright" content="Copyright W3school.com.cn All Rights Reserved." />
+<meta name="MSSmartTagsPreventParsing" content="true" />
+<meta http-equiv="imagetoolbar" content="false" />
+
+<link rel="icon" type="image/png" sizes="16x16" href="/ui2019/logo-16-red.png">
+<link rel="icon" type="image/png" sizes="32x32" href="/ui2019/logo-32-red.png">
+<link rel="icon" type="image/png" sizes="48x48" href="/ui2019/logo-48-red.png">
+<link rel="icon" type="image/png" sizes="96x96" href="/ui2019/logo-96-red.png">
+<link rel="apple-touch-icon-precomposed" sizes="180x180" href="/ui2019/logo-180.png">
+</head>
+
+<body id="homefirst">
+<div id="wrapper">
+
+<div id="header_index">
+<h1><a href="/index.html" title="w3school ‘⁄œﬂΩÃ≥Ã" style="float:left;">w3school ‘⁄œﬂΩÃ≥Ã</a></h1>
+
+<div id="searchui">
+<form method="get" id="searchform" action="https://www.google.com.hk/search">
+<input type="hidden" name="sitesearch" value="w3school.com.cn" />
+<input type="text" name="as_q" class="box"  id="searched_content" title="‘⁄¥À ‰»ÎÀ—À˜ƒ⁄»›°£" />
+<input type="submit" value="Go" class="button" title="À—À˜£°" />
+</form>
+</div>
+</div>
+
+<div id="navfirst">
+<ul id="menu">
+<li id="h"><a href="/h.asp" title="HTML œµ¡–ΩÃ≥Ã">HTML œµ¡–ΩÃ≥Ã</a></li>
+<li id="b"><a href="/b.asp" title="‰Ø¿¿∆˜Ω≈±æΩÃ≥Ã">‰Ø¿¿∆˜Ω≈±æ</a></li>
+<li id="s"><a href="/s.asp" title="∑˛ŒÒ∆˜Ω≈±æΩÃ≥Ã">∑˛ŒÒ∆˜Ω≈±æ</a></li>
+<li id="p"><a href="/p.asp" title="±‡≥ÃΩÃ≥Ã">±‡≥ÃΩÃ≥Ã</a></li>
+<li id="x"><a href="/x.asp" title="XML œµ¡–ΩÃ≥Ã">XML œµ¡–ΩÃ≥Ã</a></li>
+<li id="w"><a href="/w.asp" title="Ω®’æ ÷≤·">Ω®’æ ÷≤·</a></li>
+<li id="r"><a href="/r.asp" title="≤Œøº ÷≤·">≤Œøº ÷≤·</a></li>
+</ul>
+</div>
+
+<div id="navsecond">
+<h2>HTML ΩÃ≥Ã</h2>
+<ul>
+<li><a href="/html/index.asp" title="HTML ΩÃ≥Ã">HTML</a></li>
+<li><a href="/html5/index.asp" title="HTML5 ΩÃ≥Ã">HTML5</a></li>
+<li><a href="/xhtml/index.asp" title="XHTML ΩÃ≥Ã">XHTML</a></li>
+<li><a href="/css/index.asp" title="CSS ΩÃ≥Ã">CSS</a></li>
+<li><a href="/css3/index.asp" title="CSS3 ΩÃ≥Ã">CSS3</a></li>
+<li><a href="/tcpip/index.asp" title="TCP/IP ΩÃ≥Ã">TCP/IP</a></li>
+</ul>
+
+<h2>‰Ø¿¿∆˜Ω≈±æ</h2>
+<ul>
+<li><a href="/js/index.asp" title="JavaScript ΩÃ≥Ã">JavaScript</a></li>
+<li><a href="/htmldom/index.asp" title="HTML DOM ΩÃ≥Ã">HTML DOM</a></li>
+<li><a href="/jquery/index.asp" title="jQuery ΩÃ≥Ã">jQuery</a></li>
+<li><a href="/jquerymobile/index.asp" title="jQuery Mobile ΩÃ≥Ã">jQuery Mobile</a></li>
+<li><a href="/ajax/index.asp" title="AJAX ΩÃ≥Ã">AJAX</a></li>
+<li><a href="/json/index.asp" title="JSON ΩÃ≥Ã">JSON</a></li>
+<li><a href="/dhtml/index.asp" title="DHTML ΩÃ≥Ã">DHTML</a></li>
+<li><a href="/e4x/index.asp" title="E4X ΩÃ≥Ã">E4X</a></li>
+<li><a href="/wmlscript/index.asp" title="WMLScript ΩÃ≥Ã">WMLScript</a></li>
+</ul>
+
+<h2>∑˛ŒÒ∆˜Ω≈±æ</h2>
+<ul>
+<li><a href="/php/index.asp" title="PHP ΩÃ≥Ã">PHP</a></li>
+<li><a href="/sql/index.asp" title="SQL ΩÃ≥Ã">SQL</a></li>
+<li><a href="/asp/index.asp" title="ASP ΩÃ≥Ã">ASP</a></li>
+<li><a href="/ado/index.asp" title="ADO ΩÃ≥Ã">ADO</a></li>
+<li><a href="/aspnet/index.asp" title="ASP.NET ΩÃ≥Ã">ASP.NET</a></li>
+<li><a href="/vbscript/index.asp" title="VBScript ΩÃ≥Ã">VBScript</a></li>
+</ul>
+
+
+<h2>±‡≥Ã</h2>
+<ul>
+<li><a href="/python/index.asp" title="Python ΩÃ≥Ã">Python</a></li>
+<li><a href="#" title="Java ΩÃ≥Ã">Java</a></li>
+<li><a href="#" title="C++ ΩÃ≥Ã">C++</a></li>
+<li><a href="#" title="C# ΩÃ≥Ã">C#</a></li>
+</ul>
+
+<h2>XML ΩÃ≥Ã</h2>
+<ul>
+<li><a href="/xml/index.asp" title="XML ΩÃ≥Ã">XML</a></li>
+<li><a href="/dtd/index.asp" title="DTDΩÃ≥Ã">DTD</a></li>
+<li><a href="/xmldom/index.asp" title="XML DOM ΩÃ≥Ã">XML DOM</a></li>
+<li><a href="/xsl/xsl_languages.asp" title="XSL ”Ô—‘">XSL</a></li>
+<li><a href="/xsl/index.asp" title="XSLT ΩÃ≥Ã">XSLT</a></li>
+<li><a href="/xslfo/index.asp" title="XSL-FO ΩÃ≥Ã">XSL-FO</a></li>
+<li><a href="/xpath/index.asp" title="XPath ΩÃ≥Ã">XPath</a></li>
+<li><a href="/xquery/index.asp" title="XQuery ΩÃ≥Ã">XQuery</a></li>
+<li><a href="/xlink/index.asp" title="XLink ΩÃ≥Ã">XLink</a></li>
+<li><a href="/xlink/index.asp" title="XPointer ΩÃ≥Ã">XPointer</a></li>
+<li><a href="/schema/index.asp" title="Schema ΩÃ≥Ã">Schema</a></li>
+<li><a href="/xforms/index.asp" title="XForms ΩÃ≥Ã">XForms</a></li>
+<li><a href="/wap/index.asp" title="WAP ΩÃ≥Ã">WAP</a></li>
+<li><a href="/svg/index.asp" title="SVG ΩÃ≥Ã">SVG</a></li>
+</ul>
+
+<h2>Web Services</h2>
+<ul>
+<li><a href="/webservices/index.asp" title="Web Services ΩÃ≥Ã">Web Services</a></li>
+<li><a href="/wsdl/index.asp" title="WSDL ΩÃ≥Ã">WSDL</a></li>
+<li><a href="/soap/index.asp" title="SOAP ΩÃ≥Ã">SOAP</a></li>
+<li><a href="/rss/index.asp" title="RSS ΩÃ≥Ã">RSS</a></li>
+<li><a href="/rdf/index.asp" title="RDF ΩÃ≥Ã">RDF</a></li>
+</ul>
+
+<h2>Ω®’æ ÷≤·</h2>
+<ul>
+<li><a href="/site/index.asp" title="Õ¯’æππΩ®">Õ¯’æππΩ®</a></li>
+<li><a href="/w3c/index.asp" title="ÕÚŒ¨Õ¯¡™√À (W3C)">ÕÚŒ¨Õ¯¡™√À (W3C)</a></li>
+<li><a href="/browsers/index.asp" title="‰Ø¿¿∆˜–≈œ¢">‰Ø¿¿∆˜–≈œ¢</a></li>
+<li><a href="/quality/index.asp" title="Õ¯’æ∆∑÷ ">Õ¯’æ∆∑÷ </a></li>
+<li><a href="/semweb/index.asp" title="”Ô“ÂÕ¯">”Ô“ÂÕ¯</a></li>
+<li><a href="/careers/index.asp" title="÷∞“µπÊªÆ">÷∞“µπÊªÆ</a></li>
+<li><a href="/hosting/index.asp" title="Õ¯’æ÷˜ª˙ΩÃ≥Ã">Õ¯’æ÷˜ª˙</a></li>
+<li><a href="/media/index.asp" title="Õ¯¬Á√ΩÃÂΩÃ≥Ã">Õ¯¬Á√ΩÃÂ</a></li>
+</ul>
+
+<h2 id="link_about"><a href="/about/index.asp" title="πÿ”⁄ W3School">πÿ”⁄ W3School</a></h2>
+<h2 id="link_help"><a href="/about/about_helping.asp" title="∞Ô÷˙ W3School">∞Ô÷˙ W3School</a></h2>
+</div>
+
+<div id="maincontent">
+
+<div class="idea" id="d1">
+<h2>¡Ïœ»µƒ Web ºº ıΩÃ≥Ã - »´≤ø√‚∑—</h2>
+<p>‘⁄ W3School£¨ƒ„ø…“‘’“µΩƒ„À˘–Ë“™µƒÀ˘”–µƒÕ¯’æΩ®…ËΩÃ≥Ã°£</p>
+<p>¥”ª˘¥°µƒ HTML µΩ CSS£¨ƒÀ÷¡Ω¯Ω◊µƒ XML°¢SQL°¢JS°¢PHP ∫Õ ASP.NET°£</p>
+<p><strong>¥”◊Û≤‡µƒ≤Àµ•—°‘Òƒ„–Ë“™µƒΩÃ≥Ã£°</strong></p>
+</div>
+
+<div class="idea" id="d2">
+<h3>ÕÍ’˚µƒÕ¯’æºº ı≤Œøº ÷≤·</h3>
+<p>Œ“√«µƒ≤Œøº ÷≤·∫≠∏«¡ÀÕ¯’æºº ıµƒ∑Ω∑Ω√Ê√Ê°£</p>
+<p>∆‰÷–∞¸¿®W3C±Í◊ººº ı£∫HTML°¢CSS°¢XML °£“‘º∞∆‰À˚ºº ı£¨÷Ó»Á JavaScript°¢PHP°¢SQL µ»°£</p>
+</div>
+
+<div class="idea" id="d3">
+<h3>‘⁄œﬂ µ¿˝≤‚ ‘π§æﬂ</h3>
+<p>‘⁄ W3School£¨Œ“√«Ã·π©…œ«ß∏ˆ µ¿˝°£</p>
+<p>Õ®π˝ π”√Œ“√«µƒ‘⁄œﬂ±‡º≠∆˜£¨ƒ„ø…“‘±‡º≠’‚–©¿˝◊”£¨≤¢∂‘¥˙¬ÎΩ¯–– µ—È°£</p>
+</div>
+
+<div class="idea" id="d4">
+<h3>øÏΩ›“◊∂Æµƒ—ßœ∞∑Ω Ω</h3>
+<p>“ª¥Áπ‚“ı“ª¥ÁΩ£¨“Ú¥À£¨Œ“√«Œ™ƒ˙Ã·π©øÏΩ›“◊∂Æµƒ—ßœ∞ƒ⁄»›°£</p>
+<p>‘⁄’‚¿Ô£¨ƒ˙ø…“‘Õ®π˝“ª÷÷“◊∂Æµƒ±„¿˚µƒƒ£ ΩªÒµ√ƒ˙–Ë“™µƒ»Œ∫Œ÷™ ∂°£</p>
+</div>
+
+
+<div class="idea" id="d5">
+<h3>¥”∫Œ»Î ÷£ø</h3>
+<p> ≤√¥ «“ª∏ˆ Web Ω®…Ë’ﬂ–Ë“™—ßœ∞µƒ÷™ ∂ƒÿ£ø</p>
+<p>W3School Ω´Œ™ƒ˙ªÿ¥’‚∏ˆŒ Ã‚£¨‘⁄ƒ˙≥…Œ™◊®“µ Web ø™∑¢’ﬂµƒ¬∑…œ÷˙“ª±€÷Æ¡¶°£</p>
+<p>»Áπ˚ƒ˙ «≥ı—ß’ﬂ£¨«Îƒ˙‘ƒ∂¡°∂<a href="/web/index.asp" title="Õ¯’æππΩ®≥ıº∂ΩÃ≥Ã">Õ¯’æππΩ®≥ıº∂ΩÃ≥Ã</a>°∑°£</p>
+<p>»Áπ˚ƒ˙ «ø™∑¢’ﬂ£¨«Îƒ˙‘ƒ∂¡°∂<a href="/site/index.asp" title="Õ¯’æππΩ®">Õ¯’æππΩ®∏ﬂº∂ΩÃ≥Ã</a>°∑°£</p>
+</div>
+
+
+<div class="idea" id="d6">
+<h3>W3School –¬Œ≈</h3>
+
+<p style="margin-top: 20px;">
+<a style="font-size: 20px;" href="/python/index.asp" title="Python ΩÃ≥Ã">W3School  ◊∏ˆ±‡≥ÃΩÃ≥Ã£∫Python ΩÃ≥Ã…œœﬂ£°</a>
+</p>
+</div>
+
+
+<div class="idea" id="d7">
+<h3>W3School ∏¸–¬–≈œ¢</h3>
+
+<p style="margin-top: 20px;">
+<a style="font-size: 20px;" href="/python/python_ref_functions.asp" title="Python ΩÃ≥Ã">≤Œøº ÷≤·£∫Python ƒ⁄Ω®∫Ø ˝</a>
+</p>
+
+</div>
+
+
+<div id="d8">
+<h3>W3School ”—«È¡¥Ω”</h3>
+<p class="partner">
+<a target="_blank" href="https://mozilla.com.cn/">Firefox ÷–Œƒ…Á«¯</a> &nbsp;&nbsp;&nbsp; 
+<a target="_blank" href="https://www.w3ctech.com/">w3ctech</a> &nbsp;&nbsp;&nbsp; 
+<a target="_blank" href="https://wetest.qq.com/?from=links_w3school">WeTestÃ⁄—∂÷ ¡øø™∑≈∆ΩÃ®</a> &nbsp;&nbsp;&nbsp; 
+</p>
+</div>
+
+
+<div id="d9">
+<h3>–¬¿ÀŒ¢≤©</h3>
+<p><a target="_blank" href="https://weibo.com/w3schoolcomcn">W3School πŸ∑ΩŒ¢≤©</a></p>
+</div>
+
+
+<div id="d10">
+<h3>Œ¢–≈π´÷⁄∫≈</h3>
+<p>W3School πŸ∑Ω∑˛ŒÒ∫≈</p>
+</div>
+
+</div>
+
+
+<div id="sidebar">
+
+<h2>≤Œøº ÷≤·</h2>
+<ul>
+<li><a href="/tags/index.asp" title="HTML ≤Œøº ÷≤·">HTML/HTML5 ±Í«©</a></li>
+<li><a href="/tags/html_ref_colornames.asp" title="HTML —’…´√˚">HTML —’…´</a></li>
+<li><a href="/cssref/index.asp" title="CSS ≤Œøº ÷≤·">CSS 1,2,3</a></li>
+<li><a href="/jsref/index.asp" title="JavaScript ≤Œøº ÷≤·">JavaScript</a></li>
+<li><a href="/jsref/index.asp" title="HTML DOM ≤Œøº ÷≤·">HTML DOM</a></li>
+<li><a href="/jquery/jquery_reference.asp" title="jQuery ≤Œøº ÷≤·">jQuery</a></li>
+<li><a href="/jquerymobile/jquerymobile_ref_data.asp" title="jQuery Mobile ≤Œøº ÷≤·">jQuery Mobile</a></li>
+<li><a href="/vbscript/vbscript_ref_functions.asp" title="VBScript ∫Ø ˝">VBScript</a></li>
+<li><a href="/asp/asp_ref.asp" title="ASP ≤Œøº ÷≤·">ASP</a></li>
+<li><a href="/ado/ado_reference.asp" title="ADO ≤Œøº ÷≤·">ADO</a></li>
+<li><a href="/aspnet/aspnet_reference.asp" title="ASP.NET ≤Œøº ÷≤·">ASP.NET</a></li>
+<li><a href="/php/php_ref.asp" title="PHP ≤Œøº ÷≤·">PHP 5.1</a></li>
+<li><a href="/xmldom/xmldom_reference.asp" title="XML DOM ≤Œøº ÷≤·">XML DOM</a></li>
+<li><a href="/xsl/xsl_w3celementref.asp" title="XSLT ‘™Àÿ≤Œøº ÷≤·">XSLT 1.0</a></li>
+<li><a href="/xpath/xpath_functions.asp" title="XPath°¢XQuery “‘º∞ XSLT ∫Ø ˝">XPath 2.0</a></li>
+<li><a href="/xslfo/xslfo_reference.asp" title="XSL-FO ≤Œøº ÷≤·">XSL-FO</a></li>
+<li><a href="/wap/wml_reference.asp" title="WML ≤Œøº ÷≤·">WML 1.1</a></li>
+<li><a href="/glossary/index.asp" title="W3C  ı”Ô±Ì∫Õ¥ µ‰">W3C  ı”Ô±Ì</a></li>
+</ul>
+
+<h2>◊÷∑˚ºØ</h2>
+<ul>
+<li><a href="/tags/html_ref_charactersets.asp" title="HTML ◊÷∑˚ºØ">HTML ◊÷∑˚ºØ</a></li>
+<li><a href="/tags/html_ref_ascii.asp" title="HTML ASCII ≤Œøº ÷≤·">HTML ASCII</a></li>
+<li><a href="/tags/html_ref_entities.html" title="HTML ISO-8859-1 ≤Œøº ÷≤·">HTML ISO-8859-1</a></li>
+<li><a href="/tags/html_ref_symbols.html" title="HTML 4.01 ∑˚∫≈ µÃÂ">HTML ∑˚∫≈</a></li>
+</ul>
+
+<h2> µ¿˝/∞∏¿˝</h2>
+<ul>
+<li><a href="/example/html_examples.asp">HTML  µ¿˝</a></li>
+<li><a href="/example/csse_examples.asp">CSS  µ¿˝</a></li>
+<li><a href="/example/xmle_examples.asp">XML  µ¿˝</a></li>
+<li><a href="/python/python_examples.asp">Python  µ¿˝</a></li>
+<li><a href="/js/js_examples.asp">JavaScript  µ¿˝</a></li>
+<li><a href="/js/js_html_objects_examples.asp">JavaScript ∂‘œÛ µ¿˝</a></li>
+<li><a href="/js/js_dom_examples.asp">HTML DOM  µ¿˝</a></li>
+<li><a href="/jquery/jquery_examples.asp">jQuery  µ¿˝</a></li>
+<li><a href="/jquerymobile/jquerymobile_examples.asp">jQuery Mobile  µ¿˝</a></li>
+<li><a href="/example/xdom_examples.asp">XML DOM  µ¿˝</a></li>
+<li><a href="/example/dhtm_examples.asp">DHTML  µ¿˝</a></li>
+<li><a href="/example/ajax_examples.asp">AJAX  µ¿˝</a></li>
+<li><a href="/example/vbst_examples.asp">VBScript  µ¿˝</a></li>
+<li><a href="/example/aspe_examples.asp">ASP  µ¿˝</a></li>
+<li><a href="/example/adoe_examples.asp">ADO  µ¿˝</a></li>
+<li><a href="/svg/svg_examples.asp">SVG  µ¿˝</a></li>
+<li><a href="/wap/wap_demo.asp" title="WAP —› æ">WAP  µ¿˝</a></li>
+</ul>
+
+<h2>≤‚—È/øº ‘</h2>
+<ul>
+<li><a href="/html/html_quiz.asp">HTML ≤‚—È</a></li>
+<li><a href="/html5/html5_quiz.asp">HTML5 ≤‚—È</a></li>
+<li><a href="/xhtml/xhtml_quiz.asp">XHTML ≤‚—È</a></li>
+<li><a href="/css/css_quiz.asp">CSS ≤‚—È</a></li>
+<li><a href="/xml/xml_quiz.asp">XML ≤‚—È</a></li>
+<li><a href="/js/js_quiz.asp">JavaScript ≤‚—È</a></li>
+<li><a href="/jquery/jquery_quiz.asp">jQuery ≤‚—È</a></li>
+<li><a href="/sql/sql_quiz.asp">SQL ≤‚—È</a></li>
+<li><a href="/asp/asp_quiz.asp">ASP ≤‚—È</a></li>
+<li><a href="/php/php_quiz.asp">PHP ≤‚—È</a></li>
+</ul>
+
+<h2>¥˙¬Î—È÷§</h2>
+<ul>
+<li><a href="/site/site_validate.asp" title="Õ¯“≥—È÷§">—È÷§HTML</a></li>
+<li><a href="/site/site_validate.asp" title="Õ¯“≥—È÷§">—È÷§CSS</a></li>
+<li><a href="/site/site_validate.asp" title="Õ¯“≥—È÷§">—È÷§XHTML</a></li>
+<li><a href="/site/site_validate.asp" title="Õ¯“≥—È÷§">—È÷§XML</a></li>
+<li><a href="/site/site_validate.asp" title="Õ¯“≥—È÷§">—È÷§WML</a></li>
+</ul>
+
+</div>
+
+
+
+<div id="footer">
+<p id="p1">
+W3School ºÚÃÂ÷–Œƒ∞ÊÃ·π©µƒƒ⁄»›Ωˆ”√”⁄≈‡—µ∫Õ≤‚ ‘£¨≤ª±£÷§ƒ⁄»›µƒ’˝»∑–‘°£Õ®π˝ π”√±æ’æƒ⁄»›ÀÊ÷Æ∂¯¿¥µƒ∑Áœ’”Î±æ’æŒﬁπÿ°£
+</p>
+
+<p id="p2">
+<a href="/about/about_use.asp" title="πÿ”⁄ π”√"> π”√ÃıøÓ</a>∫Õ<a href="/about/about_privacy.asp" title="πÿ”⁄“˛ÀΩ">“˛ÀΩÃıøÓ</a>°£∞Ê»®À˘”–£¨±£¡Ù“ª«–»®¿˚°£
+‘ﬁ÷˙…Ã£∫<a target="_blank" href="https://www.ykinvestment.com/" title="…œ∫£”Æø∆Õ∂◊ ”–œﬁπ´Àæ">…œ∫£”Æø∆Õ∂◊ ”–œﬁπ´Àæ</a>°£
+<a target="_blank" href="https://www.miitbeian.gov.cn/">√…ICP±∏06004630∫≈</a>
+<a style="color: #000; margin-left: 20px;" href="/ad.html" target="_blank" title="W3School π„∏ÊøØ¿˝">π„∏ÊøØ¿˝</a>
+</p>
+</div>
+
+</div>
+</body>
+</html>
+ 
+[2019-12-23 08:26:41,198] 0    [Thread-7] ERROR nt.com.network.BioTcpSingle  - java.net.ConnectException: Connection refused: connect 

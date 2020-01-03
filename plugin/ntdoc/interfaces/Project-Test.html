@@ -11,253 +11,8 @@
 	<br />
 		<div style="text-align: left; margin-left: 100;">
 			<h3>接口名：<font color='red'>demo </font>
-			接口类型：<font color='red'>JSON</font>
+			        接口类型：<font color='red'>JSON</font>
 				接口方向：<font color='red'>返回报文</font>
-				</h3>
-		</div>
-		<div style="text-align: center;">
-			<table width="85%" border="1" cellspacing="0" cellpadding="0">
-				<tr>
-					<th width='100px'>序号</th>
-					<th>域名</th>
-					<th>域字典</th>
-					<th>上级域字典</th>
-					<th>必输</th>
-					<th>长度</th>
-					<th>备注</th>
-				</tr>
-					<tr style="text-align: center;">
-						<td>0</td>
-						<td></td>
-						<td>result</td>
-						<td>无</td>
-						<td></td>
-						<td></td>
-						<td></td>
-					</tr>
-					<tr style="text-align: center;">
-						<td>1</td>
-						<td></td>
-						<td>base64_image</td>
-						<td>result</td>
-						<td></td>
-						<td></td>
-						<td></td>
-					</tr>
-					<tr style="text-align: center;">
-						<td>2</td>
-						<td></td>
-						<td>reason</td>
-						<td>无</td>
-						<td></td>
-						<td></td>
-						<td></td>
-					</tr>
-					<tr style="text-align: center;">
-						<td>3</td>
-						<td></td>
-						<td>error_code</td>
-						<td>无</td>
-						<td></td>
-						<td></td>
-						<td></td>
-					</tr>
-					<tr style="word-wrap:break-word;">
-						<td style="text-align: center;">报文范例</td>
-						<td colspan="6">
-							<xmp>{"reason":"success","result":{"base64_image":"iVBORw0KGgoAAAANSUhEUgAAAHgAAAB4CAIAAAC2BqGFAAAPtklEQVR4nO1dXWhcxRefbRvMZtPExNaUgBZrQ60EjUUwW4JUSiBSKqUlFIsvrT5oMRZFpPXjIQ9B6YPY2AcppiAoGiWiQSJa0RC\/pWhppA9ZMRrDmhhL20205KM7\/4f55\/zPzseZj929rv\/u7yHce+fMmTPnnjlnzszsTYxzzsooPlb80wJcLSgrOiKUFR0RyoqOCGVFR4SyoiNCWdERoazoiFBWdFTgJCIQoL+\/P5vNalsfGxvDlPv378elUq2NGzcC5bp163DR22+\/HUFHaE2WikW7v1ogi8ViQK9WLLWlhVX\/tACMMRaLxcKIxTXnXOXgxTMClIpFC2AzNJmkavjYtL1YRQkPi66pqbntttvybzKdTv\/888+m0m+\/\/XZhYUFcT05O4qLp6enPP\/\/cVPHy5cvqQ62xb9iwobGx0UNiA86ePZvJZFypaReOKdva2iD+ZLNZNYKJJ1CEifHFsWPHMNv+\/n5Ms27duvxVIIIhSNLf349Ljx07RsgPFbUE+HlbW5u7Jv18NFiHdrSKUkxjuiA4FxB0u1q3LkaASRj8XO0+jXAfXQzV+ErvyMrEVh24YEBqdemvb\/f9FO0ifT4o4MsDVlqlwOCT7BeI8ZBVWQXI6T29g8a+\/vrr4eFhlyoNDQ0HDhwQ1yYR+fLU2F2SHTt2mILz6tWrsbSqTWDt9\/X1TU9Pu7S4bdu2ZDIZZg2BPpoxNjw8\/Mwzz7jUamlpefDBB62cpVFsxe7du+H9qWZr9bbQ1vHjx8+cOePSYk9Pz9atWwP8Bos+YdGqMnhIShXxYMfjXVs3zDDDtMyiVzQxAQjogFTFxFx9Hqwv6\/szoSQyQzXQ+9bFty588o+6vhxKaK1DjVqNjY2vvvoq3H788ccvvfSSlgPn\/KGHHkqn0+K2vr7+9ddft1pfwKv917gOE7QdqKqq6ujogOe\/\/\/67WhFKR0ZGfvrpJ3EtpZda1YQNoOChUCqKNrlpx44RFQmFRrnCF56whIHgQBeZpitWkVzyaS+EKaEkZh3BRS7KKngGG\/aG\/Cy62GNNm8K5VNFWtGabvilSWBUBP4sOjrnBzLUJtGNFUxE8z2fm7qvu8BS8sAgOWbTBFslBB1QvlYSlGKGJGA3BjhvGQXETFqyRhoaGlpYWl1qbNm1Sq2OEaXliYuKHH36A25tvvrm6ulpcr1mzhq6LWwTxrGhoaGChZhHuOg4cOGBdkyOq+5aq6O7u7u7uhtuxsbGmpiZHnlhZb731lvY5Lee\/cq3jakB4wuJugI4vv1D+FGZg+EKiUXf\/6CjHEbyEAURh0cFpNDz37R7eqdIS0PuE0nsCVphbEYNhOp1++eWXvbhrMTIy4ltFq+vt27ffeuutcDs4OFhRUSGuE4kEET8CBNACFgudwEkURCAa4lwHXz5WgRfeNm7cyNHxjL6+Plyxr68Pl6qHHOEARvmQ4\/\/AHXZRTaArRmMuVpSKoullUut6E7FMGuVaKIFSUTQzrNdIAcq9FD8pBaO2BEPp1FoxkEwmGRrpJ06cgOOKc3Nze\/fuBcrx8XGpLjbb3t7e2dlZcRuPx7EhJ5PJCDpiAe3CTcf9MIGVA02gNge30ol\/CSIYqq1IZy21z000WsnVY5smAgIW12HaNmW6GT5XRitXQpxoleWmCZhbgEuVWjFNomPoDKN1os1yh4s2EqgEBFx9ND3zx0rH11ItjlaBJYIY+TsJAlw5fKO+b9wLriQj+EJrE9ZbF4FdFa3yBQOBa1Xd0D3pguW+IWlw+Bq1qk3ttUkqLROgwUPT2jQBj+xWUkdvb+\/zzz8PpW+88cY999yjlebHH39sb293bAVjaWnpzz\/\/NJXW1tbG43G4\/eqrr2666SZx\/ccff9x+++1QtHPnzhMnTsDts88+K+U+YXjvvffuuusu5jbZD9+cnZubm5qagtv5+Xls4xiLi4uYslC4dOnSpUuX4HZpaQmc9ZUrV3CLFy9ehGvOeSaTKYg88BMQlyHo5DrouGei\/6egdpvwGJHBw0czBzeqxqUolW7KuQPW\/xzhztbVdaiaraurw+s4Fy9eTKVS2roTExP4tra2du3ataaGxsfHr1y5Iq4rKirWr19vopyenoYMRQBmNatWrZLWmLD8a9euxaUY2WwW\/2KsqqqK+P1WZWUlbtdE9j\/haKhze\/WCc97R0WFpaRldXV2YrcSHWL2TkoL9+\/djtmNjYy59UVnhDko\/Z+vo6DDJKSU+1qbtrkMNcTAStVNXR0izaW4+ByNNvYXcVv7urKzrVhIN9B1zs4rk5KNVdZhyJHdgybhhjZSoQhC4vAmpdXGh7YUpLcCW4fLiXX00NxztUZXuCLUW0U98bU2a6UBNUJr0pSXT5rcELIrGepTsDl+oLT3wwAOwsXT+\/PnBwUEoOnfu3MmTJ00t3nfffYuLi+L6+uuvx42mUqkvvvgCKBsaGrCbPnXqFPyAuaqqau\/eveD0xsfHP\/vsM6BsbW3dvHlzLHd5xGQxqr2DRQ8NDeGfc8Evl\/SwenHs\/oknUjDMZDJQ9P3331MS5CKdTpta1G5lAdy\/1yF+oix1RDxxCYZhP1G2+2iuuCFenDmpCpfoR5e6gHtuenkRA0poh+X\/G37TO9NrLKqN06u9RCkhlTYwEtFYDXq+UwCnYIindyD9Bx988O677wLl6Ogornjw4EEcDHHR9u3b9+3bZ2qxtraW6xbyGWNtbW3YTadSKRx\/Hn\/8cUjVFhcXcZG6Bwa9Y4x1d3dD7rpy5UrcxIULFzCf3bt379ixgy2r4vDhw46\/bf5vYy5Qo0FPT49rG7no6urS5pZqi6atIwEiM6SPtkjBEJ+Jra6uxkVDQ0O4Yk9PD72nRcA1GOYzalSouSVDrxy3gp9gsjwFIFjRvdNOnAuTGWpHcZ7gDp+b4rnbN45sCyIeM79Orpt9ubTrZNGSd86\/P9LiBn6RUl6gapmIfr52EMBKWt5xN0FLMMRHu++8884333wTmD788MOdnZ10dS0GBwcx297e3nvvvRdut27dOjMzI67Xr1\/\/ySefgA8ZGBg4cuQIUEqBqL29HcLv0tISLQPWy\/vvvz8\/Py+uV6xYgUfS3XffjY88vPbaa+pZd4BplVjAomj40S9bTrdAxPr6+vr6erWK1i1gVFRUYLazs7O4yvj4uLrPJAgymQyuKOHXX3+l+yIxZMvqvvHGGxkauHg6m0gkQLMi6BEC0Aj\/naE0drD0WkfmyDaMwBeq07AuEuUpQ2BmyHXLuNi9al0wMWEo4FzCF6rF4CKi1AsW14H3O6677jppJuC4YomljMViiUQCsxVHBghWpoak4wYzMzOwByahsrLy2muvhdtEIiFNLqGJbDaLXf8111wj3KPo7+rVq8M\/y2edaTtuZUn5heOZPK+tLPeD6BI6OzslIUt0K4vl2qY0A1Ovmc6bM90AdFk4t651WLvAlemjmhzQax0qw9gyrK0L5LV6J94VbltVJStEbNGyxe3S1bVvXa2lbUV9yJUlNpe+5HWAxtSAJByhJkcyIjn0suhgVtrI5GUrlmD4zjvvMIPV8Nwpp8my8HP8eqB6Mpm84YYbrIZpZY5RWVm5c+dOuG1tbcWUZ86cwdNh3BH1k72q8EA\/PDyMjwZa0jfahVM1CwTia7siGAJMwVCUEltZUrDq6upylK2jo0NSCI6BBd7KigC0OVtfudUgsFX6Wg\/PTQggBvryKQlFSwkOBvTNpbpUMYCVFjw3O+NkfDKhJBTN3Q7QFLCiO7Q5F3OO8ACP89EbNmw4dOiQF3ctRkZGBgYG1OeqjczMzOAWa2pq8NfUW1tbcTR+7rnn4Bx0IpFQucGTPXv2mLKb+fn5p556ihYszKI9gmFbWxvPTa5wZJAij5Q14Vvtp+eBhshxxf9hoXNUSSpTBqi95oZzHWofBX0RPz3PlJUjdblASvZcpoAqcxcanjul5ToXbBJPskraD+AQYmrIihAfbRILP+eKU2NmPfKwwbhc16U66FcVniuZHo0wH10SwfBqQOCPhTjnJ0+ePH78uAvxpk2bxHeLTK4D28ipU6fgkOPExMSuXbvUplmu\/YrhvGvXLumnBYD29vajR4\/CwD969KjYk1NRWVmJTwqOjo5u2bLF1K\/Dhw\/39vaaSiWEKFp0cnp62vGL7VJFmqC5uRlu4atfWiZSSDh37pxpn6mpqQn76MnJSZPk1dXVLS0t0MTU1BTRx8bGxjvuuMMaeAQi\/Qis1kUCYm57YMBE\/Uu0a6WRxPDtqZU+Uh9Nv3lJHY6x0SVhcZxdYHr3yOxI6f3dOx6UjIFjdVzVdGlifn4evDljLB6Pg6vJZrN\/\/\/23ylDLNh6Pr1y5UlwnEgn8S6+FhQXsvqQWpd7R8LZoafrsXsvFQWtn4iaygwcP1iAMDAzMLkNy1lhmle2XX36ZyWRExVQqhXm+8sorswhPPvmkKo\/jtDrEdYRNeJnb4hk9zF18sW8tFuqXmc9iS6TB0PTmJbbB+YsplcDt0tGYYE68xcLPOooNq1m5mF5Y\/kkoy8XYrQQhH4EN8NG0QJjtp59+CifhpGPOk5OTH374IdzW1dXhXyidPn0aXPNff\/2Fi8QJaGhl8+bNuHR0dBQOoalbWUSC\/s0338zNzcEtPkGogbzKlAtMKVbvAO4H0VtaWnBF4h9H0qt3EqRvKklbWeqqoWklj\/g4s9jKAmJ8xFIFrcmQzDAfi6YZBrA1OQR1EVEl9ppr5tnl8BQ8AFZxrZ7OJIxaUX0BPHeG4NhWQNKgRaBF598wRv6u32TRAlz30Sz35sLWRSWEW\/S2bdsc3bT4YjtzGAqc8yNHjkCEOX\/+\/IsvvmjlL1TwxBNPXLhwAZ48\/fTTQNDc3Lxv3z5Js46mCjT\/gOsQSCaT+L8oag1EGr9Ex6D6Y489BtepVIpWNDbVRx55BB5OTU3hD5p0dnbef\/\/9Jhun4btOYkJeX0RXlatKIxlOwDQ2QDYrpa\/nzT8Yhpz4144m7bRBG\/pp5N8lL89bWJ4EvP89CDNvy2qvvQyNeQ5VvCZHxDeVxl22QvloS2OYe01Njem\/FnshnU7jD0T19\/d3dnZCt3GLly9fPn36NNwODQ298MILcNvU1ARhVsLCwsJ3330Ht2vWrLnlllvg9tChQ3v27IEWt2zZAtso8Xj8o48+Asq6urrm5mYQ7Jdffvntt9+g9NFHHz179izcWl4bnc9QNQsEKTMk\/hbk84ts+SfKAOknylx3OEQ9B8L\/jYccmW56q\/4tRnPamZIUVPAcPHhOXRKK5subWFIHijeqwEebpkk4VAAZ9te+gpXKv0Jl5uxO9d3Fa1H73HGGamkrGkdcRkm4jqsBZUVHhLKiI0JZ0RGhrOiIUFZ0RCgrOiKUFR0RyoqOCP8BgQLSm2e0ZdAAAAAASUVORK5CYII="},"error_code":0}
-</xmp>
-						</td>					
-					</tr>
-			</table>
-		</div>
-		<br/>
-		<div style="text-align: left; margin-left: 100;">
-			<h3>接口名：<font color='red'>demo </font>
-			接口类型：<font color='red'>XML</font>
-				接口方向：<font color='red'>请求报文</font>
-				</h3>
-		</div>
-		<div style="text-align: center;">
-			<table width="85%" border="1" cellspacing="0" cellpadding="0">
-				<tr>
-					<th width='100px'>序号</th>
-					<th>域名</th>
-					<th>域字典</th>
-					<th>上级域字典</th>
-					<th>必输</th>
-					<th>长度</th>
-					<th>备注</th>
-				</tr>
-					<tr style="text-align: center;">
-						<td>0</td>
-						<td></td>
-						<td>response</td>
-						<td>无</td>
-						<td></td>
-						<td></td>
-						<td></td>
-					</tr>
-					<tr style="text-align: center;">
-						<td>1</td>
-						<td></td>
-						<td>error</td>
-						<td>response</td>
-						<td></td>
-						<td></td>
-						<td></td>
-					</tr>
-					<tr style="text-align: center;">
-						<td>2</td>
-						<td></td>
-						<td>error-code</td>
-						<td>error</td>
-						<td></td>
-						<td></td>
-						<td></td>
-					</tr>
-					<tr style="text-align: center;">
-						<td>3</td>
-						<td></td>
-						<td>error-msg</td>
-						<td>error</td>
-						<td></td>
-						<td></td>
-						<td></td>
-					</tr>
-					<tr style="text-align: center;">
-						<td>4</td>
-						<td></td>
-						<td>result</td>
-						<td>response</td>
-						<td></td>
-						<td></td>
-						<td></td>
-					</tr>
-					<tr style="text-align: center;">
-						<td>5</td>
-						<td></td>
-						<td>root</td>
-						<td>result</td>
-						<td></td>
-						<td></td>
-						<td></td>
-					</tr>
-					<tr style="text-align: center;">
-						<td>6</td>
-						<td></td>
-						<td>info</td>
-						<td>root</td>
-						<td></td>
-						<td></td>
-						<td></td>
-					</tr>
-					<tr style="text-align: center;">
-						<td>7</td>
-						<td></td>
-						<td>id</td>
-						<td>info</td>
-						<td></td>
-						<td></td>
-						<td></td>
-					</tr>
-					<tr style="text-align: center;">
-						<td>8</td>
-						<td></td>
-						<td>name</td>
-						<td>info</td>
-						<td></td>
-						<td></td>
-						<td></td>
-					</tr>
-					<tr style="text-align: center;">
-						<td>9</td>
-						<td></td>
-						<td>checkresult</td>
-						<td>info</td>
-						<td></td>
-						<td></td>
-						<td></td>
-					</tr>
-					<tr style="text-align: center;">
-						<td>10</td>
-						<td></td>
-						<td>photo</td>
-						<td>info</td>
-						<td></td>
-						<td></td>
-						<td></td>
-					</tr>
-					<tr style="text-align: center;">
-						<td>11</td>
-						<td></td>
-						<td>issueoffice</td>
-						<td>info</td>
-						<td></td>
-						<td></td>
-						<td></td>
-					</tr>
-					<tr style="text-align: center;">
-						<td>12</td>
-						<td></td>
-						<td>bkcheckdate</td>
-						<td>info</td>
-						<td></td>
-						<td></td>
-						<td></td>
-					</tr>
-					<tr style="text-align: center;">
-						<td>13</td>
-						<td></td>
-						<td>bkoperid</td>
-						<td>info</td>
-						<td></td>
-						<td></td>
-						<td></td>
-					</tr>
-					<tr style="text-align: center;">
-						<td>14</td>
-						<td></td>
-						<td>biztype</td>
-						<td>info</td>
-						<td></td>
-						<td></td>
-						<td></td>
-					</tr>
-					<tr style="word-wrap:break-word;">
-						<td style="text-align: center;">报文范例</td>
-						<td colspan="6">
-							<xmp><?xml version="1.0" encoding="GBK"?>
-<response>
-    <error>
-        <error-code>000</error-code>
-        <error-msg>success</error-msg>
-    </error>
-    <result>
-        <root>
-            <info>
-                <id>429006199909092235</id>
-                <name>test</name>
-                <checkresult>00</checkresult>
-		<photo/>
-                <issueoffice>10150</issueoffice>
-                <bkcheckdate>20180224</bkcheckdate>
-                <bkoperid/>
-                <biztype>01</biztype>
-            </info>
-        </root>
-    </result>
-</response>
-</xmp>
-						</td>					
-					</tr>
-			</table>
-		</div>
-		<br/>
-		<div style="text-align: left; margin-left: 100;">
-			<h3>接口名：<font color='red'>test </font>
-			接口类型：<font color='red'>JSON</font>
-				接口方向：<font color='red'>请求报文</font>
 				</h3>
 		</div>
 		<div style="text-align: center;">
@@ -462,6 +217,277 @@
 	},
 	"message":"获取成功"
 }
+</xmp>
+						</td>					
+					</tr>
+			</table>
+		</div>
+		<br/>
+		<div style="text-align: left; margin-left: 100;">
+			<h3>接口名：<font color='red'>demo </font>
+			        接口类型：<font color='red'>XML</font>
+				接口方向：<font color='red'>请求报文</font>
+				</h3>
+		</div>
+		<div style="text-align: center;">
+			<table width="85%" border="1" cellspacing="0" cellpadding="0">
+				<tr>
+					<th width='100px'>序号</th>
+					<th>域名</th>
+					<th>域字典</th>
+					<th>上级域字典</th>
+					<th>必输</th>
+					<th>长度</th>
+					<th>备注</th>
+				</tr>
+					<tr style="text-align: center;">
+						<td>0</td>
+						<td></td>
+						<td>root</td>
+						<td>无</td>
+						<td></td>
+						<td></td>
+						<td></td>
+					</tr>
+					<tr style="text-align: center;">
+						<td>1</td>
+						<td>sys</td>
+						<td>object</td>
+						<td>root</td>
+						<td></td>
+						<td></td>
+						<td></td>
+					</tr>
+					<tr style="text-align: center;">
+						<td>2</td>
+						<td>macadd</td>
+						<td>field</td>
+						<td>object</td>
+						<td></td>
+						<td></td>
+						<td></td>
+					</tr>
+					<tr style="text-align: center;">
+						<td>3</td>
+						<td>reqseq</td>
+						<td>field</td>
+						<td>object</td>
+						<td></td>
+						<td></td>
+						<td></td>
+					</tr>
+					<tr style="text-align: center;">
+						<td>4</td>
+						<td>gloseq</td>
+						<td>field</td>
+						<td>object</td>
+						<td></td>
+						<td></td>
+						<td></td>
+					</tr>
+					<tr style="text-align: center;">
+						<td>5</td>
+						<td>svccod</td>
+						<td>field</td>
+						<td>object</td>
+						<td></td>
+						<td></td>
+						<td></td>
+					</tr>
+					<tr style="text-align: center;">
+						<td>6</td>
+						<td>bsicod</td>
+						<td>field</td>
+						<td>object</td>
+						<td></td>
+						<td></td>
+						<td></td>
+					</tr>
+					<tr style="text-align: center;">
+						<td>7</td>
+						<td>pkgsav</td>
+						<td>field</td>
+						<td>object</td>
+						<td></td>
+						<td></td>
+						<td></td>
+					</tr>
+					<tr style="text-align: center;">
+						<td>8</td>
+						<td>pkgcli</td>
+						<td>field</td>
+						<td>object</td>
+						<td></td>
+						<td></td>
+						<td></td>
+					</tr>
+					<tr style="text-align: center;">
+						<td>9</td>
+						<td>chanid</td>
+						<td>field</td>
+						<td>object</td>
+						<td></td>
+						<td></td>
+						<td></td>
+					</tr>
+					<tr style="text-align: center;">
+						<td>10</td>
+						<td>orgsid</td>
+						<td>field</td>
+						<td>object</td>
+						<td></td>
+						<td></td>
+						<td></td>
+					</tr>
+					<tr style="text-align: center;">
+						<td>11</td>
+						<td>reqsid</td>
+						<td>field</td>
+						<td>object</td>
+						<td></td>
+						<td></td>
+						<td></td>
+					</tr>
+					<tr style="text-align: center;">
+						<td>12</td>
+						<td>prcscd</td>
+						<td>field</td>
+						<td>object</td>
+						<td></td>
+						<td></td>
+						<td></td>
+					</tr>
+					<tr style="text-align: center;">
+						<td>13</td>
+						<td>comm_req</td>
+						<td>object</td>
+						<td>root</td>
+						<td></td>
+						<td></td>
+						<td></td>
+					</tr>
+					<tr style="text-align: center;">
+						<td>14</td>
+						<td>farendma</td>
+						<td>field</td>
+						<td>object</td>
+						<td></td>
+						<td></td>
+						<td></td>
+					</tr>
+					<tr style="text-align: center;">
+						<td>15</td>
+						<td>qudaohao</td>
+						<td>field</td>
+						<td>object</td>
+						<td></td>
+						<td></td>
+						<td></td>
+					</tr>
+					<tr style="text-align: center;">
+						<td>16</td>
+						<td>jiaoyijg</td>
+						<td>field</td>
+						<td>object</td>
+						<td></td>
+						<td></td>
+						<td></td>
+					</tr>
+					<tr style="text-align: center;">
+						<td>17</td>
+						<td>jiaoyigy</td>
+						<td>field</td>
+						<td>object</td>
+						<td></td>
+						<td></td>
+						<td></td>
+					</tr>
+					<tr style="text-align: center;">
+						<td>18</td>
+						<td>waibriqi</td>
+						<td>field</td>
+						<td>object</td>
+						<td></td>
+						<td></td>
+						<td></td>
+					</tr>
+					<tr style="text-align: center;">
+						<td>19</td>
+						<td>waibshij</td>
+						<td>field</td>
+						<td>object</td>
+						<td></td>
+						<td></td>
+						<td></td>
+					</tr>
+					<tr style="text-align: center;">
+						<td>20</td>
+						<td>waiblius</td>
+						<td>field</td>
+						<td>object</td>
+						<td></td>
+						<td></td>
+						<td></td>
+					</tr>
+					<tr style="text-align: center;">
+						<td>21</td>
+						<td>input</td>
+						<td>object</td>
+						<td>root</td>
+						<td></td>
+						<td></td>
+						<td></td>
+					</tr>
+					<tr style="text-align: center;">
+						<td>22</td>
+						<td>chaxlxin</td>
+						<td>field</td>
+						<td>object</td>
+						<td></td>
+						<td></td>
+						<td></td>
+					</tr>
+					<tr style="text-align: center;">
+						<td>23</td>
+						<td>kehuzhao</td>
+						<td>field</td>
+						<td>object</td>
+						<td></td>
+						<td></td>
+						<td></td>
+					</tr>
+					<tr style="word-wrap:break-word;">
+						<td style="text-align: center;">报文范例</td>
+						<td colspan="6">
+							<xmp><?xml version="1.0" encoding="GBK"?>
+<root>
+	<object name="sys">
+		<field name="macadd" value=""/>
+		<field name="reqseq" value="DC101201807300000000002"/><!--调用系统流水号  标志(“D”)+系统编号（4位）+日期（8位）+顺序号（10位）-->
+		<field name="gloseq" value="QC101201807300000000002"/><!--全局流水号  标志(“Q”)+系统编号（4位）+日期（8位）+顺序号（10位）-->
+		<field name="svccod" value="30013000004"/><!--服务代码 30013000004-->
+		<field name="bsicod" value="01"/><!--场景代码-->
+		<field name="pkgsav" value="C101"/><!--业务模块编号-->
+		<field name="pkgcli" value="R1000102"/><!--终端编号 非必输-->
+		<field name="chanid" value="121001"/><!--发起渠道标识 121001-自动取款机  121002-自动存取款机  121003-自动存款机  121005-多媒体自助终端  121006-远程视频柜员机  121007-存折补登机  121008-电子回单箱  121009-硬币兑换机  -->
+		<field name="orgsid" value="C101  "/><!--发起方业务模块编号 C101-->
+		<field name="reqsid" value="100200"/><!--调用系统标识 100200-->
+		<field name="prcscd" value="1686"/><!--交易码-->
+	</object>
+	<object name="comm_req">
+		<field name="farendma" value="9999"/><!--法人代码值，发起端发送跟核心后台约定好的值，目前固定值为9999-->
+		<field name="qudaohao" value="121001"/><!--渠道号-->
+		<field name="jiaoyijg" value="12000"/><!--机构号非必输-->
+		<field name="jiaoyigy" value="15915945"/><!--柜员号必输-->
+		<field name="waibriqi" value="20180730"/><!--第三方日期-->
+		<field name="waibshij" value="0930"/><!--第三方交易时间-->
+		<field name="waiblius" value="123456789"/><!--第三方流水号-->
+	</object>
+	<object name="input">
+		<field name="chaxlxin" value="01"/><!--查询类型 00-按照客户号查询  01-客户账号查询  02-证件信息查询-->
+		<field name="kehuzhao" value="6224980010000032"/><!--客户账号-->
+	</object>
+</root>
 </xmp>
 						</td>					
 					</tr>

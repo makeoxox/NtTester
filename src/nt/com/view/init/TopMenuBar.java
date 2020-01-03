@@ -7,7 +7,7 @@ import javafx.scene.control.Menu;
 import javafx.scene.control.MenuBar;
 import javafx.scene.control.MenuItem;
 import javafx.scene.control.RadioMenuItem;
-import nt.com.config.Config;
+import nt.com.global.Config;
 /**
  * …œ∑Ω≤Àµ•¿∏
  * @author kege

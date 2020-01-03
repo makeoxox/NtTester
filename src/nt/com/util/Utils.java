@@ -65,7 +65,7 @@ public class Utils {
 		return contend;
 	}
 	
-	//读取文件内容
+	//写入内容到文件
 		public static void WriteStringtoFile(String content,boolean overwrite,File file,String code) throws IOException {
 			BufferedWriter  wr = new BufferedWriter(new OutputStreamWriter(new FileOutputStream(file,overwrite),code));
 			wr.write(content);

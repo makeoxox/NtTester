@@ -9,9 +9,11 @@ import java.io.IOException;
 import java.io.InputStreamReader;
 import java.io.OutputStreamWriter;
 import java.io.Writer;
+import java.util.ArrayList;
 import java.util.List;
 import java.util.Optional;
 
+import org.apache.commons.io.FileUtils;
 import org.fxmisc.flowless.VirtualizedScrollPane;
 
 import javafx.collections.ObservableList;
@@ -30,11 +32,14 @@ import javafx.scene.control.TextInputDialog;
 import javafx.scene.control.TreeItem;
 import javafx.scene.image.Image;
 import javafx.scene.image.ImageView;
+import javafx.scene.input.Clipboard;
+import javafx.scene.input.ClipboardContent;
+import javafx.scene.input.DataFormat;
 import javafx.scene.input.MouseEvent;
 import javafx.stage.Stage;
-import nt.com.config.Config;
-import nt.com.config.TemplateFile;
 import nt.com.enums.TextType;
+import nt.com.global.Config;
+import nt.com.global.TemplateFile;
 import nt.com.model.FileTreeModel;
 import nt.com.util.Utils;
 import nt.com.view.init.ConsoleTextArea;
@@ -75,6 +80,12 @@ public class LeftTreeViewController {
 
 	@FXML
 	private MenuItem lefttreedel;
+	
+	@FXML
+	private MenuItem lefttreecopy;
+	
+	@FXML
+	private MenuItem lefttreepaste;
 	
 	@FXML
 	private MenuItem lefttreermv;
@@ -320,6 +331,105 @@ public class LeftTreeViewController {
 		file.delete();
 	}
 	
+
+	/**
+	 * 复制
+	 * 
+	 */
+	@FXML 
+	void  copy(ActionEvent event) {
+		Clipboard clipboard = Clipboard.getSystemClipboard();
+		ClipboardContent cc = new ClipboardContent();
+		LeftTreeView ltv = (LeftTreeView) MainView.parent.lookup("#packagetree");
+		TreeItem<FileTreeModel> item =ltv.getSelectionModel().getSelectedItem();
+		if(item==null) {
+			return;
+		}else {
+			File targetFile =item.getValue().getFile();
+			List<File> files = new ArrayList<File>();
+			files.add(targetFile);
+			cc.putFiles(files);
+			clipboard.setContent(cc);
+		}
+	}
+	
+	/**
+	 * 粘贴
+	 * 
+	 */
+	@SuppressWarnings("unchecked")
+	@FXML 
+	void  paste(ActionEvent event) {
+		Clipboard clipboard = Clipboard.getSystemClipboard();
+		LeftTreeView ltv = (LeftTreeView) MainView.parent.lookup("#packagetree");
+		TreeItem<FileTreeModel> item =ltv.getSelectionModel().getSelectedItem();
+		if(item==null) {
+			return;
+		}else {
+			List<File> files =(List<File>) clipboard.getContent(DataFormat.FILES);
+			File copyFile = (File) files.get(0);
+			if(copyFile==null|| !copyFile.exists()) {
+				return ;
+			}else {
+				File anchorFile =  item.getValue().getFile();
+				//如果是文件夹则在文件夹下粘贴
+				if(anchorFile.isDirectory()) {
+					try {
+						boolean exists=false;
+						for(File file:anchorFile.listFiles()) {
+							if(file.getName().equals(copyFile.getName())) {
+								exists=true;
+								break;
+							}
+						}
+						if(!exists) {
+							if(copyFile.isDirectory()) {
+								FileUtils.copyDirectoryToDirectory(copyFile, anchorFile);
+							}else {
+								FileUtils.copyFileToDirectory(copyFile, anchorFile);
+							}
+						}else {
+							Alert alert = new Alert(AlertType.WARNING);
+							Stage alertStage =(Stage) alert.getDialogPane().getScene().getWindow();
+							alertStage.getIcons().add(new Image(getClass().getResourceAsStream("/res/title.png")));
+							alert.setTitle("提醒");
+							alert.setHeaderText(null);
+							alert.setContentText("已存在同名文件！");
+							alert.showAndWait();
+							return;
+						}
+					} catch (IOException e) {
+						ConsoleTextArea.AppendMessageOnCurrentConsole(e.toString());
+					}
+				}else {
+					try {
+						if(copyFile.getName().equals(anchorFile.getName())) {
+							Alert alert = new Alert(AlertType.WARNING);
+							Stage alertStage =(Stage) alert.getDialogPane().getScene().getWindow();
+							alertStage.getIcons().add(new Image(getClass().getResourceAsStream("/res/title.png")));
+							alert.setTitle("提醒");
+							alert.setHeaderText(null);
+							alert.setContentText("已存在同名文件！");
+							alert.showAndWait();
+							return;
+						}else {
+							if(copyFile.isDirectory()) {
+								FileUtils.copyDirectoryToDirectory(copyFile, anchorFile.getParentFile());
+							}else {
+								FileUtils.copyFileToDirectory(copyFile,  anchorFile.getParentFile());
+							}
+						}
+					} catch (IOException e) {
+						ConsoleTextArea.AppendMessageOnCurrentConsole(e.toString());
+					}
+				}
+			}
+			refresh(null);
+		}
+	}
+	
+	
+	
 	/**
 	 *  从文件树中移除外部项目
 	 */
@@ -381,7 +491,9 @@ public class LeftTreeViewController {
 		LeftTreeLoad();
 		ltv.getSelectionModel().clearSelection();
 	}
-
+	
+	
+	
 	// 所有界面初始化后，读取projects下项目以及外部导入项目，绘制上次最后打开的文件。
 	public static void LeftTreeLoad() {
 		LeftTreeView ltv = (LeftTreeView) MainView.parent.lookup("#packagetree");

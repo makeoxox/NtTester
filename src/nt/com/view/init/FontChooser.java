@@ -14,7 +14,7 @@ import javafx.scene.layout.VBox;
 import javafx.scene.text.Font;
 import javafx.stage.Modality;
 import javafx.stage.Stage;
-import nt.com.config.Config;
+import nt.com.global.Config;
 import nt.com.model.FontFamilyModel;
 import nt.com.model.FontSizeModel;
 /**

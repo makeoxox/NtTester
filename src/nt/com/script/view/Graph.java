@@ -3,6 +3,7 @@ package nt.com.script.view;
 import java.io.IOException;
 import javafx.fxml.FXMLLoader;
 import javafx.scene.Scene;
+import javafx.scene.image.Image;
 import javafx.scene.image.ImageView;
 import javafx.scene.layout.VBox;
 import javafx.stage.Stage;
@@ -23,6 +24,7 @@ public class Graph extends VBox{
 		stage.setScene(scene);
 		stage.setTitle("graph-"+title);
 		stage.setResizable(false);
+		stage.getIcons().add(new Image(getClass().getResourceAsStream("/res/title.png")));
 		stage.show();
 		ImageView iv = (ImageView) this.lookup("#image"); 
 		try {

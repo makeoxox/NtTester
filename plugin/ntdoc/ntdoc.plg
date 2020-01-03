@@ -1,7 +1,13 @@
 <?xml version="1.0" encoding="GBK"?>
 <plugin>
-	<name>ntdoc</name>
+	<id>ntdoc</id>
+	<name>接口文档生成器</name>
 	<tooltip>生成接口文档</tooltip>
 	<icon>doc.png</icon>
+	<version>1.0</version>
+	<date>2019.12.02</date>
+	<author>kege</author>
+	<enable>true</enable>
+	<remark>本插件为项目生成接口文档。</remark>
 	<class>nt.com.plugin.NtDoc</class>
 </plugin>

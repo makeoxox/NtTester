@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="GBK"?>
+<plugin>
+	<id>ntplgmgr</id>
+	<name>插件管理器</name>
+	<tooltip>管理插件</tooltip>
+	<icon>plugin.png</icon>
+	<version>1.0</version>
+	<date>2019.12.10</date>
+	<author>kege</author>
+	<enable>true</enable>
+	<remark>本插件用于管理其他插件</remark>
+	<class>nt.com.plugin.NtMgr</class>
+</plugin>

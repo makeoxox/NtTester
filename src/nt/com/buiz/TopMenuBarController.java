@@ -3,7 +3,7 @@ package nt.com.buiz;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.scene.control.*;
-import nt.com.config.Config;
+import nt.com.global.Config;
 import nt.com.view.init.MainView;
 
 /**

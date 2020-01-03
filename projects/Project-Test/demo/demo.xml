@@ -1,21 +1,29 @@
 <?xml version="1.0" encoding="GBK"?>
-<response>
-    <error>
-        <error-code>000</error-code>
-        <error-msg>success</error-msg>
-    </error>
-    <result>
-        <root>
-            <info>
-                <id>429006199909092235</id>
-                <name>test</name>
-                <checkresult>00</checkresult>
-		<photo/>
-                <issueoffice>10150</issueoffice>
-                <bkcheckdate>20180224</bkcheckdate>
-                <bkoperid/>
-                <biztype>01</biztype>
-            </info>
-        </root>
-    </result>
-</response>
+<root>
+	<object name="sys">
+		<field name="macadd" value=""/>
+		<field name="reqseq" value="DC101201807300000000002"/><!--调用系统流水号  标志(“D”)+系统编号（4位）+日期（8位）+顺序号（10位）-->
+		<field name="gloseq" value="QC101201807300000000002"/><!--全局流水号  标志(“Q”)+系统编号（4位）+日期（8位）+顺序号（10位）-->
+		<field name="svccod" value="30013000004"/><!--服务代码 30013000004-->
+		<field name="bsicod" value="01"/><!--场景代码-->
+		<field name="pkgsav" value="C101"/><!--业务模块编号-->
+		<field name="pkgcli" value="R1000102"/><!--终端编号 非必输-->
+		<field name="chanid" value="121001"/><!--发起渠道标识 121001-自动取款机  121002-自动存取款机  121003-自动存款机  121005-多媒体自助终端  121006-远程视频柜员机  121007-存折补登机  121008-电子回单箱  121009-硬币兑换机  -->
+		<field name="orgsid" value="C101  "/><!--发起方业务模块编号 C101-->
+		<field name="reqsid" value="100200"/><!--调用系统标识 100200-->
+		<field name="prcscd" value="1686"/><!--交易码-->
+	</object>
+	<object name="comm_req">
+		<field name="farendma" value="9999"/><!--法人代码值，发起端发送跟核心后台约定好的值，目前固定值为9999-->
+		<field name="qudaohao" value="121001"/><!--渠道号-->
+		<field name="jiaoyijg" value="12000"/><!--机构号非必输-->
+		<field name="jiaoyigy" value="15915945"/><!--柜员号必输-->
+		<field name="waibriqi" value="20180730"/><!--第三方日期-->
+		<field name="waibshij" value="0930"/><!--第三方交易时间-->
+		<field name="waiblius" value="123456789"/><!--第三方流水号-->
+	</object>
+	<object name="input">
+		<field name="chaxlxin" value="01"/><!--查询类型 00-按照客户号查询  01-客户账号查询  02-证件信息查询-->
+		<field name="kehuzhao" value="6224980010000032"/><!--客户账号-->
+	</object>
+</root>

@@ -23,8 +23,8 @@ import javafx.scene.image.Image;
 import javafx.scene.layout.VBox;
 import javafx.stage.Modality;
 import javafx.stage.Stage;
-import nt.com.config.Config;
-import nt.com.config.GlobalData;
+import nt.com.global.Config;
+import nt.com.global.GlobalData;
 import nt.com.model.XmlAssignModel;
 import nt.com.model.XmlIncrementModel;
 

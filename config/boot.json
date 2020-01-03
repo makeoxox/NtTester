@@ -1,5 +1,5 @@
 {
-	"lastOpenFilePath":"projects\\project-demo\\demo\\demo.js",
+	"lastOpenFilePath":"projects\\Project-Test\\demo\\demo.xml",
 	"consoleFont":{
 		"size":14,
 		"family":"Consolas"
@@ -7,10 +7,10 @@
 	"importDirectories":[],
 	"httpSetting":{
 		"requesttype":"get",
-		"svrport":1123,
+		"svrport":8080,
 		"svrtimeout":60,
 		"contextroot":"/svr",
-		"url":"http://apis.juhe.cn/qrcode/api?key=468c8fa429cca535a943df230ee34a13&text=kege",
+		"url":"https://www.w3school.com.cn/",
 		"contenttype":"application/x-www-form-urlencoding"
 	},
 	"tcpSetting":{

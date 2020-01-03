@@ -12,7 +12,7 @@ import javafx.scene.image.Image;
 import javafx.scene.layout.VBox;
 import javafx.stage.Modality;
 import javafx.stage.Stage;
-import nt.com.config.Config;
+import nt.com.global.Config;
 /**
  * HTTP±®Œƒ…Ë÷√
  * 

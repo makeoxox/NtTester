@@ -7,16 +7,9 @@ function beforeSend (send){
 }
 function afterReceive (send,recv){
 
-	
-	Nt_Ptr.println(send)
-	
-	var data =Nt_Json.parse(recv)
-	
-	var base64 = data.result.base64_image;
-	
-	Nt_Control.Graph(base64);
-
-	return data;
+	Nt_Ptr.println(recv)
+	Nt_Control.Browser(recv,false);
+	return recv;
 	
 	
 }

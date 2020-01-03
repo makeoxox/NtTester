@@ -1,1 +1,322 @@
-{"reason":"success","result":{"base64_image":"iVBORw0KGgoAAAANSUhEUgAAAHgAAAB4CAIAAAC2BqGFAAAPtklEQVR4nO1dXWhcxRefbRvMZtPExNaUgBZrQ60EjUUwW4JUSiBSKqUlFIsvrT5oMRZFpPXjIQ9B6YPY2AcppiAoGiWiQSJa0RC\/pWhppA9ZMRrDmhhL20205KM7\/4f55\/zPzseZj929rv\/u7yHce+fMmTPnnjlnzszsTYxzzsooPlb80wJcLSgrOiKUFR0RyoqOCGVFR4SyoiNCWdERoazoiFBWdFTgJCIQoL+\/P5vNalsfGxvDlPv378elUq2NGzcC5bp163DR22+\/HUFHaE2WikW7v1ogi8ViQK9WLLWlhVX\/tACMMRaLxcKIxTXnXOXgxTMClIpFC2AzNJmkavjYtL1YRQkPi66pqbntttvybzKdTv\/888+m0m+\/\/XZhYUFcT05O4qLp6enPP\/\/cVPHy5cvqQ62xb9iwobGx0UNiA86ePZvJZFypaReOKdva2iD+ZLNZNYKJJ1CEifHFsWPHMNv+\/n5Ms27duvxVIIIhSNLf349Ljx07RsgPFbUE+HlbW5u7Jv18NFiHdrSKUkxjuiA4FxB0u1q3LkaASRj8XO0+jXAfXQzV+ErvyMrEVh24YEBqdemvb\/f9FO0ifT4o4MsDVlqlwOCT7BeI8ZBVWQXI6T29g8a+\/vrr4eFhlyoNDQ0HDhwQ1yYR+fLU2F2SHTt2mILz6tWrsbSqTWDt9\/X1TU9Pu7S4bdu2ZDIZZg2BPpoxNjw8\/Mwzz7jUamlpefDBB62cpVFsxe7du+H9qWZr9bbQ1vHjx8+cOePSYk9Pz9atWwP8Bos+YdGqMnhIShXxYMfjXVs3zDDDtMyiVzQxAQjogFTFxFx9Hqwv6\/szoSQyQzXQ+9bFty588o+6vhxKaK1DjVqNjY2vvvoq3H788ccvvfSSlgPn\/KGHHkqn0+K2vr7+9ddft1pfwKv917gOE7QdqKqq6ujogOe\/\/\/67WhFKR0ZGfvrpJ3EtpZda1YQNoOChUCqKNrlpx44RFQmFRrnCF56whIHgQBeZpitWkVzyaS+EKaEkZh3BRS7KKngGG\/aG\/Cy62GNNm8K5VNFWtGabvilSWBUBP4sOjrnBzLUJtGNFUxE8z2fm7qvu8BS8sAgOWbTBFslBB1QvlYSlGKGJGA3BjhvGQXETFqyRhoaGlpYWl1qbNm1Sq2OEaXliYuKHH36A25tvvrm6ulpcr1mzhq6LWwTxrGhoaGChZhHuOg4cOGBdkyOq+5aq6O7u7u7uhtuxsbGmpiZHnlhZb731lvY5Lee\/cq3jakB4wuJugI4vv1D+FGZg+EKiUXf\/6CjHEbyEAURh0cFpNDz37R7eqdIS0PuE0nsCVphbEYNhOp1++eWXvbhrMTIy4ltFq+vt27ffeuutcDs4OFhRUSGuE4kEET8CBNACFgudwEkURCAa4lwHXz5WgRfeNm7cyNHxjL6+Plyxr68Pl6qHHOEARvmQ4\/\/AHXZRTaArRmMuVpSKoullUut6E7FMGuVaKIFSUTQzrNdIAcq9FD8pBaO2BEPp1FoxkEwmGRrpJ06cgOOKc3Nze\/fuBcrx8XGpLjbb3t7e2dlZcRuPx7EhJ5PJCDpiAe3CTcf9MIGVA02gNge30ol\/CSIYqq1IZy21z000WsnVY5smAgIW12HaNmW6GT5XRitXQpxoleWmCZhbgEuVWjFNomPoDKN1os1yh4s2EqgEBFx9ND3zx0rH11ItjlaBJYIY+TsJAlw5fKO+b9wLriQj+EJrE9ZbF4FdFa3yBQOBa1Xd0D3pguW+IWlw+Bq1qk3ttUkqLROgwUPT2jQBj+xWUkdvb+\/zzz8PpW+88cY999yjlebHH39sb293bAVjaWnpzz\/\/NJXW1tbG43G4\/eqrr2666SZx\/ccff9x+++1QtHPnzhMnTsDts88+K+U+YXjvvffuuusu5jbZD9+cnZubm5qagtv5+Xls4xiLi4uYslC4dOnSpUuX4HZpaQmc9ZUrV3CLFy9ehGvOeSaTKYg88BMQlyHo5DrouGei\/6egdpvwGJHBw0czBzeqxqUolW7KuQPW\/xzhztbVdaiaraurw+s4Fy9eTKVS2roTExP4tra2du3ataaGxsfHr1y5Iq4rKirWr19vopyenoYMRQBmNatWrZLWmLD8a9euxaUY2WwW\/2KsqqqK+P1WZWUlbtdE9j\/haKhze\/WCc97R0WFpaRldXV2YrcSHWL2TkoL9+\/djtmNjYy59UVnhDko\/Z+vo6DDJKSU+1qbtrkMNcTAStVNXR0izaW4+ByNNvYXcVv7urKzrVhIN9B1zs4rk5KNVdZhyJHdgybhhjZSoQhC4vAmpdXGh7YUpLcCW4fLiXX00NxztUZXuCLUW0U98bU2a6UBNUJr0pSXT5rcELIrGepTsDl+oLT3wwAOwsXT+\/PnBwUEoOnfu3MmTJ00t3nfffYuLi+L6+uuvx42mUqkvvvgCKBsaGrCbPnXqFPyAuaqqau\/eveD0xsfHP\/vsM6BsbW3dvHlzLHd5xGQxqr2DRQ8NDeGfc8Evl\/SwenHs\/oknUjDMZDJQ9P3331MS5CKdTpta1G5lAdy\/1yF+oix1RDxxCYZhP1G2+2iuuCFenDmpCpfoR5e6gHtuenkRA0poh+X\/G37TO9NrLKqN06u9RCkhlTYwEtFYDXq+UwCnYIindyD9Bx988O677wLl6Ogornjw4EEcDHHR9u3b9+3bZ2qxtraW6xbyGWNtbW3YTadSKRx\/Hn\/8cUjVFhcXcZG6Bwa9Y4x1d3dD7rpy5UrcxIULFzCf3bt379ixgy2r4vDhw46\/bf5vYy5Qo0FPT49rG7no6urS5pZqi6atIwEiM6SPtkjBEJ+Jra6uxkVDQ0O4Yk9PD72nRcA1GOYzalSouSVDrxy3gp9gsjwFIFjRvdNOnAuTGWpHcZ7gDp+b4rnbN45sCyIeM79Orpt9ubTrZNGSd86\/P9LiBn6RUl6gapmIfr52EMBKWt5xN0FLMMRHu++8884333wTmD788MOdnZ10dS0GBwcx297e3nvvvRdut27dOjMzI67Xr1\/\/ySefgA8ZGBg4cuQIUEqBqL29HcLv0tISLQPWy\/vvvz8\/Py+uV6xYgUfS3XffjY88vPbaa+pZd4BplVjAomj40S9bTrdAxPr6+vr6erWK1i1gVFRUYLazs7O4yvj4uLrPJAgymQyuKOHXX3+l+yIxZMvqvvHGGxkauHg6m0gkQLMi6BEC0Aj\/naE0drD0WkfmyDaMwBeq07AuEuUpQ2BmyHXLuNi9al0wMWEo4FzCF6rF4CKi1AsW14H3O6677jppJuC4YomljMViiUQCsxVHBghWpoak4wYzMzOwByahsrLy2muvhdtEIiFNLqGJbDaLXf8111wj3KPo7+rVq8M\/y2edaTtuZUn5heOZPK+tLPeD6BI6OzslIUt0K4vl2qY0A1Ovmc6bM90AdFk4t651WLvAlemjmhzQax0qw9gyrK0L5LV6J94VbltVJStEbNGyxe3S1bVvXa2lbUV9yJUlNpe+5HWAxtSAJByhJkcyIjn0suhgVtrI5GUrlmD4zjvvMIPV8Nwpp8my8HP8eqB6Mpm84YYbrIZpZY5RWVm5c+dOuG1tbcWUZ86cwdNh3BH1k72q8EA\/PDyMjwZa0jfahVM1CwTia7siGAJMwVCUEltZUrDq6upylK2jo0NSCI6BBd7KigC0OVtfudUgsFX6Wg\/PTQggBvryKQlFSwkOBvTNpbpUMYCVFjw3O+NkfDKhJBTN3Q7QFLCiO7Q5F3OO8ACP89EbNmw4dOiQF3ctRkZGBgYG1OeqjczMzOAWa2pq8NfUW1tbcTR+7rnn4Bx0IpFQucGTPXv2mLKb+fn5p556ihYszKI9gmFbWxvPTa5wZJAij5Q14Vvtp+eBhshxxf9hoXNUSSpTBqi95oZzHWofBX0RPz3PlJUjdblASvZcpoAqcxcanjul5ToXbBJPskraD+AQYmrIihAfbRILP+eKU2NmPfKwwbhc16U66FcVniuZHo0wH10SwfBqQOCPhTjnJ0+ePH78uAvxpk2bxHeLTK4D28ipU6fgkOPExMSuXbvUplmu\/YrhvGvXLumnBYD29vajR4\/CwD969KjYk1NRWVmJTwqOjo5u2bLF1K\/Dhw\/39vaaSiWEKFp0cnp62vGL7VJFmqC5uRlu4atfWiZSSDh37pxpn6mpqQn76MnJSZPk1dXVLS0t0MTU1BTRx8bGxjvuuMMaeAQi\/Qis1kUCYm57YMBE\/Uu0a6WRxPDtqZU+Uh9Nv3lJHY6x0SVhcZxdYHr3yOxI6f3dOx6UjIFjdVzVdGlifn4evDljLB6Pg6vJZrN\/\/\/23ylDLNh6Pr1y5UlwnEgn8S6+FhQXsvqQWpd7R8LZoafrsXsvFQWtn4iaygwcP1iAMDAzMLkNy1lhmle2XX36ZyWRExVQqhXm+8sorswhPPvmkKo\/jtDrEdYRNeJnb4hk9zF18sW8tFuqXmc9iS6TB0PTmJbbB+YsplcDt0tGYYE68xcLPOooNq1m5mF5Y\/kkoy8XYrQQhH4EN8NG0QJjtp59+CifhpGPOk5OTH374IdzW1dXhXyidPn0aXPNff\/2Fi8QJaGhl8+bNuHR0dBQOoalbWUSC\/s0338zNzcEtPkGogbzKlAtMKVbvAO4H0VtaWnBF4h9H0qt3EqRvKklbWeqqoWklj\/g4s9jKAmJ8xFIFrcmQzDAfi6YZBrA1OQR1EVEl9ppr5tnl8BQ8AFZxrZ7OJIxaUX0BPHeG4NhWQNKgRaBF598wRv6u32TRAlz30Sz35sLWRSWEW\/S2bdsc3bT4YjtzGAqc8yNHjkCEOX\/+\/IsvvmjlL1TwxBNPXLhwAZ48\/fTTQNDc3Lxv3z5Js46mCjT\/gOsQSCaT+L8oag1EGr9Ex6D6Y489BtepVIpWNDbVRx55BB5OTU3hD5p0dnbef\/\/9Jhun4btOYkJeX0RXlatKIxlOwDQ2QDYrpa\/nzT8Yhpz4144m7bRBG\/pp5N8lL89bWJ4EvP89CDNvy2qvvQyNeQ5VvCZHxDeVxl22QvloS2OYe01Njem\/FnshnU7jD0T19\/d3dnZCt3GLly9fPn36NNwODQ298MILcNvU1ARhVsLCwsJ3330Ht2vWrLnlllvg9tChQ3v27IEWt2zZAtso8Xj8o48+Asq6urrm5mYQ7Jdffvntt9+g9NFHHz179izcWl4bnc9QNQsEKTMk\/hbk84ts+SfKAOknylx3OEQ9B8L\/jYccmW56q\/4tRnPamZIUVPAcPHhOXRKK5subWFIHijeqwEebpkk4VAAZ9te+gpXKv0Jl5uxO9d3Fa1H73HGGamkrGkdcRkm4jqsBZUVHhLKiI0JZ0RGhrOiIUFZ0RCgrOiKUFR0RyoqOCP8BgQLSm2e0ZdAAAAAASUVORK5CYII="},"error_code":0}
+<!DOCTYPE html>
+<html lang="zh-cn">
+<head>
+
+<!-- Global site tag (gtag.js) - Google Analytics -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=UA-878633-1"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'UA-878633-1');
+</script>
+
+<title>w3school 在线教程</title>
+
+<link rel="stylesheet" type="text/css" href="/c5.css" />
+<meta charset="gbk" />
+<meta http-equiv="Content-Language" content="zh-cn" />
+<meta name="description" content="全球最大的中文 Web 技术教程。" />
+<meta name="robots" content="all" />
+<meta name="author" content="w3school.com.cn" />
+<meta name="Copyright" content="Copyright W3school.com.cn All Rights Reserved." />
+<meta name="MSSmartTagsPreventParsing" content="true" />
+<meta http-equiv="imagetoolbar" content="false" />
+
+<link rel="icon" type="image/png" sizes="16x16" href="/ui2019/logo-16-red.png">
+<link rel="icon" type="image/png" sizes="32x32" href="/ui2019/logo-32-red.png">
+<link rel="icon" type="image/png" sizes="48x48" href="/ui2019/logo-48-red.png">
+<link rel="icon" type="image/png" sizes="96x96" href="/ui2019/logo-96-red.png">
+<link rel="apple-touch-icon-precomposed" sizes="180x180" href="/ui2019/logo-180.png">
+</head>
+
+<body id="homefirst">
+<div id="wrapper">
+
+<div id="header_index">
+<h1><a href="/index.html" title="w3school 在线教程" style="float:left;">w3school 在线教程</a></h1>
+
+<div id="searchui">
+<form method="get" id="searchform" action="https://www.google.com.hk/search">
+<input type="hidden" name="sitesearch" value="w3school.com.cn" />
+<input type="text" name="as_q" class="box"  id="searched_content" title="在此输入搜索内容。" />
+<input type="submit" value="Go" class="button" title="搜索！" />
+</form>
+</div>
+</div>
+
+<div id="navfirst">
+<ul id="menu">
+<li id="h"><a href="/h.asp" title="HTML 系列教程">HTML 系列教程</a></li>
+<li id="b"><a href="/b.asp" title="浏览器脚本教程">浏览器脚本</a></li>
+<li id="s"><a href="/s.asp" title="服务器脚本教程">服务器脚本</a></li>
+<li id="p"><a href="/p.asp" title="编程教程">编程教程</a></li>
+<li id="x"><a href="/x.asp" title="XML 系列教程">XML 系列教程</a></li>
+<li id="w"><a href="/w.asp" title="建站手册">建站手册</a></li>
+<li id="r"><a href="/r.asp" title="参考手册">参考手册</a></li>
+</ul>
+</div>
+
+<div id="navsecond">
+<h2>HTML 教程</h2>
+<ul>
+<li><a href="/html/index.asp" title="HTML 教程">HTML</a></li>
+<li><a href="/html5/index.asp" title="HTML5 教程">HTML5</a></li>
+<li><a href="/xhtml/index.asp" title="XHTML 教程">XHTML</a></li>
+<li><a href="/css/index.asp" title="CSS 教程">CSS</a></li>
+<li><a href="/css3/index.asp" title="CSS3 教程">CSS3</a></li>
+<li><a href="/tcpip/index.asp" title="TCP/IP 教程">TCP/IP</a></li>
+</ul>
+
+<h2>浏览器脚本</h2>
+<ul>
+<li><a href="/js/index.asp" title="JavaScript 教程">JavaScript</a></li>
+<li><a href="/htmldom/index.asp" title="HTML DOM 教程">HTML DOM</a></li>
+<li><a href="/jquery/index.asp" title="jQuery 教程">jQuery</a></li>
+<li><a href="/jquerymobile/index.asp" title="jQuery Mobile 教程">jQuery Mobile</a></li>
+<li><a href="/ajax/index.asp" title="AJAX 教程">AJAX</a></li>
+<li><a href="/json/index.asp" title="JSON 教程">JSON</a></li>
+<li><a href="/dhtml/index.asp" title="DHTML 教程">DHTML</a></li>
+<li><a href="/e4x/index.asp" title="E4X 教程">E4X</a></li>
+<li><a href="/wmlscript/index.asp" title="WMLScript 教程">WMLScript</a></li>
+</ul>
+
+<h2>服务器脚本</h2>
+<ul>
+<li><a href="/php/index.asp" title="PHP 教程">PHP</a></li>
+<li><a href="/sql/index.asp" title="SQL 教程">SQL</a></li>
+<li><a href="/asp/index.asp" title="ASP 教程">ASP</a></li>
+<li><a href="/ado/index.asp" title="ADO 教程">ADO</a></li>
+<li><a href="/aspnet/index.asp" title="ASP.NET 教程">ASP.NET</a></li>
+<li><a href="/vbscript/index.asp" title="VBScript 教程">VBScript</a></li>
+</ul>
+
+
+<h2>编程</h2>
+<ul>
+<li><a href="/python/index.asp" title="Python 教程">Python</a></li>
+<li><a href="#" title="Java 教程">Java</a></li>
+<li><a href="#" title="C++ 教程">C++</a></li>
+<li><a href="#" title="C# 教程">C#</a></li>
+</ul>
+
+<h2>XML 教程</h2>
+<ul>
+<li><a href="/xml/index.asp" title="XML 教程">XML</a></li>
+<li><a href="/dtd/index.asp" title="DTD教程">DTD</a></li>
+<li><a href="/xmldom/index.asp" title="XML DOM 教程">XML DOM</a></li>
+<li><a href="/xsl/xsl_languages.asp" title="XSL 语言">XSL</a></li>
+<li><a href="/xsl/index.asp" title="XSLT 教程">XSLT</a></li>
+<li><a href="/xslfo/index.asp" title="XSL-FO 教程">XSL-FO</a></li>
+<li><a href="/xpath/index.asp" title="XPath 教程">XPath</a></li>
+<li><a href="/xquery/index.asp" title="XQuery 教程">XQuery</a></li>
+<li><a href="/xlink/index.asp" title="XLink 教程">XLink</a></li>
+<li><a href="/xlink/index.asp" title="XPointer 教程">XPointer</a></li>
+<li><a href="/schema/index.asp" title="Schema 教程">Schema</a></li>
+<li><a href="/xforms/index.asp" title="XForms 教程">XForms</a></li>
+<li><a href="/wap/index.asp" title="WAP 教程">WAP</a></li>
+<li><a href="/svg/index.asp" title="SVG 教程">SVG</a></li>
+</ul>
+
+<h2>Web Services</h2>
+<ul>
+<li><a href="/webservices/index.asp" title="Web Services 教程">Web Services</a></li>
+<li><a href="/wsdl/index.asp" title="WSDL 教程">WSDL</a></li>
+<li><a href="/soap/index.asp" title="SOAP 教程">SOAP</a></li>
+<li><a href="/rss/index.asp" title="RSS 教程">RSS</a></li>
+<li><a href="/rdf/index.asp" title="RDF 教程">RDF</a></li>
+</ul>
+
+<h2>建站手册</h2>
+<ul>
+<li><a href="/site/index.asp" title="网站构建">网站构建</a></li>
+<li><a href="/w3c/index.asp" title="万维网联盟 (W3C)">万维网联盟 (W3C)</a></li>
+<li><a href="/browsers/index.asp" title="浏览器信息">浏览器信息</a></li>
+<li><a href="/quality/index.asp" title="网站品质">网站品质</a></li>
+<li><a href="/semweb/index.asp" title="语义网">语义网</a></li>
+<li><a href="/careers/index.asp" title="职业规划">职业规划</a></li>
+<li><a href="/hosting/index.asp" title="网站主机教程">网站主机</a></li>
+<li><a href="/media/index.asp" title="网络媒体教程">网络媒体</a></li>
+</ul>
+
+<h2 id="link_about"><a href="/about/index.asp" title="关于 W3School">关于 W3School</a></h2>
+<h2 id="link_help"><a href="/about/about_helping.asp" title="帮助 W3School">帮助 W3School</a></h2>
+</div>
+
+<div id="maincontent">
+
+<div class="idea" id="d1">
+<h2>领先的 Web 技术教程 - 全部免费</h2>
+<p>在 W3School，你可以找到你所需要的所有的网站建设教程。</p>
+<p>从基础的 HTML 到 CSS，乃至进阶的 XML、SQL、JS、PHP 和 ASP.NET。</p>
+<p><strong>从左侧的菜单选择你需要的教程！</strong></p>
+</div>
+
+<div class="idea" id="d2">
+<h3>完整的网站技术参考手册</h3>
+<p>我们的参考手册涵盖了网站技术的方方面面。</p>
+<p>其中包括W3C标准技术：HTML、CSS、XML 。以及其他技术，诸如 JavaScript、PHP、SQL 等。</p>
+</div>
+
+<div class="idea" id="d3">
+<h3>在线实例测试工具</h3>
+<p>在 W3School，我们提供上千个实例。</p>
+<p>通过使用我们的在线编辑器，你可以编辑这些例子，并对代码进行实验。</p>
+</div>
+
+<div class="idea" id="d4">
+<h3>快捷易懂的学习方式</h3>
+<p>一寸光阴一寸金，因此，我们为您提供快捷易懂的学习内容。</p>
+<p>在这里，您可以通过一种易懂的便利的模式获得您需要的任何知识。</p>
+</div>
+
+
+<div class="idea" id="d5">
+<h3>从何入手？</h3>
+<p>什么是一个 Web 建设者需要学习的知识呢？</p>
+<p>W3School 将为您回答这个问题，在您成为专业 Web 开发者的路上助一臂之力。</p>
+<p>如果您是初学者，请您阅读《<a href="/web/index.asp" title="网站构建初级教程">网站构建初级教程</a>》。</p>
+<p>如果您是开发者，请您阅读《<a href="/site/index.asp" title="网站构建">网站构建高级教程</a>》。</p>
+</div>
+
+
+<div class="idea" id="d6">
+<h3>W3School 新闻</h3>
+
+<p style="margin-top: 20px;">
+<a style="font-size: 20px;" href="/python/index.asp" title="Python 教程">W3School 首个编程教程：Python 教程上线！</a>
+</p>
+</div>
+
+
+<div class="idea" id="d7">
+<h3>W3School 更新信息</h3>
+
+<p style="margin-top: 20px;">
+<a style="font-size: 20px;" href="/python/python_ref_functions.asp" title="Python 教程">参考手册：Python 内建函数</a>
+</p>
+
+</div>
+
+
+<div id="d8">
+<h3>W3School 友情链接</h3>
+<p class="partner">
+<a target="_blank" href="https://mozilla.com.cn/">Firefox 中文社区</a> &nbsp;&nbsp;&nbsp; 
+<a target="_blank" href="https://www.w3ctech.com/">w3ctech</a> &nbsp;&nbsp;&nbsp; 
+<a target="_blank" href="https://wetest.qq.com/?from=links_w3school">WeTest腾讯质量开放平台</a> &nbsp;&nbsp;&nbsp; 
+</p>
+</div>
+
+
+<div id="d9">
+<h3>新浪微博</h3>
+<p><a target="_blank" href="https://weibo.com/w3schoolcomcn">W3School 官方微博</a></p>
+</div>
+
+
+<div id="d10">
+<h3>微信公众号</h3>
+<p>W3School 官方服务号</p>
+</div>
+
+</div>
+
+
+<div id="sidebar">
+
+<h2>参考手册</h2>
+<ul>
+<li><a href="/tags/index.asp" title="HTML 参考手册">HTML/HTML5 标签</a></li>
+<li><a href="/tags/html_ref_colornames.asp" title="HTML 颜色名">HTML 颜色</a></li>
+<li><a href="/cssref/index.asp" title="CSS 参考手册">CSS 1,2,3</a></li>
+<li><a href="/jsref/index.asp" title="JavaScript 参考手册">JavaScript</a></li>
+<li><a href="/jsref/index.asp" title="HTML DOM 参考手册">HTML DOM</a></li>
+<li><a href="/jquery/jquery_reference.asp" title="jQuery 参考手册">jQuery</a></li>
+<li><a href="/jquerymobile/jquerymobile_ref_data.asp" title="jQuery Mobile 参考手册">jQuery Mobile</a></li>
+<li><a href="/vbscript/vbscript_ref_functions.asp" title="VBScript 函数">VBScript</a></li>
+<li><a href="/asp/asp_ref.asp" title="ASP 参考手册">ASP</a></li>
+<li><a href="/ado/ado_reference.asp" title="ADO 参考手册">ADO</a></li>
+<li><a href="/aspnet/aspnet_reference.asp" title="ASP.NET 参考手册">ASP.NET</a></li>
+<li><a href="/php/php_ref.asp" title="PHP 参考手册">PHP 5.1</a></li>
+<li><a href="/xmldom/xmldom_reference.asp" title="XML DOM 参考手册">XML DOM</a></li>
+<li><a href="/xsl/xsl_w3celementref.asp" title="XSLT 元素参考手册">XSLT 1.0</a></li>
+<li><a href="/xpath/xpath_functions.asp" title="XPath、XQuery 以及 XSLT 函数">XPath 2.0</a></li>
+<li><a href="/xslfo/xslfo_reference.asp" title="XSL-FO 参考手册">XSL-FO</a></li>
+<li><a href="/wap/wml_reference.asp" title="WML 参考手册">WML 1.1</a></li>
+<li><a href="/glossary/index.asp" title="W3C 术语表和词典">W3C 术语表</a></li>
+</ul>
+
+<h2>字符集</h2>
+<ul>
+<li><a href="/tags/html_ref_charactersets.asp" title="HTML 字符集">HTML 字符集</a></li>
+<li><a href="/tags/html_ref_ascii.asp" title="HTML ASCII 参考手册">HTML ASCII</a></li>
+<li><a href="/tags/html_ref_entities.html" title="HTML ISO-8859-1 参考手册">HTML ISO-8859-1</a></li>
+<li><a href="/tags/html_ref_symbols.html" title="HTML 4.01 符号实体">HTML 符号</a></li>
+</ul>
+
+<h2>实例/案例</h2>
+<ul>
+<li><a href="/example/html_examples.asp">HTML 实例</a></li>
+<li><a href="/example/csse_examples.asp">CSS 实例</a></li>
+<li><a href="/example/xmle_examples.asp">XML 实例</a></li>
+<li><a href="/python/python_examples.asp">Python 实例</a></li>
+<li><a href="/js/js_examples.asp">JavaScript 实例</a></li>
+<li><a href="/js/js_html_objects_examples.asp">JavaScript 对象实例</a></li>
+<li><a href="/js/js_dom_examples.asp">HTML DOM 实例</a></li>
+<li><a href="/jquery/jquery_examples.asp">jQuery 实例</a></li>
+<li><a href="/jquerymobile/jquerymobile_examples.asp">jQuery Mobile 实例</a></li>
+<li><a href="/example/xdom_examples.asp">XML DOM 实例</a></li>
+<li><a href="/example/dhtm_examples.asp">DHTML 实例</a></li>
+<li><a href="/example/ajax_examples.asp">AJAX 实例</a></li>
+<li><a href="/example/vbst_examples.asp">VBScript 实例</a></li>
+<li><a href="/example/aspe_examples.asp">ASP 实例</a></li>
+<li><a href="/example/adoe_examples.asp">ADO 实例</a></li>
+<li><a href="/svg/svg_examples.asp">SVG 实例</a></li>
+<li><a href="/wap/wap_demo.asp" title="WAP 演示">WAP 实例</a></li>
+</ul>
+
+<h2>测验/考试</h2>
+<ul>
+<li><a href="/html/html_quiz.asp">HTML 测验</a></li>
+<li><a href="/html5/html5_quiz.asp">HTML5 测验</a></li>
+<li><a href="/xhtml/xhtml_quiz.asp">XHTML 测验</a></li>
+<li><a href="/css/css_quiz.asp">CSS 测验</a></li>
+<li><a href="/xml/xml_quiz.asp">XML 测验</a></li>
+<li><a href="/js/js_quiz.asp">JavaScript 测验</a></li>
+<li><a href="/jquery/jquery_quiz.asp">jQuery 测验</a></li>
+<li><a href="/sql/sql_quiz.asp">SQL 测验</a></li>
+<li><a href="/asp/asp_quiz.asp">ASP 测验</a></li>
+<li><a href="/php/php_quiz.asp">PHP 测验</a></li>
+</ul>
+
+<h2>代码验证</h2>
+<ul>
+<li><a href="/site/site_validate.asp" title="网页验证">验证HTML</a></li>
+<li><a href="/site/site_validate.asp" title="网页验证">验证CSS</a></li>
+<li><a href="/site/site_validate.asp" title="网页验证">验证XHTML</a></li>
+<li><a href="/site/site_validate.asp" title="网页验证">验证XML</a></li>
+<li><a href="/site/site_validate.asp" title="网页验证">验证WML</a></li>
+</ul>
+
+</div>
+
+
+
+<div id="footer">
+<p id="p1">
+W3School 简体中文版提供的内容仅用于培训和测试，不保证内容的正确性。通过使用本站内容随之而来的风险与本站无关。
+</p>
+
+<p id="p2">
+<a href="/about/about_use.asp" title="关于使用">使用条款</a>和<a href="/about/about_privacy.asp" title="关于隐私">隐私条款</a>。版权所有，保留一切权利。
+赞助商：<a target="_blank" href="https://www.ykinvestment.com/" title="上海赢科投资有限公司">上海赢科投资有限公司</a>。
+<a target="_blank" href="https://www.miitbeian.gov.cn/">蒙ICP备06004630号</a>
+<a style="color: #000; margin-left: 20px;" href="/ad.html" target="_blank" title="W3School 广告刊例">广告刊例</a>
+</p>
+</div>
+
+</div>
+</body>
+</html>

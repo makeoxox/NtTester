@@ -9,7 +9,7 @@ import javafx.scene.control.TextField;
 import javafx.scene.control.ToggleGroup;
 import javafx.scene.layout.VBox;
 import javafx.stage.Stage;
-import nt.com.config.Config;
+import nt.com.global.Config;
 
 public class TcpMsgSettingViewController {
 

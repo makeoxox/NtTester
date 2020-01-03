@@ -16,8 +16,8 @@ import javafx.application.Platform;
 import javafx.fxml.FXMLLoader;
 import javafx.scene.input.KeyCode;
 import javafx.scene.input.KeyEvent;
-import nt.com.config.Config;
 import nt.com.enums.TextType;
+import nt.com.global.Config;
 
 /**
  * ¸»ÎÄ±¾±à¼­Óò

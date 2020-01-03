@@ -1,4 +1,4 @@
-package nt.com.config;
+package nt.com.global;
 
 import java.io.BufferedReader;
 import java.io.IOException;

@@ -7,7 +7,6 @@ import javafx.beans.value.ChangeListener;
 import javafx.beans.value.ObservableValue;
 import javafx.collections.FXCollections;
 import javafx.collections.ObservableList;
-import javafx.embed.swing.SwingNode;
 import javafx.fxml.FXMLLoader;
 import javafx.scene.Scene;
 import javafx.scene.control.Button;
@@ -22,8 +21,8 @@ import javafx.scene.layout.VBox;
 import javafx.stage.Modality;
 import javafx.stage.Stage;
 import net.sf.json.JSON;
-import nt.com.config.Config;
-import nt.com.config.GlobalData;
+import nt.com.global.Config;
+import nt.com.global.GlobalData;
 import nt.com.model.JsonAssignModel;
 import nt.com.model.JsonIncrementModel;
 

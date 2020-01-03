@@ -3,11 +3,11 @@ package nt.com.view;
 import nt.com.view.init.MainView;
 
 /**
- * NT接口测试器
+ * NT接口测试器启动
  * 
  * @author  kege
  */
-public class Start extends MainView {
+public class Launcher extends MainView {
 	
 	public static void main(String[] args) {
 		launch(args);

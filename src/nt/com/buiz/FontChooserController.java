@@ -11,7 +11,7 @@ import javafx.scene.control.ListView;
 import javafx.scene.control.Tab;
 import javafx.scene.control.TabPane;
 import javafx.stage.Stage;
-import nt.com.config.Config;
+import nt.com.global.Config;
 import nt.com.model.FontFamilyModel;
 import nt.com.model.FontSizeModel;
 import nt.com.view.init.FontChooser;

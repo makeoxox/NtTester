@@ -1,4 +1,4 @@
-package nt.com.config;
+package nt.com.global;
 
 import java.util.HashMap;
 import java.util.List;
@@ -28,4 +28,5 @@ public class GlobalData {
 	public static Map<String,List<TxtFieldModel>> txtIncrementNodeMap = new HashMap<>();
 	//txt赋值子对象集合
 	public static Map<String,List<TxtFieldModel>> txtAssignNodeMap = new HashMap<>();
+	
 }

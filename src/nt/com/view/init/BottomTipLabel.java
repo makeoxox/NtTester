@@ -5,7 +5,7 @@ import java.io.IOException;
 import javafx.fxml.FXMLLoader;
 import javafx.scene.control.Label;
 import javafx.scene.control.ToolBar;
-import nt.com.config.Config;
+import nt.com.global.Config;
 /**
  * 下方提示文本
  * @author kege
