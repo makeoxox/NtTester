@@ -30,7 +30,12 @@ public class DebugScriptManager extends AbstractMessageScriptManager {
 			}
 			
 		}catch (Exception e) {
-			ConsoleTextArea.AppendMessageOnCurrentConsole(e.toString());
+			if(e instanceof NullPointerException) {
+				ConsoleTextArea.AppendMessageOnCurrentConsole("调试脚本缺少main函数");
+			}else {
+				ConsoleTextArea.AppendMessageOnCurrentConsole(e.toString());
+			}
+			
 			e.printStackTrace();
 		}
 		return null;

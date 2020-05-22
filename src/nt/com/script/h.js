@@ -41,6 +41,8 @@ var Nt_Asyn = {
 	}
 }
 
+
+
 // 输出打印对象
 var Nt_Ptr = {
 	println : function(content){
@@ -215,7 +217,7 @@ var Nt_Control={
 var Nt_Xml = {
 		document : null,
 		parse : function(xmlStr,encode){
-			this.document = XmlParser.getDocByString(xmlStr,encode)
+			this.document = XmlParser.getDocByString(xmlStr,encode);
 		},
 		format : function(xmlStr,encode){
 		 return 	XmlParser.convertFormatXMLStr(xmlStr,encode);
@@ -310,7 +312,7 @@ var Nt_Xml = {
  Nt_File.prototype.write = function(content,encode,overwrite){
 	 
 	 try{
-		 if(encode==null)encode="utf-8";
+		if(encode==null)encode="utf-8";
 		if(overwrite==null)overwrite=true;
 		Utils.WriteStringtoFile(content,overwrite,this.file,encode);
 		}catch(e){
