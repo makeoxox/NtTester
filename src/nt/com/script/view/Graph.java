@@ -12,7 +12,7 @@ import nt.com.util.Picture;
 public class Graph extends VBox{
 	
 	public Graph(String Base64ImgStr,String title){
-		FXMLLoader fxmlLoader = new FXMLLoader(getClass().getResource("/nt/com/script/view/Graph.fxml"));
+		FXMLLoader fxmlLoader = new FXMLLoader(getClass().getResource("/nt/com/script/view/fxml/Graph.fxml"));
 		fxmlLoader.setRoot(this);
 		try {
 			 fxmlLoader.load();

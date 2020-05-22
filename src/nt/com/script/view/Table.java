@@ -21,7 +21,7 @@ public class Table extends VBox{
 	
 	@SuppressWarnings({ "unchecked", "rawtypes" })
 	public Table(List<Map<String,Object>> list,String title){
-		FXMLLoader fxmlLoader = new FXMLLoader(getClass().getResource("/nt/com/script/view/Table.fxml"));
+		FXMLLoader fxmlLoader = new FXMLLoader(getClass().getResource("/nt/com/script/view/fxml/Table.fxml"));
 		fxmlLoader.setRoot(this);
 		try {
 			 fxmlLoader.load();

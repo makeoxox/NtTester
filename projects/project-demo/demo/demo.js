@@ -1,4 +1,10 @@
 
+function main(data){
+	
+	Nt_Control.Table([{"name":"kege","age":22},{"name":"kege","age":22}]);
+
+}
+
 function beforeSend (send){
 	
 	

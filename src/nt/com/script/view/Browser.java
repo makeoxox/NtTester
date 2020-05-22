@@ -13,7 +13,7 @@ import javafx.stage.Stage;
 public class Browser extends BorderPane{
 	
 	public Browser(String content,String contentType,String title) {
-		FXMLLoader fxmlLoader = new FXMLLoader(getClass().getResource("/nt/com/script/view/Browser.fxml"));
+		FXMLLoader fxmlLoader = new FXMLLoader(getClass().getResource("/nt/com/script/view/fxml/Browser.fxml"));
 		fxmlLoader.setRoot(this);
 		try {
 			 fxmlLoader.load();
