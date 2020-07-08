@@ -1,0 +1,356 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<style type="text/css">
+
+table {
+	width:100%;
+	height:100%;
+}
+
+td{
+	border: 2px solid ;
+	padding :5px;
+}
+li {
+
+	 list-style: none;
+	 margin-top: 5px;
+}
+
+.api-content {
+
+	width:95%;
+	height:100%;
+	display:block;
+	margin-top: 5px;
+	font-size: 15px;
+}
+.des {
+
+	border: 1px solid ;
+	padding:5px;
+}
+ul {
+
+	margin:0px;
+}
+</style>
+</head>
+<body>
+	<table >
+		<tr>
+			<td style="height:100px;text-align: center;" colspan="2">
+				<span style="font-size: 30px">NtTester脚本内置API</span>
+			</td>
+		<tr>
+		<tr >
+			<td width="15%" style="vertical-align:top;font-size: 20px" >
+				<div class=".api-content"><span style="font-size: 22px;font-weight: bold;">目录</span></div>
+				<ul  >
+					<li><a href="#function">函数</a></li>
+					<li><a href="#object">对象</a></li>
+					<li><a href="#class">类</a></li>
+				</ul>
+			</td>
+			<td>
+				
+				<ul>
+					<li><div class="api-content" id="function" >
+						<div class=".api-content"><span style="font-size: 22px;font-weight: bold;color: red">参数中的[ ]表示该参数为可选，返回值中的[ ]表示该返回值的数据类型约束。</span></div>
+						<div class=".api-content"><span style="font-size: 22px;font-weight: bold;">函数</span></div>
+						<div class="api-content des"> 
+							<ul>
+								<li>函数名：<font color="red">Nt_Import(js)</font></li>
+								<li>解释：导入外部脚本函数</li>
+								<li>参数：外部脚本路径(String)</li>
+								<li>返回值：无</li>
+								<li>示例：Nt_Import("Project-Test/js/area.js")</li>
+							</ul>
+						</div>
+					</div></li>
+					<li><div class="api-content"  id="object">
+					<div class=".api-content"><span style="font-size: 22px;font-weight: bold;">对象</span></div>
+						<div class="api-content des"> 
+							<ul>
+								<li>对象名：<font color="red">Nt_Asyn</font></li>
+								<li>解释：进行异步处理的对象</li>
+								<li>包含属性：无</li>
+								<li>包含函数：
+									<ul>
+										<li>函数名：<font color="red">run(func)</font></li>
+										<li>解释：执行异步处理</li>
+										<li>参数：异步回调函数(Funciton)</li>
+										<li>返回值：无</li>
+										<li>示例：Nt_Asyn.run(function(){ /*  do someting  */ })</li>
+									</ul>	
+								</li>
+								
+							</ul>
+						</div>
+						<div class="api-content des"> 
+							<ul>
+								<li>对象名：<font color="red">Nt_Ptr</font></li>
+								<li>解释：输出到控制台的打印对象</li>
+								<li>包含属性：无</li>
+								<li>包含函数：
+									<ul>
+										<li>函数名：<font color="red">println(content)</font></li>
+										<li>解释：打印并换行</li>
+										<li>参数：打印的内容(String)</li>
+										<li>返回值：无</li>
+										<li>示例：Nt_Ptr.println(".....")</li>
+									</ul>
+									<ul>
+										<li>函数名：<font color="red">print(content)</font></li>
+										<li>解释：打印不换行</li>
+										<li>参数：打印的内容(String)</li>
+										<li>返回值：无</li>
+										<li>示例：Nt_Ptr.print(".....")</li>
+									</ul>	
+								</li>
+							</ul>
+						</div>
+						<div class="api-content des"> 
+							<ul>
+								<li>对象名：<font color="red">Nt_Net</font></li>
+								<li>解释：进行网络通讯的对象</li>
+								<li>包含属性：
+									<ul>
+										<li>属性名：<font color="red">tcp</font></li>
+										<li>解释：tcp通讯对象</li>
+										<li>包含函数：
+										<ul>
+											<li>函数名：<font color="red">send(content,ip,port)</font></li>
+											<li>解释：发送消息并等待返回</li>
+											<li>参数：发送的消息内容(String)，ip地址(String)，端口号 (String)</li>
+											<li>返回值：返回的消息(String)</li>
+											<li>示例：var recv = Nt_Net.tcp.send("...","127.0.0.1","1551")</li>
+										</ul>
+										<ul>
+											<li>函数名：<font color="red">sendNoRecv(content,ip,port)</font></li>
+											<li>解释：发送消息不等待返回</li>
+											<li>参数：发送的消息内容(String)，ip地址(String)，端口号 (String)</li>
+											<li>返回值：无</li>
+											<li>示例：var recv = Nt_Net.tcp.sendNoRecv("...","127.0.0.1","1551")</li>
+										</ul>
+									</ul>
+									<ul>
+										<li>属性名：<font color="red">http</font></li>
+										<li>解释：http通讯对象</li>
+										<li>包含函数：
+										<ul>
+											<li>函数名：<font color="red">post(url,msg,code,contentType)</font></li>
+											<li>解释：以post发送消息并等待返回</li>
+											<li>参数：url（String）,发送的消息(String)，编码方式[String],内容类型[String]</li>
+											<li>返回值：返回的消息(String)</li>
+											<li>示例：var recv = Nt_Net.http.post("http://xxx.com/file","getfile","utf-8","text/plain")</li>
+										</ul>
+										<ul>
+											<li>函数名：<font color="red">get(url,code)</font></li>
+											<li>解释：以get发送消息并等待返回</li>
+											<li>参数：url（String），编码方式[String]</li>
+											<li>返回值：返回的消息(String)</li>
+											<li>示例：var recv = Nt_Net.tcp.sendNoRecv("http://xxx.com/file","utf-8")</li>
+										</ul>
+									</ul>
+								</li>
+								<li>包含函数：无</li>
+							</ul>
+						</div>
+						<div class="api-content des"> 
+							<ul>
+								<li>对象名：<font color="red">Nt_Db</font></li>
+								<li>解释：连接数据库对象</li>
+								<li>包含属性：无</li>
+								<li>包含函数：
+									<ul>
+										<li>函数名：<font color="red">connect(url,driver,username,password)</font></li>
+										<li>解释：连接到目标数据库</li>
+										<li>参数：数据库URL(String),数据库java驱动名(String),数据库用户名(String),数据库密码（String）</li>
+										<li>返回值：无</li>
+										<li>示例：Nt_Db.connect("jdbc:sqlite://D:/NtData.db","org.sqlite.JDBC","kege","123456")</li>
+									</ul>
+									<ul>
+										<li>函数名：<font color="red">query(sql,success)</font></li>
+										<li>解释：查询数据库表</li>
+										<li>参数：SQL查询语句(String),回调函数（Function）</li>
+										<li>返回值：查询回的数据（Array）</li>
+										<li>示例：var array = Nt_Db.query("select * from wsunit",function(array){ /* do something */ })</li>
+									</ul>
+									<ul>
+										<li>函数名：<font color="red">execute(sql)</font></li>
+										<li>解释：增删改数据库表</li>
+										<li>参数：SQL变更语句(String)</li>
+										<li>返回值：无</li>
+										<li>示例：var array = Nt_Db.execute("insert into wsunit (unitid,name) values ('100001','ATMNumber1')")</li>
+									</ul>	
+								</li>
+							</ul>
+						</div>
+						<div class="api-content des"> 
+							<ul>
+								<li>对象名：<font color="red">Nt_Control</font></li>
+								<li>解释：数据显示控件对象</li>
+								<li>包含属性：无</li>
+								<li>包含函数：
+									<ul>
+										<li>函数名：<font color="red">Table(data,title)</font></li>
+										<li>解释：表格显示数组数据</li>
+										<li>参数：数据数组（Array）,标题[String]</li>
+										<li>返回值：无</li>
+										<li>示例：Nt_Control.Table([{name:'kege',gender:'1'},{name:'wuyihong',gender:'2'},"员工表"])</li>
+									</ul>
+									<ul>
+										<li>函数名：<font color="red">Graph(base64img,title)</font></li>
+										<li>解释：显示Base64编码图片</li>
+										<li>参数：Base64编码图片(String),标题[String]</li>
+										<li>返回值：无</li>
+										<li>示例：Nt_Control.Graph("base64 code...","身份证")</li>
+									</ul>
+									<ul>
+										<li>函数名：<font color="red">Browser(content,contentType,title)</font></li>
+										<li>解释：内置浏览器</li>
+										<li>参数：显示内容可以是url或html代码(String)，指定内容类型url或html(String),标题[String]</li>
+										<li>返回值：无</li>
+										<li>示例：Nt_Control.Browser("http://www.baidu.com","url","浏览器")</li>
+									</ul>	
+								</li>
+							</ul>
+						</div>
+						<div class="api-content des"> 
+							<ul>
+								<li>对象名：<font color="red">Nt_Json</font></li>
+								<li>解释：Json处理对象</li>
+								<li>包含属性：无</li>
+								<li>包含函数：
+									<ul>
+										<li>函数名：<font color="red">parse(jsonStr)</font></li>
+										<li>解释：将json字符串转成Object或数组</li>
+										<li>参数：json字符串(String)</li>
+										<li>返回值:json对象(Object/Array)</li>
+										<li>示例：var obj = Nt_Json.parse("{'name':'kege'}")</li>
+									</ul>
+									<ul>
+										<li>函数名：<font color="red">stringify(json)</font></li>
+										<li>解释：将json对象或数组转成json字符串</li>
+										<li>参数：json对象或数组(Object/Array)</li>
+										<li>返回值：json字符串（String）</li>
+										<li>示例：var jsonStr = Nt_Json.stringify([{name:'kege'},{name:'wuyihong'}])</li>
+									</ul>
+									<ul>
+										<li>函数名：<font color="red">json2xml(jsonStr,root)</font></li>
+										<li>解释：将json字符串转为Xml字符串</li>
+										<li>参数：json字符串（String）,指定一个根节点root(String)</li>
+										<li>返回值：xml字符串（String）</li>
+										<li>示例：var xmlStr = Nt_Json.json2xml("{'name':'kege'}","name")</li>
+									</ul>
+									<ul>
+										<li>函数名：<font color="red">xml2json(xmlStr)</font></li>
+										<li>解释：将Xml字符串转为json字符串</li>
+										<li>参数：xml字符串（String）</li>
+										<li>返回值：json字符串（String）</li>
+										<li>示例：var jsonStr = Nt_Json.xml2json("&lt;root&gt;&lt;name&gt;kege&lt;/name&gt;&lt;/root&gt;")</li>
+									</ul>	
+								</li>
+							</ul>
+						</div>
+					</div></li>
+					<li><div class="api-content"  id="class">
+						<div class=".api-content"><span style="font-size: 22px;;font-weight: bold;">类</span></div>
+						<div class="api-content des"> 
+							<ul>
+								<li>类名：<font color="red">Nt_File</font></li>
+								<li>解释：文件操作类</li>
+								<li>构造函数：
+									<ul>
+										<li>函数名：<font color="red">Nt_File(path)</font></li>
+										<li>解释：使用文件路径构造文件对象</li>
+										<li>参数：文件路径（String）</li>
+										<li>返回值：文件对象（Nt_File）</li>
+										<li>示例：var file = new Nt_File("D:/Ntlog/trace/xxx.log")</li>
+									</ul>	
+								</li>
+								<li>包含函数：
+									<ul>
+										<li>函数名：<font color="red">createNewFile()</font></li>
+										<li>解释：在硬盘上创建该空文件</li>
+										<li>参数：无</li>
+										<li>返回值：无</li>
+										<li>示例：file.createNewFile()</li>
+									</ul>
+									<ul>
+										<li>函数名：<font color="red">delete()</font></li>
+										<li>解释：在硬盘上删除该文件</li>
+										<li>参数：无</li>
+										<li>返回值：无</li>
+										<li>示例：file.delete()</li>
+									</ul>
+									<ul>
+										<li>函数名：<font color="red">exists()</font></li>
+										<li>解释：判断硬盘是否存在该文件</li>
+										<li>参数：无</li>
+										<li>返回值：判断值（Boolean）</li>
+										<li>示例：var flag = file.exists()</li>
+									</ul>
+									<ul>
+										<li>函数名：<font color="red">getParent()</font></li>
+										<li>解释：获得上层路径</li>
+										<li>参数：无</li>
+										<li>返回值：上层路径（String）</li>
+										<li>示例：var path = file.getParent()</li>
+									</ul>
+									<ul>
+										<li>函数名：<font color="red">isFile()</font></li>
+										<li>解释：判断该文件是否是文件（不是文件夹）</li>
+										<li>参数：无</li>
+										<li>返回值：判断值（Boolean）</li>
+										<li>示例：file.isFile()</li>
+									</ul>
+									<ul>
+										<li>函数名：<font color="red">isDirectory()</font></li>
+										<li>解释：判断该文件是否是文件夹（不是文件）</li>
+										<li>参数：无</li>
+										<li>返回值：判断值（Boolean）</li>
+										<li>示例：file.isDirectory()</li>
+									</ul>
+									<ul>
+										<li>函数名：<font color="red">listFiles()</font></li>
+										<li>解释：返回该文件对象子文件数组</li>
+										<li>参数：无</li>
+										<li>返回值：文件数组（Array[Nt_File]）</li>
+										<li>示例：var array = file.listFiles() ; array[0].exists()</li>
+									</ul>
+									<ul>
+										<li>函数名：<font color="red">listFileNames()</font></li>
+										<li>解释：返回该文件对象子文件名数组</li>
+										<li>参数：无</li>
+										<li>返回值：文件名数组（Array[String]）</li>
+										<li>示例：var array = file.listFileNames() ; NtPtr.println(array[0])</li>
+									</ul>
+									<ul>
+										<li>函数名：<font color="red">read(decode)</font></li>
+										<li>解释：按编码读取文件内容</li>
+										<li>参数：编码[String]</li>
+										<li>返回值：文件内容（String）</li>
+										<li>示例：var content = file.read("utf-8") ;</li>
+									</ul>
+									<ul>
+										<li>函数名：<font color="red">write(content,encode,overwrite)</font></li>
+										<li>解释：按编码写入文件内容</li>
+										<li>参数：内容（String）,编码[String],是否覆盖[Boolean]</li>
+										<li>返回值：无</li>
+										<li>示例：file.write("hello","utf-8",true)</li>
+									</ul>
+								</li>
+							</ul>
+						</div>
+					</div></li>
+				</ul>
+			</td>
+		</tr>
+	</table>
+</body>
+</html>

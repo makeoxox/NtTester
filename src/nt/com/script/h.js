@@ -213,8 +213,8 @@ var Nt_Control={
 	 }
  }
 
-// Xml对象
-var Nt_Xml = {
+// Xml对象，使用不佳，放弃
+/*var Nt_Xml = {
 		document : null,
 		parse : function(xmlStr,encode){
 			this.document = XmlParser.getDocByString(xmlStr,encode);
@@ -222,7 +222,7 @@ var Nt_Xml = {
 		format : function(xmlStr,encode){
 		 return 	XmlParser.convertFormatXMLStr(xmlStr,encode);
 		}
-}
+}*/
  
  // 文件操作类
  var Nt_File = function(path){

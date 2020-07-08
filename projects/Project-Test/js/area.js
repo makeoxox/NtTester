@@ -1,7 +1,4 @@
 
-
- Nt_Import("Project-Test/js/md5.js")
-
 function getArea(str) {
     var area = {}
     var index11 = 0

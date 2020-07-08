@@ -1,7 +1,8 @@
 
+ Nt_Import("Project-Test/js/area.js")
+
 function main(data){
 	
-	Nt_Control.Table([{"name":"kege","age":22},{"name":"kege","age":22}]);
 
 }
 

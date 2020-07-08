@@ -60,8 +60,6 @@ public class HttpServer {
 							log.error(e.toString());
 							e.printStackTrace();
 						} 
-				
-					
 				}
 			});
 			server.setHandler(ctx);
