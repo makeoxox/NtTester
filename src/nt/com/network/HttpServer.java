@@ -16,7 +16,11 @@ import org.eclipse.jetty.server.handler.AbstractHandler;
 import org.eclipse.jetty.server.handler.ContextHandler;
 
 
-
+/**
+ * ¼òÒ×http·þÎñÆ÷
+ * 
+ * @author kege
+ * */
 public class HttpServer {
 	
 	protected static Log log = LogFactory.getLog(HttpServer.class);

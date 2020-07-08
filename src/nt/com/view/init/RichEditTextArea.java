@@ -1,21 +1,40 @@
 package nt.com.view.init;
 
+import java.io.BufferedWriter;
+import java.io.File;
+import java.io.FileOutputStream;
 import java.io.IOException;
+import java.io.OutputStreamWriter;
+import java.io.UnsupportedEncodingException;
 import java.time.Duration;
 import java.util.Collection;
 import java.util.Collections;
+import java.util.HashSet;
+import java.util.Optional;
+import java.util.Set;
 import java.util.regex.Matcher;
 import java.util.regex.Pattern;
 
+import org.fxmisc.flowless.VirtualizedScrollPane;
 import org.fxmisc.richtext.CodeArea;
 import org.fxmisc.richtext.LineNumberFactory;
 import org.fxmisc.richtext.model.StyleSpans;
 import org.fxmisc.richtext.model.StyleSpansBuilder;
 
 import javafx.application.Platform;
+import javafx.event.EventHandler;
 import javafx.fxml.FXMLLoader;
+import javafx.scene.control.Alert;
+import javafx.scene.control.ButtonType;
+import javafx.scene.control.Menu;
+import javafx.scene.control.RadioMenuItem;
+import javafx.scene.control.Tab;
+import javafx.scene.control.TabPane;
+import javafx.scene.control.Alert.AlertType;
+import javafx.scene.image.Image;
 import javafx.scene.input.KeyCode;
 import javafx.scene.input.KeyEvent;
+import javafx.stage.Stage;
 import nt.com.enums.TextType;
 import nt.com.global.Config;
 
@@ -27,6 +46,7 @@ import nt.com.global.Config;
 public class RichEditTextArea extends CodeArea {
 	
 	private TextType type;
+	private static Set<KeyCode> keySet = new HashSet<KeyCode>(); //存储组合按键。
 	
 	public RichEditTextArea() {
 		
@@ -40,6 +60,58 @@ public class RichEditTextArea extends CodeArea {
 		String fontFamily = "-fx-font-family:"+Config.getEditFont().getFamily()+";";
 		String fontSize = "-fx-font-size:"+Config.getEditFont().getSize()+";";
 		this.setStyle(fontFamily+fontSize);
+		
+		this.setOnKeyPressed(new EventHandler<KeyEvent>() {  //设置组合按键保存
+			public void handle(KeyEvent event) {
+				KeyCode key = event.getCode();
+				keySet.add(key);
+				if(keySet.size()==2) {
+					 if (keySet.contains(KeyCode.S) && event.isShortcutDown() && event.isControlDown()) { //ctrl+S保存当前文本
+						keySet.clear();
+						TabPane metp = (TabPane) MainView.parent.lookup("#edittabpane");
+						Tab currentEditTab = metp.getSelectionModel().getSelectedItem();
+						if (currentEditTab == null)
+							return;
+						String fileAbsPath = currentEditTab.getId();
+						VirtualizedScrollPane<RichEditTextArea> sp = (VirtualizedScrollPane<RichEditTextArea>) currentEditTab.getContent();
+						RichEditTextArea eta = (RichEditTextArea) sp.getContent();
+						String content = eta.getText();
+						Alert alert = new Alert(AlertType.CONFIRMATION);
+						Stage alertStage = (Stage) alert.getDialogPane().getScene().getWindow();
+						alertStage.getIcons().add(new Image(getClass().getResourceAsStream("/res/title.png")));
+						alert.setTitle("保存");
+						alert.setHeaderText(null);
+						alert.setContentText("是否保存 " + fileAbsPath + "？");
+						Optional<ButtonType> result = alert.showAndWait();
+						TopMenuBar mb = (TopMenuBar) MainView.parent.lookup("#topmenubar");
+						Menu codeMenu = mb.getMenus().get(0);
+						RadioMenuItem rmi = (RadioMenuItem) codeMenu.getItems().get(0);
+						rmi = (RadioMenuItem) rmi.getToggleGroup().getSelectedToggle();
+						String code = rmi.getText();
+						if (result.get() == ButtonType.OK) {
+							File file = new File(fileAbsPath);
+							try {
+								BufferedWriter bw = new BufferedWriter(new OutputStreamWriter(new FileOutputStream(file, false), code));
+								bw.write(content);
+								bw.flush();
+								bw.close();
+							} catch (UnsupportedEncodingException e) {
+								e.printStackTrace();
+							} catch (IOException e) {
+								e.printStackTrace();
+							}
+						}
+				 }
+				}else return;
+			};
+		});
+		this.setOnKeyReleased(new EventHandler<KeyEvent>() {  //当松开任何一个按键时清除集合
+			@Override
+			public void handle(KeyEvent event) {
+				keySet.clear();
+			}
+		});
+		
 	}
 	
 	//js关键字
