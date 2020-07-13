@@ -185,7 +185,7 @@ var Nt_Control={
 		Platform.runLater(new Runnable() {
 		    run : function(){
 		    	try{
-		    		if(title==null)title="browser";
+		    		if(title==null)title="";
 		    		if(contentType==undefined)contentType=null;
 		    		new Browser(content,contentType,title);
 		    	}catch(e){

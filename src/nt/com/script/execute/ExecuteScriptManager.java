@@ -38,9 +38,9 @@ public class ExecuteScriptManager extends AbstractMessageScriptManager {
 		try {
 			Invocable iv = this.getInvocable(path);
 			ExecuteScript as =iv.getInterface(ExecuteScript.class);
-			if(method.equals("before")) {
+			if(method.equals(BEFORE)) {
 				return as.beforeSend(((SessionModel) session).getSendMessage());
-			}else if(method.equals("after")){
+			}else if(method.equals(AFTER)){
 				return as.afterReceive(((SessionModel) session).getSendMessage(),((SessionModel) session).getRecvMessage());
 			}
 		}catch (Exception e) {

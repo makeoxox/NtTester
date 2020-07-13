@@ -539,6 +539,13 @@ public class LeftTreeViewController {
 							if (edittab.getText().equals(file.getName())) {
 								metp.getSelectionModel().select(edittab);
 								mctp.getSelectionModel().select(consoletab);
+								Alert alert = new Alert(AlertType.WARNING);
+								Stage alertStage =(Stage) alert.getDialogPane().getScene().getWindow();
+								alertStage.getIcons().add(new Image(getClass().getResourceAsStream("/res/title.png")));
+								alert.setTitle("提醒");
+								alert.setHeaderText(null);
+								alert.setContentText("已存在打开的同名文件，请先关闭并确认保存后再打开该文件！");
+								alert.showAndWait();
 								return;
 							}
  						}
