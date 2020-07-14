@@ -98,6 +98,14 @@ public class Comm {
 		if(asyn.toLowerCase().equals("sync")&&protocol.toLowerCase().equals("tcp")&&multi.toLowerCase().equals("single")) {
 			TcpSyncSingle(message,scriptpath);
 		}
+		//tcp - 同步 - 并发无阻塞
+		if(asyn.toLowerCase().equals("sync")&&protocol.toLowerCase().equals("tcp")&&multi.toLowerCase().equals("multin")) {
+			TcpSyncMultiN(message,scriptpath);
+		}
+		
+		
+		
+		
 		//http - 同步 - 单条
 		else if(asyn.toLowerCase().equals("sync")&&protocol.toLowerCase().equals("http")&&multi.toLowerCase().equals("single")) {
 			HttpSyncSingle(message,scriptpath);
@@ -235,6 +243,12 @@ public class Comm {
 		}
 		
 	}
+	
+	//tcp-同步-并发无阻塞
+	private void TcpSyncMultiN(String message,String scriptpath) {
+		
+	}
+	
 	
 	//http-同步-单发
 	private void HttpSyncSingle(String message, String scriptpath) throws InstantiationException, IllegalAccessException, ClassNotFoundException, DocumentException, MalformedURLException {

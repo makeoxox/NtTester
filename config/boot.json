@@ -1,5 +1,5 @@
 {
-	"lastOpenFilePath":"projects\\project-demo\\js\\sm4.js",
+	"lastOpenFilePath":"projects\\project-demo\\demo\\demo.resp",
 	"consoleFont":{
 		"size":14,
 		"family":"Consolas"
@@ -27,15 +27,15 @@
 	"multixml":{
 		"increment":{
 			"incrementlistname":"",
-			"xmlfilepath":"projects\\project-demo\\debug.xml",
+			"xmlfilepath":"projects\\project-demo\\demo\\demo.xml",
 			"disable":false,
 			"type":"attribution",
 			"attrname":"untid"
 		},
 		"concurrency":77,
 		"assign":{
-			"xmlfilepath":"",
-			"disable":true,
+			"xmlfilepath":"projects\\project-demo\\demo\\demo.xml",
+			"disable":false,
 			"valuesfilepath":"config/values.txt",
 			"type":"text",
 			"attrname":"",
@@ -45,7 +45,7 @@
 	"multijson":{
 		"increment":{
 			"incrementlistname":"",
-			"jsonfilepath":"projects\\project-demo\\debug.json",
+			"jsonfilepath":"projects\\project-demo\\demo\\demo.json",
 			"disable":false
 		},
 		"concurrency":23,
@@ -59,11 +59,12 @@
 	"menu":{
 		"encode":"GBK",
 		"msg":"xml",
-		"protocol":"http",
+		"protocol":"tcp",
 		"connect":"sync",
 		"script":"enable",
-		"multi":"single"
+		"multi":"multiN"
 	},
+	"keyword":"head",
 	"version":"2.0.0",
 	"multitxt":{
 		"increment":{

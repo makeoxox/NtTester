@@ -96,6 +96,8 @@
 <h2>编程</h2>
 <ul>
 <li><a href="/python/index.asp" title="Python 教程">Python</a></li>
+<li><a href="/python/numpy_intro.asp" title="NumPy 教程">Python NumPy</a></li>
+<li><a href="/python/python_ml_getting_started.asp" title="机器学习教程">机器学习</a></li>
 <li><a href="#" title="Java 教程">Java</a></li>
 <li><a href="#" title="C++ 教程">C++</a></li>
 <li><a href="#" title="C# 教程">C#</a></li>
@@ -185,7 +187,7 @@
 <h3>W3School 新闻</h3>
 
 <p style="margin-top: 20px;">
-<a style="font-size: 20px;" href="/python/index.asp" title="Python 教程">W3School 首个编程教程：Python 教程上线！</a>
+<a style="font-size: 20px;" href="/python/python_ml_getting_started.asp" title="机器学习 - 入门">W3School 首个人工智能课程：机器学习教程全新上线！</a>
 </p>
 </div>
 
@@ -194,9 +196,10 @@
 <h3>W3School 更新信息</h3>
 
 <p style="margin-top: 20px;">
-<a style="font-size: 20px;" href="/python/python_ref_functions.asp" title="Python 教程">参考手册：Python 内建函数</a>
+<a style="font-size: 20px;" href="/python/numpy_intro.asp" title="NumPy 教程">教程：Python NumPy</a>
+&nbsp;&nbsp;&nbsp;
+<a style="font-size: 20px;" href="/python/python_ml_getting_started.asp" title="机器学习教程">教程：机器学习</a>
 </p>
-
 </div>
 
 
@@ -239,7 +242,8 @@
 <li><a href="/asp/asp_ref.asp" title="ASP 参考手册">ASP</a></li>
 <li><a href="/ado/ado_reference.asp" title="ADO 参考手册">ADO</a></li>
 <li><a href="/aspnet/aspnet_reference.asp" title="ASP.NET 参考手册">ASP.NET</a></li>
-<li><a href="/php/php_ref.asp" title="PHP 参考手册">PHP 5.1</a></li>
+<li><a href="/php/php_ref.asp" title="PHP 参考手册">PHP</a></li>
+<li><a href="/python/python_reference.asp" title="Python 参考手册">Python</a></li>
 <li><a href="/xmldom/xmldom_reference.asp" title="XML DOM 参考手册">XML DOM</a></li>
 <li><a href="/xsl/xsl_w3celementref.asp" title="XSLT 元素参考手册">XSLT 1.0</a></li>
 <li><a href="/xpath/xpath_functions.asp" title="XPath、XQuery 以及 XSLT 函数">XPath 2.0</a></li>
@@ -306,16 +310,20 @@
 
 <div id="footer">
 <p id="p1">
-W3School 简体中文版提供的内容仅用于培训和测试，不保证内容的正确性。通过使用本站内容随之而来的风险与本站无关。
+W3School 简体中文版提供的内容仅用于培训和测试，不保证内容的正确性。通过使用本站内容随之而来的风险与本站无关。版权所有，保留一切权利。
 </p>
 
 <p id="p2">
-<a href="/about/about_use.asp" title="关于使用">使用条款</a>和<a href="/about/about_privacy.asp" title="关于隐私">隐私条款</a>。版权所有，保留一切权利。
-赞助商：<a target="_blank" href="https://www.ykinvestment.com/" title="上海赢科投资有限公司">上海赢科投资有限公司</a>。
-<a target="_blank" href="https://www.miitbeian.gov.cn/">蒙ICP备06004630号</a>
-<a style="color: #000; margin-left: 20px;" href="/ad.html" target="_blank" title="W3School 广告刊例">广告刊例</a>
+
+<a href="/about/about_use.asp" title="关于使用">使用条款</a>
+<a href="/about/about_privacy.asp" title="关于隐私">隐私条款</a>
+<a class="link_kanli" href="/ad.html" target="_blank" title="W3School 广告刊例">广告刊例</a>
+<a target="_blank" href="https://www.ykinvestment.com/">技术支持：赢科</a>
+<a target="_blank" href="http://www.beian.miit.gov.cn">蒙ICP备06004630号</a>
 </p>
 </div>
+
+
 
 </div>
 </body>

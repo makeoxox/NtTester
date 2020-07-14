@@ -26,6 +26,7 @@ import javafx.stage.Stage;
 import nt.com.global.Config;
 import nt.com.global.GlobalData;
 import nt.com.model.XmlAssignModel;
+import nt.com.model.XmlElementModel;
 import nt.com.model.XmlIncrementModel;
 
 public class MultiXMLView extends VBox {
@@ -69,7 +70,7 @@ public class MultiXMLView extends VBox {
 		Label incrementattrlabel = (Label) this.lookup("#incrementattrlabel");
 		TextField incrementattrfield = (TextField) this.lookup("#incrementattrfield");
 		TreeView<?> incrementeletree = (TreeView<?>) this.lookup("#incrementeletree");
-		ListView<Node> incrementelelist = (ListView<Node>) this.lookup("#incrementelelist");
+		ListView<XmlElementModel> incrementelelist = (ListView<XmlElementModel>) this.lookup("#incrementelelist");
 		Button incrementadd = (Button) this.lookup("#incrementadd");
 		Button incrementdel = (Button) this.lookup("#incrementdel");
 		if (!xim.isDisable()) {
@@ -95,9 +96,9 @@ public class MultiXMLView extends VBox {
 		}
 		incrementattrfield.setText(xim.getAttrname());
 		incrementxmlfield.setText(xim.getXmlFilePath());
-		List<Node> incrementList = GlobalData.xmlIncrementNodeMap.get(xim.getIncrementListName());
+		List<XmlElementModel> incrementList = GlobalData.xmlIncrementNodeMap.get(xim.getIncrementListName());
 		if (incrementList != null) {
-			ObservableList<Node> items = FXCollections.observableArrayList(incrementList);
+			ObservableList<XmlElementModel> items = FXCollections.observableArrayList(incrementList);
 			incrementelelist.setItems(items);
 		}
 		//º”‘ÿ∏≥÷µ≈‰÷√
@@ -114,7 +115,7 @@ public class MultiXMLView extends VBox {
 		Label assignattrlabel = (Label) this.lookup("#assignattrlabel");
 		TextField assignattrfield = (TextField) this.lookup("#assignattrfield");
 		TreeView<?> assigneletree = (TreeView<?>) this.lookup("#assigneletree");
-		ListView<Node> assignelelist = (ListView<Node>) this.lookup("#assignelelist");
+		ListView<XmlElementModel> assignelelist = (ListView<XmlElementModel>) this.lookup("#assignelelist");
 		Button assignadd = (Button) this.lookup("#assignadd");
 		Button assigndel = (Button) this.lookup("#assigndel");
 		if(!xam.isDisable()) {
@@ -144,9 +145,9 @@ public class MultiXMLView extends VBox {
 		assignvaluesfield.setText(xam.getValuesFilePath());
 		assignxmlfield.setText(xam.getXmlFilePath());
 		assignattrfield.setText(xam.getAttrname());
-		List<Node> assignList = GlobalData.xmlAssignNodeMap.get(xam.getAssignListName());
+		List<XmlElementModel> assignList = GlobalData.xmlAssignNodeMap.get(xam.getAssignListName());
 		if (assignList != null) {
-			ObservableList<Node> items = FXCollections.observableArrayList(assignList);
+			ObservableList<XmlElementModel> items = FXCollections.observableArrayList(assignList);
 			assignelelist.setItems(items);
 		}
 	}

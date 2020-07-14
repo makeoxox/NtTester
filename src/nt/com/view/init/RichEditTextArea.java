@@ -9,13 +9,10 @@ import java.io.UnsupportedEncodingException;
 import java.time.Duration;
 import java.util.Collection;
 import java.util.Collections;
-import java.util.HashSet;
 import java.util.Optional;
-import java.util.Set;
 import java.util.regex.Matcher;
 import java.util.regex.Pattern;
 
-import org.fxmisc.flowless.VirtualizedScrollPane;
 import org.fxmisc.richtext.CodeArea;
 import org.fxmisc.richtext.LineNumberFactory;
 import org.fxmisc.richtext.model.StyleSpans;
@@ -51,6 +48,7 @@ public class RichEditTextArea extends CodeArea {
 	private TextType type;
 	private KeyCombination saveEvent = new KeyCodeCombination(KeyCode.S, KeyCombination.SHORTCUT_DOWN); //组合按键事件 Ctrl+S 
 	private KeyCombination deleteLineEvent = new KeyCodeCombination(KeyCode.D, KeyCombination.SHORTCUT_DOWN); //组合按键事件 Ctrl+D
+	private KeyCombination findEvent = new  KeyCodeCombination(KeyCode.F, KeyCombination.SHORTCUT_DOWN); //组合按键事件 Ctrl+F
 	private RichEditTextArea that;
 	
 	public RichEditTextArea() {
@@ -65,9 +63,10 @@ public class RichEditTextArea extends CodeArea {
 		String fontFamily = "-fx-font-family:"+Config.getEditFont().getFamily()+";";
 		String fontSize = "-fx-font-size:"+Config.getEditFont().getSize()+";";
 		this.setStyle(fontFamily+fontSize);
+		//文本域的组合按键事件。
 		this.setOnKeyPressed(new EventHandler<KeyEvent>() { 
 			public void handle(KeyEvent event) {
-				if(saveEvent.match(event)) {  //保存事件
+				if(saveEvent.match(event)) {  //保存事件，保存文件内容
 					TabPane metp = (TabPane) MainView.parent.lookup("#edittabpane");
 					Tab currentEditTab = metp.getSelectionModel().getSelectedItem();
 					if (currentEditTab == null)return;
@@ -103,6 +102,9 @@ public class RichEditTextArea extends CodeArea {
 					that.deleteText(new IndexRange(that.getSelection().getStart(),that.getSelection().getEnd()));
 					that.selectLine();
 					that.deleteText(new IndexRange(that.getSelection().getStart(),that.getSelection().getEnd()));
+				}
+				if(findEvent.match(event)) { //查找事件，全文查找内容。
+					new FindView();
 				}
 			};
 		});

@@ -34,6 +34,7 @@ import nt.com.global.Config;
 import nt.com.model.FileTreeModel;
 import nt.com.util.Utils;
 import nt.com.view.init.ConsoleTextArea;
+import nt.com.view.init.FindView;
 import nt.com.view.init.HttpMsgSettingView;
 import nt.com.view.init.LeftTreeView;
 import nt.com.view.init.MainView;
@@ -168,10 +169,10 @@ public class TopToolBarController {
 	void debug(ActionEvent event) {
 		TabPane metp = (TabPane) MainView.parent.lookup("#edittabpane");
 		Tab currentEditTab =metp.getSelectionModel().getSelectedItem();
+		Alert alert = new Alert(AlertType.WARNING);
+		Stage alertStage =(Stage) alert.getDialogPane().getScene().getWindow();
+		alertStage.getIcons().add(new Image(getClass().getResourceAsStream("/res/title.png")));
 		if(currentEditTab==null) {
-			Alert alert = new Alert(AlertType.WARNING);
-			Stage alertStage =(Stage) alert.getDialogPane().getScene().getWindow();
-			alertStage.getIcons().add(new Image(getClass().getResourceAsStream("/res/title.png")));
 			alert.setTitle("提醒");
 			alert.setHeaderText(null);
 			alert.setContentText("请先打开一个Js文件！");
@@ -182,9 +183,6 @@ public class TopToolBarController {
 			File file = new File(fileAbsPath);
 			TextType tt =Utils.getTextType(file);
 			if(tt!=TextType.JAVASCRIPT) {
-				Alert alert = new Alert(AlertType.WARNING);
-				Stage alertStage =(Stage) alert.getDialogPane().getScene().getWindow();
-				alertStage.getIcons().add(new Image(getClass().getResourceAsStream("/res/title.png")));
 				alert.setTitle("提醒");
 				alert.setHeaderText(null);
 				alert.setContentText("文件 "+file.getName()+" 不是Js文件！");
@@ -245,7 +243,13 @@ public class TopToolBarController {
 		}
 	}
 	
+	//查找文本
+	@FXML
+	void find(ActionEvent event) {
+		new FindView();
+	}
 	
+	//运行发送报文
 	@FXML
 	void run(ActionEvent event) {
 		TabPane metp = (TabPane) MainView.parent.lookup("#edittabpane");

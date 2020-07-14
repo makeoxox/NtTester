@@ -61,6 +61,17 @@ public class Config {
 	public static String getVersion() {
 		return CONFIG.get("version").toString();
 	}
+	
+	//查找关键字
+	public static String getKeyword() {
+		return CONFIG.get("keyword").toString();
+	}
+	
+	public static void setKeyword(String keyword) {
+		CONFIG.element("keyword", keyword);
+		String jsonStr = CONFIG.toString();
+		WriteConfig(jsonStr);
+	}
 
 	// 编辑面板字体
 	public static Font getEditFont() {
