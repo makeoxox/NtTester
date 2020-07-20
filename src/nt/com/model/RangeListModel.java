@@ -11,6 +11,8 @@ import javafx.scene.control.IndexRange;
  *
  */
 public class RangeListModel {
+	
+	private String fileName;
 
 	private String keyWord; 
 	
@@ -18,6 +20,12 @@ public class RangeListModel {
 	
 	private List<Integer> rangeList;
 	
+	public String getFileName() {
+		return fileName;
+	}
+	public void setFileName(String fileName) {
+		this.fileName = fileName;
+	}
 	public String getKeyWord() {
 		return keyWord;
 	}

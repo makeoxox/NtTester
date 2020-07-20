@@ -31,12 +31,12 @@
       <Separator prefHeight="0.0" prefWidth="269.0" />
       <AnchorPane prefHeight="326.0" prefWidth="531.0">
          <children>
-            <Button fx:id="findsinglebtn" layoutX="400.0" layoutY="29.0" mnemonicParsing="false" onAction="#findone" text=" 查找下一个  " />
-            <Button fx:id="findallbtn" layoutX="400.0" layoutY="65.0" mnemonicParsing="false" onAction="#findall" text="查找所有项目" />
+            <Button fx:id="findsinglebtn" layoutX="380.0" layoutY="29.0" mnemonicParsing="false" onKeyPressed="#findone" onAction="#findone" text="查找当前文件中下一个" />
+            <Button fx:id="findallbtn" layoutX="380.0" layoutY="65.0" mnemonicParsing="false"  onKeyPressed="#findall" onAction="#findall"    text="     查找所有文件        " />
             <Label layoutX="43.0" layoutY="33.0" text="查找内容" />
-            <TextField fx:id="findfield" layoutX="114.0" layoutY="29.0" prefHeight="23.0" prefWidth="261.0" />
-            <Label layoutX="43.0" layoutY="98.0" text="文本所在文件" />
-            <ListView fx:id="findlist" layoutX="44.0" layoutY="128.0" prefHeight="175.0" prefWidth="444.0" />
+            <TextField fx:id="findfield" layoutX="114.0" layoutY="29.0" prefHeight="23.0" prefWidth="250.0" />
+            <Label layoutX="43.0" layoutY="75.0" text="文本所在文件" />
+            <ListView onKeyPressed="#openFileAction" onMouseClicked="#openFileAction"  fx:id="findlist" layoutX="44.0" layoutY="110.0" prefHeight="200.0" prefWidth="465.0" />
          </children>
       </AnchorPane>
       <Separator prefHeight="0.0" prefWidth="400.0" />

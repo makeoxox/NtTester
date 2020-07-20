@@ -1,5 +1,5 @@
 {
-	"lastOpenFilePath":"projects\\project-demo\\demo\\demo.resp",
+	"lastOpenFilePath":"projects\\project-demo\\demo\\demo.js",
 	"consoleFont":{
 		"size":14,
 		"family":"Consolas"
@@ -64,7 +64,7 @@
 		"script":"enable",
 		"multi":"multiN"
 	},
-	"keyword":"head",
+	"keyword":"0",
 	"version":"2.0.0",
 	"multitxt":{
 		"increment":{

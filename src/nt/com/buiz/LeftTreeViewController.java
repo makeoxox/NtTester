@@ -550,11 +550,11 @@ public class LeftTreeViewController {
 							}
  						}
 						Tab edittab =new Tab(file.getName());
-						edittab.setId(file.getAbsolutePath());
-						edittab.setGraphic(new ImageView(new Image(LeftTreeViewController.class.getResourceAsStream("/res/file.png"))));
+						edittab.setId(file.getAbsolutePath()); //把文件绝对路径作为id
+						edittab.setGraphic(new ImageView(new Image(getClass().getResourceAsStream("/res/file.png"))));
 						edittabList.add(edittab);
 						Tab consoletab = new Tab(file.getName() + " - console");
-						consoletab.setGraphic(new ImageView(new Image(LeftTreeViewController.class.getResourceAsStream("/res/console.png"))));
+						consoletab.setGraphic(new ImageView(new Image(getClass().getResourceAsStream("/res/console.png"))));
 						consoletab.setId(file.getAbsolutePath());
 						consoletabList.add(consoletab);
 						edittab.setOnClosed((CloseEvent) -> {

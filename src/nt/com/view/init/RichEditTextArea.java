@@ -1,15 +1,9 @@
 package nt.com.view.init;
 
-import java.io.BufferedWriter;
-import java.io.File;
-import java.io.FileOutputStream;
 import java.io.IOException;
-import java.io.OutputStreamWriter;
-import java.io.UnsupportedEncodingException;
 import java.time.Duration;
 import java.util.Collection;
 import java.util.Collections;
-import java.util.Optional;
 import java.util.regex.Matcher;
 import java.util.regex.Pattern;
 
@@ -19,22 +13,9 @@ import org.fxmisc.richtext.model.StyleSpans;
 import org.fxmisc.richtext.model.StyleSpansBuilder;
 
 import javafx.application.Platform;
-import javafx.event.EventHandler;
 import javafx.fxml.FXMLLoader;
-import javafx.scene.control.Alert;
-import javafx.scene.control.ButtonType;
-import javafx.scene.control.IndexRange;
-import javafx.scene.control.Menu;
-import javafx.scene.control.RadioMenuItem;
-import javafx.scene.control.Tab;
-import javafx.scene.control.TabPane;
-import javafx.scene.control.Alert.AlertType;
-import javafx.scene.image.Image;
 import javafx.scene.input.KeyCode;
-import javafx.scene.input.KeyCodeCombination;
-import javafx.scene.input.KeyCombination;
 import javafx.scene.input.KeyEvent;
-import javafx.stage.Stage;
 import nt.com.enums.TextType;
 import nt.com.global.Config;
 
@@ -46,13 +27,8 @@ import nt.com.global.Config;
 public class RichEditTextArea extends CodeArea {
 	
 	private TextType type;
-	private KeyCombination saveEvent = new KeyCodeCombination(KeyCode.S, KeyCombination.SHORTCUT_DOWN); //组合按键事件 Ctrl+S 
-	private KeyCombination deleteLineEvent = new KeyCodeCombination(KeyCode.D, KeyCombination.SHORTCUT_DOWN); //组合按键事件 Ctrl+D
-	private KeyCombination findEvent = new  KeyCodeCombination(KeyCode.F, KeyCombination.SHORTCUT_DOWN); //组合按键事件 Ctrl+F
-	private RichEditTextArea that;
 	
 	public RichEditTextArea() {
-		that = this;
 		FXMLLoader fxmlLoader = new FXMLLoader(getClass().getResource("/nt/com/view/fxml/RichEditTextArea.fxml"));
 		fxmlLoader.setRoot(this);
 		try {
@@ -63,52 +39,7 @@ public class RichEditTextArea extends CodeArea {
 		String fontFamily = "-fx-font-family:"+Config.getEditFont().getFamily()+";";
 		String fontSize = "-fx-font-size:"+Config.getEditFont().getSize()+";";
 		this.setStyle(fontFamily+fontSize);
-		//文本域的组合按键事件。
-		this.setOnKeyPressed(new EventHandler<KeyEvent>() { 
-			public void handle(KeyEvent event) {
-				if(saveEvent.match(event)) {  //保存事件，保存文件内容
-					TabPane metp = (TabPane) MainView.parent.lookup("#edittabpane");
-					Tab currentEditTab = metp.getSelectionModel().getSelectedItem();
-					if (currentEditTab == null)return;
-					String fileAbsPath = currentEditTab.getId();
-					String content = that.getText();
-					Alert alert = new Alert(AlertType.CONFIRMATION);
-					Stage alertStage = (Stage) alert.getDialogPane().getScene().getWindow();
-					alertStage.getIcons().add(new Image(getClass().getResourceAsStream("/res/title.png")));
-					alert.setTitle("保存");
-					alert.setHeaderText(null);
-					alert.setContentText("是否保存 " + fileAbsPath + "？");
-					Optional<ButtonType> result = alert.showAndWait();
-					TopMenuBar mb = (TopMenuBar) MainView.parent.lookup("#topmenubar");
-					Menu codeMenu = mb.getMenus().get(0);
-					RadioMenuItem rmi = (RadioMenuItem) codeMenu.getItems().get(0);
-					rmi = (RadioMenuItem) rmi.getToggleGroup().getSelectedToggle();
-					String code = rmi.getText();
-					if (result.get() == ButtonType.OK) {
-						File file = new File(fileAbsPath);
-						try {
-							BufferedWriter bw = new BufferedWriter(new OutputStreamWriter(new FileOutputStream(file, false), code));
-							bw.write(content);
-							bw.flush();
-							bw.close();
-						} catch (UnsupportedEncodingException e) {
-							e.printStackTrace();
-						} catch (IOException e) {
-							e.printStackTrace();
-						}
-					}
-				}
-				if(deleteLineEvent.match(event)) { //删除行事件 。 先删除选中内容 ，再删除该行残余的内容。
-					that.deleteText(new IndexRange(that.getSelection().getStart(),that.getSelection().getEnd()));
-					that.selectLine();
-					that.deleteText(new IndexRange(that.getSelection().getStart(),that.getSelection().getEnd()));
-				}
-				if(findEvent.match(event)) { //查找事件，全文查找内容。
-					new FindView();
-				}
-			};
-		});
-		
+
 	}
 	
 	//js关键字

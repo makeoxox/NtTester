@@ -8,7 +8,7 @@
 <?import javafx.scene.image.ImageView?>
 <?import org.fxmisc.richtext.CodeArea?>
 
-<fx:root  type="CodeArea" xmlns:fx="http://javafx.com/fxml/1" xmlns="http://javafx.com/javafx/11.0.1" fx:controller="nt.com.buiz.RichEditTextAreaController">
+<fx:root  type="CodeArea" onKeyPressed="#keyPress" xmlns:fx="http://javafx.com/fxml/1" xmlns="http://javafx.com/javafx/11.0.1" fx:controller="nt.com.buiz.RichEditTextAreaController">
 		<contextMenu>
 			<ContextMenu style="-fx-font-size:14" fx:id="editmenu" width="400.0">
 				<items>
