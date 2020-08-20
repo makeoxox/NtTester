@@ -55,7 +55,6 @@ public class HttpServer {
 								contend+=line+"\n";
 							}
 							br.close();
-							
 						} catch (IOException e) {
 							log.error(e.toString());
 							e.printStackTrace();

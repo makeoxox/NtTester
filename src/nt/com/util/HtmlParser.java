@@ -17,11 +17,15 @@ import org.xml.sax.SAXException;
  */
 public class HtmlParser {
 	
-	
 	public static String  convertFormatHTMLStr(String htmlStr,String encode) throws SAXException, IOException, TransformerException{
 		Document doc = Jsoup.parse(htmlStr);
 		return doc.html();
 	}
 
+	
+	
+	
+	
+	
 	
 }

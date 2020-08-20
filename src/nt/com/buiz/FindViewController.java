@@ -134,7 +134,7 @@ public class FindViewController {
     }
     
     //µü´úÎÄ¼þ¼Ð
-    public  void iteratorDir(File[] files,String keyword) throws IOException {
+    private  void iteratorDir(File[] files,String keyword) throws IOException {
 		for (File file : files) {
 			if (file.isDirectory()) {
 				iteratorDir(file.listFiles(),keyword); 
@@ -181,7 +181,7 @@ public class FindViewController {
     	}
     }
     
-    void openFile() {
+    private void openFile() {
     	FileTreeModel flm = findlist.getSelectionModel().getSelectedItem();
     	TabPane metp = (TabPane) MainView.parent.lookup("#edittabpane");
 		TabPane mctp = (TabPane) MainView.parent.lookup("#consoletabpane");

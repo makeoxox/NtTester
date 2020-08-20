@@ -2,7 +2,6 @@ package nt.com.model;
 
 import java.util.List;
 
-import javafx.scene.control.IndexRange;
 
 /**
  * 关键词坐标模型

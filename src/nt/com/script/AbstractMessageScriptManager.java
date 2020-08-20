@@ -1,3 +1,4 @@
+
 package nt.com.script;
 
 import java.io.File;
@@ -43,6 +44,7 @@ public abstract class AbstractMessageScriptManager {
 		}
 
 	}
+	
 	
 	protected Invocable getInvocable(String path) {
 		try {
