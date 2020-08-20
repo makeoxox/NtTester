@@ -187,26 +187,26 @@ public class RichEditTextAreaController {
 			alertStage.getIcons().add(new Image(getClass().getResourceAsStream("/res/title.png")));
 			alert.setTitle("提醒");
 			alert.setHeaderText(null);
-			alert.setContentText("请先打开一个Js文件！");
+			alert.setContentText("请先打开一个Js或Java文件！");
 			alert.showAndWait();
 			return;
 		} else {
 			String fileAbsPath = currentEditTab.getId();
 			File file = new File(fileAbsPath);
 			TextType tt = Utils.getTextType(file);
-			if (tt != TextType.JAVASCRIPT) {
+			if(tt==TextType.JAVASCRIPT || tt==TextType.JAVA) {
+				ScriptDebugDialog sdd = new ScriptDebugDialog(tt);
+				TextField pathfield =(TextField) sdd.lookup("#pathfield");
+				pathfield.setText(fileAbsPath);
+			}else {
 				Alert alert = new Alert(AlertType.WARNING);
 				Stage alertStage = (Stage) alert.getDialogPane().getScene().getWindow();
 				alertStage.getIcons().add(new Image(getClass().getResourceAsStream("/res/title.png")));
 				alert.setTitle("提醒");
 				alert.setHeaderText(null);
-				alert.setContentText("文件 " + file.getName() + " 不是Js文件！");
+				alert.setContentText("文件 "+file.getName()+" 不是Js或Java文件！");
 				alert.showAndWait();
 				return;
-			} else {
-				ScriptDebugDialog sdd = new ScriptDebugDialog();
-				TextField pathfield = (TextField) sdd.lookup("#pathfield");
-				pathfield.setText(fileAbsPath);
 			}
 		}
 	}

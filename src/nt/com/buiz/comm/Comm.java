@@ -22,7 +22,7 @@ import nt.com.handler.HandlerManager;
 import nt.com.model.SessionModel;
 import nt.com.network.HttpSingle;
 import nt.com.network.NioTcpSingle;
-import nt.com.script.execute.ExecuteScriptManager;
+import nt.com.script.javascript.execute.ExecuteScriptManager;
 import nt.com.util.Str;
 import nt.com.util.Utils;
 import nt.com.view.init.ConsoleTextArea;

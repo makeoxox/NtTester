@@ -16,6 +16,7 @@ import java.util.Optional;
 import org.apache.commons.io.FileUtils;
 import org.fxmisc.flowless.VirtualizedScrollPane;
 
+import freemarker.template.TemplateException;
 import javafx.collections.ObservableList;
 import javafx.event.ActionEvent;
 import javafx.event.EventHandler;
@@ -41,6 +42,7 @@ import nt.com.enums.TextType;
 import nt.com.global.Config;
 import nt.com.global.TemplateFile;
 import nt.com.model.FileTreeModel;
+import nt.com.util.RegexUtils;
 import nt.com.util.Utils;
 import nt.com.view.init.ConsoleTextArea;
 import nt.com.view.init.LeftTreeView;
@@ -77,6 +79,9 @@ public class LeftTreeViewController {
 
 	@FXML
 	private MenuItem addjsonbtn;
+	
+	@FXML
+	private MenuItem addjavabtn;
 
 	@FXML
 	private MenuItem lefttreedel;
@@ -133,6 +138,10 @@ public class LeftTreeViewController {
 			icon= new ImageView(new Image(LeftTreeViewController.class.getResourceAsStream("/res/file.png")));
 			dialog.setContentText("新建json文件名：");
 			dialog.setTitle("新增json文件");
+		}else if(clickedBtn==addjavabtn) {
+			icon= new ImageView(new Image(LeftTreeViewController.class.getResourceAsStream("/res/file.png")));
+			dialog.setContentText("新建java文件名：");
+			dialog.setTitle("新增java文件");
 		}
 		Optional<String> result = dialog.showAndWait();
 		if (!result.isPresent()){
@@ -170,7 +179,7 @@ public class LeftTreeViewController {
 			File file=item.getValue().getFile();
 			File newfile=null;
 			Writer write=null;
-			String content = null;
+			String content = "";
 			if(file.isDirectory()) {  //如果是文件夹 则在该文件夹下创建
 				if(clickedBtn==addfoldbtn) {
 					newfile = new File(file.getAbsolutePath()+File.separator+result.get());
@@ -178,6 +187,8 @@ public class LeftTreeViewController {
 				}else if(clickedBtn==addtxtbtn) {
 					newfile = new File(file.getAbsolutePath()+File.separator+result.get()+".txt");
 					newfile.createNewFile();
+					write = new OutputStreamWriter(new FileOutputStream(newfile));
+					write.write(content="");
 				}else if(clickedBtn==addjsbtn) {
 					newfile = new File(file.getAbsolutePath()+File.separator+result.get()+".js");
 					newfile.createNewFile();
@@ -193,6 +204,30 @@ public class LeftTreeViewController {
 					newfile.createNewFile();
 					write = new OutputStreamWriter(new FileOutputStream(newfile));
 					write.write(content=TemplateFile.JsonTemplate());
+				}else if(clickedBtn==addjavabtn) {
+					try {
+						if(RegexUtils.ClassNameMatche(result.get())) {
+							newfile = new File(file.getAbsolutePath()+File.separator+result.get()+".java");
+							newfile.createNewFile();
+							write = new OutputStreamWriter(new FileOutputStream(newfile));
+							write.write(content=TemplateFile.JavaTemplate(result.get()));
+						}else {
+							Alert alert = new Alert(AlertType.WARNING);
+							Stage alertStage =(Stage) alert.getDialogPane().getScene().getWindow();
+							alertStage.getIcons().add(new Image(getClass().getResourceAsStream("/res/title.png")));
+							alert.setTitle("提醒");
+							alert.setHeaderText(null);
+							alert.setContentText("Java文件名不符合规范！");
+							alert.showAndWait();
+							return;
+						}
+					} catch (TemplateException e) {
+						if(write!=null) {
+							write.flush();
+							write.close();
+						}
+						return;
+					}
 				}
 				if(write!=null) {
 					write.flush();
@@ -209,6 +244,8 @@ public class LeftTreeViewController {
 				}else if(clickedBtn==addtxtbtn) {
 					newfile = new File(file.getParentFile().getAbsolutePath()+File.separator+result.get()+".txt");
 					newfile.createNewFile();
+					write = new OutputStreamWriter(new FileOutputStream(newfile));
+					write.write(content="");
 				}else if(clickedBtn==addjsbtn) {
 					newfile = new File(file.getParentFile().getAbsolutePath()+File.separator+result.get()+".js");
 					newfile.createNewFile();
@@ -224,6 +261,30 @@ public class LeftTreeViewController {
 					newfile.createNewFile();
 					write = new OutputStreamWriter(new FileOutputStream(newfile));
 					write.write(content=TemplateFile.JsonTemplate());
+				}else if(clickedBtn==addjavabtn) {
+					try {
+						if(RegexUtils.ClassNameMatche(result.get())) {
+							newfile = new File(file.getParentFile().getAbsolutePath()+File.separator+result.get()+".java");
+							newfile.createNewFile();
+							write = new OutputStreamWriter(new FileOutputStream(newfile));
+							write.write(content=TemplateFile.JavaTemplate(result.get()));
+						}else {
+							Alert alert = new Alert(AlertType.WARNING);
+							Stage alertStage =(Stage) alert.getDialogPane().getScene().getWindow();
+							alertStage.getIcons().add(new Image(getClass().getResourceAsStream("/res/title.png")));
+							alert.setTitle("提醒");
+							alert.setHeaderText(null);
+							alert.setContentText("Java文件名不符合规范！");
+							alert.showAndWait();
+							return;
+						}
+					} catch (TemplateException e) {
+						if(write!=null) {
+							write.flush();
+							write.close();
+						}
+						return;
+					}
 				}
 				if(write!=null) {
 					write.flush();
@@ -279,6 +340,8 @@ public class LeftTreeViewController {
 				eta.setText(content,TextType.JSON);
 			}else if(clickedBtn==addtxtbtn) {
 				eta.setText(content,TextType.TXT);
+			}else if(clickedBtn==addjavabtn){
+				eta.setText(content,TextType.JAVA);
 			}else {
 				eta.setText(content,TextType.UNKNOW);
 			}

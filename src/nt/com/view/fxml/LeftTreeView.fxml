@@ -65,6 +65,14 @@
                            </image>
                         </ImageView>
                      </graphic></MenuItem>
+                     <MenuItem fx:id="addjavabtn" mnemonicParsing="false" onAction="#add" text="Java 文件">
+                     <graphic>
+                        <ImageView fitHeight="15.0" fitWidth="15.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@../../../../res/java.png" />
+                           </image>
+                        </ImageView>
+                     </graphic></MenuItem>
               </items>
                <graphic>
                   <ImageView fitHeight="15.0" fitWidth="15.0" pickOnBounds="true" preserveRatio="true">

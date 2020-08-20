@@ -17,14 +17,14 @@ import org.eclipse.jetty.server.handler.ContextHandler;
 
 
 /**
- * 简易http服务器
+ * 简单http服务器
  * 
  * @author kege
  * */
 public class HttpServer {
 	
 	protected static Log log = LogFactory.getLog(HttpServer.class);
-	private static boolean isOpen = false;
+	private static boolean isOpened = false;
 	private  Map<?,?> recvMsg;
 	private Server server;
 	
@@ -34,7 +34,7 @@ public class HttpServer {
 	
 	public  void start(int port,String root ,String contentype,String encode) {
 		try {
-			if(isOpen) {
+			if(isOpened) {
 				return;
 			}
 			this.server = new Server(port);	
@@ -63,7 +63,7 @@ public class HttpServer {
 			});
 			server.setHandler(ctx);
 			server.start();
-			isOpen = false;
+			isOpened = false;
 		} catch (Exception e) {
 			log.error(e.getMessage());
 			e.printStackTrace();
@@ -73,7 +73,7 @@ public class HttpServer {
 	
 	public void stop() {
 		try {
-			if(!isOpen)return;
+			if(!isOpened)return;
 			this.server.stop();
 		} catch (Exception e) {
 			log.error(e.getMessage());

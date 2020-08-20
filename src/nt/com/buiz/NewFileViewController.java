@@ -8,7 +8,7 @@ import java.io.Writer;
 
 import org.fxmisc.flowless.VirtualizedScrollPane;
 
-
+import freemarker.template.TemplateException;
 import javafx.collections.ObservableList;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
@@ -29,6 +29,8 @@ import nt.com.global.Config;
 import nt.com.global.TemplateFile;
 import nt.com.model.FileTreeModel;
 import nt.com.model.NewFileListModel;
+import nt.com.util.RegexUtils;
+import nt.com.util.Utils;
 import nt.com.view.init.ConsoleTextArea;
 import nt.com.view.init.LeftTreeView;
 import nt.com.view.init.MainView;
@@ -84,6 +86,8 @@ public class NewFileViewController {
 		}else if(filetype==FileType.XML) {
 			icon= new ImageView(new Image(LeftTreeViewController.class.getResourceAsStream("/res/file.png")));
 		}else if(filetype==FileType.JSON) {
+			icon= new ImageView(new Image(LeftTreeViewController.class.getResourceAsStream("/res/file.png")));
+		}else if(filetype==FileType.JAVA) {
 			icon= new ImageView(new Image(LeftTreeViewController.class.getResourceAsStream("/res/file.png")));
 		}
 		if(item==null) {  //右键没选中treeitem就默认为从根节点新建
@@ -143,7 +147,32 @@ public class NewFileViewController {
 					newfile.createNewFile();
 					write = new OutputStreamWriter(new FileOutputStream(newfile));
 					write.write(content=TemplateFile.JsonTemplate());
+				}else if(filetype==FileType.JAVA) {
+					try {
+						if(RegexUtils.ClassNameMatche(newFileName)) {
+							newfile = new File(file.getAbsolutePath()+File.separator+newFileName+".java");
+							newfile.createNewFile();
+							write = new OutputStreamWriter(new FileOutputStream(newfile));
+							write.write(content=TemplateFile.JavaTemplate(newFileName));
+						}else {
+							Alert alert = new Alert(AlertType.WARNING);
+							Stage alertStage =(Stage) alert.getDialogPane().getScene().getWindow();
+							alertStage.getIcons().add(new Image(getClass().getResourceAsStream("/res/title.png")));
+							alert.setTitle("提醒");
+							alert.setHeaderText(null);
+							alert.setContentText("Java文件名不符合规范！");
+							alert.showAndWait();
+							return;
+						}
+					} catch (TemplateException e) {
+						if(write!=null) {
+							write.flush();
+							write.close();
+						}
+						return;
+					}
 				}
+				
 				if(write!=null) {
 					write.flush();
 					write.close();
@@ -174,7 +203,32 @@ public class NewFileViewController {
 					newfile.createNewFile();
 					write = new OutputStreamWriter(new FileOutputStream(newfile));
 					write.write(content=TemplateFile.JsonTemplate());
+				}else if(filetype==FileType.JAVA) {
+					try {
+						if(RegexUtils.ClassNameMatche(newFileName)) {
+							newfile = new File(file.getParentFile().getAbsolutePath()+File.separator+newFileName+".java");
+							newfile.createNewFile();
+							write = new OutputStreamWriter(new FileOutputStream(newfile));
+							write.write(content=TemplateFile.JavaTemplate(newFileName));
+						}else {
+							Alert alert = new Alert(AlertType.WARNING);
+							Stage alertStage =(Stage) alert.getDialogPane().getScene().getWindow();
+							alertStage.getIcons().add(new Image(getClass().getResourceAsStream("/res/title.png")));
+							alert.setTitle("提醒");
+							alert.setHeaderText(null);
+							alert.setContentText("Java文件名不符合规范！");
+							alert.showAndWait();
+							return;
+						}
+					} catch (TemplateException e) {
+						if(write!=null) {
+							write.flush();
+							write.close();
+						}
+						return;
+					}
 				}
+				
 				if(write!=null) {
 					write.flush();
 					write.close();
@@ -231,6 +285,8 @@ public class NewFileViewController {
 				eta.setText(content,TextType.JSON);
 			}else if(filetype==FileType.TXT) {
 				eta.setText(content,TextType.TXT);
+			}else if(filetype==FileType.JAVA) {
+				eta.setText(content,TextType.JAVA);
 			}else {
 				eta.setText(content,TextType.UNKNOW);
 			}

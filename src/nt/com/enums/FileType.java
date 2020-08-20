@@ -12,5 +12,6 @@ public enum FileType {
 	JSON,
 	HTML,
 	TXT,
+	JAVA,
 	UNKNOW;
 }

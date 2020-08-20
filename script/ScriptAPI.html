@@ -43,7 +43,9 @@ ul {
 	<table >
 		<tr>
 			<td style="height:100px;text-align: center;" colspan="2">
-				<span style="font-size: 30px">NtTester脚本内置API</span>
+				<div><span style="font-size: 30px">NtTester脚本内置API</span></div>
+				<br/>
+				<div><span style="font-size: 25px">作者：kege</span></div>
 			</td>
 		<tr>
 		<tr >
@@ -201,7 +203,7 @@ ul {
 										<li>解释：表格显示数组数据</li>
 										<li>参数：数据数组（Array）,标题[String]</li>
 										<li>返回值：无</li>
-										<li>示例：Nt_Control.Table([{name:'kege',gender:'1'},{name:'wuyihong',gender:'2'},"员工表"])</li>
+										<li>示例：Nt_Control.Table([{name:'kege',gender:'1'},{name:'wuyihong',gender:'2'}],"员工表")</li>
 									</ul>
 									<ul>
 										<li>函数名：<font color="red">Graph(base64img,title)</font></li>
@@ -258,96 +260,98 @@ ul {
 							</ul>
 						</div>
 					</div></li>
-					<li><div class="api-content"  id="class">
-						<div class=".api-content"><span style="font-size: 22px;;font-weight: bold;">类</span></div>
-						<div class="api-content des"> 
-							<ul>
-								<li>类名：<font color="red">Nt_File</font></li>
-								<li>解释：文件操作类</li>
-								<li>构造函数：
-									<ul>
-										<li>函数名：<font color="red">Nt_File(path)</font></li>
-										<li>解释：使用文件路径构造文件对象</li>
-										<li>参数：文件路径（String）</li>
-										<li>返回值：文件对象（Nt_File）</li>
-										<li>示例：var file = new Nt_File("D:/Ntlog/trace/xxx.log")</li>
-									</ul>	
-								</li>
-								<li>包含函数：
-									<ul>
-										<li>函数名：<font color="red">createNewFile()</font></li>
-										<li>解释：在硬盘上创建该空文件</li>
-										<li>参数：无</li>
-										<li>返回值：无</li>
-										<li>示例：file.createNewFile()</li>
-									</ul>
-									<ul>
-										<li>函数名：<font color="red">delete()</font></li>
-										<li>解释：在硬盘上删除该文件</li>
-										<li>参数：无</li>
-										<li>返回值：无</li>
-										<li>示例：file.delete()</li>
-									</ul>
-									<ul>
-										<li>函数名：<font color="red">exists()</font></li>
-										<li>解释：判断硬盘是否存在该文件</li>
-										<li>参数：无</li>
-										<li>返回值：判断值（Boolean）</li>
-										<li>示例：var flag = file.exists()</li>
-									</ul>
-									<ul>
-										<li>函数名：<font color="red">getParent()</font></li>
-										<li>解释：获得上层路径</li>
-										<li>参数：无</li>
-										<li>返回值：上层路径（String）</li>
-										<li>示例：var path = file.getParent()</li>
-									</ul>
-									<ul>
-										<li>函数名：<font color="red">isFile()</font></li>
-										<li>解释：判断该文件是否是文件（不是文件夹）</li>
-										<li>参数：无</li>
-										<li>返回值：判断值（Boolean）</li>
-										<li>示例：file.isFile()</li>
-									</ul>
-									<ul>
-										<li>函数名：<font color="red">isDirectory()</font></li>
-										<li>解释：判断该文件是否是文件夹（不是文件）</li>
-										<li>参数：无</li>
-										<li>返回值：判断值（Boolean）</li>
-										<li>示例：file.isDirectory()</li>
-									</ul>
-									<ul>
-										<li>函数名：<font color="red">listFiles()</font></li>
-										<li>解释：返回该文件对象子文件数组</li>
-										<li>参数：无</li>
-										<li>返回值：文件数组（Array[Nt_File]）</li>
-										<li>示例：var array = file.listFiles() ; array[0].exists()</li>
-									</ul>
-									<ul>
-										<li>函数名：<font color="red">listFileNames()</font></li>
-										<li>解释：返回该文件对象子文件名数组</li>
-										<li>参数：无</li>
-										<li>返回值：文件名数组（Array[String]）</li>
-										<li>示例：var array = file.listFileNames() ; NtPtr.println(array[0])</li>
-									</ul>
-									<ul>
-										<li>函数名：<font color="red">read(decode)</font></li>
-										<li>解释：按编码读取文件内容</li>
-										<li>参数：编码[String]</li>
-										<li>返回值：文件内容（String）</li>
-										<li>示例：var content = file.read("utf-8") ;</li>
-									</ul>
-									<ul>
-										<li>函数名：<font color="red">write(content,encode,overwrite)</font></li>
-										<li>解释：按编码写入文件内容</li>
-										<li>参数：内容（String）,编码[String],是否覆盖[Boolean]</li>
-										<li>返回值：无</li>
-										<li>示例：file.write("hello","utf-8",true)</li>
-									</ul>
-								</li>
-							</ul>
+					<li>
+						<div class="api-content"  id="class">
+							<div class=".api-content"><span style="font-size: 22px;;font-weight: bold;">类</span></div>
+							<div class="api-content des"> 
+								<ul>
+									<li>类名：<font color="red">Nt_File</font></li>
+									<li>解释：文件操作类</li>
+									<li>构造函数：
+										<ul>
+											<li>函数名：<font color="red">Nt_File(path)</font></li>
+											<li>解释：使用文件路径构造文件对象</li>
+											<li>参数：文件路径（String）</li>
+											<li>返回值：文件对象（Nt_File）</li>
+											<li>示例：var file = new Nt_File("D:/Ntlog/trace/xxx.log")</li>
+										</ul>	
+									</li>
+									<li>包含函数：
+										<ul>
+											<li>函数名：<font color="red">createNewFile()</font></li>
+											<li>解释：在硬盘上创建该空文件</li>
+											<li>参数：无</li>
+											<li>返回值：无</li>
+											<li>示例：file.createNewFile()</li>
+										</ul>
+										<ul>
+											<li>函数名：<font color="red">delete()</font></li>
+											<li>解释：在硬盘上删除该文件</li>
+											<li>参数：无</li>
+											<li>返回值：无</li>
+											<li>示例：file.delete()</li>
+										</ul>
+										<ul>
+											<li>函数名：<font color="red">exists()</font></li>
+											<li>解释：判断硬盘是否存在该文件</li>
+											<li>参数：无</li>
+											<li>返回值：判断值（Boolean）</li>
+											<li>示例：var flag = file.exists()</li>
+										</ul>
+										<ul>
+											<li>函数名：<font color="red">getParent()</font></li>
+											<li>解释：获得上层路径</li>
+											<li>参数：无</li>
+											<li>返回值：上层路径（String）</li>
+											<li>示例：var path = file.getParent()</li>
+										</ul>
+										<ul>
+											<li>函数名：<font color="red">isFile()</font></li>
+											<li>解释：判断该文件是否是文件（不是文件夹）</li>
+											<li>参数：无</li>
+											<li>返回值：判断值（Boolean）</li>
+											<li>示例：file.isFile()</li>
+										</ul>
+										<ul>
+											<li>函数名：<font color="red">isDirectory()</font></li>
+											<li>解释：判断该文件是否是文件夹（不是文件）</li>
+											<li>参数：无</li>
+											<li>返回值：判断值（Boolean）</li>
+											<li>示例：file.isDirectory()</li>
+										</ul>
+										<ul>
+											<li>函数名：<font color="red">listFiles()</font></li>
+											<li>解释：返回该文件对象子文件数组</li>
+											<li>参数：无</li>
+											<li>返回值：文件数组（Array[Nt_File]）</li>
+											<li>示例：var array = file.listFiles() ; array[0].exists()</li>
+										</ul>
+										<ul>
+											<li>函数名：<font color="red">listFileNames()</font></li>
+											<li>解释：返回该文件对象子文件名数组</li>
+											<li>参数：无</li>
+											<li>返回值：文件名数组（Array[String]）</li>
+											<li>示例：var array = file.listFileNames() ; NtPtr.println(array[0])</li>
+										</ul>
+										<ul>
+											<li>函数名：<font color="red">read(decode)</font></li>
+											<li>解释：按编码读取文件内容</li>
+											<li>参数：编码[String]</li>
+											<li>返回值：文件内容（String）</li>
+											<li>示例：var content = file.read("utf-8") ;</li>
+										</ul>
+										<ul>
+											<li>函数名：<font color="red">write(content,encode,overwrite)</font></li>
+											<li>解释：按编码写入文件内容</li>
+											<li>参数：内容（String）,编码[String],是否覆盖[Boolean]</li>
+											<li>返回值：无</li>
+											<li>示例：file.write("hello","utf-8",true)</li>
+										</ul>
+									</li>
+								</ul>
+							</div>
 						</div>
-					</div></li>
+					</li>
 				</ul>
 			</td>
 		</tr>

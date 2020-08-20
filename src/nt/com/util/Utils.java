@@ -36,7 +36,7 @@ public class Utils {
 				type=TextType.JSON;
 				break;
 			case "JAVA" :
-				type=TextType.JAVASCRIPT;
+				type=TextType.JAVA;
 				break;
 			case "HTML" :
 				type=TextType.HTML;

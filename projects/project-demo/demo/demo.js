@@ -3,7 +3,7 @@
 
 function main(arg){
 	
-	
+	Nt_Control.Table([{name:'kege',gender:'1'},{name:'wuyihong',gender:'2'}],"Ô±¹¤±í");
 }
 
 function beforeSend (send){

@@ -107,6 +107,20 @@ public class RichEditTextArea extends CodeArea {
 	              this.replaceText(0, 0, text);
 	      		this.getStylesheets().add(this.getClass().getResource("/nt/com/view/css/RichTextEdit-js.css").toExternalForm());
 	      		break;
+	        case JAVA:
+	        	  this.multiPlainChanges().successionEnds(Duration.ofMillis(500)).subscribe(ignore -> this.setStyleSpans(0, computeJSHighlighting(this.getText())));
+	              this.addEventHandler( KeyEvent.KEY_PRESSED, KE ->
+	              {
+	                  if ( KE.getCode() == KeyCode.ENTER ) {
+	                  	int caretPosition = this.getCaretPosition();
+	                  	int currentParagraph = this.getCurrentParagraph();
+	                      Matcher m0 = whiteSpace.matcher( this.getParagraph( currentParagraph-1 ).getSegments().get( 0 ) );
+	                      if ( m0.find() ) Platform.runLater( () -> this.insertText( caretPosition, m0.group() ) );
+	                  }
+	              });
+	              this.replaceText(0, 0, text);
+	      		this.getStylesheets().add(this.getClass().getResource("/nt/com/view/css/RichTextEdit-js.css").toExternalForm());
+	      		break;
 	        case XML:
 	        	   this.textProperty().addListener((obs, oldText, newText) -> {
 	                   this.setStyleSpans(0, computeXMLHighlighting(newText));
@@ -135,7 +149,7 @@ public class RichEditTextArea extends CodeArea {
 	              this.replaceText(0, 0, text);
 	      		this.getStylesheets().add(this.getClass().getResource("/nt/com/view/css/RichTextEdit-json.css").toExternalForm());
 	      		break;
-	      		
+	      	 
 	        default:
 				 this.replaceText(0, 0, text);
 				break;

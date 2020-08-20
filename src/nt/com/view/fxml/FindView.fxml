@@ -35,7 +35,7 @@
             <Button fx:id="findallbtn" layoutX="380.0" layoutY="65.0" mnemonicParsing="false"  onKeyPressed="#findall" onAction="#findall"    text="     查找所有文件        " />
             <Label layoutX="43.0" layoutY="33.0" text="查找内容" />
             <TextField fx:id="findfield" layoutX="114.0" layoutY="29.0" prefHeight="23.0" prefWidth="250.0" />
-            <Label layoutX="43.0" layoutY="75.0" text="文本所在文件" />
+            <Label layoutX="43.0" layoutY="75.0" text="文本所在文件：" />
             <ListView onKeyPressed="#openFileAction" onMouseClicked="#openFileAction"  fx:id="findlist" layoutX="44.0" layoutY="110.0" prefHeight="200.0" prefWidth="465.0" />
          </children>
       </AnchorPane>

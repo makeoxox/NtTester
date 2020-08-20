@@ -133,7 +133,7 @@ public class FindViewController {
 		}
     }
     
-    //迭代文件夹
+    //递归文件夹
     private  void iteratorDir(File[] files,String keyword) throws IOException {
 		for (File file : files) {
 			if (file.isDirectory()) {
@@ -181,6 +181,7 @@ public class FindViewController {
     	}
     }
     
+    //打开文件夹
     private void openFile() {
     	FileTreeModel flm = findlist.getSelectionModel().getSelectedItem();
     	TabPane metp = (TabPane) MainView.parent.lookup("#edittabpane");

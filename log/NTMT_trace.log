@@ -9419,3 +9419,28 @@ W3School ¼òÌåÖÐÎÄ°æÌá¹©µÄÄÚÈÝ½öÓÃÓÚÅàÑµºÍ²âÊÔ£¬²»±£Ö¤ÄÚÈÝµÄÕýÈ·ÐÔ¡£Í¨¹ýÊ¹ÓÃ±¾Õ¾Ä
 </body>
 </html>
  
+[2020-08-20 10:50:47,530] 0    [main] DEBUG freemarker.cache  - Couldn't find template in cache for "newfile_java.ftl"("zh_CN", GBK, parsed); will try to load it. 
+[2020-08-20 10:50:47,538] 8    [main] DEBUG freemarker.cache  - TemplateLoader.findTemplateSource("newfile_java_zh_CN.ftl"): Not found 
+[2020-08-20 10:50:47,541] 11   [main] DEBUG freemarker.cache  - TemplateLoader.findTemplateSource("newfile_java_zh.ftl"): Not found 
+[2020-08-20 10:50:47,543] 13   [main] DEBUG freemarker.cache  - TemplateLoader.findTemplateSource("newfile_java.ftl"): Found 
+[2020-08-20 10:50:47,543] 13   [main] DEBUG freemarker.cache  - Loading template for "newfile_java.ftl"("zh_CN", GBK, parsed) from "file:/C:/Users/Administrator/git/NtTester/bin/template/newfile_java.ftl" 
+[2020-08-20 10:54:44,263] 0    [main] DEBUG freemarker.cache  - Couldn't find template in cache for "newfile_java.ftl"("zh_CN", GBK, parsed); will try to load it. 
+[2020-08-20 10:54:44,266] 3    [main] DEBUG freemarker.cache  - TemplateLoader.findTemplateSource("newfile_java_zh_CN.ftl"): Not found 
+[2020-08-20 10:54:44,268] 5    [main] DEBUG freemarker.cache  - TemplateLoader.findTemplateSource("newfile_java_zh.ftl"): Not found 
+[2020-08-20 10:54:44,269] 6    [main] DEBUG freemarker.cache  - TemplateLoader.findTemplateSource("newfile_java.ftl"): Found 
+[2020-08-20 10:54:44,269] 6    [main] DEBUG freemarker.cache  - Loading template for "newfile_java.ftl"("zh_CN", GBK, parsed) from "file:/C:/Users/Administrator/git/NtTester/bin/template/newfile_java.ftl" 
+[2020-08-20 10:54:44,362] 99   [main] DEBUG freemarker.cache  - Couldn't find template in cache for "newfile_java.ftl"("zh_CN", GBK, parsed); will try to load it. 
+[2020-08-20 10:54:44,362] 99   [main] DEBUG freemarker.cache  - TemplateLoader.findTemplateSource("newfile_java_zh_CN.ftl"): Not found 
+[2020-08-20 10:54:44,363] 100  [main] DEBUG freemarker.cache  - TemplateLoader.findTemplateSource("newfile_java_zh.ftl"): Not found 
+[2020-08-20 10:54:44,364] 101  [main] DEBUG freemarker.cache  - TemplateLoader.findTemplateSource("newfile_java.ftl"): Found 
+[2020-08-20 10:54:44,364] 101  [main] DEBUG freemarker.cache  - Loading template for "newfile_java.ftl"("zh_CN", GBK, parsed) from "file:/C:/Users/Administrator/git/NtTester/bin/template/newfile_java.ftl" 
+[2020-08-20 12:39:58,060] 0    [JavaFX Application Thread] DEBUG freemarker.cache  - Couldn't find template in cache for "newfile_java.ftl"("zh_CN", GBK, parsed); will try to load it. 
+[2020-08-20 12:39:58,063] 3    [JavaFX Application Thread] DEBUG freemarker.cache  - TemplateLoader.findTemplateSource("newfile_java_zh_CN.ftl"): Not found 
+[2020-08-20 12:39:58,066] 6    [JavaFX Application Thread] DEBUG freemarker.cache  - TemplateLoader.findTemplateSource("newfile_java_zh.ftl"): Not found 
+[2020-08-20 12:39:58,067] 7    [JavaFX Application Thread] DEBUG freemarker.cache  - TemplateLoader.findTemplateSource("newfile_java.ftl"): Found 
+[2020-08-20 12:39:58,067] 7    [JavaFX Application Thread] DEBUG freemarker.cache  - Loading template for "newfile_java.ftl"("zh_CN", GBK, parsed) from "file:/C:/Users/Administrator/git/NtTester/bin/template/newfile_java.ftl" 
+[2020-08-20 12:44:20,275] 0    [JavaFX Application Thread] DEBUG freemarker.cache  - Couldn't find template in cache for "newfile_java.ftl"("zh_CN", GBK, parsed); will try to load it. 
+[2020-08-20 12:44:20,277] 2    [JavaFX Application Thread] DEBUG freemarker.cache  - TemplateLoader.findTemplateSource("newfile_java_zh_CN.ftl"): Not found 
+[2020-08-20 12:44:20,279] 4    [JavaFX Application Thread] DEBUG freemarker.cache  - TemplateLoader.findTemplateSource("newfile_java_zh.ftl"): Not found 
+[2020-08-20 12:44:20,281] 6    [JavaFX Application Thread] DEBUG freemarker.cache  - TemplateLoader.findTemplateSource("newfile_java.ftl"): Found 
+[2020-08-20 12:44:20,281] 6    [JavaFX Application Thread] DEBUG freemarker.cache  - Loading template for "newfile_java.ftl"("zh_CN", GBK, parsed) from "file:/C:/Users/Administrator/git/NtTester/bin/template/newfile_java.ftl" 

@@ -3,7 +3,6 @@ package nt.com.view.init;
 import java.io.IOException;
 import java.util.List;
 
-import org.dom4j.Node;
 
 import javafx.beans.value.ChangeListener;
 import javafx.beans.value.ObservableValue;

@@ -3,6 +3,13 @@ package nt.com.global;
 import java.io.BufferedReader;
 import java.io.IOException;
 import java.io.InputStreamReader;
+import java.io.StringWriter;
+import java.util.Collections;
+
+import freemarker.cache.ClassTemplateLoader;
+import freemarker.template.Configuration;
+import freemarker.template.Template;
+import freemarker.template.TemplateException;
 
 /**
  * 读取模板文件
@@ -11,6 +18,20 @@ import java.io.InputStreamReader;
  *
  */
 public class TemplateFile {
+		
+	
+	
+	public static String JavaTemplate(String className) throws   IOException, TemplateException {
+		Configuration cfg = new Configuration(Configuration.VERSION_2_3_23);
+		cfg.setDefaultEncoding("GBK");
+		cfg.setTemplateLoader(new ClassTemplateLoader(TemplateFile.class, "/template"));
+		Template template = cfg.getTemplate("newfile_java.ftl");
+		StringWriter swr=new StringWriter();
+		template.process(Collections.singletonMap("className", className), swr);
+		String javaStr  = swr.toString();
+		swr.close();
+		return javaStr;
+	}
 
 	public static String JsonTemplate() {
 		String line = "";

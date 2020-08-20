@@ -11,7 +11,7 @@ import nt.com.model.TxtFieldModel;
 import nt.com.model.XmlElementModel;
 
 /**
- * 程序全局数据
+ * 全局缓存数据
  * 
  * @author kege
  *
