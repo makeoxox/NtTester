@@ -32,7 +32,7 @@ public class Table extends VBox{
 		Scene scene = new Scene(this);
 		stage.setScene(scene);
 		stage.setTitle("table-"+title);
-		stage.setResizable(false);
+		stage.setResizable(true);
 		stage.getIcons().add(new Image(getClass().getResourceAsStream("/res/title.png")));
 		stage.show();
 		

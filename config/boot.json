@@ -1,12 +1,12 @@
 {
-	"lastOpenFilePath":"projects\\project-demo\\demo\\NewClass.java",
+	"lastOpenFilePath":"projects\\project-demo\\demo\\demo.js",
 	"consoleFont":{
 		"size":14,
 		"family":"Consolas"
 	},
 	"importDirectories":[],
 	"httpSetting":{
-		"requesttype":"get",
+		"requesttype":"post",
 		"svrport":8080,
 		"svrtimeout":60,
 		"contextroot":"/svr",
@@ -59,10 +59,10 @@
 	"menu":{
 		"encode":"GBK",
 		"msg":"xml",
-		"protocol":"tcp",
+		"protocol":"http",
 		"connect":"sync",
-		"script":"enable",
-		"multi":"multiN"
+		"script":"disable",
+		"multi":"single"
 	},
 	"keyword":"rac",
 	"version":"2.0.0",
@@ -79,7 +79,7 @@
 		}
 	},
 	"editFont":{
-		"size":14,
+		"size":13,
 		"family":"Consolas"
 	}
 }

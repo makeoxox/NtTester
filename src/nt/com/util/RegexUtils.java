@@ -24,7 +24,7 @@ public class RegexUtils {
 	
 	
 	public static void main(String[] args) {
-		System.out.println(RegexUtils.ClassNameMatche("NewClass"));
-		
+		System.out.println(RegexUtils.RegexMatche("15", "^(((\\d|[1-9]\\d)(\\.\\d{1,2})?)|100|100.0|100.00)$"));
+														  
 	}
 }

@@ -446,7 +446,7 @@ public class LeftTreeViewController {
 							}
 						}
 						if(!exists) {
-							if(copyFile.isDirectory()) {
+							if(copyFile.isDirectory()) { 
 								FileUtils.copyDirectoryToDirectory(copyFile, anchorFile);
 							}else {
 								FileUtils.copyFileToDirectory(copyFile, anchorFile);

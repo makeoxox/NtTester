@@ -23,7 +23,7 @@ public class JavaRun {
 	            }
 	            ConsoleTextArea.AppendMessageOnCurrentConsole(compiler.getRunResult());
 	        } else {
-	        	ConsoleTextArea.AppendMessageOnCurrentConsole("±‡“Î ß∞‹£∫ln"+compiler.getCompilerMessage());
+	        	ConsoleTextArea.AppendMessageOnCurrentConsole("±‡“Î ß∞‹£∫"+compiler.getCompilerMessage());
 	        }
 
 	    }

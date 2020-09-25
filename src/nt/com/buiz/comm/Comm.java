@@ -94,6 +94,7 @@ public class Comm {
 		String asyn = Config.getConnect();     	//同步
 		String protocol = Config.getProtocol();	//协议
 		String multi = Config.getMulti();	   	//并发
+		
 		//Tcp - 同步 - 单条
 		if(asyn.toLowerCase().equals("sync")&&protocol.toLowerCase().equals("tcp")&&multi.toLowerCase().equals("single")) {
 			TcpSyncSingle(message,scriptpath);

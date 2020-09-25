@@ -6,14 +6,14 @@
 <?import javafx.scene.layout.BorderPane?>
 <?import javafx.scene.layout.VBox?>
 
-<fx:root fx:id="tableview" fx:controller="nt.com.script.javascript.view.TableController" prefHeight="423.0" prefWidth="554.0" type="VBox" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" >
+<fx:root fx:id="tableview" prefHeight="423.0" prefWidth="554.0" type="VBox" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="nt.com.script.javascript.view.TableController">
    <children>
-      <BorderPane>
+      <BorderPane VBox.vgrow="ALWAYS">
          <center>
             <TableView fx:id="table" BorderPane.alignment="CENTER" />
          </center>
       </BorderPane>
-      <BorderPane>
+      <BorderPane VBox.vgrow="NEVER">
          <right>
             <Button fx:id="cancelbtn" mnemonicParsing="false" onAction="#cancel" text="退出" BorderPane.alignment="CENTER">
                <BorderPane.margin>
