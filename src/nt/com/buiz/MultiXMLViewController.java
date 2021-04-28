@@ -28,6 +28,14 @@ import nt.com.util.XmlParser;
 import nt.com.view.init.ConsoleTextArea;
 import nt.com.view.init.MainView;
 
+
+
+/**
+ * 并发XML报文控制器
+ * 
+ * @author kege
+ *
+ */
 public class MultiXMLViewController {
 	
 	 	@FXML

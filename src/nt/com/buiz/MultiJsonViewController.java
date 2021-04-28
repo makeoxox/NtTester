@@ -12,6 +12,13 @@ import javafx.scene.control.TreeView;
 import javafx.scene.layout.VBox;
 import net.sf.json.JSON;
 
+
+/**
+ * 并发JSON报文控制器
+ * 
+ * @author kege
+ *
+ */
 public class MultiJsonViewController {
 	
     @FXML

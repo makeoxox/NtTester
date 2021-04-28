@@ -12,6 +12,12 @@ import javafx.scene.layout.VBox;
 import javafx.stage.Stage;
 import nt.com.global.Config;
 
+/**
+ * HTTP报文设置控制器
+ * 
+ * @author kege
+ *
+ */
 public class HttpMsgSettingViewController {
 
     @FXML

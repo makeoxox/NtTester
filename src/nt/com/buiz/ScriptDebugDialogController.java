@@ -21,6 +21,12 @@ import nt.com.view.init.MainView;
 import nt.com.view.init.ScriptDebugDialog;
 import nt.com.view.init.TopToolBar;
 
+/**
+ * 脚本执行对话框控制器
+ * 
+ * @author kege
+ *
+ */
 public class ScriptDebugDialogController {
 	
 	@FXML

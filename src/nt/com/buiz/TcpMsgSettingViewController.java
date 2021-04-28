@@ -11,6 +11,12 @@ import javafx.scene.layout.VBox;
 import javafx.stage.Stage;
 import nt.com.global.Config;
 
+/**
+ * Tcp报文设置框控制器
+ * 
+ * @author kege
+ *
+ */
 public class TcpMsgSettingViewController {
 
     @FXML

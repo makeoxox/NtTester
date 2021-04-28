@@ -12,6 +12,12 @@ import javafx.scene.layout.VBox;
 import nt.com.model.TxtFieldModel;
 
 
+/**
+ * 并发文本报文控制器
+ * 
+ * @author kege
+ *
+ */
 public class MultiTxtViewController {
 	
 	@FXML
