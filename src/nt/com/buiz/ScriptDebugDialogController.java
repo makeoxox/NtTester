@@ -14,7 +14,6 @@ import javafx.scene.control.TextField;
 import javafx.scene.layout.VBox;
 import javafx.stage.Stage;
 import nt.com.enums.TextType;
-import nt.com.script.java.JavaRun;
 import nt.com.script.javascript.debug.DebugScriptManager;
 import nt.com.util.Utils;
 import nt.com.view.init.ConsoleTextArea;
@@ -68,42 +67,6 @@ public class ScriptDebugDialogController {
 							return dsm.invoke(arg);
 						}
 					}catch(Exception e) {
-						ConsoleTextArea.AppendMessageOnCurrentConsole(e.toString());
-					}
-					return null;
-				}
-			};
-			new Thread(task).start();
-			new Thread(new Runnable() {
-				@Override
-				public void run() {
-					try {
-						if (timeout.trim() == null || timeout.trim().equals("") || timeout.trim().equals("0")) {
-							task.get();
-						} else {
-							task.get(Integer.parseInt(timeout), TimeUnit.MILLISECONDS);
-						}
-					} catch (InterruptedException e1) {
-						ConsoleTextArea.AppendMessageOnCurrentConsole(e1.getLocalizedMessage());
-					} catch (ExecutionException e1) {
-						ConsoleTextArea.AppendMessageOnCurrentConsole(e1.getLocalizedMessage());
-					} catch (TimeoutException e1) {
-						task.cancel(true);
-						
-					} finally {
-						scriptBtn.setDisable(false);
-						ConsoleTextArea.AppendMessageOnCurrentConsole("µ÷ÊÔ½Å±¾["+path+"]½áÊø");
-					}
-				}
-			}).start();
-    	}else if(sdd.textType==TextType.JAVA){
-    		Task<Object> task = new Task<Object>() {
-				@Override
-				public Object call() {
-					try {
-						String code = Utils.ReadFiletoString(new File(path), "GBK");
-						new JavaRun().run(new String[] {arg}, code);
-					} catch (IOException e) {
 						ConsoleTextArea.AppendMessageOnCurrentConsole(e.toString());
 					}
 					return null;
